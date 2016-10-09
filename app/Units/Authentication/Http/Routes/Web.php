@@ -20,6 +20,6 @@ class Web extends RouteFile
     {
         $this->router->get('login', ['as' => 'auth.index', 'uses' => 'LoginController@index']);
         $this->router->post('login', ['as' => 'auth.index', 'uses' => 'LoginController@login']);
-        $this->router->get('logout', ['as' => 'auth.index', 'uses' => 'LoginController@logout']);
+        $this->router->get('logout', ['as' => 'auth.logout', 'uses' => 'LoginController@logout']);
     }
 }

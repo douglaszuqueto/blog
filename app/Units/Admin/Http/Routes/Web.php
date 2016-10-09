@@ -12,13 +12,28 @@ class Web extends RouteFile
      */
     protected function routes()
     {
-        $this->homeRoutes();
+        $this->router->group(['prefix' => 'admin', 'middleware' => ['auth']], function () {
+
+            $this->dashboardRoutes();
+            $this->articlesRoutes();
+            $this->usersRoutes();
+
+        });
+
     }
 
-    protected function homeRoutes()
+    protected function dashboardRoutes()
     {
-        $this->router->get('admin', ['as' => 'admin.dashboard.index', 'uses' => 'HomeController@index']);
-        $this->router->get('admin/articles', ['as' => 'admin.articles.index', 'uses' => 'ArticlesController@index']);
-        $this->router->get('admin/users', ['as' => 'admin.users.index', 'uses' => 'UsersController@index']);
+        $this->router->get('/', ['as' => 'admin.dashboard.index', 'uses' => 'HomeController@index']);
+    }
+
+    protected function articlesRoutes()
+    {
+        $this->router->get('/articles', ['as' => 'admin.articles.index', 'uses' => 'ArticlesController@index']);
+    }
+
+    protected function usersRoutes()
+    {
+        $this->router->get('/users', ['as' => 'admin.users.index', 'uses' => 'UsersController@index']);
     }
 }

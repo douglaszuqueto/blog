@@ -14,7 +14,7 @@
                 <li><a href="#">Dashboard</a></li>
                 <li><a href="#">Settings</a></li>
                 <li><a href="#">Profile</a></li>
-                <li><a href="#">Help</a></li>
+                <li><a href="{{route('auth.logout')}}">Logout</a></li>
             </ul>
 
         </div>
