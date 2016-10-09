@@ -18,6 +18,8 @@ class Web extends RouteFile
 
     protected function homeRoutes()
     {
-        $this->router->get('login', ['as' => 'auth.login.index', 'uses' => 'LoginController@index']);
+        $this->router->get('login', ['as' => 'auth.index', 'uses' => 'LoginController@index']);
+        $this->router->post('login', ['as' => 'auth.index', 'uses' => 'LoginController@login']);
+        $this->router->get('logout', ['as' => 'auth.index', 'uses' => 'LoginController@logout']);
     }
 }

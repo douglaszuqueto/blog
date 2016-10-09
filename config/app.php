@@ -167,6 +167,7 @@ return [
          * Package Service Providers...
          */
         Migrator\MigrationServiceProvider::class,
+        Artesaos\SEOTools\Providers\SEOToolsServiceProvider::class,
 
         /**
          * Domains Service Providers

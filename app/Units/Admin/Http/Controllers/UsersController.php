@@ -4,11 +4,11 @@ namespace App\Units\Admin\Http\Controllers;
 
 use App\Support\Http\Controllers\Controller;
 
-class HomeController extends Controller
+class UsersController extends Controller
 {
 
     public function index()
     {
-        return $this->view('admin::dashboard.index');
+        return $this->view('admin::users.index');
     }
 }

@@ -7,7 +7,7 @@ use App\Support\Units\ServiceProvider;
 class UnitServiceProvider extends ServiceProvider
 {
 
-    protected $alias = 'login';
+    protected $alias = 'auth';
 
     protected $hasViews = true;
 
