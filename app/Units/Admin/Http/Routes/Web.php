@@ -17,6 +17,7 @@ class Web extends RouteFile
             $this->dashboardRoutes();
             $this->articlesRoutes();
             $this->usersRoutes();
+            $this->messagesRoutes();
 
         });
 
@@ -35,5 +36,10 @@ class Web extends RouteFile
     protected function usersRoutes()
     {
         $this->router->get('/users', ['as' => 'admin.users.index', 'uses' => 'UsersController@index']);
+    }
+
+    protected function messagesRoutes()
+    {
+        $this->router->get('/messages', ['as' => 'admin.messages.index', 'uses' => 'MessagesController@index']);
     }
 }
