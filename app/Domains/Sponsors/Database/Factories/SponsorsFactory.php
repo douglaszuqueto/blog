@@ -2,7 +2,7 @@
 
 namespace App\Domains\Sponsors\Database\Factories;
 
-use App\Domains\Sponsorss\Entities\Sponsors;
+use App\Domains\Sponsors\Entities\Sponsors;
 use App\Support\Database\ModelFactory;
 
 class SponsorsFactory extends ModelFactory
@@ -15,13 +15,12 @@ class SponsorsFactory extends ModelFactory
      */
     protected function fields()
     {
-        static $password;
 
         return [
-            'name' => $this->faker->name,
-            'email' => $this->faker->unique()->safeEmail,
-            'password' => $password ?: $password = bcrypt('secret'),
-            'remember_token' => str_random(10),
+            'sponsor' => $this->faker->name,
+            'url' => $this->faker->url,
+            'image' => $this->faker->url,
+            'state' => 1,
         ];
     }
 }
