@@ -2,7 +2,7 @@
 
 namespace App\Domains\News\Database\Seeders;
 
-use App\Domains\Newss\Entities\News;
+use App\Domains\News\Entities\News;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
@@ -16,11 +16,9 @@ class NewsSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('News')->insert([
-            'id' => 1,
-            'name' => 'Douglas Zuqueto',
-            'email' => 'douglas.zuqueto@gmail.com',
-            'password' => bcrypt('admin'),
+        DB::table('news')->insert([
+            'title' => 'Title',
+            'url' => 'url',
         ]);
 
 //        factory(News::class)->create();
