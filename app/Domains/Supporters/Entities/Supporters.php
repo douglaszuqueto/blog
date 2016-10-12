@@ -13,8 +13,10 @@ class Supporters extends Model
      * @var array
      */
     protected $fillable = [
-        'title',
+        'supporter',
         'url',
+        'image',
+        'state',
     ];
 
 }
