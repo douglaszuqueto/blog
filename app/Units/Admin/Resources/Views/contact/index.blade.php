@@ -1,14 +1,14 @@
 @extends('admin::layout')
 
 @section('content')
-    <h3>Artigos</h3>
+    <h3>Contato</h3>
     <div class="col-md-8 col-md-offset-2">
         <table class="table">
 
             <thead>
             <tr>
-                <th>Titulo</th>
-                <th>Subtitulo</th>
+                <th>Email</th>
+                <th>Assunto</th>
                 <th>Data</th>
                 <th>#</th>
                 <th>#</th>
@@ -17,23 +17,23 @@
 
             </thead>
             <tbody>
-            @foreach($articles as $row)
+            @foreach($contacts as $row)
                 <tr>
-                    <td>{{$row->title}}</td>
-                    <td>{{$row->subtitle}}</td>
+                    <td>{{$row->email}}</td>
+                    <td>{{$row->subject}}</td>
                     <td>{{$row->created_at}}</td>
                     <td>
                         <span class="btn btn-xs btn-success">Ativado</span>
                     </td>
                     <td>
-                        <a href="{{route('admin.articles.edit', $row->id)}}">
+                        <a href="{{route('admin.contact.edit', $row->id)}}">
                             <span class="glyphicon glyphicon-edit btn btn-xs btn-success"></span>
                         </a>
 
 
                     </td>
                     <td>
-                        <a href="{{route('admin.articles.edit', $row->id)}}">
+                        <a href="{{route('admin.contact.edit', $row->id)}}">
                             <span class="glyphicon glyphicon-trash btn btn-xs btn-danger"></span>
                         </a>
                     </td>

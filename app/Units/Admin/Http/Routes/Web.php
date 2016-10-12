@@ -18,7 +18,7 @@ class Web extends RouteFile
             $this->articlesRoutes();
             $this->usersRoutes();
             $this->newsRoutes();
-            $this->messagesRoutes();
+            $this->contactRoutes();
 
         });
 
@@ -27,11 +27,6 @@ class Web extends RouteFile
     protected function dashboardRoutes()
     {
         $this->router->get('/', ['as' => 'admin.dashboard.index', 'uses' => 'HomeController@index']);
-    }
-
-    protected function articlesRoutes()
-    {
-        $this->router->get('/articles', ['as' => 'admin.articles.index', 'uses' => 'ArticlesController@index']);
     }
 
     protected function usersRoutes()
@@ -50,8 +45,21 @@ class Web extends RouteFile
         $this->router->put('/news/{id}', ['as' => 'admin.news.update', 'uses' => 'NewsController@update']);
     }
 
-    protected function messagesRoutes()
+    protected function articlesRoutes()
     {
-        $this->router->get('/messages', ['as' => 'admin.messages.index', 'uses' => 'MessagesController@index']);
+        $this->router->get('/articles/create', ['as' => 'admin.articles.create', 'uses' => 'ArticlesController@create']);
+        $this->router->get('/articles', ['as' => 'admin.articles.index', 'uses' => 'ArticlesController@index']);
+        $this->router->get('/articles/{id}', ['as' => 'admin.articles.edit', 'uses' => 'ArticlesController@edit']);
+        $this->router->post('/articles', ['as' => 'admin.articles.store', 'uses' => 'ArticlesController@store']);
+        $this->router->put('/articles/{id}', ['as' => 'admin.articles.update', 'uses' => 'ArticlesController@update']);
+    }
+
+    protected function contactRoutes()
+    {
+        $this->router->get('/contact/create', ['as' => 'admin.contact.create', 'uses' => 'ContactController@create']);
+        $this->router->get('/contact', ['as' => 'admin.contact.index', 'uses' => 'ContactController@index']);
+        $this->router->get('/contact/{id}', ['as' => 'admin.contact.edit', 'uses' => 'ContactController@edit']);
+        $this->router->post('/contact', ['as' => 'admin.contact.store', 'uses' => 'ContactController@store']);
+        $this->router->put('/contact/{id}', ['as' => 'admin.contact.update', 'uses' => 'ContactController@update']);
     }
 }

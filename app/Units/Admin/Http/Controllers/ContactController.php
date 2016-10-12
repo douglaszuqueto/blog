@@ -3,31 +3,32 @@
 namespace App\Units\Admin\Http\Controllers;
 
 use App\Domains\Articles\Repositories\ArticlesRepository;
+use App\Domains\Contact\Repositories\ContactRepository;
 use App\Support\Http\Controllers\Controller;
 use Artesaos\SEOTools\Traits\SEOTools;
 use Illuminate\Http\Request;
 
-class ArticlesController extends Controller
+class ContactController extends Controller
 {
     use SEOTools;
     /**
-     * @var ArticlesRepository
+     * @var ContactRepository
      */
     private $repository;
 
     /**
      * UsersController constructor.
-     * @param ArticlesRepository $repository
+     * @param ContactRepository $repository
      */
-    public function __construct(ArticlesRepository $repository)
+    public function __construct(ContactRepository $repository)
     {
         $this->repository = $repository;
     }
 
     public function index()
     {
-        $this->seo()->setTitle('Artigos')->setDescription('listing');
-        return $this->view('admin::articles.index', ['articles' => $this->repository->all()]);
+        $this->seo()->setTitle('Contato')->setDescription('listing');
+        return $this->view('admin::contact.index', ['contacts' => $this->repository->all()]);
     }
 
 
@@ -36,7 +37,7 @@ class ArticlesController extends Controller
      */
     public function create()
     {
-        return $this->view('admin::articles.create');
+        return $this->view('admin::contact.create');
     }
 
     /**
@@ -47,13 +48,13 @@ class ArticlesController extends Controller
     {
         $this->repository->create($request->all());
 
-        return redirect()->route('admin.articles.index');
+        return redirect()->route('admin.contact.index');
     }
 
     public function edit($id)
     {
-        $this->seo()->setTitle('Artigos')->setDescription('edit');
-        return $this->view('admin::articles.edit', ['articles' => $this->repository->find($id)]);
+        $this->seo()->setTitle('Contato')->setDescription('edit');
+        return $this->view('admin::contact.edit', ['contacts' => $this->repository->find($id)]);
     }
 
 

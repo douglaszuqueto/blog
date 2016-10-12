@@ -16,7 +16,7 @@
                 <li><a href="#">Estatísticas</a></li>
                 <li><a href="{{route('admin.articles.index')}}">Artigos</a></li>
                 <li><a href="{{route('admin.users.index')}}">Usuários</a></li>
-                <li><a href="{{route('admin.messages.index')}}">Mensagens</a></li>
+                <li><a href="{{route('admin.contact.index')}}">Mensagens</a></li>
                 <li><a href="#">Configurações</a></li>
                 <li><a href="{{route('auth.logout')}}">Logout</a></li>
             </ul>
