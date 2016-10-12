@@ -11,7 +11,7 @@
             <a class="navbar-brand" href="#">@douglaszuqueto</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
-            <ul class="nav navbar-nav navbar-right">
+            <ul class="nav navbar-nav navbar-right hidden-lg hidden-sm hidden-md">
                 <li><a href="{{route('admin.dashboard.index')}}">Dashboard</a></li>
                 <li><a href="#">Estatísticas</a></li>
                 <li><a href="{{route('admin.articles.index')}}">Artigos</a></li>

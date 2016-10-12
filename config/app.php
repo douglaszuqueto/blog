@@ -174,6 +174,7 @@ return [
          * Domains Service Providers
          */
         App\Domains\Users\Providers\DomainServiceProvider::class,
+        App\Domains\News\Providers\DomainServiceProvider::class,
 
         /*
          * Units Service Providers...
