@@ -15,4 +15,9 @@ class UsersController extends Controller
         $this->seo()->setTitle('Users')->setDescription('listing');
         return $this->view('admin::users.index', ['users' => User::all()]);
     }
+
+    public function edit($id)
+    {
+        return $this->view('admin::users.edit', ['user' => User::find($id)]);
+    }
 }

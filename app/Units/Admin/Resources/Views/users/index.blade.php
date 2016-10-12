@@ -19,8 +19,14 @@
                 <tr>
                     <td>{{$user->name}}</td>
                     <td>{{$user->email}}</td>
-                    <td><span class="btn btn-xs btn-info">Ativado</span></td>
-                    <td><span class="glyphicon glyphicon-edit"></span></td>
+                    <td>
+                        <span class="btn btn-xs btn-info">Ativado</span>
+                    </td>
+                    <td>
+                        <a href="{{route('admin.users.edit', $user->id)}}">
+                            <span class="glyphicon glyphicon-edit"></span>
+                        </a>
+                    </td>
                 </tr>
             @endforeach
             </tbody>
