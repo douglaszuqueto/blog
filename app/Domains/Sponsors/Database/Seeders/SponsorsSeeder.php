@@ -16,13 +16,14 @@ class SponsorsSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('Sponsors')->insert([
+        DB::table('sponsors')->insert([
             'id' => 1,
-            'name' => 'Douglas Zuqueto',
-            'email' => 'douglas.zuqueto@gmail.com',
-            'password' => bcrypt('admin'),
+            'sponsor' => 'Sponsor 1',
+            'url' => 'url',
+            'image' => 'image',
+            'state' => 1,
         ]);
 
-//        factory(Sponsors::class)->create();
+//        factory(sponsors::class)->create();
     }
 }
