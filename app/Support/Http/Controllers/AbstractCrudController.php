@@ -58,12 +58,31 @@ abstract class AbstractCrudController extends Controller implements Contract
         return $this->view($this->getView('edit'), ['item' => $this->repository->find($id)]);
     }
 
+    /**
+     * @param Request $request
+     * @return \Illuminate\Http\RedirectResponse
+     */
+    public function update(Request $request, $id)
+    {
+        $this->repository->update($request->all(), $id);
 
+        return redirect()->route($this->getRoute('index'));
+    }
+
+
+    /**
+     * @param $action
+     * @return string
+     */
     protected function getRoute($action)
     {
         return strtolower($this->modulo) . "." . strtolower($this->page) . "." . $action;
     }
 
+    /**
+     * @param $action
+     * @return string
+     */
     protected function getView($action)
     {
         return strtolower($this->modulo) . "::" . strtolower($this->page) . '.' . $action;
