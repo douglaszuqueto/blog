@@ -15,15 +15,15 @@
 
             </thead>
             <tbody>
-            @foreach($users as $user)
+            @foreach($itens as $row)
                 <tr>
-                    <td>{{$user->name}}</td>
-                    <td>{{$user->email}}</td>
+                    <td>{{$row->name}}</td>
+                    <td>{{$row->email}}</td>
                     <td>
                         <span class="btn btn-xs btn-info">Ativado</span>
                     </td>
                     <td>
-                        <a href="{{route('admin.users.edit', $user->id)}}">
+                        <a href="{{route('admin.users.edit', $row->id)}}">
                             <span class="glyphicon glyphicon-edit"></span>
                         </a>
                     </td>

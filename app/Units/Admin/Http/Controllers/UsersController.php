@@ -3,16 +3,15 @@
 namespace App\Units\Admin\Http\Controllers;
 
 use App\Domains\Users\Repositories\UserRepository;
+use App\Support\Http\Controllers\AbstractCrudController;
 use App\Support\Http\Controllers\Controller;
 use Artesaos\SEOTools\Traits\SEOTools;
 
-class UsersController extends Controller
+class UsersController extends AbstractCrudController
 {
-    use SEOTools;
-    /**
-     * @var UserRepository
-     */
-    private $repository;
+    protected $modulo = 'admin';
+    protected $page = 'Users';
+    protected $page_description = 'listing';
 
     /**
      * UsersController constructor.
@@ -23,15 +22,4 @@ class UsersController extends Controller
         $this->repository = $repository;
     }
 
-    public function index()
-    {
-        $this->seo()->setTitle('Usuarios')->setDescription('listing');
-        return $this->view('admin::users.index', ['users' => $this->repository->all()]);
-    }
-
-    public function edit($id)
-    {
-        $this->seo()->setTitle('Usuarios')->setDescription('edit');
-        return $this->view('admin::users.edit', ['user' => $this->repository->find($id)]);
-    }
 }
