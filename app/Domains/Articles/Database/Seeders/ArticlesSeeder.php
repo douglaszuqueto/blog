@@ -2,7 +2,7 @@
 
 namespace App\Domains\Articles\Database\Seeders;
 
-use App\Domains\Articless\Entities\Articles;
+use App\Domains\Articles\Entities\Articles;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
@@ -17,10 +17,11 @@ class ArticlesSeeder extends Seeder
     public function run()
     {
         DB::table('articles')->insert([
-            'id' => 1,
-            'name' => 'Douglas Zuqueto',
-            'email' => 'douglas.zuqueto@gmail.com',
-            'password' => bcrypt('admin'),
+            'title' => 'Title 1',
+            'subtitle' => 'Subtitle 1',
+            'image' => 'Image 1',
+            'url' => 'Url 1',
+            'state' => 1,
         ]);
 
 //        factory(Articles::class)->create();
