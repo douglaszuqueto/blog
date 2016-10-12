@@ -1,9 +1,9 @@
 @extends('admin::layout')
 
 @section('content')
-    <h3>News</h3>
+    <h3>Artigo</h3>
 
-    <form class="form-horizontal" role="form" method="POST" action="{{ route('admin.news.update', $news->id) }}">
+    <form class="form-horizontal" role="form" method="POST" action="{{ route('admin.news.update', $item->id) }}">
         {{ csrf_field() }}
         <input name="_method" type="hidden" value="PUT">
 
@@ -11,7 +11,7 @@
             <label for="title" class="col-md-4 control-label">title</label>
 
             <div class="col-md-6">
-                <input id="title" type="title" class="form-control" name="title" value="{{ $news->title }}">
+                <input id="title" type="title" class="form-control" name="title" value="{{ $item->title }}">
 
                 @if ($errors->has('title'))
                     <span class="help-block">
@@ -25,7 +25,7 @@
             <label for="url" class="col-md-4 control-label">url</label>
 
             <div class="col-md-6">
-                <input id="url" type="url" class="form-control" name="url" value="{{ $news->url }}">
+                <input id="url" type="url" class="form-control" name="url" value="{{ $item->url }}">
 
                 @if ($errors->has('url'))
                     <span class="help-block">

@@ -17,7 +17,7 @@
 
             </thead>
             <tbody>
-            @foreach($articles as $row)
+            @foreach($itens as $row)
                 <tr>
                     <td>{{$row->title}}</td>
                     <td>{{$row->subtitle}}</td>
