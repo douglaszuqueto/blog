@@ -12,6 +12,6 @@ trait Index
     public function index()
     {
         $this->seo()->setTitle($this->page)->setDescription($this->page_description);
-        return $this->view(strtolower($this->modulo) . "::" . strtolower($this->page) . '.index', ['itens' => $this->repository->all()]);
+        return $this->view($this->getView('index'), ['itens' => $this->repository->all()]);
     }
 }
