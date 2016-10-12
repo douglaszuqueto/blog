@@ -15,13 +15,13 @@ class ContactFactory extends ModelFactory
      */
     protected function fields()
     {
-        static $password;
 
         return [
-            'name' => $this->faker->name,
+            'title' => $this->faker->title,
+            'subject' => $this->faker->title,
+            'message' => $this->faker->text,
             'email' => $this->faker->unique()->safeEmail,
-            'password' => $password ?: $password = bcrypt('secret'),
-            'remember_token' => str_random(10),
+            'state' => 0,
         ];
     }
 }
