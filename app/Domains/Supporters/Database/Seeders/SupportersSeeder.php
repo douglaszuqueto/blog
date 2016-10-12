@@ -17,7 +17,6 @@ class SupportersSeeder extends Seeder
     public function run()
     {
         DB::table('supporters')->insert([
-            'id' => 1,
             'supporter' => 'Supporter 1',
             'url' => 'url',
             'image' => 'image',
