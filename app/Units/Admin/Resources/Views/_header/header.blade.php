@@ -8,6 +8,7 @@
         <li><a href="{{route('admin.news.index')}}">Notícias</a></li>
         <li><a href="{{route('admin.contact.index')}}">Mensagens</a></li>
         <li><a href="{{route('admin.sponsors.index')}}">Patrocinadores</a></li>
+        <li><a href="{{route('admin.supporters.index')}}">Apoiadores</a></li>
         <li><a href="#">Configurações</a></li>
     </ul>
 </div>
