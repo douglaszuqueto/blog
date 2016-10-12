@@ -17,7 +17,6 @@ class SponsorsSeeder extends Seeder
     public function run()
     {
         DB::table('sponsors')->insert([
-            'id' => 1,
             'sponsor' => 'Sponsor 1',
             'url' => 'url',
             'image' => 'image',
