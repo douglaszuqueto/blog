@@ -17,7 +17,7 @@
 
             </thead>
             <tbody>
-            @foreach($supporters as $row)
+            @foreach($itens as $row)
                 <tr>
                     <td>{{$row->supporter}}</td>
                     <td>{{$row->url}}</td>
