@@ -19,6 +19,7 @@ class Web extends RouteFile
             $this->usersRoutes();
             $this->newsRoutes();
             $this->contactRoutes();
+            $this->sponsorsRoutes();
 
         });
 
@@ -52,6 +53,15 @@ class Web extends RouteFile
         $this->router->get('/articles/{id}', ['as' => 'admin.articles.edit', 'uses' => 'ArticlesController@edit']);
         $this->router->post('/articles', ['as' => 'admin.articles.store', 'uses' => 'ArticlesController@store']);
         $this->router->put('/articles/{id}', ['as' => 'admin.articles.update', 'uses' => 'ArticlesController@update']);
+    }
+
+    protected function sponsorsRoutes()
+    {
+        $this->router->get('/sponsors/create', ['as' => 'admin.sponsors.create', 'uses' => 'SponsorsController@create']);
+        $this->router->get('/sponsors', ['as' => 'admin.sponsors.index', 'uses' => 'SponsorsController@index']);
+        $this->router->get('/sponsors/{id}', ['as' => 'admin.sponsors.edit', 'uses' => 'SponsorsController@edit']);
+        $this->router->post('/sponsors', ['as' => 'admin.sponsors.store', 'uses' => 'SponsorsController@store']);
+        $this->router->put('/sponsors/{id}', ['as' => 'admin.sponsors.update', 'uses' => 'SponsorsController@update']);
     }
 
     protected function contactRoutes()

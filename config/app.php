@@ -177,6 +177,7 @@ return [
         App\Domains\News\Providers\DomainServiceProvider::class,
         App\Domains\Articles\Providers\DomainServiceProvider::class,
         App\Domains\Contact\Providers\DomainServiceProvider::class,
+        App\Domains\Sponsors\Providers\DomainServiceProvider::class,
 
         /*
          * Units Service Providers...
