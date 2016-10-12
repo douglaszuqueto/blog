@@ -17,7 +17,7 @@
 
             </thead>
             <tbody>
-            @foreach($sponsors as $row)
+            @foreach($itens as $row)
                 <tr>
                     <td>{{$row->sponsor}}</td>
                     <td>{{$row->url}}</td>
