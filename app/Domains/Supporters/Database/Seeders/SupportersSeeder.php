@@ -18,9 +18,10 @@ class SupportersSeeder extends Seeder
     {
         DB::table('supporters')->insert([
             'id' => 1,
-            'name' => 'Douglas Zuqueto',
-            'email' => 'douglas.zuqueto@gmail.com',
-            'password' => bcrypt('admin'),
+            'supporter' => 'Supporter 1',
+            'url' => 'url',
+            'image' => 'image',
+            'state' => 1,
         ]);
 
 //        factory(Supporters::class)->create();
