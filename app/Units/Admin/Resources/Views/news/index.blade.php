@@ -18,7 +18,7 @@
             @foreach($news as $row)
                 <tr>
                     <td>{{$row->title}}</td>
-                    <td>{{$row->url}}</td>
+                    <td><a href="{{$row->url}}" target="_blank">Link</a></td>
                     <td>{{$row->created_at}}</td>
                     <td>
                         <span class="btn btn-xs btn-info">Ativado</span>
@@ -33,7 +33,5 @@
             </tbody>
         </table>
     </div>
-
-
 
 @endsection

@@ -43,8 +43,10 @@ class Web extends RouteFile
 
     protected function newsRoutes()
     {
+        $this->router->get('/news/create', ['as' => 'admin.news.create', 'uses' => 'NewsController@create']);
         $this->router->get('/news', ['as' => 'admin.news.index', 'uses' => 'NewsController@index']);
         $this->router->get('/news/{id}', ['as' => 'admin.news.edit', 'uses' => 'NewsController@edit']);
+        $this->router->post('/news', ['as' => 'admin.news.store', 'uses' => 'NewsController@store']);
         $this->router->put('/news/{id}', ['as' => 'admin.news.update', 'uses' => 'NewsController@update']);
     }
 
