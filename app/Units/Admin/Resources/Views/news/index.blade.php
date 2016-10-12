@@ -17,7 +17,7 @@
 
             </thead>
             <tbody>
-            @foreach($news as $row)
+            @foreach($itens as $row)
                 <tr>
                     <td>{{$row->title}}</td>
                     <td><a href="{{$row->url}}" target="_blank">Link</a></td>
