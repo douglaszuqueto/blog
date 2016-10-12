@@ -15,13 +15,10 @@ class NewsFactory extends ModelFactory
      */
     protected function fields()
     {
-        static $password;
 
         return [
-            'name' => $this->faker->name,
-            'email' => $this->faker->unique()->safeEmail,
-            'password' => $password ?: $password = bcrypt('secret'),
-            'remember_token' => str_random(10),
+            'title' => $this->faker->title,
+            'url' => $this->faker->url,
         ];
     }
 }
