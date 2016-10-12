@@ -27,8 +27,19 @@ abstract class AbstractCrudController extends Controller implements Contract
      */
     protected $repository;
 
+    /**
+     * @var $modulo
+     */
     protected $modulo;
+
+    /**
+     * @var $page
+     */
     protected $page;
+
+    /**
+     * @var $page_description
+     */
     protected $page_description;
 
     /**
