@@ -13,8 +13,10 @@ class Sponsors extends Model
      * @var array
      */
     protected $fillable = [
-        'title',
+        'sponsor',
         'url',
+        'image',
+        'state',
     ];
 
 }
