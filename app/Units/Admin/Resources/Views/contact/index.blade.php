@@ -17,7 +17,7 @@
 
             </thead>
             <tbody>
-            @foreach($contacts as $row)
+            @foreach($itens as $row)
                 <tr>
                     <td>{{$row->email}}</td>
                     <td>{{$row->subject}}</td>
