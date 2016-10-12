@@ -2,7 +2,7 @@
 
 namespace App\Domains\News\Database\Factories;
 
-use App\Domains\Newss\Entities\News;
+use App\Domains\News\Entities\News;
 use App\Support\Database\ModelFactory;
 
 class NewsFactory extends ModelFactory
