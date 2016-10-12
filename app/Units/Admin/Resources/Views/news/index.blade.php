@@ -25,7 +25,11 @@
                     </td>
                     <td>
                         <a href="{{route('admin.news.edit', $row->id)}}">
-                            <span class="glyphicon glyphicon-edit"></span>
+                            <span class="glyphicon glyphicon-edit btn btn-xs btn-success"></span>
+                        </a>
+
+                        <a href="{{route('admin.news.edit', $row->id)}}">
+                            <span class="glyphicon glyphicon-trash btn btn-xs btn-danger"></span>
                         </a>
                     </td>
                 </tr>
