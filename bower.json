@@ -1,0 +1,17 @@
+{
+  "name": "blog",
+  "description": "Blog - @douglaszuqueto",
+  "main": "",
+  "authors": [
+    "Douglas Zuqueto <douglas.zuqueto@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/douglaszuqueto/blog",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

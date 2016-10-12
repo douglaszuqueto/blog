@@ -12,7 +12,7 @@ class Web extends RouteFile
      */
     protected function routes()
     {
-        $this->router->group(['prefix' => 'admin', 'middleware' => ['auth']], function () {
+        $this->router->group(['prefix' => 'admin', 'middleware' => []], function () {
 
             $this->dashboardRoutes();
             $this->articlesRoutes();
