@@ -168,6 +168,7 @@ return [
          */
         Migrator\MigrationServiceProvider::class,
         Artesaos\SEOTools\Providers\SEOToolsServiceProvider::class,
+        Prettus\Repository\Providers\RepositoryServiceProvider::class,
 
         /**
          * Domains Service Providers
