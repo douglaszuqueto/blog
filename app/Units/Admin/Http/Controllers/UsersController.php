@@ -4,8 +4,6 @@ namespace App\Units\Admin\Http\Controllers;
 
 use App\Domains\Users\Repositories\UserRepository;
 use App\Support\Http\Controllers\AbstractCrudController;
-use App\Support\Http\Controllers\Controller;
-use Artesaos\SEOTools\Traits\SEOTools;
 
 class UsersController extends AbstractCrudController
 {

@@ -4,9 +4,6 @@ namespace App\Units\Admin\Http\Controllers;
 
 use App\Domains\News\Repositories\NewsRepository;
 use App\Support\Http\Controllers\AbstractCrudController;
-use App\Support\Http\Controllers\Controller;
-use Artesaos\SEOTools\Traits\SEOTools;
-use Illuminate\Http\Request;
 
 class NewsController extends AbstractCrudController
 {

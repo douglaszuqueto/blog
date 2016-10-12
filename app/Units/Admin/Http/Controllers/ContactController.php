@@ -2,12 +2,8 @@
 
 namespace App\Units\Admin\Http\Controllers;
 
-use App\Domains\Articles\Repositories\ArticlesRepository;
 use App\Domains\Contact\Repositories\ContactRepository;
 use App\Support\Http\Controllers\AbstractCrudController;
-use App\Support\Http\Controllers\Controller;
-use Artesaos\SEOTools\Traits\SEOTools;
-use Illuminate\Http\Request;
 
 class ContactController extends AbstractCrudController
 {
