@@ -11,7 +11,16 @@
     {!! app('seotools')->generate() !!}
 
     <link rel="stylesheet" href="{{asset('css/materialize.min.css')}}">
+    <link href="http://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        html {
+            line-height: 1.5;
+            font-family: "Roboto", sans-serif;
+            font-weight: normal;
+            color: rgba(0,0,0,0.87);
+        }
+    </style>
 
     <script src="{{asset('js/jquery.min.js')}}"></script>
     <!-- Token for JS -->

@@ -3,46 +3,49 @@
 @section('content')
     <div class="container">
 
-        <h3>Notícias</h3>
-        <div class="col-md-8 col-md-offset-2">
-            <table class="table">
+        <h5>Notícias</h5>
 
-                <thead>
-                <tr>
-                    <th>Titulo</th>
-                    <th>Url</th>
-                    <th>Data</th>
-                    <th>#</th>
-                    <th>#</th>
-                    <th>#</th>
-                </tr>
+        <div class="row">
+            <div class="col s12 m10 l10 offset-l1">
+                <table class="table bordored">
 
-                </thead>
-                <tbody>
-                @foreach($itens as $row)
+                    <thead>
                     <tr>
-                        <td>{{$row->title}}</td>
-                        <td><a href="{{$row->url}}" target="_blank">Link</a></td>
-                        <td>{{$row->created_at}}</td>
-                        <td>
-                            <span class="btn btn-xs btn-success">Ativado</span>
-                        </td>
-                        <td>
-                            <a href="{{route('admin.news.edit', $row->id)}}">
-                                <span class="glyphicon glyphicon-edit btn btn-xs btn-success"></span>
-                            </a>
-
-
-                        </td>
-                        <td>
-                            <a href="{{route('admin.news.edit', $row->id)}}">
-                                <span class="glyphicon glyphicon-trash btn btn-xs btn-danger"></span>
-                            </a>
-                        </td>
+                        <th>Titulo</th>
+                        <th>Url</th>
+                        <th>Data</th>
+                        <th>#</th>
+                        <th>#</th>
+                        <th>#</th>
                     </tr>
-                @endforeach
-                </tbody>
-            </table>
+
+                    </thead>
+                    <tbody>
+                    @foreach($itens as $row)
+                        <tr>
+                            <td>{{$row->title}}</td>
+                            <td><a href="{{$row->url}}" target="_blank">Link</a></td>
+                            <td>{{$row->created_at}}</td>
+                            <td>
+                                <span class="">Ativado</span>
+                            </td>
+                            <td>
+                                <a href="{{route('admin.news.edit', $row->id)}}">
+                                    <span class="">Remover</span>
+                                </a>
+
+
+                            </td>
+                            <td>
+                                <a href="{{route('admin.news.edit', $row->id)}}">
+                                    <span class="">Editar</span>
+                                </a>
+                            </td>
+                        </tr>
+                    @endforeach
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
 
