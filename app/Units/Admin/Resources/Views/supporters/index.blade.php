@@ -8,13 +8,12 @@
 
         <div class="row">
             <div class="col s12 m10 l10 offset-l1">
-                <table class="table bordered">
+                <table class="table highlight">
                     <thead>
                     <tr>
                         <th>Apoiador</th>
-                        <th>Url</th>
                         <th>Data</th>
-                        <th>#</th>
+                        <th>Status</th>
                         <th>#</th>
                         <th>#</th>
                     </tr>
@@ -23,21 +22,19 @@
                     @foreach($itens as $row)
                         <tr>
                             <td>{{$row->supporter}}</td>
-                            <td>{{$row->url}}</td>
                             <td>{{$row->created_at}}</td>
                             <td>
                                 <span class="">Ativado</span>
                             </td>
+                            <td><a href="{{$row->url}}" target="_blank"><i class="material-icons">language</i></a></td>
                             <td>
                                 <a href="{{route('admin.supporters.edit', $row->id)}}">
-                                    <span class="">Remover</span>
+                                    <i class="material-icons red-text">delete</i>
                                 </a>
-
-
                             </td>
                             <td>
                                 <a href="{{route('admin.supporters.edit', $row->id)}}">
-                                    <span class="">Editar</span>
+                                    <i class="material-icons">mode_edit</i>
                                 </a>
                             </td>
                         </tr>

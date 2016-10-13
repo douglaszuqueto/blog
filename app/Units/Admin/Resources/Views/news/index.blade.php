@@ -8,7 +8,6 @@
         <div class="row">
             <div class="col s12 m10 l10 offset-l1">
                 <table class="table highlight">
-
                     <thead>
                     <tr>
                         <th>Titulo</th>
@@ -18,7 +17,6 @@
                         <th>#</th>
                         <th>#</th>
                     </tr>
-
                     </thead>
                     <tbody>
                     @foreach($itens as $row)

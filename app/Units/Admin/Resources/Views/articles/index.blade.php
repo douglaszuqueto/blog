@@ -4,11 +4,10 @@
     <div class="container">
 
         <h5>Artigos</h5>
+
         <div class="row">
-
             <div class="col s12 m10 l10 offset-l1">
-                <table class="table bordered striped">
-
+                <table class="table highlight">
                     <thead>
                     <tr>
                         <th>Titulo</th>
@@ -18,7 +17,6 @@
                         <th>#</th>
                         <th>#</th>
                     </tr>
-
                     </thead>
                     <tbody>
                     @foreach($itens as $row)
@@ -31,10 +29,8 @@
                             </td>
                             <td>
                                 <a href="{{route('admin.articles.edit', $row->id)}}">
-                                    <i class="material-icons">delete</i>
+                                    <i class="material-icons red-text">delete</i>
                                 </a>
-
-
                             </td>
                             <td>
                                 <a href="{{route('admin.articles.edit', $row->id)}}">

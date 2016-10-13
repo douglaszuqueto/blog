@@ -5,10 +5,8 @@
 
         <h5>Contato</h5>
         <div class="row">
-
             <div class="col s12 m10 l10 offset-l1">
-                <table class="table bordered">
-
+                <table class="table highlight">
                     <thead>
                     <tr>
                         <th>Email</th>
@@ -18,7 +16,6 @@
                         <th>#</th>
                         <th>#</th>
                     </tr>
-
                     </thead>
                     <tbody>
                     @foreach($itens as $row)
@@ -31,10 +28,8 @@
                             </td>
                             <td>
                                 <a href="{{route('admin.contact.edit', $row->id)}}">
-                                    <span class="">Remover</span>
+                                    <i class="material-icons red-text">delete</i>
                                 </a>
-
-
                             </td>
                             <td>
                                 <a href="{{route('admin.contact.edit', $row->id)}}">

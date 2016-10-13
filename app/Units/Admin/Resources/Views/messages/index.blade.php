@@ -7,8 +7,7 @@
 
         <div class="row">
             <div class="col s12 m10 l10 offset-l1">
-                <table class="table bordered">
-
+                <table class="table highlight">
                     <thead>
                     <tr>
                         <th>Usuário</th>
@@ -16,7 +15,6 @@
                         <th>Assunto</th>
                         <th>#</th>
                     </tr>
-
                     </thead>
                     <tbody>
                     @foreach($users as $user)
