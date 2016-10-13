@@ -1,7 +1,8 @@
 @extends('admin::layout')
 
 @section('content')
-
-            INDEX
+    <div class="container">
+        INDEX
+    </div>
 
 @endsection

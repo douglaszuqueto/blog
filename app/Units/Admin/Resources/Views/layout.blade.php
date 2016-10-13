@@ -10,25 +10,10 @@
 
     {!! app('seotools')->generate() !!}
 
-    <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}">
-    <link rel="stylesheet" href="{{asset('css/bootstrap-theme.min.css')}}">
+    <link rel="stylesheet" href="{{asset('css/materialize.min.css')}}">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-    <style>
-        body {
-            padding-top: 50px;
-        }
-
-        @media (min-width: 768px)
-            .main {
-                padding-right: 40px;
-                padding-left: 40px;
-            }
-
-            .main {
-                padding: 20px;
-            }
-    </style>
-
+    <script src="{{asset('js/jquery.min.js')}}"></script>
     <!-- Token for JS -->
     <script>
         window.Laravel = {!!   json_encode([
@@ -39,24 +24,16 @@
 
 </head>
 <body>
-@include('admin::_includes.navbar')
 
-<div class="container-fluid">
-    <div class="row">
+@include('admin::_header.header')
 
-        @include('admin::_header.header')
-
-        <div class="">
-            <div class="col-md-10 col-md-offset-2 main">
-                @yield('content')
-            </div>
-        </div>
+<main>
+    <div class="container">
+        @yield('content')
     </div>
+</main>
 
-</div>
-
-<script src="{{asset('js/jquery.min.js')}}"></script>
-<script src="{{asset('js/bootstrap.min.js')}}"></script>
+<script src="{{asset('js/materialize.min.js')}}"></script>
 
 </body>
 </html>
