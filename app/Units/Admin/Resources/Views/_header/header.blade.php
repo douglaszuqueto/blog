@@ -33,21 +33,14 @@
                 <i class="material-icons">menu</i>
             </a>
             <div class="nav-wrapper">
-                <ul id="user_options" class="dropdown-content">
-                    <li><a href="#">Perfil</a></li>
-                    <li class="divider"></li>
-                    <li><a>Sair<i class="material-icons right">input</i></a></li>
-                </ul>
                 <ul class="right">
                     <li class="hide-on-small-only">
-                        <a data-ng-click="Base.reload()">
+                        <a>
                             <i class="material-icons">refresh</i>
                         </a>
                     </li>
                     <li>
-                        <a class="user_options_dropdown" href="" data-activates="user_options">
-                            <i class="material-icons right">arrow_drop_down</i>
-                        </a>
+                        <a href="{{route('auth.logout')}}">Sair<i class="material-icons right">input</i></a>
                     </li>
                 </ul>
             </div>
