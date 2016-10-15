@@ -25,7 +25,7 @@
 
             <div class="col s12 m4 l4">
                 <div class="card-panel ">
-                    <h6 class="flow-text center-align">Art. Programados</h6>
+                    <h6 class="flow-text center-align">Art. Agendados</h6>
                     <h4 class="center-align">12</h4>
                 </div>
             </div>

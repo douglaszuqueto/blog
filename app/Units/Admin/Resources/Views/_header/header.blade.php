@@ -95,7 +95,7 @@
                 <div class="collapsible-body">
                     <ul>
                         <li><a href="{{route('admin.articles.index')}}">Artigos</a></li>
-                        <li><a href="">Cadastrar Artigo</a></li>
+                        <li><a href="{{route('admin.articles.create')}}">Cadastrar Artigo</a></li>
                     </ul>
                 </div>
             </li>
