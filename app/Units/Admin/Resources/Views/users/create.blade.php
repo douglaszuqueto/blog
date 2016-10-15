@@ -2,10 +2,10 @@
 
 @section('content')
     <div class="container">
+
+        <h5>Cadastrar Usuário</h5>
+
         <div class="row">
-
-            <h5>Cadastrar Usuário</h5>
-
             <form class="col l6 offset-l3" role="form" method="POST" action="{{ route('admin.users.store') }}">
                 {{ csrf_field() }}
 

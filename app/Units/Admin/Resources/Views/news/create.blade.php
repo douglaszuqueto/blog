@@ -2,10 +2,10 @@
 
 @section('content')
     <div class="container">
+
+        <h5>Cadastrar Notícia</h5>
+
         <div class="row">
-
-            <h5>News</h5>
-
             <form class="col l6 offset-l3" role="form" method="POST" action="{{ route('admin.news.store') }}">
                 {{ csrf_field() }}
 

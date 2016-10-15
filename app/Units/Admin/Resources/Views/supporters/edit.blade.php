@@ -2,11 +2,12 @@
 
 @section('content')
     <div class="container">
+
+        <h5>Atualizar Apoiador</h5>
+
         <div class="row">
-
-            <h5>Atualizar Apoiador</h5>
-
-            <form class="col l6 offset-l3" role="form" method="POST" action="{{ route('admin.supporters.update', ['id' => $item->id])}}">
+            <form class="col l6 offset-l3" role="form" method="POST"
+                  action="{{ route('admin.supporters.update', ['id' => $item->id])}}">
                 {{ csrf_field() }}
                 <input name="_method" type="hidden" value="PUT">
 

@@ -26,10 +26,10 @@
         });
     </script>
     <div class="container">
+
+        <h5>Cadastrar Artigo</h5>
+
         <div class="row">
-
-            <h5>Artigo</h5>
-
             <form class="col l12" role="form" method="POST" href="#">
                 {{ csrf_field() }}
 

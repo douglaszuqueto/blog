@@ -2,10 +2,10 @@
 
 @section('content')
     <div class="container">
+
+        <h5>Atualizar Patrocinador</h5>
+
         <div class="row">
-
-            <h5>Atualizar Patrocinador</h5>
-
             <form class="col l6 offset-l3" role="form" method="POST"
                   action="{{ route('admin.sponsors.update', ['id' => $item->id])}}">
                 {{ csrf_field() }}

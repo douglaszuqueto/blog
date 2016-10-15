@@ -2,11 +2,10 @@
 
 @section('content')
     <div class="container">
+
+        <h5>Visualizar Artigo</h5>
+
         <div class="row">
-
-            <h5>Visualizar Artigo</h5>
-
-
             <div class="col l12">
 
             </div>
