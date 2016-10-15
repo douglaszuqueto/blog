@@ -1,52 +1,117 @@
 @extends('admin::layout')
 
 @section('content')
-    <h3>News</h3>
+    <script>
+        $(document).ready(function () {
+            $("#submit").click(function () {
 
-    <form class="form-horizontal" role="form" method="POST" action="{{ route('admin.news.store') }}">
-        {{ csrf_field() }}
+                $.ajax({
+                    url: '{{route('admin.articles.store')}}',
+                    method: "POST",
+                    data: {
+                        'title': $('input[name="title"]').val(),
+                        'subtitle': $('input[name="subtitle"]').val(),
+                        'url': $('input[name="url"]').val(),
+                        'text': editor.value(),
+                        '_token': $('input[name="_token"]').val()
 
-        <div class="form-group{{ $errors->has('title') ? ' has-error' : '' }}">
-            <label for="title" class="col-md-4 control-label">title</label>
+                    },
+                    'success': function (data) {
+                        console.log(data);
+                    }
+                });
 
-            <div class="col-md-6">
-                <input id="title" type="title" class="form-control" name="title">
+                return false;
+            })
+        });
+    </script>
+    <div class="container">
+        <div class="row">
 
-                @if ($errors->has('title'))
-                    <span class="help-block">
-                        <strong>{{ $errors->first('title') }}</strong>
-                    </span>
-                @endif
-            </div>
-        </div>
+            <h5>Artigo</h5>
 
-        <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-            <label for="url" class="col-md-4 control-label">url</label>
+            <form class="col l12" role="form" method="POST" href="#">
+                {{ csrf_field() }}
 
-            <div class="col-md-6">
-                <input id="url" type="url" class="form-control" name="url">
+                <div class="row">
+                    <div class="input-field col l6">
 
-                @if ($errors->has('url'))
-                    <span class="help-block">
-                        <strong>{{ $errors->first('url') }}</strong>
-                    </span>
-                @endif
-            </div>
-        </div>
+                        <label for="title">Title</label>
 
-        <div class="form-group">
-            <div class="row">
+                        <input type="text" id="title" name="title">
 
-                <div class="col-md-6">
-                    <input type="reset" class="btn btn-info col-md-3" value="Limpar Campos">
+                        @if ($errors->has('title'))
+                            <strong>{{ $errors->first('title') }}</strong>
+                        @endif
+
+                    </div>
+
+                    <div class="input-field col l6">
+
+                        <label for="subtitle">Subtitle</label>
+
+                        <input type="text" id="subtitle" name="subtitle">
+
+                        @if ($errors->has('subtitle'))
+                            <strong>{{ $errors->first('subtitle') }}</strong>
+                        @endif
+
+                    </div>
                 </div>
-                <div class="col md 6">
-                    <button type="submit" class="btn btn-success col-md-3">Salvar</button>
+
+                <div class="row">
+                    <div class="input-field col l6">
+
+                        <label for="url">Url</label>
+
+                        <input type="url" id="url" name="url">
+
+                        @if ($errors->has('url'))
+                            <strong>{{ $errors->first('url') }}</strong>
+                        @endif
+
+                    </div>
+
+                    <div class="file-field input-field col l6">
+
+                        <div class="btn btn-flat right">
+                            <span>Imagem</span>
+                            <input type="file" id="image" name="image">
+                        </div>
+                        <div class="file-path-wrapper">
+                            <input type="text" class="file-path validate" placeholder="Image">
+                        </div>
+
+
+                        @if ($errors->has('image'))
+                            <strong>{{ $errors->first('image') }}</strong>
+                        @endif
+
+                    </div>
                 </div>
-            </div>
 
+                <div class="col l12">
+                    <textarea id="editor" name="text"></textarea>
+
+                    <script>
+                        var editor = new SimpleMDE({
+                            element: document.getElementById("editor"),
+                            spellChecker: false,
+                        });
+
+
+                    </script>
+                </div>
+
+                <div class="row">
+                    <div class="input-field col l12 ">
+                        <button id="submit" type="submit" class="waves-effect waves-light btn right">
+                            <i class="material-icons right">cloud</i>Cadastrar
+                        </button>
+                    </div>
+                </div>
+            </form>
         </div>
-
-    </form>
+    </div>
 
 @endsection
