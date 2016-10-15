@@ -80,7 +80,7 @@
     <li class="no-padding">
         <ul class="collapsible collapsible-accordion">
             <li class="bold">
-                <a class="waves-effect waves-blue">
+                <a href="{{route('admin.statistics.index')}}" class="waves-effect waves-blue">
                     <i class="material-icons blue-text text-darken-2">equalizer</i>
                     <span>Estatísticas</span>
                 </a>

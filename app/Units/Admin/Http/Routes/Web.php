@@ -15,11 +15,19 @@ class Web extends RouteFile
         $this->router->group(['prefix' => 'admin', 'middleware' => []], function () {
 
             $this->dashboardRoutes();
+
+            $this->statisticsRoutes();
+
             $this->articlesRoutes();
+
             $this->usersRoutes();
+
             $this->newsRoutes();
+
             $this->contactRoutes();
+
             $this->sponsorsRoutes();
+
             $this->supportersRoutes();
 
         });
@@ -29,6 +37,11 @@ class Web extends RouteFile
     protected function dashboardRoutes()
     {
         $this->router->get('/', ['as' => 'admin.dashboard.index', 'uses' => 'HomeController@index']);
+    }
+
+    protected function statisticsRoutes()
+    {
+        $this->router->get('/statistics', ['as' => 'admin.statistics.index', 'uses' => 'StatisticsController@index']);
     }
 
     protected function usersRoutes()
