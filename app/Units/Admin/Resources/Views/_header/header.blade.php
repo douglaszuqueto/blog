@@ -83,7 +83,7 @@
                     <div class="collapsible-body">
                         <ul>
                             <li><a href="{{route('admin.news.index')}}">Notícias</a></li>
-                            <li><a href="">Cadastrar Notícias</a></li>
+                            <li><a href="{{route('admin.news.create')}}">Cadastrar Notícia</a></li>
                         </ul>
                     </div>
                 </li>

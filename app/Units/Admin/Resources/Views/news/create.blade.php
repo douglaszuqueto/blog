@@ -1,52 +1,70 @@
 @extends('admin::layout')
 
 @section('content')
-    <h3>News</h3>
+    <div class="container">
+        <div class="row">
 
-    <form class="form-horizontal" role="form" method="POST" action="{{ route('admin.news.store') }}">
-        {{ csrf_field() }}
+            <h5>News</h5>
 
-        <div class="form-group{{ $errors->has('title') ? ' has-error' : '' }}">
-            <label for="title" class="col-md-4 control-label">title</label>
+            <form class="col l6 offset-l3" role="form" method="POST" action="{{ route('admin.news.store') }}">
+                {{ csrf_field() }}
 
-            <div class="col-md-6">
-                <input id="title" type="title" class="form-control" name="title">
+                <div class="row">
+                    <div class="input-field col l12">
 
-                @if ($errors->has('title'))
-                    <span class="help-block">
-                        <strong>{{ $errors->first('title') }}</strong>
-                    </span>
-                @endif
-            </div>
-        </div>
+                        <label for="title">Title</label>
 
-        <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-            <label for="url" class="col-md-4 control-label">url</label>
+                        <input type="text" id="title" name="title" required>
 
-            <div class="col-md-6">
-                <input id="url" type="url" class="form-control" name="url">
+                        @if ($errors->has('title'))
+                            <strong>{{ $errors->first('title') }}</strong>
+                        @endif
 
-                @if ($errors->has('url'))
-                    <span class="help-block">
-                        <strong>{{ $errors->first('url') }}</strong>
-                    </span>
-                @endif
-            </div>
-        </div>
-
-        <div class="form-group">
-            <div class="row">
-
-                <div class="col-md-6">
-                    <input type="reset" class="btn btn-info col-md-3" value="Limpar Campos">
+                    </div>
                 </div>
-                <div class="col md 6">
-                    <button type="submit" class="btn btn-success col-md-3">Salvar</button>
+
+                <div class="row">
+                    <div class="input-field col l12">
+
+                        <label for="url">Url</label>
+
+                        <input type="url" id="url" name="url" required>
+
+                        @if ($errors->has('url'))
+                            <strong>{{ $errors->first('url') }}</strong>
+                        @endif
+
+                    </div>
                 </div>
-            </div>
 
+                <div class="row">
+                    <div class="file-field input-field col l12">
+
+                        <div class="btn btn-flat right">
+                            <span>Imagem</span>
+                            <input type="file" id="image" name="image">
+                        </div>
+                        <div class="file-path-wrapper">
+                            <input type="text" class="file-path validate" placeholder="Image">
+                        </div>
+
+
+                        @if ($errors->has('image'))
+                            <strong>{{ $errors->first('image') }}</strong>
+                        @endif
+
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-field col l12 ">
+                        <button type="submit" class="waves-effect waves-light btn right">
+                            <i class="material-icons right">cloud</i>Cadastrar
+                        </button>
+                    </div>
+                </div>
+            </form>
         </div>
-
-    </form>
+    </div>
 
 @endsection
