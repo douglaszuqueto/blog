@@ -11,7 +11,7 @@ class StatisticsController extends Controller
     protected $page_description = 'listing';
 
     /**
-     * UsersController constructor.
+     * StatisticsController constructor.
      */
     public function __construct()
     {
@@ -20,8 +20,7 @@ class StatisticsController extends Controller
 
     public function index()
     {
-
-        return $this->view('admin::statistics.index');
+        return $this->view($this->getView('index'));
     }
 
 }

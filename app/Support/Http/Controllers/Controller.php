@@ -20,4 +20,42 @@ abstract class Controller extends BaseController
     {
         return view($view, $data);
     }
+
+    /**
+     * @var RepositoryInterface
+     */
+    protected $repository;
+
+    /**
+     * @var $modulo
+     */
+    protected $modulo;
+
+    /**
+     * @var $page
+     */
+    protected $page;
+
+    /**
+     * @var $page_description
+     */
+    protected $page_description;
+
+    /**
+     * @param $action
+     * @return string
+     */
+    protected function getRoute($action)
+    {
+        return strtolower($this->modulo) . "." . strtolower($this->page) . "." . $action;
+    }
+
+    /**
+     * @param $action
+     * @return string
+     */
+    protected function getView($action)
+    {
+        return strtolower($this->modulo) . "::" . strtolower($this->page) . '.' . $action;
+    }
 }

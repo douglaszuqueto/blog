@@ -22,43 +22,4 @@ abstract class AbstractCrudController extends Controller implements Contract
     use Edit;
     use Update;
 
-    /**
-     * @var RepositoryInterface
-     */
-    protected $repository;
-
-    /**
-     * @var $modulo
-     */
-    protected $modulo;
-
-    /**
-     * @var $page
-     */
-    protected $page;
-
-    /**
-     * @var $page_description
-     */
-    protected $page_description;
-
-    /**
-     * @param $action
-     * @return string
-     */
-    protected function getRoute($action)
-    {
-        return strtolower($this->modulo) . "." . strtolower($this->page) . "." . $action;
-    }
-
-    /**
-     * @param $action
-     * @return string
-     */
-    protected function getView($action)
-    {
-        return strtolower($this->modulo) . "::" . strtolower($this->page) . '.' . $action;
-    }
-
-
 }
