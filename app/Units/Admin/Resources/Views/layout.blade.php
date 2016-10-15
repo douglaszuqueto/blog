@@ -7,6 +7,8 @@
     <meta name="description" content="@douglaszuqueto">
     <meta name="apple-mobile-web-app-title" content="@douglaszuqueto">
     <meta name="application-name" content="@douglaszuqueto">
+    <meta name="theme-color" content="#008BD3">
+
 
     {!! app('seotools')->generate() !!}
 
