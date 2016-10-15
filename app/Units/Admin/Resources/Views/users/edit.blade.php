@@ -1,68 +1,54 @@
 @extends('admin::layout')
 
 @section('content')
-    <h3>Usuário</h3>
+    <div class="container">
+        <div class="row">
 
-    <form class="form-horizontal" role="form" method="POST" action="{{ route('admin.users.update', $item->id) }}">
-        {{ csrf_field() }}
+            <h5>Editar Usuário</h5>
 
-        <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
-            <label for="name" class="col-md-4 control-label">name</label>
+            <form class="col l6 offset-l3" role="form" method="POST"
+                  action="{{ route('admin.users.update', ['id' => $item->id]) }}">
 
-            <div class="col-md-6">
-                <input id="name" type="name" class="form-control" name="name" value="{{ $item->name }}">
+                {{ csrf_field() }}
+                <input type="hidden" name="_method" value="PUT">
 
-                @if ($errors->has('name'))
-                    <span class="help-block">
-                        <strong>{{ $errors->first('name') }}</strong>
-                    </span>
-                @endif
-            </div>
-        </div>
+                <div class="row">
+                    <div class="input-field col l12">
 
-        <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-            <label for="email" class="col-md-4 control-label">email</label>
+                        <label for="name" class="active">Nome</label>
 
-            <div class="col-md-6">
-                <input id="email" type="email" class="form-control" name="email" value="{{ $item->email }}">
+                        <input type="text" id="name" name="name" value="{{$item->name}}" required>
 
-                @if ($errors->has('email'))
-                    <span class="help-block">
-                        <strong>{{ $errors->first('email') }}</strong>
-                    </span>
-                @endif
-            </div>
-        </div>
+                        @if ($errors->has('name'))
+                            <strong>{{ $errors->first('name') }}</strong>
+                        @endif
 
-        <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-            <label for="password" class="col-md-4 control-label">password</label>
-
-            <div class="col-md-6">
-                <input id="password" type="password" class="form-control" name="password" value="{{ $item->password }}">
-
-                @if ($errors->has('password'))
-                    <span class="help-block">
-                        <strong>{{ $errors->first('password') }}</strong>
-                    </span>
-                @endif
-            </div>
-        </div>
-
-        <div class="form-group">
-            <div class="row">
-
-                <div class="col-md-6">
-                    <input type="reset" class="btn btn-info col-md-3" value="Limpar Campos">
+                    </div>
                 </div>
-                <div class="col md 6">
-                    <button type="submit" class="btn btn-success col-md-3">Salvar</button>
+
+                <div class="row">
+                    <div class="input-field col l12">
+
+                        <label for="email" class="active">Email</label>
+
+                        <input type="email" id="email" name="email" value="{{$item->email}}" required>
+
+                        @if ($errors->has('email'))
+                            <strong>{{ $errors->first('email') }}</strong>
+                        @endif
+
+                    </div>
                 </div>
-            </div>
 
+                <div class="row">
+                    <div class="input-field col l12 ">
+                        <button type="submit" class="waves-effect waves-light btn right">
+                            <i class="material-icons right">cloud</i>Atualizar
+                        </button>
+                    </div>
+                </div>
+            </form>
         </div>
-
-    </form>
-
-
+    </div>
 
 @endsection
