@@ -34,8 +34,10 @@ class Web extends RouteFile
     protected function usersRoutes()
     {
         $this->router->get('/users', ['as' => 'admin.users.index', 'uses' => 'UsersController@index']);
+        $this->router->get('/users/create', ['as' => 'admin.users.create', 'uses' => 'UsersController@create']);
         $this->router->get('/users/{id}', ['as' => 'admin.users.edit', 'uses' => 'UsersController@edit']);
         $this->router->put('/users/{id}', ['as' => 'admin.users.update', 'uses' => 'UsersController@update']);
+        $this->router->post('/users', ['as' => 'admin.users.store', 'uses' => 'UsersController@store']);
     }
 
     protected function newsRoutes()

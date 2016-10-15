@@ -72,7 +72,7 @@
                     <div class="collapsible-body">
                         <ul>
                             <li><a href="{{route('admin.users.index')}}">Usuários</a></li>
-                            <li><a href="">Cadastrar Usuário</a></li>
+                            <li><a href="{{route('admin.users.create')}}">Cadastrar Usuário</a></li>
                         </ul>
                     </div>
                 </li>
