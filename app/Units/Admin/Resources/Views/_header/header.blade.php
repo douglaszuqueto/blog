@@ -54,7 +54,7 @@
                     </ul>
                     <ul class="right">
                         <li>
-                            <a href="{{route('auth.logout')}}">Sair<i class="material-icons right">input</i></a>
+                            <a href="{{route('auth.logout')}}"><i class="material-icons right">input</i></a>
                         </li>
                     </ul>
                 </div>
