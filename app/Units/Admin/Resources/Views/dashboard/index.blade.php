@@ -35,7 +35,8 @@
             <div class="col s12 m4 l4">
                 <div class="card-panel ">
                     <p class="center-align" style="margin-top: -20px">
-                        <i class="material-icons medium" title="Caixa de Entrada">email</i></p>
+                        <a href="{{route('admin.contact.index')}}"><i class="material-icons medium green-text" title="Caixa de Entrada">email</i></a>
+                    </p>
                     <h4 class="center-align">20</h4>
                 </div>
             </div>
