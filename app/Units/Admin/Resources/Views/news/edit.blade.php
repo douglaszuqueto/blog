@@ -6,13 +6,13 @@
         <h5>Atualizar Notícia</h5>
 
         <div class="row">
-            <form class="col l6 offset-l3" role="form" method="POST"
+            <form class="col s12 l6 offset-l3" role="form" method="POST"
                   action="{{ route('admin.news.update', ['id' => $item->id])}}">
                 {{ csrf_field() }}
                 <input name="_method" type="hidden" value="PUT">
 
                 <div class="row">
-                    <div class="input-field col l12">
+                    <div class="input-field col s12 l12">
 
                         <label for="title" class="active">Title</label>
 
@@ -26,7 +26,7 @@
                 </div>
 
                 <div class="row">
-                    <div class="input-field col l12">
+                    <div class="input-field col s12 l12">
 
                         <label for="url" class="active">Url</label>
 
@@ -40,7 +40,7 @@
                 </div>
 
                 <div class="row">
-                    <div class="file-field input-field col l12">
+                    <div class="file-field input-field col s12 l12">
 
                         <div class="btn btn-flat right">
                             <span>Imagem</span>
@@ -59,7 +59,7 @@
                 </div>
 
                 <div class="row">
-                    <div class="input-field col l12 ">
+                    <div class="input-field col s12 l12 ">
                         <button type="submit" class="waves-effect waves-light btn right">
                             <i class="material-icons right">cloud</i>Atualizar
                         </button>

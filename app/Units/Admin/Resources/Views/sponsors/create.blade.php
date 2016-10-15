@@ -6,11 +6,11 @@
         <h5>Cadastrar Patrocinador</h5>
 
         <div class="row">
-            <form class="col l6 offset-l3" role="form" method="POST" action="{{ route('admin.sponsors.store') }}">
+            <form class="col s12 l6 offset-l3" role="form" method="POST" action="{{ route('admin.sponsors.store') }}">
                 {{ csrf_field() }}
 
                 <div class="row">
-                    <div class="input-field col l12">
+                    <div class="input-field col s12 l12">
 
                         <label for="sponsor">Patrocinador</label>
 
@@ -24,7 +24,7 @@
                 </div>
 
                 <div class="row">
-                    <div class="input-field col l12">
+                    <div class="input-field col s12 l12">
 
                         <label for="url">Url</label>
 
@@ -38,7 +38,7 @@
                 </div>
 
                 <div class="row">
-                    <div class="input-field col l12 ">
+                    <div class="input-field col s12 l12 ">
                         <button type="submit" class="waves-effect waves-light btn right">
                             <i class="material-icons right">cloud</i>Cadastrar
                         </button>
