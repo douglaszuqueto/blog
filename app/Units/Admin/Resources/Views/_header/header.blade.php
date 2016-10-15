@@ -34,11 +34,6 @@
             </a>
             <div class="nav-wrapper">
                 <ul class="right">
-                    <li class="hide-on-small-only">
-                        <a>
-                            <i class="material-icons">refresh</i>
-                        </a>
-                    </li>
                     <li>
                         <a href="{{route('auth.logout')}}">Sair<i class="material-icons right">input</i></a>
                     </li>
