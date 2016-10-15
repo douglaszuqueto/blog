@@ -1,63 +1,86 @@
 <style>
-    .form-login {
-        margin-top: 100px;
+    .login-page {
+        position: relative;
+        opacity: 0.9;
+        margin-top: 5%;
+    }
+
+    .login-header {
+        margin-top: 3%;
+    }
+
+    .title {
+        color: #009BC9;
+    }
+
+    .theme-color:hover {
+        background-color: #ffffff;
+        border: none;
+        cursor: pointer;
+    }
+
+    .theme-color:focus {
+        background-color: #ffffff;
+        border: none;
+        cursor: pointer;
     }
 </style>
 @extends('auth::layout')
 
 @section('content')
+
     <div class="container">
-        <div class="row form-login">
-            <div class="col-md-4 col-md-offset-4">
-                <div class="panel panel-default">
-                    <div class="panel-heading">Login</div>
-                    <div class="panel-body">
-                        <form class="form-horizontal" role="form" method="POST" action="{{ url('/login') }}">
+        <div class="row login-page">
+            <div class="col s12 m8 l6 offset-l3 offset-m2 card-panel">
+
+                <!--Login Header-->
+                <div class="login-header row">
+                    <div class="col s12 m12 l12 center">
+                        <h5 class="title">@douglaszuqueto</h5>
+                    </div>
+                </div>
+
+                <!--Login Form-->
+                <div class="row">
+                    <div class="col s10 m10 l10 offset-s1 offset-m1 offset-l1">
+                        <form method="POST" action="{{ url('/login') }}">
                             {{ csrf_field() }}
-
-                            <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                                <label for="email" class="col-md-4 control-label">E-Mail</label>
-
-                                <div class="col-md-6">
-                                    <input id="email" type="email" class="form-control" name="email"
-                                           value="{{ old('email') }}">
-
-                                    @if ($errors->has('email'))
-                                        <span class="help-block">
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <input type="email" name="email" required
+                                           tabindex="1">
+                                    <label class="active">E-mail</label>
+                                </div>
+                                @if ($errors->has('email'))
+                                    <span class="help-block">
                                         <strong>{{ $errors->first('email') }}</strong>
                                     </span>
-                                    @endif
-                                </div>
+                                @endif
                             </div>
-
-                            <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                                <label for="password" class="col-md-4 control-label">Password</label>
-
-                                <div class="col-md-6">
-                                    <input id="password" type="password" class="form-control" name="password">
-
-                                    @if ($errors->has('password'))
-                                        <span class="help-block">
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <input type="password" name="password" required
+                                           tabindex="2">
+                                    <label class="active">Password</label>
+                                </div>
+                                @if ($errors->has('password'))
+                                    <span class="help-block">
                                         <strong>{{ $errors->first('password') }}</strong>
                                     </span>
-                                    @endif
+                                @endif
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <input type="checkbox" id="remember" name="remember"/>
+                                    <label for="remember">Remember-me</label>
                                 </div>
                             </div>
-
-                            <div class="form-group">
-                                <div class="col-md-6 col-md-offset-4">
-                                    <div class="checkbox">
-                                        <label>
-                                            <input type="checkbox" name="remember"> Remember Me
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="form-group">
-                                <div class="col-md-4 col-md-offset-8">
-                                    <button type="submit" class="btn btn-primary">
-                                        <i class="fa fa-btn fa-sign-in"></i> Login
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <button type="submit" class="btn green col s12" tabindex="4">Login</button>
+                                    <div class="row"></div>
+                                    <button type="reset" class="btn btn-flat col s12 theme-color" tabindex="3">Limpar
+                                        Campos
                                     </button>
                                 </div>
                             </div>
