@@ -12,7 +12,6 @@
                     <thead>
                     <tr>
                         <th>Apoiador</th>
-                        <th>Data</th>
                         <th>Status</th>
                         <th>#</th>
                         <th>#</th>
@@ -23,7 +22,6 @@
                     @foreach($itens as $row)
                         <tr>
                             <td>{{$row->supporter}}</td>
-                            <td>{{$row->created_at}}</td>
                             <td>
                                 <span class="">Ativado</span>
                             </td>

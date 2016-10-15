@@ -26,7 +26,7 @@
                             </td>
                             <td>
                                 <a href="{{route('admin.users.edit', $row->id)}}">
-                                    <span class="">Editar</span>
+                                    <i class="material-icons">mode_edit</i>
                                 </a>
                             </td>
                         </tr>

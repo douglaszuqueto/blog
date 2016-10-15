@@ -11,7 +11,6 @@
                     <thead>
                     <tr>
                         <th>Patrocinador</th>
-                        <th>Data</th>
                         <th>Status</th>
                         <th>#</th>
                         <th>#</th>
@@ -22,7 +21,6 @@
                     @foreach($itens as $row)
                         <tr>
                             <td>{{$row->sponsor}}</td>
-                            <td>{{$row->created_at}}</td>
                             <td>
                                 <span class="">Ativado</span>
                             </td>
