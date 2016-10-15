@@ -14,8 +14,8 @@ class CreateSupportersTable extends Migration
             $table->increments('id');
             $table->string('supporter');
             $table->string('url');
-            $table->string('image');
-            $table->boolean('state');
+            $table->string('image')->nullable();
+            $table->boolean('state')->default(1);
             $table->timestamps();
         });
     }
