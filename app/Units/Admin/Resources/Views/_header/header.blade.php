@@ -141,13 +141,5 @@
         $('.collapsible').collapsible({
             accordion: false
         });
-
-        var pgurl = window.location.href.substr(window.location.href.lastIndexOf("/") + 1);
-
-        console.log(pgurl);
-        $("nav ul li").each(function () {
-            if ($(this).attr("href") == pgurl || $(this).attr("href") == '')
-                $(this).addClass("active");
-        })
     });
 </script>
