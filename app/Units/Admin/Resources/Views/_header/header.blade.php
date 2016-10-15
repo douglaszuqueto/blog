@@ -42,7 +42,9 @@
         </div>
     </nav>
     <ul id="nav-mobile" class="side-nav fixed">
+        <br>
         <h4 class=" center" style="color: #009BC9;">@douglaszuqueto</h4>
+        <br>
         <div class="divider"></div>
         <li class="bold">
             <a href="{{route('admin.dashboard.index')}}" class="waves-effect waves-blue">Dashboard</a>
@@ -139,6 +141,13 @@
         $('.collapsible').collapsible({
             accordion: false
         });
-        $(".user_options_dropdown").dropdown({belowOrigin: true});
+
+        var pgurl = window.location.href.substr(window.location.href.lastIndexOf("/") + 1);
+
+        console.log(pgurl);
+        $("nav ul li").each(function () {
+            if ($(this).attr("href") == pgurl || $(this).attr("href") == '')
+                $(this).addClass("active");
+        })
     });
 </script>
