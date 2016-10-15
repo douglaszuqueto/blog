@@ -20,6 +20,9 @@
         .container {
             width: 85%;
         }
+        #nav-title{
+            display: none;
+        }
     }
 
     @media only screen and (min-width: 993px) {
@@ -27,6 +30,7 @@
             padding-left: 10px;
             width: 95%;
         }
+
     }
 
     header nav {
@@ -65,7 +69,10 @@
     <li class="no-padding">
         <ul class="collapsible collapsible-accordion">
             <li class="bold">
-                <a class="waves-effect waves-blue">Estatísticas</a>
+                <a class="waves-effect waves-blue">
+                    <i class="material-icons"></i>
+                    <span>Estatísticas</span>
+                </a>
             </li>
         </ul>
         <ul class="collapsible collapsible-accordion">
