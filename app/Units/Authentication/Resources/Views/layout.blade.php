@@ -15,7 +15,7 @@
 
     <script src="{{asset('js/jquery.min.js')}}"></script>
 
-<!-- Token for JS -->
+    <!-- Token for JS -->
     <script>
         window.Laravel = {!!   json_encode([
                 'csrfToken' => csrf_token(),
@@ -26,13 +26,8 @@
 </head>
 <body>
 
-<div class="container">
-    <div class="row">
-        <div class="col-md-12">
-            @yield('content')
-        </div>
-    </div>
-
+<div class="">
+    @yield('content')
 </div>
 
 <script src="{{asset('js/materialize.min.js')}}"></script>
