@@ -48,7 +48,7 @@
                                 <div class="row">
                                     <div class="input-field col s12">
                                         <input type="email" name="email" required
-                                               tabindex="1">
+                                               tabindex="1" value="{{old('email')}}">
                                         <label class="active">E-mail</label>
                                     </div>
                                     @if ($errors->has('email'))
