@@ -3,15 +3,21 @@
         padding-left: 240px;
         padding-top: 65px;
     }
-    header{position: absolute; width: 100%; z-index: 9999;}
 
-    #nav-mobile{
+    header {
+        position: absolute;
+        width: 100%;
+        z-index: 9999;
+    }
+
+    #nav-mobile {
         margin-top: 65px;
     }
 
-    #nav-title{
+    #nav-title {
         margin: -5px 0 0 10px;
     }
+
     @media only screen and (max-width: 992px) {
         main, footer {
             padding-left: 0;
@@ -20,7 +26,8 @@
         .container {
             width: 85%;
         }
-        #nav-title{
+
+        #nav-title {
             display: none;
         }
     }
@@ -54,7 +61,8 @@
                     </ul>
                     <ul class="right">
                         <li>
-                            <a href="{{route('auth.logout')}}"><i class="material-icons right">input</i></a>
+                            <a href="{{route('auth.logout')}}"><i
+                                        class="material-icons right">power_settings_new</i></a>
                         </li>
                     </ul>
                 </div>
@@ -64,20 +72,26 @@
 </header>
 <ul id="nav-mobile" class="side-nav fixed">
     <li class="bold">
-        <a href="{{route('admin.dashboard.index')}}" class="waves-effect waves-blue">Dashboard</a>
+        <a href="{{route('admin.dashboard.index')}}" class="waves-effect waves-blue">
+            <i class="material-icons blue-text text-darken-2">dashboard</i>
+            <span>Dashboard</span>
+        </a>
     </li>
     <li class="no-padding">
         <ul class="collapsible collapsible-accordion">
             <li class="bold">
                 <a class="waves-effect waves-blue">
-                    <i class="material-icons"></i>
+                    <i class="material-icons blue-text text-darken-2">equalizer</i>
                     <span>Estatísticas</span>
                 </a>
             </li>
         </ul>
         <ul class="collapsible collapsible-accordion">
             <li class="bold">
-                <a class="collapsible-header  waves-effect waves-blue">Artigos</a>
+                <a class="collapsible-header  waves-effect waves-blue">
+                    <i class="material-icons blue-text text-darken-2">comment</i>
+                    <span>Artigos</span>
+                </a>
                 <div class="collapsible-body">
                     <ul>
                         <li><a href="{{route('admin.articles.index')}}">Artigos</a></li>
@@ -88,7 +102,10 @@
         </ul>
         <ul class="collapsible collapsible-accordion">
             <li class="bold">
-                <a class="collapsible-header  waves-effect waves-blue">Usuários</a>
+                <a class="collapsible-header  waves-effect waves-blue">
+                    <i class="material-icons blue-text text-darken-2">person_pin</i>
+                    <span>Usuários</span>
+                </a>
                 <div class="collapsible-body">
                     <ul>
                         <li><a href="{{route('admin.users.index')}}">Usuários</a></li>
@@ -99,7 +116,10 @@
         </ul>
         <ul class="collapsible collapsible-accordion">
             <li class="bold">
-                <a class="collapsible-header  waves-effect waves-blue">Notícias</a>
+                <a class="collapsible-header  waves-effect waves-blue">
+                    <i class="material-icons blue-text text-darken-2 blue-text text-darken-2">subject</i>
+                    <span>Notícias</span>
+                </a>
                 <div class="collapsible-body">
                     <ul>
                         <li><a href="{{route('admin.news.index')}}">Notícias</a></li>
@@ -110,7 +130,10 @@
         </ul>
         <ul class="collapsible collapsible-accordion">
             <li class="bold">
-                <a class="collapsible-header  waves-effect waves-blue">Mensagens</a>
+                <a class="collapsible-header  waves-effect waves-blue">
+                    <i class="material-icons blue-text text-darken-2">email</i>
+                    <span>Mensagens</span>
+                </a>
                 <div class="collapsible-body">
                     <ul>
                         <li><a href="{{route('admin.contact.index')}}">Mensagens</a></li>
@@ -121,7 +144,10 @@
         </ul>
         <ul class="collapsible collapsible-accordion">
             <li class="bold">
-                <a class="collapsible-header  waves-effect waves-blue">Patrocinadores</a>
+                <a class="collapsible-header  waves-effect waves-blue">
+                    <i class="material-icons blue-text text-darken-2">business</i>
+                    <span>Patrocinadores</span>
+                </a>
                 <div class="collapsible-body">
                     <ul>
                         <li><a href="{{route('admin.sponsors.index')}}">Patrocinadores</a></li>
@@ -132,7 +158,10 @@
         </ul>
         <ul class="collapsible collapsible-accordion">
             <li class="bold">
-                <a class="collapsible-header  waves-effect waves-blue">Apoiadores</a>
+                <a class="collapsible-header  waves-effect waves-blue">
+                    <i class="material-icons blue-text text-darken-2">business</i>
+                    <span>Apoiadores</span>
+                </a>
                 <div class="collapsible-body">
                     <ul>
                         <li><a href="{{route('admin.supporters.index')}}">Apoiadores</a></li>
@@ -144,7 +173,10 @@
 
         <ul class="collapsible collapsible-accordion">
             <li class="bold">
-                <a class="collapsible-header  waves-effect waves-blue">Configurações</a>
+                <a class="collapsible-header  waves-effect waves-blue">
+                    <i class="material-icons blue-text text-darken-2">settings</i>
+                    <span>Configurações</span>
+                </a>
                 <div class="collapsible-body">
                     <ul>
                         <li><a href="">Configurações</a></li>
