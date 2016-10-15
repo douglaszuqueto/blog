@@ -116,7 +116,7 @@
                     <div class="collapsible-body">
                         <ul>
                             <li><a href="{{route('admin.supporters.index')}}">Apoiadores</a></li>
-                            <li><a href="">Cadastrar Apoiadores</a></li>
+                            <li><a href="{{route('admin.supporters.create')}}">Cadastrar Apoiador</a></li>
                         </ul>
                     </div>
                 </li>
