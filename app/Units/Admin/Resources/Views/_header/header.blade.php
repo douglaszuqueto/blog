@@ -105,7 +105,7 @@
                     <div class="collapsible-body">
                         <ul>
                             <li><a href="{{route('admin.sponsors.index')}}">Patrocinadores</a></li>
-                            <li><a href="">Cadastrar Patrocinadores</a></li>
+                            <li><a href="{{route('admin.sponsors.create')}}">Cadastrar Patrocinador</a></li>
                         </ul>
                     </div>
                 </li>
