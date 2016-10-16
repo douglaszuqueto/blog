@@ -53,6 +53,49 @@
                 </div>
             </div>
         </div>
+
+        <div class="row">
+            <div class="col l12">
+                <div id='chart'></div>
+
+                <script>
+
+                    var chart = c3.generate({
+                        data: {
+                            // iris data from R
+                            columns: [
+//                                ['data1', 30],
+//                                ['data2', 120],
+                            ],
+                            type: 'pie',
+//                            onclick: function (d, i) { console.log("onclick", d, i); },
+//                            onmouseover: function (d, i) { console.log("onmouseover", d, i); },
+//                            onmouseout: function (d, i) { console.log("onmouseout", d, i); }
+                        }
+                    });
+
+                    chart.load({
+                        columns: [
+                            ["Firefox", 50],
+                            ["Google Chrome", 25],
+                            ["Opera", 25],
+                            ["Internet Explorer", 25],
+                            ["Safari", 25],
+                        ]
+                    });
+
+                    //                    setTimeout(function () {
+                    //                        chart.unload({
+                    //                            ids: 'data1'
+                    //                        });
+                    //                        chart.unload({
+                    //                            ids: 'data2'
+                    //                        });
+                    //                    }, 2500);
+
+                </script>
+            </div>
+        </div>
     </div>
 
 @endsection

@@ -11,16 +11,22 @@
 
 
     {!! app('seotools')->generate() !!}
-
-    <link rel="stylesheet" href="{{asset('css/materialize.min.css')}}">
     <link href="http://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="{{asset('css/materialize.min.css')}}">
+    <link rel="stylesheet" href="{{asset('css/c3.min.css')}}">
+
 
     <script src="{{asset('js/jquery.min.js')}}"></script>
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css">
     <script src="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.js"></script>
+
+
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script src="{{asset('js/c3.min.js')}}"></script>
     <!-- Token for JS -->
     <script>
         window.Laravel = {!!   json_encode([
