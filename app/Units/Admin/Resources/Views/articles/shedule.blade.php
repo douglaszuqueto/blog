@@ -1,93 +1,41 @@
 @extends('admin::layout')
+<style>
+    .tabs .tab a {
+        color: #008BD3 !important;
+    }
 
+    .tabs .indicator {
+        background-color: #008BD3 !important;
+    }
+</style>
 @section('content')
     <div class="container">
 
-        <h5>Agendar Artigo</h5>
-
         <div class="row">
             <div class="col s12 m10 l10 offset-l1">
-                <table class="table">
-                    <thead>
-                    <tr>
-                        <th>Titulo</th>
-                        <th class="center-align">Agendamento</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    @foreach($itens as $row)
-                        <tr>
-                            <td>{{$row->title}}</td>
-                            <td width="20%" class="center-align ">
-                                <a class="modal-trigger" href="#modalShedule-{{$row->id}}">
-                                    <i class="material-icons green-text">query_builder</i>
-                                </a>
-                            </td>
-                            <div id="modalShedule-{{$row->id}}" class="modal">
-                                <form class="col l12" role="form" method="POST"
-                                      action="{{ route('admin.articles.shedule')}}">
-                                    {{ csrf_field() }}
-                                    <input type="hidden" name="article_id" value="{{$row->id}}">
-                                    <div class="modal-content">
-                                        <h5>Agendamento - {{$row->title}}</h5>
-                                        <div class="row">
-                                            <div class="input-field col l8 offset-l2">
-                                                <label for="datepicker">Data</label>
-                                                <input type="text" class="datepicker" name="dt_shedule" required>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="submit" class="waves-effect waves-light btn right">
-                                            <i class="material-icons right">cloud</i>Agendar
-                                        </button>
-                                        <br>
-                                        <br>
-                                    </div>
-                                </form>
-                            </div>
-                        </tr>
-                    @endforeach
-                    </tbody>
-                </table>
+                <ul class="tabs">
+                    <li class="tab col s3"><a href="#agendar">Agendar Artigo</a></li>
+                    <li class="tab col s3"><a href="#agendamento">Artigos Agendados</a></li>
+                </ul>
+                <br>
             </div>
-        </div>
-        <div class="divider offset-l1"></div>
+            <div class="col s12 l10 offset-l1" id="agendar">
+                @include('admin::articles._includes.agendar')
+            </div>
 
-        <h5>Artigos Agendados</h5>
-
-        <div class="row">
-            <div class="col l10 offset-l1">
-                <table class="table">
-                    <thead>
-                    <tr>
-                        <th width="60%">Titulo</th>
-                        <th width="20%" class="center-align"><i class="material-icons blue-text">alarm_on</i></th>
-                        <th width="20%" class="center-align">#</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    @foreach($shedules as $row)
-                        <tr>
-                            <td width="60%">{{$row['article']}}</td>
-                            <td width="20%" class="center-align">{{$row['dt_shedule']}}</td>
-                            <td width="20%" class="center-align">
-                                <a href="">
-                                    <i class="material-icons red-text" title="Remover Agendamento">delete</i>
-                                </a>
-                            </td>
-                        </tr>
-                    @endforeach
-                    </tbody>
-                </table>
+            <div class="col s12 l10 offset-l1" id="agendamento">
+                @include('admin::articles._includes.agendamento')
             </div>
         </div>
     </div>
+
     <script>
         $(document).ready(function () {
             $('.modal-trigger').leanModal({
                 starting_top: '100%'
             });
+
+            $('ul.tabs').tabs();
 
             $('.datepicker').pickadate({
                 selectMonths: true,
