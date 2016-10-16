@@ -35,13 +35,13 @@ class ArticlesController extends AbstractCrudController
 
         $shedules = [];
 
-        foreach ($this->repository->findWhere(['state' => 0]) as $key => $row) {
+        foreach ($this->repository->findWhere(['state' => 1]) as $key => $row) {
 
-            $shedule = $row->shedule()->first(['dt_shedule']);
+            $shedule = $row->shedule()->where(['state' => 0])->first(['dt_shedule']);
             if ($shedule) {
                 $shedules[$key]['id'] = $row->id;
                 $shedules[$key]['article'] = $row->title;
-                $shedules[$key]['dt_shedule'] = $row->shedule()->first(['dt_shedule']);
+                $shedules[$key]['dt_shedule'] = date('d/m/Y', strtotime($shedule['dt_shedule']));
             }
         }
 
@@ -54,8 +54,8 @@ class ArticlesController extends AbstractCrudController
     public function sheduleCreate(Request $request)
     {
         $data = $request->all();
-        $data['dt_shedule'] = date('Y-m-d H:i:s', strtotime('+12 hours', strtotime($data['dt_shedule'])));
 
+        $this->repository->update(['state' => 1], $data['article_id']);
         $this->articlesSheduleRepository->create($data);
 
         return redirect()->route('admin.articles.shedule');

@@ -61,15 +61,15 @@
                 <table class="table">
                     <thead>
                     <tr>
-                        <th>Titulo</th>
-                        <th>Data Agendamento</th>
+                        <th width="80%">Titulo</th>
+                        <th width="20%">Data Agendamento</th>
                     </tr>
                     </thead>
                     <tbody>
                     @foreach($shedules as $row)
                         <tr>
-                            <td>{{$row['article']}}</td>
-                            <td>{{$row['dt_shedule']['dt_shedule']}}</td>
+                            <td width="80%">{{$row['article']}}</td>
+                            <td width="20%" class="center-align">{{$row['dt_shedule']}}</td>
 
                         </tr>
                     @endforeach
