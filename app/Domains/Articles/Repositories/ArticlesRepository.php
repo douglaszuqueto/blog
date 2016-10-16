@@ -17,4 +17,9 @@ class ArticlesRepository extends BaseRepository
     {
         return Articles::class;
     }
+
+    public function articlesCount($state = 3)
+    {
+        return $this->findWhere(['state' => $state])->count();
+    }
 }
