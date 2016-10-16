@@ -96,20 +96,7 @@
                     <ul>
                         <li><a href="{{route('admin.articles.index')}}">Artigos</a></li>
                         <li><a href="{{route('admin.articles.create')}}">Cadastrar Artigo</a></li>
-                    </ul>
-                </div>
-            </li>
-        </ul>
-        <ul class="collapsible collapsible-accordion">
-            <li class="bold">
-                <a class="collapsible-header  waves-effect waves-blue">
-                    <i class="material-icons blue-text text-darken-2">person_pin</i>
-                    <span>Usuários</span>
-                </a>
-                <div class="collapsible-body">
-                    <ul>
-                        <li><a href="{{route('admin.users.index')}}">Usuários</a></li>
-                        <li><a href="{{route('admin.users.create')}}">Cadastrar Usuário</a></li>
+                        <li><a href="{{route('admin.articles.shedule')}}">Agendar Artigo</a></li>
                     </ul>
                 </div>
             </li>
@@ -124,20 +111,6 @@
                     <ul>
                         <li><a href="{{route('admin.news.index')}}">Notícias</a></li>
                         <li><a href="{{route('admin.news.create')}}">Cadastrar Notícia</a></li>
-                    </ul>
-                </div>
-            </li>
-        </ul>
-        <ul class="collapsible collapsible-accordion">
-            <li class="bold">
-                <a class="collapsible-header  waves-effect waves-blue">
-                    <i class="material-icons blue-text text-darken-2">email</i>
-                    <span>Mensagens</span>
-                </a>
-                <div class="collapsible-body">
-                    <ul>
-                        <li><a href="{{route('admin.contact.index')}}">Mensagens</a></li>
-                        <li><a href="">Cadastrar Mensagens</a></li>
                     </ul>
                 </div>
             </li>
@@ -170,7 +143,34 @@
                 </div>
             </li>
         </ul>
-
+        <ul class="collapsible collapsible-accordion">
+            <li class="bold">
+                <a class="collapsible-header  waves-effect waves-blue">
+                    <i class="material-icons blue-text text-darken-2">email</i>
+                    <span>Mensagens</span>
+                </a>
+                <div class="collapsible-body">
+                    <ul>
+                        <li><a href="{{route('admin.contact.index')}}">Mensagens</a></li>
+                        <li><a href="">Cadastrar Mensagens</a></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        <ul class="collapsible collapsible-accordion">
+            <li class="bold">
+                <a class="collapsible-header  waves-effect waves-blue">
+                    <i class="material-icons blue-text text-darken-2">person_pin</i>
+                    <span>Usuários</span>
+                </a>
+                <div class="collapsible-body">
+                    <ul>
+                        <li><a href="{{route('admin.users.index')}}">Usuários</a></li>
+                        <li><a href="{{route('admin.users.create')}}">Cadastrar Usuário</a></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
         <ul class="collapsible collapsible-accordion">
             <li class="bold">
                 <a class="collapsible-header  waves-effect waves-blue">

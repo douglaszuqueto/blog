@@ -20,15 +20,15 @@ class Web extends RouteFile
 
             $this->articlesRoutes();
 
-            $this->usersRoutes();
-
             $this->newsRoutes();
 
-            $this->contactRoutes();
+            $this->supportersRoutes();
 
             $this->sponsorsRoutes();
 
-            $this->supportersRoutes();
+            $this->contactRoutes();
+
+            $this->usersRoutes();
 
         });
 
@@ -65,6 +65,7 @@ class Web extends RouteFile
     protected function articlesRoutes()
     {
         $this->router->get('/articles/create', ['as' => 'admin.articles.create', 'uses' => 'ArticlesController@create']);
+        $this->router->get('/articles/shedule', ['as' => 'admin.articles.shedule', 'uses' => 'ArticlesController@shedule']);
         $this->router->get('/articles', ['as' => 'admin.articles.index', 'uses' => 'ArticlesController@index']);
         $this->router->get('/articles/{id}', ['as' => 'admin.articles.edit', 'uses' => 'ArticlesController@edit']);
         $this->router->post('/articles', ['as' => 'admin.articles.store', 'uses' => 'ArticlesController@store']);
