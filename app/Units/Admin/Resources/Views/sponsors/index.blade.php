@@ -12,9 +12,9 @@
                     <tr>
                         <th>Patrocinador</th>
                         <th>Status</th>
-                        <th>#</th>
-                        <th>#</th>
-                        <th>#</th>
+                        <th width="10%" class="center-align">#</th>
+                        <th width="10%" class="center-align">#</th>
+                        <th width="10%" class="center-align">#</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -24,13 +24,17 @@
                             <td>
                                 <span class="">Ativado</span>
                             </td>
-                            <td><a href="{{$row->url}}" target="_blank"><i class="material-icons">language</i></a></td>
-                            <td>
+                            <td class="center-align">
+                                <a href="{{$row->url}}" target="_blank">
+                                    <i class="material-icons">language</i>
+                                </a>
+                            </td>
+                            <td class="center-align">
                                 <a href="{{route('admin.sponsors.edit', $row->id)}}">
                                     <i class="material-icons red-text">delete</i>
                                 </a>
                             </td>
-                            <td>
+                            <td class="center-align">
                                 <a href="{{route('admin.sponsors.edit', $row->id)}}">
                                     <i class="material-icons">mode_edit</i>
                                 </a>
