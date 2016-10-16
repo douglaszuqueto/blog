@@ -4,6 +4,7 @@ namespace App\Units\Admin\Http\Controllers;
 
 use App\Domains\Articles\Repositories\ArticlesRepository;
 use App\Support\Http\Controllers\AbstractCrudController;
+use Illuminate\Http\Request;
 
 class ArticlesController extends AbstractCrudController
 {
@@ -23,6 +24,11 @@ class ArticlesController extends AbstractCrudController
     public function shedule()
     {
         return $this->view($this->getView('shedule'), ['itens' => $this->repository->findWhere(['state' => 0])]);
+    }
+
+    public function sheduleCreate(Request $request)
+    {
+
     }
 
 }

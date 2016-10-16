@@ -3,6 +3,7 @@
 namespace App\Domains\Articles\Providers;
 
 use App\Domains\Articles\Database\Factories\ArticlesFactory;
+use App\Domains\Articles\Database\Migrations\CreateArticlesSheduleTable;
 use App\Domains\Articles\Database\Migrations\CreateArticlesTable;
 use App\Domains\Articles\Database\Seeders\ArticlesSeeder;
 use Illuminate\Support\ServiceProvider;
@@ -23,6 +24,7 @@ class DomainServiceProvider extends ServiceProvider
     {
         $this->migrations([
             CreateArticlesTable::class,
+            CreateArticlesSheduleTable::class,
         ]);
     }
 

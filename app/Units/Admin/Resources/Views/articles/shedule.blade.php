@@ -24,27 +24,27 @@
                                 </a>
                             </td>
                             <div id="modalShedule-{{$row->id}}" class="modal">
-                                <div class="modal-content">
-                                    <h4>Agendamento de Artigo - {{$row->id}}</h4>
-                                    <form class="col l12" role="form" method="POST"
-                                          action="{{ route('admin.articles.shedule') }}">
-                                        {{ csrf_field() }}
-
+                                <form class="col l12" role="form" method="POST"
+                                      action="{{ route('admin.articles.shedule')}}">
+                                    {{ csrf_field() }}
+                                    <input type="hidden" name="id_article" value="{{$row->id}}">
+                                    <div class="modal-content">
+                                        <h4>Agendamento de Artigo - {{$row->id}}</h4>
                                         <div class="row">
                                             <div class="input-field col l8 offset-l2">
                                                 <label for="datepicker">Data</label>
                                                 <input type="text" class="datepicker" name="datepicker" required>
                                             </div>
                                         </div>
-                                    </form>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="submit" class="waves-effect waves-light btn right">
-                                        <i class="material-icons right">cloud</i>Cadastrar
-                                    </button>
-                                    <br>
-                                    <br>
-                                </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="submit" class="waves-effect waves-light btn right">
+                                            <i class="material-icons right">cloud</i>Agendar
+                                        </button>
+                                        <br>
+                                        <br>
+                                    </div>
+                                </form>
                             </div>
                         </tr>
                     @endforeach
