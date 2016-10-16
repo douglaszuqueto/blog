@@ -27,13 +27,13 @@
                                 <form class="col l12" role="form" method="POST"
                                       action="{{ route('admin.articles.shedule')}}">
                                     {{ csrf_field() }}
-                                    <input type="hidden" name="id_article" value="{{$row->id}}">
+                                    <input type="hidden" name="article_id" value="{{$row->id}}">
                                     <div class="modal-content">
                                         <h4>Agendamento de Artigo - {{$row->id}}</h4>
                                         <div class="row">
                                             <div class="input-field col l8 offset-l2">
                                                 <label for="datepicker">Data</label>
-                                                <input type="text" class="datepicker" name="datepicker" required>
+                                                <input type="text" class="datepicker" name="dt_shedule" required>
                                             </div>
                                         </div>
                                     </div>
@@ -60,8 +60,8 @@
             });
 
             $('.datepicker').pickadate({
-                selectMonths: true, // Creates a dropdown to control month
-                selectYears: 15 // Creates a dropdown of 15 years to control year
+                selectMonths: true,
+                format: 'yyyy/mm/dd'
             });
         });
     </script>

@@ -7,6 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 class ArticlesShedule extends Model
 {
 
+    protected $table = 'articles_shedule';
+
     /**
      * The attributes that are mass assignable.
      *
