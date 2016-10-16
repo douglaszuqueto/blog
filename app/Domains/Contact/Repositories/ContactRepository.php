@@ -17,4 +17,13 @@ class ContactRepository extends BaseRepository
     {
         return Contact::class;
     }
+
+    /**
+     * @param int $state
+     * @return mixed
+     */
+    public function getContactsCount($state = 0)
+    {
+        return $this->findWhere(['state' => $state])->count();
+    }
 }

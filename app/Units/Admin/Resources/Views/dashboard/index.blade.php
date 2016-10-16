@@ -44,7 +44,7 @@
                         <a href="{{route('admin.contact.index')}}"><i class="material-icons medium green-text"
                                                                       title="Caixa de Entrada">email</i></a>
                     </p>
-                    <h4 class="center-align">20</h4>
+                    <h4 class="center-align">{{$contacts}}</h4>
                 </div>
             </div>
         </div>
