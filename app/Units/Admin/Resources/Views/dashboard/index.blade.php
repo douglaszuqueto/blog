@@ -4,40 +4,79 @@
     .dashboard .card-panel {
         height: 120px;
     }
+
+    .artigos .row {
+        margin-bottom: 5px;
+    }
+
+    .article-title {
+        margin-top: -20px;
+        margin-bottom: -10px;
+    }
 </style>
 
 @section('content')
     <div class="container dashboard">
         <div class="row">
-            <div class="col s12 m4 l3">
-                <div class="card-panel ">
-                    <h6 class="flow-text center-align">Art. Pendentes</h6>
-                    <h4 class="center-align">{{$articles['pending']}}</h4>
-                </div>
-            </div>
-            <div class="col s12 m4 l3">
-                <div class="card-panel ">
-                    <h6 class="flow-text center-align">Art. Preview</h6>
-                    <h4 class="center-align">{{$articles['preview']}}</h4>
-                </div>
-            </div>
-            <div class="col s12 m4 l3">
-                <div class="card-panel ">
-                    <h6 class="flow-text center-align">Art. Agendados</h6>
-                    <h4 class="center-align">{{$articles['scheduled']}}</h4>
-                </div>
-            </div>
-            <div class="col s12 m4 l3">
-                <div class="card-panel ">
-                    <h6 class="flow-text center-align">Art. Publicados</h6>
-                    <h4 class="center-align">{{$articles['published']}}</h4>
+            <div class="col s12 m4 l4">
+                <div class="card-panel" style="height: 200px">
+                    <div class="row">
+                        <div class="col l12 article-title">
+                            <h5 class="center-align">Artigos</h5>
+                        </div>
+                    </div>
+                    <div class="col l12 artigos">
+                        <div class="row">
+                            <div class="col l3">
+                                <i class="material-icons green-text">edit</i>
+                            </div>
+                            <div class="col l5">
+                                <h6 class="left-align">Pendentes</h6>
+                            </div>
+                            <div class="col l4">
+                                <h6 class="left-align">{{$articles['preview']}}</h6>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col l3">
+                                <i class="material-icons green-text">edit</i>
+                            </div>
+                            <div class="col l5">
+                                <h6 class="left-align">Previews</h6>
+                            </div>
+                            <div class="col l4">
+                                <h6 class="left-align">{{$articles['preview']}}</h6>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col l3">
+                                <i class="material-icons green-text">edit</i>
+                            </div>
+                            <div class="col l5">
+                                <h6 class="left-align">Agendados</h6>
+                            </div>
+                            <div class="col l4">
+                                <h6 class="left-align">{{$articles['preview']}}</h6>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col l3">
+                                <i class="material-icons green-text">edit</i>
+                            </div>
+                            <div class="col l5">
+                                <h6 class="left-align">Publicados</h6>
+                            </div>
+                            <div class="col l4">
+                                <h6 class="left-align">{{$articles['preview']}}</h6>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-
-        </div>
-
-        <div class="row">
             <div class="col s12 m4 l3">
                 <div class="card-panel ">
                     <p class="center-align" style="margin-top: -20px">
