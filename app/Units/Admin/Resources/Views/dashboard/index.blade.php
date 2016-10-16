@@ -12,7 +12,7 @@
             <div class="col s12 m4 l3">
                 <div class="card-panel ">
                     <h6 class="flow-text center-align">Art. Pendentes</h6>
-                    <h4 class="center-align">{{$articles['pendent']}}</h4>
+                    <h4 class="center-align">{{$articles['pending']}}</h4>
                 </div>
             </div>
             <div class="col s12 m4 l3">
@@ -24,7 +24,7 @@
             <div class="col s12 m4 l3">
                 <div class="card-panel ">
                     <h6 class="flow-text center-align">Art. Agendados</h6>
-                    <h4 class="center-align">{{$articles['shedule']}}</h4>
+                    <h4 class="center-align">{{$articles['scheduled']}}</h4>
                 </div>
             </div>
             <div class="col s12 m4 l3">

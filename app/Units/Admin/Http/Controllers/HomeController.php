@@ -19,9 +19,9 @@ class HomeController extends Controller
 
     public function index()
     {
-        $articles['pendent'] = $this->repository->articlesCount(0);
+        $articles['pending'] = $this->repository->articlesCount(0);
         $articles['preview'] = $this->repository->articlesCount(2);
-        $articles['shedule'] = $this->repository->articlesCount(1);
+        $articles['scheduled'] = $this->repository->articlesCount(1);
         $articles['published'] = $this->repository->articlesCount(3);
 
         return $this->view('admin::dashboard.index', ['articles' => $articles]);
