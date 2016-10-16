@@ -25,7 +25,7 @@
     <script src="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.js"></script>
 
 
-    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script src="{{asset('js/d3.min.js')}}" charset="utf-8"></script>
     <script src="{{asset('js/c3.min.js')}}"></script>
     <!-- Token for JS -->
     <script>
