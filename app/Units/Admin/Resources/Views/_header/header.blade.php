@@ -24,7 +24,7 @@
         }
 
         .container {
-            width: 85%;
+            width: 95%;
         }
 
         #nav-title {

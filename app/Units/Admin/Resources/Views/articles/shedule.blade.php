@@ -14,8 +14,8 @@
         <div class="row">
             <div class="col s12 m10 l10 offset-l1">
                 <ul class="tabs">
-                    <li class="tab col s3"><a href="#agendar">Agendar Artigo</a></li>
-                    <li class="tab col s3"><a href="#agendamento">Artigos Agendados</a></li>
+                    <li class="tab col s6"><a href="#agendar">Agendar Artigo</a></li>
+                    <li class="tab col s6"><a href="#agendamento">Artigos Agendados</a></li>
                 </ul>
                 <br>
             </div>
