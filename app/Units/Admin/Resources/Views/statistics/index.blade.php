@@ -68,20 +68,32 @@
 //                                ['data2', 120],
                             ],
                             type: 'pie',
-//                            onclick: function (d, i) { console.log("onclick", d, i); },
-//                            onmouseover: function (d, i) { console.log("onmouseover", d, i); },
-//                            onmouseout: function (d, i) { console.log("onmouseout", d, i); }
+                            onclick: function (d, i) {
+                                console.log("onclick", d.value);
+                            },
+//                            onmouseover: function (d, i) { console.log("onclick", d.value); },
+//                            onmouseout: function (d, i) { console.log("onclick", d.value); },
+                        },
+                        pie: {
+                            label: {
+                                format: function (value, ratio, id) {
+                                    return d3.format('')(value);
+                                }
+                            }
                         }
                     });
 
+                    var data = {!! $browsers !!};
+                    var chartjsData = [];
+
+                    data.forEach(function (element, index, array) {
+                        chartjsData.push([
+                            element.browser,
+                            element.sessions
+                        ]);
+                    });
                     chart.load({
-                        columns: [
-                            ["Firefox", 50],
-                            ["Google Chrome", 25],
-                            ["Opera", 25],
-                            ["Internet Explorer", 25],
-                            ["Safari", 25],
-                        ]
+                        columns: chartjsData,
                     });
 
                     //                    setTimeout(function () {
