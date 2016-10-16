@@ -22,7 +22,7 @@ class ArticlesController extends AbstractCrudController
 
     public function shedule()
     {
-        return $this->view($this->getView('shedule'), ['itens' => $this->repository->findWhere(['state' => 1])]);
+        return $this->view($this->getView('shedule'), ['itens' => $this->repository->findWhere(['state' => 0])]);
     }
 
 }
