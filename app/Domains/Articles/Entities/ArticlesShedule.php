@@ -17,6 +17,7 @@ class ArticlesShedule extends Model
     protected $fillable = [
         'article_id',
         'dt_shedule',
+        'state'
     ];
 
 }

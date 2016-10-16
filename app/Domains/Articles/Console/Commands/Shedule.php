@@ -2,7 +2,7 @@
 
 namespace App\Domains\Articles\Console\Commands;
 
-use App\Domains\Articles\Repositories\ArticlesRepository;
+use App\Domains\Articles\Repositories\ArticlesSheduleRepository;
 use Illuminate\Console\Command;
 
 class Shedule extends Command
@@ -12,8 +12,14 @@ class Shedule extends Command
      */
     protected $signature = 'shedule';
 
-    public function handle(ArticlesRepository $repository)
+    public function handle(ArticlesSheduleRepository $repository)
     {
+        $shedules = $repository->findWhere(['state' => 0]);
 
+        foreach ($shedules as $row) {
+            if ($repository->isShedule($row)) {
+                $repository->update(['state' => 1], $row->id);
+            }
+        }
     }
 }

@@ -17,4 +17,12 @@ class ArticlesSheduleRepository extends BaseRepository
     {
         return ArticlesShedule::class;
     }
+
+    public function isShedule($row)
+    {
+        if (date('Y/m/d', strtotime($row->dt_shedule)) == date('Y/m/d')) {
+            return true;
+        }
+        return false;
+    }
 }
