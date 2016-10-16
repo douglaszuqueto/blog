@@ -52,6 +52,31 @@
                 </table>
             </div>
         </div>
+        <div class="divider offset-l1"></div>
+
+        <h5>Artigos Agendados</h5>
+
+        <div class="row">
+            <div class="col l10 offset-l1">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>Titulo</th>
+                        <th>Data Agendamento</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    @foreach($shedules as $row)
+                        <tr>
+                            <td>{{$row['article']}}</td>
+                            <td>{{$row['dt_shedule']['dt_shedule']}}</td>
+
+                        </tr>
+                    @endforeach
+                    </tbody>
+                </table>
+            </div>
+        </div>
     </div>
     <script>
         $(document).ready(function () {

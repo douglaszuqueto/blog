@@ -32,7 +32,23 @@ class ArticlesController extends AbstractCrudController
 
     public function shedule()
     {
-        return $this->view($this->getView('shedule'), ['itens' => $this->repository->findWhere(['state' => 0])]);
+
+        $shedules = [];
+
+        foreach ($this->repository->findWhere(['state' => 0]) as $key => $row) {
+
+            $shedule = $row->shedule()->first(['dt_shedule']);
+            if ($shedule) {
+                $shedules[$key]['id'] = $row->id;
+                $shedules[$key]['article'] = $row->title;
+                $shedules[$key]['dt_shedule'] = $row->shedule()->first(['dt_shedule']);
+            }
+        }
+
+        return $this->view($this->getView('shedule'), [
+            'itens' => $this->repository->findWhere(['state' => 0]),
+            'shedules' => $shedules
+        ]);
     }
 
     public function sheduleCreate(Request $request)

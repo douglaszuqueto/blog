@@ -20,4 +20,10 @@ class Articles extends Model
         'state',
     ];
 
+
+    public function shedule()
+    {
+        return $this->hasOne(ArticlesShedule::class, 'article_id', 'id');
+    }
+
 }
