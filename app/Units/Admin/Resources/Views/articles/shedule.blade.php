@@ -29,7 +29,7 @@
                                     {{ csrf_field() }}
                                     <input type="hidden" name="article_id" value="{{$row->id}}">
                                     <div class="modal-content">
-                                        <h4>Agendamento de Artigo - {{$row->id}}</h4>
+                                        <h5>Agendamento - {{$row->title}}</h5>
                                         <div class="row">
                                             <div class="input-field col l8 offset-l2">
                                                 <label for="datepicker">Data</label>
@@ -61,7 +61,7 @@
 
             $('.datepicker').pickadate({
                 selectMonths: true,
-                format: 'yyyy/mm/dd'
+                format: 'yyyy-mm-dd'
             });
         });
     </script>
