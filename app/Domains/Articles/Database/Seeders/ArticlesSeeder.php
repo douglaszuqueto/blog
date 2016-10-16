@@ -20,7 +20,6 @@ class ArticlesSeeder extends Seeder
             'title' => 'Title 1',
             'subtitle' => 'Subtitle 1',
             'image' => 'Image 1',
-            'url' => 'http://douglaszuqueto.com',
             'state' => 0,
             'text' => '# Article',
         ]);
