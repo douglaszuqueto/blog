@@ -14,8 +14,9 @@ class CreateArticlesTable extends Migration
             $table->increments('id');
             $table->string('title');
             $table->string('subtitle');
-            $table->string('image');
-            $table->tinyInteger('state');
+            $table->string('image')->nullable();
+            $table->tinyInteger('state')->default(0);
+            $table->text('text');
             $table->timestamps();
         });
     }
