@@ -9,10 +9,8 @@
                 <table class="table highlight">
                     <thead>
                     <tr>
-                        <th>Email</th>
-                        <th>Assunto</th>
-                        <th>Data</th>
-                        <th width="10%" class="center-align">#</th>
+                        <th>Titulo</th>
+                        <th width="10%" class="center-align">Data</th>
                         <th width="10%" class="center-align">#</th>
                         <th width="10%" class="center-align">#</th>
                     </tr>
@@ -20,12 +18,8 @@
                     <tbody>
                     @foreach($itens as $row)
                         <tr>
-                            <td>{{$row->email}}</td>
-                            <td>{{$row->subject}}</td>
-                            <td>{{$row->created_at}}</td>
-                            <td class="center-align">
-                                <span class="">Ativado</span>
-                            </td>
+                            <td>{{$row->title}}</td>
+                            <td class="center-align">{{date('d/m/Y', strtotime($row->created_at))}}</td>
                             <td class="center-align">
                                 <a href="{{route('admin.contact.edit', $row->id)}}">
                                     <i class="material-icons red-text">delete</i>
