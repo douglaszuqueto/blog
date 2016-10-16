@@ -15,6 +15,7 @@ class CreateArticlesSheduleTable extends Migration
             $table->integer('article_id')->unsigned();
             $table->foreign('article_id')->references('id')->on('articles');
             $table->dateTime('dt_shedule');
+            $table->tinyInteger('state')->default(0);
             $table->timestamps();
         });
     }
