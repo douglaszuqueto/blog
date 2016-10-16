@@ -6,8 +6,8 @@ return [
          * The default configurations to be used by the meta generator.
          */
         'defaults'       => [
-            'title'        => "@douglaszuqueto", // set false to total remove
-            'description'  => '@douglaszuqueto', // set false to total remove
+            'title'        => "Blog - @douglaszuqueto", // set false to total remove
+            'description'  => 'Blog - @douglaszuqueto', // set false to total remove
             'separator'    => ' - ',
             'keywords'     => ['@douglaszuqueto', 'Blog', 'IoT', 'Internet of Things', 'Maker'],
             'canonical'    => true, // Set null for using Url::current(), set false to total remove
