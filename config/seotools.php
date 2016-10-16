@@ -9,8 +9,8 @@ return [
             'title'        => "@douglaszuqueto", // set false to total remove
             'description'  => '@douglaszuqueto', // set false to total remove
             'separator'    => ' - ',
-            'keywords'     => [],
-            'canonical'    => false, // Set null for using Url::current(), set false to total remove
+            'keywords'     => ['@douglaszuqueto', 'Blog', 'IoT', 'Internet of Things', 'Maker'],
+            'canonical'    => true, // Set null for using Url::current(), set false to total remove
         ],
 
         /*
@@ -29,8 +29,8 @@ return [
          * The default configurations to be used by the opengraph generator.
          */
         'defaults' => [
-            'title'       => 'Over 9000 Thousand!', // set false to total remove
-            'description' => 'For those who helped create the Genki Dama', // set false to total remove
+            'title'       => 'Blog @douglaszuqueto!', // set false to total remove
+            'description' => 'Blog for makers and hobbyists', // set false to total remove
             'url'         => false,
             'type'        => false,
             'site_name'   => false,
