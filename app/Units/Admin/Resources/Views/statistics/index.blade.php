@@ -55,7 +55,7 @@
         </div>
 
         <div class="row">
-            <div class="col l12">
+            <div class="col s12 l12">
                 <div id='chart'></div>
 
                 <script>
