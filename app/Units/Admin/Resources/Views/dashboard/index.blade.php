@@ -38,7 +38,7 @@
         </div>
 
         <div class="row">
-            <div class="col s12 m4 l4">
+            <div class="col s12 m4 l3">
                 <div class="card-panel ">
                     <p class="center-align" style="margin-top: -20px">
                         <a href="{{route('admin.contact.index')}}"><i class="material-icons medium green-text"
