@@ -12,7 +12,7 @@ class Web extends RouteFile
      */
     protected function routes()
     {
-        $this->router->group(['domain' => 'blog.dev'], function () {
+        $this->router->group(['domain' => 'douglaszuqueto.com'], function () {
             $this->homeRoutes();
         });
     }
