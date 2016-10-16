@@ -20,7 +20,7 @@
                             <td>{{$row->title}}</td>
                             <td width="20%" class="center-align ">
                                 <a class="modal-trigger" href="#modalShedule-{{$row->id}}">
-                                    <i class="material-icons red-text">query_builder</i>
+                                    <i class="material-icons green-text">query_builder</i>
                                 </a>
                             </td>
                             <div id="modalShedule-{{$row->id}}" class="modal">
@@ -61,16 +61,21 @@
                 <table class="table">
                     <thead>
                     <tr>
-                        <th width="80%">Titulo</th>
-                        <th width="20%">Data Agendamento</th>
+                        <th width="60%">Titulo</th>
+                        <th width="20%" class="center-align"><i class="material-icons blue-text">alarm_on</i></th>
+                        <th width="20%" class="center-align">#</th>
                     </tr>
                     </thead>
                     <tbody>
                     @foreach($shedules as $row)
                         <tr>
-                            <td width="80%">{{$row['article']}}</td>
+                            <td width="60%">{{$row['article']}}</td>
                             <td width="20%" class="center-align">{{$row['dt_shedule']}}</td>
-
+                            <td width="20%" class="center-align">
+                                <a href="">
+                                    <i class="material-icons red-text" title="Remover Agendamento">delete</i>
+                                </a>
+                            </td>
                         </tr>
                     @endforeach
                     </tbody>
