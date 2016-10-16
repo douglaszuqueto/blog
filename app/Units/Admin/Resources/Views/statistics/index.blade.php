@@ -13,11 +13,11 @@
                 <div class="card-panel ">
                     <div class="col l3">
                         <p class="" style="">
-                            <i class="material-icons medium green-text" title="Visitantes Hoje">trending_up</i>
+                            <i class="material-icons medium green-text" title="Visitantes de Hoje">trending_up</i>
                         </p>
                     </div>
                     <div class="col l8">
-                        <h6 class="center-align">Visitantes Hoje</h6>
+                        <h6 class="center-align">Visitantes de Hoje</h6>
                         <h4 class="center-align"><strong>15</strong></h4>
                     </div>
 
