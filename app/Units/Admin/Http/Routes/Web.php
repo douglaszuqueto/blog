@@ -12,7 +12,7 @@ class Web extends RouteFile
      */
     protected function routes()
     {
-        $this->router->group(['domain' => 'admin.douglaszuqueto.com', 'middleware' => ['auth']], function () {
+        $this->router->group(['domain' => env('APP_DOMAIN_ADMIN'), 'middleware' => ['auth']], function () {
 
             $this->dashboardRoutes();
 
