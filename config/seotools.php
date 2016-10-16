@@ -17,7 +17,7 @@ return [
          * Webmaster tags are always added.
          */
         'webmaster_tags' => [
-            'google'    => null,
+            'google'    => true,
             'bing'      => null,
             'alexa'     => null,
             'pinterest' => null,
@@ -31,7 +31,7 @@ return [
         'defaults' => [
             'title'       => 'Blog @douglaszuqueto!', // set false to total remove
             'description' => 'Blog for makers and hobbyists', // set false to total remove
-            'url'         => false,
+            'url'         => true,
             'type'        => false,
             'site_name'   => false,
             'images'      => [],
@@ -43,7 +43,7 @@ return [
          */
         'defaults' => [
           //'card'        => 'summary',
-          //'site'        => '@LuizVinicius73',
+          //'site'        => '@douglaszuqueto',
         ],
     ],
 ];
