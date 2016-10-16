@@ -11,5 +11,12 @@ O projeto é 100% Open Source, ou seja, poderá ser baixado, poderá ser editado
  * Docker
  
 # Instalação
+ * Clone o projeto
+ * Instale as dependências do projeto
 
+# Configuração
+ * Arquivo .env
+    * APP_DOMAIN_ADMIN=admin.domain.com
+    * APP_DOMAIN=blog.domain.com
+    * ANALYTICS_VIEW_ID=seuIdGoogleAnalytics
 # Deploy
