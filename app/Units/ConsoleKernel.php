@@ -2,6 +2,7 @@
 
 namespace App\Units;
 
+use App\Domains\Articles\Console\Commands\Shedule;
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel;
 
@@ -13,7 +14,7 @@ class ConsoleKernel extends Kernel
      * @var array
      */
     protected $commands = [
-        //
+        Shedule::class
     ];
 
     /**
@@ -24,8 +25,7 @@ class ConsoleKernel extends Kernel
      */
     protected function schedule(Schedule $schedule)
     {
-        // $schedule->command('inspire')
-        //          ->hourly();
+        $schedule->command('shedule')->everyMinute();
     }
 
     /**
