@@ -19,13 +19,13 @@
                         <tr>
                             <td>{{$row->title}}</td>
                             <td width="20%" class="center-align ">
-                                <a class="modal-trigger" href="#modalShedule">
+                                <a class="modal-trigger" href="#modalShedule-{{$row->id}}">
                                     <i class="material-icons red-text">query_builder</i>
                                 </a>
                             </td>
-                            <div id="modalShedule" class="modal">
+                            <div id="modalShedule-{{$row->id}}" class="modal">
                                 <div class="modal-content">
-                                    <h4>Agendamento de Artigo</h4>
+                                    <h4>Agendamento de Artigo - {{$row->id}}</h4>
                                     <form class="col l12" role="form" method="POST"
                                           action="{{ route('admin.articles.shedule') }}">
                                         {{ csrf_field() }}
@@ -42,6 +42,7 @@
                                     <button type="submit" class="waves-effect waves-light btn right">
                                         <i class="material-icons right">cloud</i>Cadastrar
                                     </button>
+                                    <br>
                                     <br>
                                 </div>
                             </div>
