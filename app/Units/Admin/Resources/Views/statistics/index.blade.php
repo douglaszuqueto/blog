@@ -18,7 +18,7 @@
                     </div>
                     <div class="col l8">
                         <h6 class="center-align">Visitantes de Hoje</h6>
-                        <h4 class="center-align"><strong>15</strong></h4>
+                        <h4 class="center-align"><strong>{{$visitors['day']}}</strong></h4>
                     </div>
 
                 </div>
@@ -33,7 +33,7 @@
                     </div>
                     <div class="col l8">
                         <h6 class="center-align">Visitantes no Mês</h6>
-                        <h4 class="center-align"><strong>25</strong></h4>
+                        <h4 class="center-align"><strong>{{$visitors['month']}}</strong></h4>
                     </div>
 
                 </div>
@@ -47,7 +47,7 @@
                     </div>
                     <div class="col l8">
                         <h6 class="center-align">Visitantes Totais</h6>
-                        <h4 class="center-align"><strong>40</strong></h4>
+                        <h4 class="center-align"><strong>{{$visitors['all']}}</strong></h4>
                     </div>
 
                 </div>
