@@ -22,12 +22,12 @@
                             <td class="center-align">{{date('d/m/Y', strtotime($row->created_at))}}</td>
                             <td class="center-align">
                                 <a href="{{route('admin.contact.edit', $row->id)}}">
-                                    <i class="material-icons red-text">delete</i>
+                                    <i class="material-icons blue-text">edit</i>
                                 </a>
                             </td>
                             <td class="center-align">
                                 <a href="{{route('admin.contact.edit', $row->id)}}">
-                                    <i class="material-icons blue-text">edit</i>
+                                    <i class="material-icons red-text">delete</i>
                                 </a>
                             </td>
                         </tr>
