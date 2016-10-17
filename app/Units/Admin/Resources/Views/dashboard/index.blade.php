@@ -34,7 +34,7 @@
                                 <h6 class="left-align">Pendentes</h6>
                             </div>
                             <div class="col l4">
-                                <h6 class="left-align">{{$articles['preview']}}</h6>
+                                <h6 class="left-align">{{$articles['pending']}}</h6>
                             </div>
                         </div>
 
@@ -58,7 +58,7 @@
                                 <h6 class="left-align">Agendados</h6>
                             </div>
                             <div class="col l4">
-                                <h6 class="left-align">{{$articles['preview']}}</h6>
+                                <h6 class="left-align">{{$articles['scheduled']}}</h6>
                             </div>
                         </div>
 
@@ -70,7 +70,7 @@
                                 <h6 class="left-align">Publicados</h6>
                             </div>
                             <div class="col l4">
-                                <h6 class="left-align">{{$articles['preview']}}</h6>
+                                <h6 class="left-align">{{$articles['published']}}</h6>
                             </div>
                         </div>
                     </div>
