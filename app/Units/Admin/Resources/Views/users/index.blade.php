@@ -23,7 +23,7 @@
                             <td>{{$row->name}}</td>
                             <td class="hide-on-small-only">{{$row->email}}</td>
                             <td class="center-align">
-                                <i class="material-icons">visibility</i>
+                                <i class="material-icons {{$row->state ? 'green-text' : '' }}">visibility</i>
                             </td>
                             <td class="center-align">
                                 <a href="{{route('admin.users.edit', $row->id)}}">
@@ -31,7 +31,7 @@
                                 </a>
                             </td>
                             <td class="center-align">
-                                <a href="{{route('admin.users.edit', $row->id)}}">
+                                <a class="removeUser" href="#" data-id="{{$row->id}}">
                                     <i class="material-icons red-text">delete</i>
                                 </a>
                             </td>
@@ -42,6 +42,28 @@
             </div>
         </div>
     </div>
+    <script>
+        $(document).ready(function () {
+            $('.removeUser').click(function () {
+                removeUser($(this).attr('data-id'))
+            })
+        });
+
+        function removeUser(user_id) {
+            $.ajax({
+                url: '/users/' + user_id,
+                method: 'POST',
+                data: {
+                    '_token': window.Laravel.csrfToken,
+                    '_method': 'PUT',
+                    'state': 0
+                },
+                success: function (data) {
+                    Materialize.toast('Usuário excluido', 2000);
+                }
+            });
+        }
+    </script>
 
 
 @endsection
