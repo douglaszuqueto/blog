@@ -11,8 +11,8 @@
                     <thead>
                     <tr>
                         <th>Usuário</th>
-                        <th>Email</th>
-                        <th width="10%" class="center-align">Status</th>
+                        <th class="hide-on-small-only">Email</th>
+                        <th width="5%" class="center-align">#</th>
                         <th width="5%" class="center-align">#</th>
                         <th width="5%" class="center-align">#</th>
                     </tr>
@@ -21,9 +21,9 @@
                     @foreach($itens as $row)
                         <tr>
                             <td>{{$row->name}}</td>
-                            <td>{{$row->email}}</td>
+                            <td class="hide-on-small-only">{{$row->email}}</td>
                             <td class="center-align">
-                                <span class="">Ativado</span>
+                                <i class="material-icons">visibility</i>
                             </td>
                             <td class="center-align">
                                 <a href="{{route('admin.users.edit', $row->id)}}">
