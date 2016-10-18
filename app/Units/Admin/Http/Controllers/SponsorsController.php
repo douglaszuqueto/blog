@@ -31,7 +31,9 @@ class SponsorsController extends AbstractCrudController
 
         $data['image_url'] = asset('storage/images/'. $data['image_name']);
 
-        return $this->repository->create($data);
+        $this->repository->create($data);
+
+        return redirect()->route('admin.sponsors.index');
 
     }
 
