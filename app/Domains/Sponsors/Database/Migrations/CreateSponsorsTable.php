@@ -14,7 +14,8 @@ class CreateSponsorsTable extends Migration
             $table->increments('id');
             $table->string('sponsor');
             $table->string('url');
-            $table->string('image')->nullable();
+            $table->string('image_name')->nullable();
+            $table->string('image_url')->nullable();
             $table->boolean('state')->default(1);
             $table->timestamps();
         });

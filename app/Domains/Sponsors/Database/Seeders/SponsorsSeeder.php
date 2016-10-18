@@ -19,7 +19,8 @@ class SponsorsSeeder extends Seeder
         DB::table('sponsors')->insert([
             'sponsor' => 'Sponsor 1',
             'url' => 'url',
-            'image' => 'image',
+            'image_name' => 'image_name',
+            'image_url' => 'image_url',
             'state' => 1,
         ]);
 

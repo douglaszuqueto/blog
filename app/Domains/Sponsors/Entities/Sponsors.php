@@ -15,7 +15,8 @@ class Sponsors extends Model
     protected $fillable = [
         'sponsor',
         'url',
-        'image',
+        'image_name',
+        'image_url',
         'state',
     ];
 
