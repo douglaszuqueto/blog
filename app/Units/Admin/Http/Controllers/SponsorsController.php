@@ -5,9 +5,12 @@ namespace App\Units\Admin\Http\Controllers;
 use App\Domains\Sponsors\Repositories\SponsorsRepository;
 use App\Support\Http\Controllers\AbstractCrudController;
 use Illuminate\Http\Request;
+use App\Support\Http\Controllers\Traits\FileUpload;
 
 class SponsorsController extends AbstractCrudController
 {
+    use FileUpload;
+
     protected $modulo = 'admin';
     protected $page = 'Sponsors';
     protected $page_description = 'listing';
@@ -25,11 +28,11 @@ class SponsorsController extends AbstractCrudController
     {
         $data = $request->except(['images']);
 
-        $image = $request->file('image');
-        $data['image_name'] = 'img-' . md5(date('d/m/Y H:i:s')) . '.' . $image->getClientOriginalExtension();
-        $image->storeAs('public/images', $data['image_name'], 'local', 'public');
+        $upload = $this->upload($request->file('image'));
 
-        $data['image_url'] = asset('storage/images/'. $data['image_name']);
+        $data['image_name'] = $upload['image_name'];
+        $data['image_url'] = $upload['image_url'];
+
 
         $this->repository->create($data);
 
