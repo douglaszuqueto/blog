@@ -15,7 +15,8 @@ class Supporters extends Model
     protected $fillable = [
         'supporter',
         'url',
-        'image',
+        'image_name',
+        'image_url',
         'state',
     ];
 
