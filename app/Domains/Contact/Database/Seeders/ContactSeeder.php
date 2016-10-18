@@ -16,7 +16,7 @@ class ContactSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('contact')->insert([
+        DB::table('contacts')->insert([
             'title' => 'News 1',
             'subject' => 'Subject 1',
             'message' => 'Message 1',
