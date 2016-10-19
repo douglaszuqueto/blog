@@ -53,6 +53,8 @@ return [
 
     'url' => env('APP_URL', 'http://localhost'),
 
+    'secure' => env('APP_SECURE', false),
+
     /*
     |--------------------------------------------------------------------------
     | Application Timezone

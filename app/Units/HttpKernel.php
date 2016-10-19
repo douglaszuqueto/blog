@@ -2,6 +2,7 @@
 
 namespace App\Units;
 
+use App\Units\Core\Http\Middleware\RedirectIfWrongUrlOrProtocol;
 use Illuminate\Foundation\Http\Kernel;
 
 class HttpKernel extends Kernel
@@ -30,6 +31,8 @@ class HttpKernel extends Kernel
             \Illuminate\View\Middleware\ShareErrorsFromSession::class,
             \App\Units\Core\Http\Middleware\VerifyCsrfToken::class,
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
+
+            RedirectIfWrongUrlOrProtocol::class
         ],
 
         'api' => [
