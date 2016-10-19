@@ -12,7 +12,7 @@ trait FileUpload
         $data['image_name'] = $this->getFileName($image->getClientOriginalExtension());
         $data['image_url'] = $this->getFileUrl($data['image_name']);
 
-        $image->storeAs('images', $data['image_name'], 'uploads');
+        $image->storeAs('images', $data['image_name'], 'upload');
 
         return $data;
     }
