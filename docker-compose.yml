@@ -38,12 +38,14 @@ services:
 
   # PHP (with Caddy)
   app:
-    image: ambientum/php:7.0-caddy
+    build:
+      context: ./caddy
+      dockerfile: Dockerfile
     container_name: blog-app
     volumes:
       - .:/var/www/app
     ports:
-      - "80:8080"
+      - "443:443"
     links:
       - mysql
       - cache

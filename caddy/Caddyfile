@@ -1,0 +1,18 @@
+*.blog.dev:443 {
+
+  tls ./caddy/cert.crt ./caddy/cert.key
+  root /var/www/app/public
+  log stdout
+  errors stderr
+
+  fastcgi / 127.0.0.1:9000 php
+
+  rewrite {
+    to {path} {path}/ /index.php?{query}
+  }
+
+  gzip {
+    level 1
+  }
+
+}
