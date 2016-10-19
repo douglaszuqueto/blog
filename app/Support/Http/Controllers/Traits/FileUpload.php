@@ -12,7 +12,7 @@ trait FileUpload
         $data['image_name'] = $this->getFileName($image->getClientOriginalExtension());
         $data['image_url'] = $this->getFileUrl($data['image_name']);
 
-        $image->storeAs('public/images', $data['image_name'], 'local', 'public');
+        $image->storeAs('images', $data['image_name'], 'uploads',);
 
         return $data;
     }
@@ -24,6 +24,6 @@ trait FileUpload
 
     protected function getFileUrl($image_name)
     {
-        return asset('storage/images/' . $image_name);
+        return asset('uploads/images/' . $image_name);
     }
 }
