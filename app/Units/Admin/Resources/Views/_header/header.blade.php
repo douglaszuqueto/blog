@@ -10,6 +10,10 @@
         z-index: 9999;
     }
 
+    .side-nav{
+        height: 100% !important;
+    }
+
     #nav-mobile {
         margin-top: 65px;
     }
