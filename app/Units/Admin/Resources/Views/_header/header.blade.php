@@ -180,7 +180,7 @@
                 <div class="collapsible-body">
                     <ul>
                         <li><a href="">Configurações</a></li>
-                        <li><a href="">Categorias</a></li>
+                        <li><a href="{{route('admin.categories.index')}}">Categorias</a></li>
                         <li><a href="">Tags</a></li>
                     </ul>
                 </div>

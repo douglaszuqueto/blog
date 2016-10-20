@@ -30,6 +30,8 @@ class Web extends RouteFile
 
             $this->usersRoutes();
 
+            $this->categoriesRoutes();
+
         });
 
     }
@@ -99,4 +101,14 @@ class Web extends RouteFile
         $this->router->post('/contact', ['as' => 'admin.contact.store', 'uses' => 'ContactController@store']);
         $this->router->put('/contact/{id}', ['as' => 'admin.contact.update', 'uses' => 'ContactController@update']);
     }
+
+    protected function categoriesRoutes()
+    {
+        $this->router->get('/categories/create', ['as' => 'admin.categories.create', 'uses' => 'CategoriesController@create']);
+        $this->router->get('/categories', ['as' => 'admin.categories.index', 'uses' => 'CategoriesController@index']);
+        $this->router->get('/categories/{id}', ['as' => 'admin.categories.edit', 'uses' => 'CategoriesController@edit']);
+        $this->router->post('/categories', ['as' => 'admin.categories.store', 'uses' => 'CategoriesController@store']);
+        $this->router->put('/categories/{id}', ['as' => 'admin.categories.update', 'uses' => 'CategoriesController@update']);
+    }
+
 }
