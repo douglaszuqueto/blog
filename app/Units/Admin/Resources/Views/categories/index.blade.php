@@ -58,7 +58,7 @@
                     'state': 0
                 },
                 success: function (data) {
-                    Materialize.toast('Tag excluida', 2000);
+                    Materialize.toast('Categoria excluida', 2000);
 
                 }
             });
