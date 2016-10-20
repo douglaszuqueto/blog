@@ -32,6 +32,8 @@ class Web extends RouteFile
 
             $this->categoriesRoutes();
 
+            $this->tagsRoutes();
+
         });
 
     }
@@ -109,6 +111,15 @@ class Web extends RouteFile
         $this->router->get('/categories/{id}', ['as' => 'admin.categories.edit', 'uses' => 'CategoriesController@edit']);
         $this->router->post('/categories', ['as' => 'admin.categories.store', 'uses' => 'CategoriesController@store']);
         $this->router->put('/categories/{id}', ['as' => 'admin.categories.update', 'uses' => 'CategoriesController@update']);
+    }
+
+    protected function tagsRoutes()
+    {
+        $this->router->get('/tags/create', ['as' => 'admin.tags.create', 'uses' => 'TagsController@create']);
+        $this->router->get('/tags', ['as' => 'admin.tags.index', 'uses' => 'TagsController@index']);
+        $this->router->get('/tags/{id}', ['as' => 'admin.tags.edit', 'uses' => 'TagsController@edit']);
+        $this->router->post('/tags', ['as' => 'admin.tags.store', 'uses' => 'TagsController@store']);
+        $this->router->put('/tags/{id}', ['as' => 'admin.tags.update', 'uses' => 'TagsController@update']);
     }
 
 }

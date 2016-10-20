@@ -183,6 +183,7 @@ return [
         App\Domains\Sponsors\Providers\DomainServiceProvider::class,
         App\Domains\Supporters\Providers\DomainServiceProvider::class,
         App\Domains\Categories\Providers\DomainServiceProvider::class,
+        App\Domains\Tags\Providers\DomainServiceProvider::class,
 
 
         /*
