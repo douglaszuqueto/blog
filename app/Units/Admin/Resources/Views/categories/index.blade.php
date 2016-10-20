@@ -20,7 +20,7 @@
                     <tbody>
                     @foreach($itens as $row)
                         <tr>
-                            <td>{{$row->supporter}}</td>
+                            <td>{{$row->category}}</td>
                             <td>
                                 <span class="">Ativado</span>
                             </td>

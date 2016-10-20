@@ -182,6 +182,8 @@ return [
         App\Domains\Contact\Providers\DomainServiceProvider::class,
         App\Domains\Sponsors\Providers\DomainServiceProvider::class,
         App\Domains\Supporters\Providers\DomainServiceProvider::class,
+        App\Domains\Categories\Providers\DomainServiceProvider::class,
+
 
         /*
          * Units Service Providers...

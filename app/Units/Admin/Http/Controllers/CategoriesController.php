@@ -2,6 +2,7 @@
 
 namespace App\Units\Admin\Http\Controllers;
 
+use App\Domains\Categories\Repositories\CategoriesRepository;
 use App\Support\Http\Controllers\AbstractCrudController;
 
 class CategoriesController extends AbstractCrudController
@@ -11,10 +12,13 @@ class CategoriesController extends AbstractCrudController
     protected $page = 'Categories';
     protected $page_description = 'listing';
 
-
-    public function __construct()
+    /**
+     * CategoriesController constructor.
+     * @param CategoriesRepository $repository
+     */
+    public function __construct(CategoriesRepository $repository)
     {
-
+        $this->repository = $repository;
     }
 
 }
