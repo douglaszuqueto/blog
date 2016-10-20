@@ -180,6 +180,8 @@
                 <div class="collapsible-body">
                     <ul>
                         <li><a href="">Configurações</a></li>
+                        <li><a href="">Categorias</a></li>
+                        <li><a href="">Tags</a></li>
                     </ul>
                 </div>
             </li>
