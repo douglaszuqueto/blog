@@ -12,7 +12,7 @@
                     <thead>
                     <tr>
                         <th>Tag</th>
-                        <th>Status</th>
+                        <th width="10%" class="center-align">Status</th>
                         <th width="10%" class="center-align">#</th>
                         <th width="10%" class="center-align">#</th>
                     </tr>
@@ -21,8 +21,8 @@
                     @foreach($itens as $row)
                         <tr>
                             <td>{{$row->tag}}</td>
-                            <td>
-                                <span class="">Ativado</span>
+                            <td class="center-align">
+                                <i class="material-icons {{$row->state ? 'green-text' : ''}}">visibility</i>
                             </td>
                             <td class="center-align">
                                 <a href="{{route('admin.tags.edit', $row->id)}}">
@@ -30,7 +30,7 @@
                                 </a>
                             </td>
                             <td class="center-align">
-                                <a href="{{route('admin.tags.edit', $row->id)}}">
+                                <a class="removeTag" href="#" data-id="{{$row->id}}">
                                     <i class="material-icons red-text">delete</i>
                                 </a>
                             </td>
@@ -41,5 +41,28 @@
             </div>
         </div>
     </div>
+    <script>
+        $(document).ready(function () {
+            $('.removeTag').click(function () {
+                removeTag($(this).attr('data-id'))
+            })
+        });
+
+        function removeTag(tag_id) {
+            $.ajax({
+                url: '/tags/' + tag_id,
+                method: 'POST',
+                data: {
+                    '_token': window.Laravel.csrfToken,
+                    '_method': 'PUT',
+                    'state': 0
+                },
+                success: function (data) {
+                    Materialize.toast('Tag excluida', 2000);
+
+                }
+            });
+        }
+    </script>
 
 @endsection
