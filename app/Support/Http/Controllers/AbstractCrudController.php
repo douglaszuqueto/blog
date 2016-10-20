@@ -5,6 +5,7 @@ namespace App\Support\Http\Controllers;
 use App\Support\Http\Controllers\Traits\Create;
 use App\Support\Http\Controllers\Traits\Edit;
 use App\Support\Http\Controllers\Traits\Index;
+use App\Support\Http\Controllers\Traits\Remove;
 use App\Support\Http\Controllers\Traits\Store;
 use App\Support\Http\Controllers\Traits\Update;
 use Artesaos\SEOTools\Traits\SEOTools;
@@ -21,5 +22,6 @@ abstract class AbstractCrudController extends Controller implements Contract
     use Store;
     use Edit;
     use Update;
+    use Remove;
 
 }

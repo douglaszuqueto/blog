@@ -12,7 +12,7 @@
                     <thead>
                     <tr>
                         <th>Categoria</th>
-                        <th>Status</th>
+                        <th width="10%" class="center-align">Status</th>
                         <th width="10%" class="center-align">#</th>
                         <th width="10%" class="center-align">#</th>
                     </tr>
@@ -21,8 +21,8 @@
                     @foreach($itens as $row)
                         <tr>
                             <td>{{$row->category}}</td>
-                            <td>
-                                <span class="">Ativado</span>
+                            <td class="center-align">
+                                <i class="material-icons {{$row->state ? 'green-text' : ''}}">visibility</i>
                             </td>
                             <td class="center-align">
                                 <a href="{{route('admin.categories.edit', $row->id)}}">
@@ -30,7 +30,7 @@
                                 </a>
                             </td>
                             <td class="center-align">
-                                <a href="{{route('admin.categories.edit', $row->id)}}">
+                                <a class="removeCategory" href="#" data-id="{{$row->id}}">
                                     <i class="material-icons red-text">delete</i>
                                 </a>
                             </td>
@@ -41,5 +41,28 @@
             </div>
         </div>
     </div>
+    <script>
+        $(document).ready(function () {
+            $('.removeCategory').click(function () {
+                removeCategory($(this).attr('data-id'))
+            })
+        });
+
+        function removeCategory(category_id) {
+            $.ajax({
+                url: '/categories/' + category_id,
+                method: 'POST',
+                data: {
+                    '_token': window.Laravel.csrfToken,
+                    '_method': 'PUT',
+                    'state': 0
+                },
+                success: function (data) {
+                    Materialize.toast('Tag excluida', 2000);
+
+                }
+            });
+        }
+    </script>
 
 @endsection

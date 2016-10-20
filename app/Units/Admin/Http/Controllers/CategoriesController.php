@@ -12,6 +12,7 @@ class CategoriesController extends AbstractCrudController
     protected $page = 'Categories';
     protected $page_description = 'listing';
 
+
     /**
      * CategoriesController constructor.
      * @param CategoriesRepository $repository
