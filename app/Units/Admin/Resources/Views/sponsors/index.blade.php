@@ -35,7 +35,7 @@
                                 </a>
                             </td>
                             <td class="center-align">
-                                <a href="{{route('admin.sponsors.edit', $row->id)}}">
+                                <a class="removeSponsor" href="#" data-id="{{$row->id}}">
                                     <i class="material-icons red-text">delete</i>
                                 </a>
                             </td>
@@ -46,5 +46,27 @@
             </div>
         </div>
     </div>
+    <script>
+        $(document).ready(function () {
+            $('.removeSponsor').click(function () {
+                removeSponsor($(this).attr('data-id'))
+            })
+        });
+
+        function removeSponsor(sponsor_id) {
+            $.ajax({
+                url: '/sponsors/' + sponsor_id,
+                method: 'POST',
+                data: {
+                    '_token': window.Laravel.csrfToken,
+                    '_method': 'PUT',
+                    'state': 0
+                },
+                success: function (data) {
+                    Materialize.toast('Patrocinador desativado', 2000);
+                }
+            });
+        }
+    </script>
 
 @endsection

@@ -36,7 +36,7 @@
                                 </a>
                             </td>
                             <td class="center-align">
-                                <a href="{{route('admin.supporters.edit', $row->id)}}">
+                                <a class="removeSupporter" href="#" data-id="{{$row->id}}">
                                     <i class="material-icons red-text">delete</i>
                                 </a>
                             </td>
@@ -47,5 +47,27 @@
             </div>
         </div>
     </div>
+    <script>
+        $(document).ready(function () {
+            $('.removeSupporter').click(function () {
+                removeSupporter($(this).attr('data-id'))
+            })
+        });
+
+        function removeSupporter(supporter_id) {
+            $.ajax({
+                url: '/supporters/' + supporter_id,
+                method: 'POST',
+                data: {
+                    '_token': window.Laravel.csrfToken,
+                    '_method': 'PUT',
+                    'state': 0
+                },
+                success: function (data) {
+                    Materialize.toast('Apoiador desativado', 2000);
+                }
+            });
+        }
+    </script>
 
 @endsection
