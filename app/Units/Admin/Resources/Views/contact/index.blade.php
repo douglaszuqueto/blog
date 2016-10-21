@@ -11,6 +11,7 @@
                     <tr>
                         <th>Titulo</th>
                         <th width="10%" class="center-align">Data</th>
+                        <th width="10%" class="center-align">Status</th>
                         <th width="10%" class="center-align">#</th>
                         <th width="10%" class="center-align">#</th>
                     </tr>
@@ -20,6 +21,9 @@
                         <tr>
                             <td>{{$row->title}}</td>
                             <td class="center-align">{{date('d/m/Y', strtotime($row->created_at))}}</td>
+                            <td class="center-align">
+                                <i class="material-icons {{$row->state ? 'green-text' : ''}}">visibility</i>
+                            </td>
                             <td class="center-align">
                                 <a href="{{route('admin.contact.edit', $row->id)}}">
                                     <i class="material-icons blue-text">edit</i>
