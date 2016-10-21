@@ -156,7 +156,6 @@
                 <div class="collapsible-body">
                     <ul>
                         <li><a href="{{route('admin.contact.index')}}">Mensagens</a></li>
-                        <li><a href="">Cadastrar Mensagens</a></li>
                     </ul>
                 </div>
             </li>
