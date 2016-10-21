@@ -12,8 +12,8 @@
                     <thead>
                     <tr>
                         <th>Apoiador</th>
-                        <th>Status</th>
-                        <th width="10%" class="center-align">#</th>
+                        <th width="10%" class="center-align">Site</th>
+                        <th width="10%" class="center-align">Status</th>
                         <th width="10%" class="center-align">#</th>
                         <th width="10%" class="center-align">#</th>
                     </tr>
@@ -22,13 +22,13 @@
                     @foreach($itens as $row)
                         <tr>
                             <td>{{$row->supporter}}</td>
-                            <td>
-                                <span class="">Ativado</span>
-                            </td>
                             <td class="center-align">
                                 <a href="{{$row->url}}" target="_blank">
                                     <i class="material-icons">language</i>
                                 </a>
+                            </td>
+                            <td class="center-align">
+                                <i class="material-icons {{$row->state ? 'green-text' : ''}}">visibility</i>
                             </td>
                             <td class="center-align">
                                 <a href="{{route('admin.supporters.edit', $row->id)}}">
