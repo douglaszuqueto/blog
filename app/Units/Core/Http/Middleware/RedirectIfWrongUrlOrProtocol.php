@@ -41,7 +41,11 @@ class RedirectIfWrongUrlOrProtocol
     protected function redirect()
     {
         $protocol = config('app.secure') ? 'https://' : 'http://';
-        $domain = env('APP_DOMAIN_ADMIN');
+
+        $currentDomain = $this->getDomain();
+
+        $domain = explode('.', $currentDomain);
+        $domain = $domain[0] == 'admin' ? env('APP_DOMAIN_ADMIN') : env('APP_DOMAIN');
         $path = $this->request->path() == '/' ? '' : '/' . $this->request->path();
 
         return redirect()->to($protocol . $domain . $path);
