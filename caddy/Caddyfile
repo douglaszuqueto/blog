@@ -1,4 +1,4 @@
-*.blog.dev:443 {
+*.blog.dev:443, blog.dev:443 {
 
   tls ./caddy/cert.crt ./caddy/cert.key
   root /var/www/app/public
