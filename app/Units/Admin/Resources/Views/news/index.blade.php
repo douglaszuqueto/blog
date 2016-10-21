@@ -11,7 +11,7 @@
                     <thead>
                     <tr>
                         <th>Titulo</th>
-                        <th width="10%" class="center-align">#</th>
+                        <th width="10%" class="center-align">Link</th>
                         <th width="10%" class="center-align">#</th>
                         <th width="10%" class="center-align">#</th>
                     </tr>
@@ -20,7 +20,8 @@
                     @foreach($itens as $row)
                         <tr>
                             <td>{{$row->title}}</td>
-                            <td class="center-align"><a href="{{$row->url}}" target="_blank"><i class="material-icons">language</i></a>
+                            <td class="center-align">
+                                <a href="{{$row->url}}" target="_blank"><i class="material-icons">language</i></a>
                             </td>
                             <td class="center-align">
                                 <a href="{{route('admin.news.edit', $row->id)}}">
