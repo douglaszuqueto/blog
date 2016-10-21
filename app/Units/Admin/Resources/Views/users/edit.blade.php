@@ -41,10 +41,10 @@
                 </div>
                 <div class="row">
                     <div class="">
-                        <p class="col s12 l12">
-                            <input type="checkbox" id="state" name="state" />
+                        <div class="col s12 l12">
+                            <input type="checkbox" id="state" name="state" {{$item->state ? 'checked' : ''}}/>
                             <label for="state">Status</label>
-                        </p>
+                        </div>
                     </div>
                 </div>
 
@@ -58,15 +58,5 @@
             </form>
         </div>
     </div>
-    <script>
-        $(document).ready(function () {
-            $('#state').on('change', function () {
-                $('#state').attr('value', 0);
-                if ($('#state').prop('checked')) {
-                    $('#state').attr('value', 1);
-                }
-            });
-        });
-    </script>
 
 @endsection

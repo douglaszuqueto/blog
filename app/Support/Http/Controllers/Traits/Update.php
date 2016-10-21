@@ -13,7 +13,16 @@ trait Update
      */
     public function update(Request $request, $id)
     {
-        $this->repository->update($request->all(), $id);
+        $data = $request->all();
+
+        $state = 0;
+
+        if (isset($data['state']) and $data['state'] == 'on') {
+            $state = 1;
+        }
+        $data['state'] = $state;
+
+        $this->repository->update($data, $id);
 
         return redirect()->route($this->getRoute('index'));
     }
