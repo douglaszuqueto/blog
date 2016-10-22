@@ -120,6 +120,7 @@ class Web extends RouteFile
         $this->router->get('/tags/{id}', ['as' => 'admin.tags.edit', 'uses' => 'TagsController@edit']);
         $this->router->post('/tags', ['as' => 'admin.tags.store', 'uses' => 'TagsController@store']);
         $this->router->put('/tags/{id}', ['as' => 'admin.tags.update', 'uses' => 'TagsController@update']);
+        $this->router->delete('/tags/{id}', ['as' => 'admin.tags.remove', 'uses' => 'TagsController@remove']);
     }
 
 }

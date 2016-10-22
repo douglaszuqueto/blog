@@ -8,10 +8,20 @@ trait Remove
 
     /**
      * @param $id
-     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     * @return array
      */
     public function remove($id)
     {
-        return $this->repository->delete($id);
+        if (!$this->repository->delete($id)) {
+            return [
+                'error' => true,
+                'error_message' => 'Erro ao excluir a tag'
+            ];
+        };
+
+        return [
+            'error' => false,
+            'error_message' => 'Tag excluída com sucesso'
+        ];
     }
 }

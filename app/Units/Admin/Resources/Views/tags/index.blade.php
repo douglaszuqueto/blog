@@ -54,11 +54,13 @@
                 method: 'POST',
                 data: {
                     '_token': window.Laravel.csrfToken,
-                    '_method': 'PUT',
+                    '_method': 'DELETE',
                     'state': 0
                 },
                 success: function (data) {
-                    Materialize.toast('Tag excluida', 2000);
+                    Materialize.toast('Tag excluída', 2000, null, function () {
+                        location.reload();
+                    });
 
                 }
             });
