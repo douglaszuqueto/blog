@@ -15,13 +15,13 @@ trait Remove
         if (!$this->repository->delete($id)) {
             return [
                 'error' => true,
-                'error_message' => 'Erro ao excluir a tag'
+                'error_message' => 'Erro ao excluir o item'
             ];
         };
 
         return [
             'error' => false,
-            'error_message' => 'Tag excluída com sucesso'
+            'error_message' => 'Item excluído(a) com sucesso'
         ];
     }
 }

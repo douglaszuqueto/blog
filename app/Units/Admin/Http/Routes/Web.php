@@ -111,6 +111,8 @@ class Web extends RouteFile
         $this->router->get('/categories/{id}', ['as' => 'admin.categories.edit', 'uses' => 'CategoriesController@edit']);
         $this->router->post('/categories', ['as' => 'admin.categories.store', 'uses' => 'CategoriesController@store']);
         $this->router->put('/categories/{id}', ['as' => 'admin.categories.update', 'uses' => 'CategoriesController@update']);
+        $this->router->delete('/categories/{id}', ['as' => 'admin.tags.remove', 'uses' => 'CategoriesController@remove']);
+
     }
 
     protected function tagsRoutes()

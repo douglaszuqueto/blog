@@ -58,7 +58,7 @@
                     'state': 0
                 },
                 success: function (data) {
-                    Materialize.toast('Tag excluída', 2000, null, function () {
+                    Materialize.toast(data.error_message, 1000, null, function () {
                         location.reload();
                     });
 
