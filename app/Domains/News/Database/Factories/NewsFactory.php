@@ -19,6 +19,8 @@ class NewsFactory extends ModelFactory
         return [
             'title' => $this->faker->title,
             'url' => $this->faker->url,
+            'image_name' => $this->faker->name,
+            'image_url' => $this->faker->url,
         ];
     }
 }

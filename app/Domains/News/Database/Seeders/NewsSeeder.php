@@ -19,6 +19,8 @@ class NewsSeeder extends Seeder
         DB::table('news')->insert([
             'title' => 'Title',
             'url' => 'url',
+            'image_name' => 'image_name',
+            'image_url' => 'image_url',
         ]);
 
 //        factory(News::class)->create();
