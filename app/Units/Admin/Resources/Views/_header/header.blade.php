@@ -10,7 +10,7 @@
         z-index: 9999;
     }
 
-    .side-nav{
+    .side-nav {
         height: 100% !important;
     }
 
@@ -107,71 +107,42 @@
         </ul>
         <ul class="collapsible collapsible-accordion">
             <li class="bold">
-                <a class="collapsible-header  waves-effect waves-blue">
-                    <i class="material-icons blue-text text-darken-2 blue-text text-darken-2">subject</i>
+                <a href="{{route('admin.news.index')}}" class="waves-effect waves-blue">
+                    <i class="material-icons blue-text text-darken-2">subject</i>
                     <span>Notícias</span>
                 </a>
-                <div class="collapsible-body">
-                    <ul>
-                        <li><a href="{{route('admin.news.index')}}">Notícias</a></li>
-                        <li><a href="{{route('admin.news.create')}}">Cadastrar Notícia</a></li>
-                    </ul>
-                </div>
             </li>
         </ul>
         <ul class="collapsible collapsible-accordion">
             <li class="bold">
-                <a class="collapsible-header  waves-effect waves-blue">
+                <a href="{{route('admin.sponsors.index')}}" class="waves-effect waves-blue">
                     <i class="material-icons blue-text text-darken-2">business</i>
                     <span>Patrocinadores</span>
                 </a>
-                <div class="collapsible-body">
-                    <ul>
-                        <li><a href="{{route('admin.sponsors.index')}}">Patrocinadores</a></li>
-                        <li><a href="{{route('admin.sponsors.create')}}">Cadastrar Patrocinador</a></li>
-                    </ul>
-                </div>
             </li>
         </ul>
         <ul class="collapsible collapsible-accordion">
             <li class="bold">
-                <a class="collapsible-header  waves-effect waves-blue">
+                <a href="{{route('admin.supporters.index')}}" class="waves-effect waves-blue">
                     <i class="material-icons blue-text text-darken-2">business</i>
                     <span>Apoiadores</span>
                 </a>
-                <div class="collapsible-body">
-                    <ul>
-                        <li><a href="{{route('admin.supporters.index')}}">Apoiadores</a></li>
-                        <li><a href="{{route('admin.supporters.create')}}">Cadastrar Apoiador</a></li>
-                    </ul>
-                </div>
             </li>
         </ul>
         <ul class="collapsible collapsible-accordion">
             <li class="bold">
-                <a class="collapsible-header  waves-effect waves-blue">
+                <a href="{{route('admin.contact.index')}}" class="waves-effect waves-blue">
                     <i class="material-icons blue-text text-darken-2">email</i>
                     <span>Mensagens</span>
                 </a>
-                <div class="collapsible-body">
-                    <ul>
-                        <li><a href="{{route('admin.contact.index')}}">Mensagens</a></li>
-                    </ul>
-                </div>
             </li>
         </ul>
         <ul class="collapsible collapsible-accordion">
             <li class="bold">
-                <a class="collapsible-header  waves-effect waves-blue">
+                <a href="{{route('admin.users.index')}}" class="waves-effect waves-blue">
                     <i class="material-icons blue-text text-darken-2">person_pin</i>
                     <span>Usuários</span>
                 </a>
-                <div class="collapsible-body">
-                    <ul>
-                        <li><a href="{{route('admin.users.index')}}">Usuários</a></li>
-                        <li><a href="{{route('admin.users.create')}}">Cadastrar Usuário</a></li>
-                    </ul>
-                </div>
             </li>
         </ul>
         <ul class="collapsible collapsible-accordion">
