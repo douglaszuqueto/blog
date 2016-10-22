@@ -6,7 +6,7 @@
         <h5>Atualizar Notícia</h5>
 
         <div class="row">
-            <form class="col s12 l6 offset-l3" role="form" method="POST"
+            <form class="col s12 l6 offset-l3" role="form" method="POST" enctype="multipart/form-data"
                   action="{{ route('admin.news.update', ['id' => $item->id])}}">
                 {{ csrf_field() }}
                 <input name="_method" type="hidden" value="PUT">

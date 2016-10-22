@@ -7,7 +7,7 @@
 
         <div class="row">
             <form class="col s12 l6 offset-l3" role="form" method="POST"
-                  action="{{ route('admin.sponsors.update', ['id' => $item->id])}}">
+                  enctype="multipart/form-data" action="{{ route('admin.sponsors.update', ['id' => $item->id])}}">
                 {{ csrf_field() }}
                 <input name="_method" type="hidden" value="PUT">
 
