@@ -68,6 +68,13 @@
                 </div>
 
                 <div class="row">
+                    <div class="col s12 l12">
+                        <img src="{{$item->image_url}}" alt="Foto Patrocinador" title="Foto Patrocinador"
+                             class="responsive-img">
+                    </div>
+                </div>
+
+                <div class="row">
                     <div class="input-field col s12 l12 ">
                         <button type="submit" class="waves-effect waves-light btn right">
                             <i class="material-icons right">cloud</i>Atualizar

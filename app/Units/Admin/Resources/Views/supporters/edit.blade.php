@@ -12,6 +12,13 @@
                 <input name="_method" type="hidden" value="PUT">
 
                 <div class="row">
+                    <div class="col s6 l4 offset-l4 offset-s3">
+                        <img src="{{$item->image_url}}" alt="Foto Patrocinador" title="Foto Patrocinador"
+                             class="responsive-img">
+                    </div>
+                </div>
+
+                <div class="row">
                     <div class="input-field col s12 l12">
 
                         <label for="supporter" class="active">Apoiador</label>
