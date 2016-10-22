@@ -14,8 +14,7 @@ trait FileUpload
         $data['image_name'] = $this->getFileName($image->getClientOriginalExtension());
         $data['image_url'] = $this->getFileUrl($data['image_name']);
 
-        Image::make($image)->fit(600)->save($this->imagesPath . $data['image_name']);
-//        $image->storeAs('images', $data['image_name'], 'upload');
+        $this->resizing($image, $data);
 
         return $data;
     }
@@ -28,5 +27,10 @@ trait FileUpload
     protected function getFileUrl($image_name)
     {
         return asset('uploads/images/' . $image_name);
+    }
+
+    protected function resizing($image, $data)
+    {
+        Image::make($image)->fit(600)->save($this->imagesPath . $data['image_name']);
     }
 }
