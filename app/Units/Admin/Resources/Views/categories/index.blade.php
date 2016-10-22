@@ -41,6 +41,18 @@
             </div>
         </div>
     </div>
+    <div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
+        <a class="btn-floating btn-large blue">
+            <i class="large material-icons">settings</i>
+        </a>
+        <ul>
+            <li>
+                <a href="{{route('admin.categories.create')}}" class="btn-floating green">
+                    <i class="material-icons">save</i>
+                </a>
+            </li>
+        </ul>
+    </div>
     <script>
         $(document).ready(function () {
             $('.removeCategory').click(function () {
