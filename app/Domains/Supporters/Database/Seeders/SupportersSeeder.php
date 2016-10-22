@@ -18,7 +18,7 @@ class SupportersSeeder extends Seeder
     {
         DB::table('supporters')->insert([
             'supporter' => 'Supporter 1',
-            'url' => 'url',
+            'url' => 'https://douglaszuqueto.com',
             'image_name' => 'image_name',
             'image_url' => 'image_url',
             'state' => 1,
