@@ -64,6 +64,8 @@ class Web extends RouteFile
         $this->router->get('/news/{id}', ['as' => 'admin.news.edit', 'uses' => 'NewsController@edit']);
         $this->router->post('/news', ['as' => 'admin.news.store', 'uses' => 'NewsController@store']);
         $this->router->put('/news/{id}', ['as' => 'admin.news.update', 'uses' => 'NewsController@update']);
+        $this->router->delete('/news/{id}', ['as' => 'admin.news.remove', 'uses' => 'NewsController@remove']);
+
     }
 
     protected function articlesRoutes()
