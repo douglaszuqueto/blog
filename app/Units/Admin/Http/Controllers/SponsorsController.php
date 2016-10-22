@@ -28,7 +28,7 @@ class SponsorsController extends AbstractCrudController
     {
         $data = $request->except(['images']);
 
-        $upload = $this->upload($request->file('image'));
+        $upload = $this->upload($request->file('image'), 100);
 
         $data['image_name'] = $upload['image_name'];
         $data['image_url'] = $upload['image_url'];

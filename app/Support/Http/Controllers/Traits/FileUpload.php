@@ -9,12 +9,12 @@ trait FileUpload
 {
     protected $imagesPath = 'uploads/images/';
 
-    public function upload(UploadedFile $image)
+    public function upload(UploadedFile $image, $width = null)
     {
         $data['image_name'] = $this->getFileName($image->getClientOriginalExtension());
         $data['image_url'] = $this->getFileUrl($data['image_name']);
 
-        $this->resizing($image, $data);
+        $this->resizing($image, $data, $width);
 
         return $data;
     }
@@ -29,8 +29,11 @@ trait FileUpload
         return asset('uploads/images/' . $image_name);
     }
 
-    protected function resizing($image, $data)
+    protected function resizing($image, $data, $width)
     {
-        Image::make($image)->fit(600)->save($this->imagesPath . $data['image_name']);
+        if (!$width) {
+            return Image::make($image)->save($this->imagesPath . $data['image_name']);
+        }
+        return Image::make($image)->fit($width)->save($this->imagesPath . $data['image_name']);
     }
 }
