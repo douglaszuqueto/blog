@@ -172,6 +172,8 @@ return [
         Artesaos\SEOTools\Providers\SEOToolsServiceProvider::class,
         Prettus\Repository\Providers\RepositoryServiceProvider::class,
         Spatie\Analytics\AnalyticsServiceProvider::class,
+        Intervention\Image\ImageServiceProvider::class,
+
 
         /**
          * Domains Service Providers
@@ -242,6 +244,7 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
         'Analytics' => Spatie\Analytics\AnalyticsFacade::class,
+        'Image' => Intervention\Image\Facades\Image::class
 
     ],
 
