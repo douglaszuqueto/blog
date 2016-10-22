@@ -86,6 +86,8 @@ class Web extends RouteFile
         $this->router->get('/sponsors/{id}', ['as' => 'admin.sponsors.edit', 'uses' => 'SponsorsController@edit']);
         $this->router->post('/sponsors', ['as' => 'admin.sponsors.store', 'uses' => 'SponsorsController@store']);
         $this->router->put('/sponsors/{id}', ['as' => 'admin.sponsors.update', 'uses' => 'SponsorsController@update']);
+        $this->router->delete('/sponsors/{id}', ['as' => 'admin.sponsors.remove', 'uses' => 'SponsorsController@remove']);
+
     }
 
     protected function supportersRoutes()
@@ -95,6 +97,8 @@ class Web extends RouteFile
         $this->router->get('/supporters/{id}', ['as' => 'admin.supporters.edit', 'uses' => 'SupportersController@edit']);
         $this->router->post('/supporters', ['as' => 'admin.supporters.store', 'uses' => 'SupportersController@store']);
         $this->router->put('/supporters/{id}', ['as' => 'admin.supporters.update', 'uses' => 'SupportersController@update']);
+        $this->router->delete('/supporters/{id}', ['as' => 'admin.supporters.remove', 'uses' => 'SupportersController@remove']);
+
     }
 
     protected function contactRoutes()

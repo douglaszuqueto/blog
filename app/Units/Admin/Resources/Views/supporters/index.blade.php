@@ -60,11 +60,13 @@
                 method: 'POST',
                 data: {
                     '_token': window.Laravel.csrfToken,
-                    '_method': 'PUT',
+                    '_method': 'DELETE',
                     'state': 0
                 },
                 success: function (data) {
-                    Materialize.toast('Apoiador desativado', 2000);
+                    Materialize.toast(data.error_message, 1000, null, function () {
+                        location.reload();
+                    });
                 }
             });
         }
