@@ -23,13 +23,13 @@ class StatisticsController extends Controller
 
     public function index()
     {
-
         $visitors['day'] = $this->getVisitors(1);
         $visitors['month'] = $this->getVisitors();
         $visitors['all'] = $this->getVisitors(365);
 
         return $this->view($this->getView('index'), [
             'browsers' => json_encode($this->getTopBrowsers()),
+            'referrers' => json_encode($this->getTopReferrers()),
             'visitors' => $visitors
         ]);
     }
@@ -44,13 +44,23 @@ class StatisticsController extends Controller
         return Analytics::fetchTopBrowsers($period);
     }
 
+    protected function getTopReferrers()
+    {
+        $startDate = Carbon::now()->subYear();
+        $endDate = Carbon::now();
+
+        $period = Period::create($startDate, $endDate);
+
+        return Analytics::fetchTopReferrers($period);
+    }
+
     protected function getVisitors($visitors = 30)
     {
-        $allVisitors =  Analytics::fetchVisitorsAndPageViews(Period::days($visitors));
+        $allVisitors = Analytics::fetchVisitorsAndPageViews(Period::days($visitors));
 
         $visitors = 0;
 
-        foreach ($allVisitors as $visitor){
+        foreach ($allVisitors as $visitor) {
             $visitors += $visitor['visitors'];
         }
 

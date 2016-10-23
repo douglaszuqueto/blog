@@ -55,24 +55,18 @@
         </div>
 
         <div class="row">
-            <div class="col s12 l12">
-                <div id='chart'></div>
+            <div class="col s12 l6">
+                <div id='browserChart'></div>
 
                 <script>
-
-                    var chart = c3.generate({
+                    var chartBrowser = c3.generate({
+                        bindto: '#browserChart',
                         data: {
-                            // iris data from R
-                            columns: [
-//                                ['data1', 30],
-//                                ['data2', 120],
-                            ],
+                            columns: [],
                             type: 'pie',
                             onclick: function (d, i) {
                                 console.log("onclick", d.value);
                             },
-//                            onmouseover: function (d, i) { console.log("onclick", d.value); },
-//                            onmouseout: function (d, i) { console.log("onclick", d.value); },
                         },
                         pie: {
                             label: {
@@ -83,28 +77,55 @@
                         }
                     });
 
-                    var data = {!! $browsers !!};
-                    var chartjsData = [];
+                    var dataBrowserJson = {!! $browsers !!};
+                    var browsersData = [];
 
-                    data.forEach(function (element, index, array) {
-                        chartjsData.push([
+                    dataBrowserJson.forEach(function (element, index, array) {
+                        browsersData.push([
                             element.browser,
                             element.sessions
                         ]);
                     });
-                    chart.load({
-                        columns: chartjsData,
+                    chartBrowser.load({
+                        columns: browsersData,
+                    });
+                </script>
+            </div>
+            <div class="col s12 l6">
+                <div id='referrersChart'></div>
+
+                <script>
+
+                    var chartReferrer = c3.generate({
+                        bindto: '#referrersChart',
+                        data: {
+                            columns: {},
+                            type: 'pie',
+                            onclick: function (d, i) {
+                                console.log("onclick", d.value);
+                            }
+                        },
+                        pie: {
+                            label: {
+                                format: function (value, ratio, id) {
+                                    return d3.format('')(value);
+                                }
+                            }
+                        }
                     });
 
-                    //                    setTimeout(function () {
-                    //                        chart.unload({
-                    //                            ids: 'data1'
-                    //                        });
-                    //                        chart.unload({
-                    //                            ids: 'data2'
-                    //                        });
-                    //                    }, 2500);
+                    var dataReferrersJson = {!! $referrers !!};
+                    var referrersData = [];
 
+                    dataReferrersJson.forEach(function (element, index, array) {
+                        referrersData.push([
+                            element.url,
+                            element.pageViews
+                        ]);
+                    });
+                    chartReferrer.load({
+                        columns: referrersData,
+                    });
                 </script>
             </div>
         </div>
