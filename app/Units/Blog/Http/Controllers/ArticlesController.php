@@ -48,9 +48,15 @@ class ArticlesController extends Controller
 
     public function show($article)
     {
-        SEOMeta::setTitle('Artigo 1');
-        SEOMeta::setDescription('Controlando Led usando MQTT e ESP8266');
-        SEOMeta::setCanonical('https://douglaszuqueto.com/artigos/artigo-1');
+        $article = $this->articlesRepository->scopeQuery(function ($query) use ($article) {
+            $query->orderBy('created_at', 'asc');
+            return $query->where('state', '=', 3);
+        })->first();
+
+
+        SEOMeta::setTitle($article->title);
+        SEOMeta::setDescription($article->title);
+        SEOMeta::setCanonical($article->url);
 
 //        OpenGraph::setTitle('Artigo 1');
 //        OpenGraph::setDescription('Controlando Led usando MQTT e ESP8266');
@@ -58,23 +64,18 @@ class ArticlesController extends Controller
 //        OpenGraph::addProperty('type', 'articles');
 //        OpenGraph::addImage(['url' => 'https://douglaszuqueto.com/images/esp8266.jpg', 'size' => 300]);
 
-        OpenGraph::setTitle('Artigo 1')
-            ->setDescription('Controlando Led usando MQTT e ESP8266')
+        OpenGraph::setTitle($article->title)
+            ->setDescription($article->title)
             ->setType('article')
             ->setArticle([
-                'published_time' => '23/10/2016 12:00',
+                'published_time' => $article->created_at,
                 'author' => 'Douglas Zuqueto',
                 'section' => 'IoT',
                 'tag' => 'IoT, ESP8266, Arduino, MQTT'
             ])
-            ->addImage(['url' => 'https://douglaszuqueto.com/images/esp8266.jpg', 'size' => 300])
-            ->addImage('https://douglaszuqueto.com/images/esp8266.jpg');
+            ->addImage(['url' => $article->image, 'size' => 300])
+            ->addImage($article->image);
 
-
-        $article = $this->articlesRepository->scopeQuery(function ($query) use ($article) {
-            $query->orderBy('created_at', 'asc');
-            return $query->where('state', '=', 3);
-        })->first();
 
         return $this->view('home::articles.show', [
             'article' => $article,
