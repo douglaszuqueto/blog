@@ -34,17 +34,17 @@
 @section('content')
     <div class="container index">
         <div class="row">
-            <div class="col l10">
-                <article class="col l9 card">
+            <div class="col s12 l10">
+                <article class="col s12 l9 card">
                     <div class="card-content black-text">
                         <div class="row article-header">
-                            <div class="col l2">
+                            <div class="col s12 l2">
                                 <span class="avatar">
                                     <img src="https://douglaszuqueto.github.io/public/build/images/perfil.jpg"
                                          class="responsive-img circle">
                                 </span>
                             </div>
-                            <div class="col l4">
+                            <div class="col s12 l4">
                                 <div class="row">
                                     <span class="author">Douglas Zuqueto</span>
                                 </div>
@@ -54,14 +54,14 @@
                             </div>
                         </div>
                         <div class="row article-image">
-                            <div class="col l12">
+                            <div class="col s12 l12">
                                 <img src="{{asset('images/esp8266.jpg')}}" class="responsive-img">
                             </div>
                         </div>
                     </div>
                     <div class="card-content">
                         <div class="row article-body">
-                            <div class="col l12">
+                            <div class="col s12 l12">
                                 <a href="" class="card-title black-text">Controlando Led usando MQTT e ESP8266</a>
                                 {{--<p>I am a very simple card. I am good at containing small bits of information.</p>--}}
                             </div>
