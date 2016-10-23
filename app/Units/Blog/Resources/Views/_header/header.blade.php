@@ -1,17 +1,23 @@
 <style>
     nav {
         background-color: white;
+        position: fixed;
+        /*opacity: 0.8;*/
     }
 
     .brand-logo {
         margin-left: 50px;
     }
+
+    .active {
+        background-color: #2196F3 !important;
+    }
 </style>
 <nav>
     <div class="nav-wrapper">
-        <a href="{{route('blog.index')}}" class="brand-logo blue-text">douglaszuqueto</a>
+        <a href="{{route('blog.index')}}" class="brand-logo blue-text text-darken-2 left">douglaszuqueto</a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li class="active"><a class="black-text">Home</a></li>
+            <li class="active"><a class="">Home</a></li>
             <li><a class="black-text">Artigos</a></li>
             <li><a class="black-text">O Projeto</a></li>
             <li><a class="black-text">Notícias</a></li>
@@ -20,6 +26,6 @@
         </ul>
     </div>
 </nav>
-<div class="l12">
+<div class="l12 hide-on-med-and-down">
     <img src="{{asset('images/esp8266.jpg')}}" alt="" class="responsive-img">
 </div>
