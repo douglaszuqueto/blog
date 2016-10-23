@@ -44,5 +44,21 @@
 </footer>
 <script src="{{asset('js/materialize.min.js')}}"></script>
 
+<script>
+
+    $(document).ready(function () {
+        var url = window.location.href;
+
+        if (url === 'https://blog.dev/') {
+            var target = $('ul li a[href="https://blog.dev"]');
+            target.addClass('active');
+        }
+
+        var target = $('ul li a[href="' + url + '"]');
+
+        target.addClass('active');
+
+    });
+</script>
 </body>
 </html>
