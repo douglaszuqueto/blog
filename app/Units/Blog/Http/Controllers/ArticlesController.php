@@ -58,7 +58,7 @@ class ArticlesController extends Controller
         OpenGraph::addProperty('type', 'articles');
         OpenGraph::addImage(['url' => 'https://douglaszuqueto.com/images/esp8266.jpg', 'size' => 300]);
 
-        $article = $this->articlesRepository->scopeQuery(function ($query) use ($id) {
+        $article = $this->articlesRepository->scopeQuery(function ($query) use ($article) {
             $query->orderBy('created_at', 'asc');
             return $query->where('state', '=', 1);
         })->first();
