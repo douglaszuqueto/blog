@@ -1,53 +1,43 @@
 @extends('admin::layout')
 
 <style>
-    .dashboard .card-panel {
-        height: 120px;
+    .github .card-panel {
+        height: 200px !important;
     }
 </style>
 
 @section('content')
-    <div class="container dashboard">
+    <div class="container github">
         <div class="row">
-            <div class="col s12 m4 l4">
+            <div class="col s12 m4 l6">
                 <div class="card-panel ">
                     <div class="col l3">
                         <p class="" style="">
-                            <i class="material-icons medium green-text" title="Visitantes de Hoje">trending_up</i>
+                            <i class="material-icons medium green-text" title="Visitantes de Hoje">thumb_up</i>
                         </p>
                     </div>
                     <div class="col l8">
-                        <h6 class="center-align">Visitantes de Hoje</h6>
-                        <h4 class="center-align"><strong>{{$visitors['day']}}</strong></h4>
+                        <h6 class="center-align">TCC</h6>
+                        <h4 class="center-align"><strong>{{$tcc['stars']}}</strong></h4>
+                        <h5 class="center-align"><strong>Forks {{$tcc['forks']}}</strong></h5>
+                        <h5 class="center-align"><strong>Subscribers {{$tcc['subscribers']}}</strong></h5>
                     </div>
 
                 </div>
             </div>
 
-            <div class="col s12 m4 l4">
+            <div class="col s12 m4 l6">
                 <div class="card-panel ">
                     <div class="col l3">
                         <p class="" style="">
-                            <i class="material-icons medium orange-text" title="Visitantes Mês">trending_up</i>
+                            <i class="material-icons medium green-text" title="Visitantes Mês">thumb_up</i>
                         </p>
                     </div>
                     <div class="col l8">
-                        <h6 class="center-align">Visitantes no Mês</h6>
-                        <h4 class="center-align"><strong>{{$visitors['month']}}</strong></h4>
-                    </div>
-
-                </div>
-            </div>
-            <div class="col s12 m4 l4">
-                <div class="card-panel ">
-                    <div class="col l3">
-                        <p class="" style="">
-                            <i class="material-icons medium red-text" title="Visitantes Totais">trending_up</i>
-                        </p>
-                    </div>
-                    <div class="col l8">
-                        <h6 class="center-align">Visitantes Totais</h6>
-                        <h4 class="center-align"><strong>{{$visitors['all']}}</strong></h4>
+                        <h6 class="center-align">Blog</h6>
+                        <h4 class="center-align"><strong>{{$blog['stars']}}</strong></h4>
+                        <h5 class="center-align"><strong>Forks {{$blog['forks']}}</strong></h5>
+                        <h5 class="center-align"><strong>Subscribers {{$blog['subscribers']}}</strong></h5>
                     </div>
 
                 </div>

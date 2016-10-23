@@ -5,6 +5,10 @@ namespace App\Units\Admin\Http\Controllers;
 use App\Support\Http\Controllers\Controller;
 use Analytics;
 use Carbon\Carbon;
+use GuzzleHttp\Client;
+use GuzzleHttp\Promise;
+use GuzzleHttp\Psr7\Request;
+use Psr\Http\Message\ResponseInterface;
 use Spatie\Analytics\Period;
 
 class StatisticsController extends Controller
@@ -41,8 +45,34 @@ class StatisticsController extends Controller
         $visitors['all'] = $this->getVisitors(365);
 
         return $this->view($this->getView('github'), [
-            'visitors' => $visitors
+            'tcc' => ($this->getRepoInfo('tcc')),
+            'blog' => ($this->getRepoInfo('blog')),
         ]);
+    }
+
+    protected function getRepoInfo($repo)
+    {
+        /* URL: https://api.github.com/repos/douglaszuqueto/tcc */
+        /* URL: https://api.github.com/repos/douglaszuqueto/blog */
+
+        $client = new Client();
+
+
+        $promise = $client->getAsync('https://api.github.com/repos/douglaszuqueto/' . $repo, [
+            'headers' => [
+                'Authorization' => 'token 3769e68543e98287bf0907e5cca4c696052fa3e3'
+            ]
+        ]);
+        $response = $promise->wait();
+
+        $data = json_decode($response->getbody());
+
+        return [
+            'stars' => $data->stargazers_count,
+            'forks' => $data->forks,
+            'subscribers' => $data->subscribers_count,
+        ];
+
     }
 
     protected function getTopBrowsers()
