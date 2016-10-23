@@ -20,8 +20,26 @@
     }
 
     .article-view article h1 {
-        font-size: 41px;
-        line-height: 50px;
+        font-family: medium-content-sans-serif-font,"Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Arial,sans-serif;
+        letter-spacing: -.02em;
+        font-weight: 700;
+        font-style: normal;
+        font-size: 40px;
+        margin-left: -2.5px;
+        line-height: 1.04;
+        letter-spacing: -.028em;
+    }
+
+    .article-body .article-content p,  .article-body > p{
+        text-align: justify;
+        text-justify: inter-word;
+        font-family: medium-content-serif-font, Georgia, Cambria, "Times New Roman", Times, serif;
+        letter-spacing: .01rem;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 21px;
+        line-height: 1.58;
+        letter-spacing: -.003em;
     }
 </style>
 @section('content')
