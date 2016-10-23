@@ -46,6 +46,7 @@ class Web extends RouteFile
     protected function statisticsRoutes()
     {
         $this->router->get('/statistics', ['as' => 'admin.statistics.index', 'uses' => 'StatisticsController@index']);
+        $this->router->get('/statistics/github', ['as' => 'admin.statistics.github', 'uses' => 'StatisticsController@github']);
     }
 
     protected function usersRoutes()

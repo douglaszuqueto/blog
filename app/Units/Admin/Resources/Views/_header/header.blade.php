@@ -84,10 +84,16 @@
     <li class="no-padding">
         <ul class="collapsible collapsible-accordion">
             <li class="bold">
-                <a href="{{route('admin.statistics.index')}}" class="waves-effect waves-blue">
+                <a class="collapsible-header  waves-effect waves-blue">
                     <i class="material-icons blue-text text-darken-2">equalizer</i>
                     <span>Estatísticas</span>
                 </a>
+                <div class="collapsible-body">
+                    <ul>
+                        <li><a href="{{route('admin.statistics.index')}}">Google Analytics</a></li>
+                        <li><a href="{{route('admin.statistics.github')}}">Github</a></li>
+                    </ul>
+                </div>
             </li>
         </ul>
         <ul class="collapsible collapsible-accordion">

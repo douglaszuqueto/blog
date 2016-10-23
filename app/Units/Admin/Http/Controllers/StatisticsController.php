@@ -34,6 +34,17 @@ class StatisticsController extends Controller
         ]);
     }
 
+    public function github()
+    {
+        $visitors['day'] = $this->getVisitors(1);
+        $visitors['month'] = $this->getVisitors();
+        $visitors['all'] = $this->getVisitors(365);
+
+        return $this->view($this->getView('github'), [
+            'visitors' => $visitors
+        ]);
+    }
+
     protected function getTopBrowsers()
     {
         $startDate = Carbon::now()->subYear();
