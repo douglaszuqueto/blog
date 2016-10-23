@@ -8,6 +8,8 @@ use Carbon\Carbon;
 use GuzzleHttp\Client;
 use GuzzleHttp\Promise;
 use GuzzleHttp\Psr7\Request;
+use Illuminate\Support\Facades\Cache;
+use Illuminate\Support\Facades\Redis;
 use Psr\Http\Message\ResponseInterface;
 use Spatie\Analytics\Period;
 
@@ -55,24 +57,22 @@ class StatisticsController extends Controller
         /* URL: https://api.github.com/repos/douglaszuqueto/tcc */
         /* URL: https://api.github.com/repos/douglaszuqueto/blog */
 
-        $client = new Client();
+        return Cache::remember('statistics:' . $repo, 60, function () use ($repo) {
+            $client = new Client();
+            $promise = $client->getAsync('https://api.github.com/repos/douglaszuqueto/' . $repo, [
+                'headers' => [
+                    'Authorization' => 'token ' . env('GITHUB_TOKEN')
+                ]
+            ]);
+            $response = $promise->wait();
 
-
-        $promise = $client->getAsync('https://api.github.com/repos/douglaszuqueto/' . $repo, [
-            'headers' => [
-                'Authorization' => 'token ' . env('GITHUB_TOKEN')
-            ]
-        ]);
-        $response = $promise->wait();
-
-        $data = json_decode($response->getbody());
-
-        return [
-            'stars' => $data->stargazers_count,
-            'forks' => $data->forks,
-            'subscribers' => $data->subscribers_count,
-        ];
-
+            $data = json_decode($response->getbody());
+            return [
+                'stars' => $data->stargazers_count,
+                'forks' => $data->forks,
+                'subscribers' => $data->subscribers_count,
+            ];
+        });
     }
 
     protected function getTopBrowsers()
