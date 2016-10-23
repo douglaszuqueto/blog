@@ -46,7 +46,7 @@
 
 <script>
 
-    $(document).ready(function () {
+//    $(document).ready(function () {
         var url = window.location.href;
 
         if (url === 'https://blog.dev/') {
@@ -58,7 +58,7 @@
 
         target.addClass('active');
 
-    });
+//    });
 </script>
 </body>
 </html>
