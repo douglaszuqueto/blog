@@ -55,5 +55,6 @@ class Web extends RouteFile
     protected function contactRoutes()
     {
         $this->router->get('/contato', ['as' => 'blog.contact.index', 'uses' => 'ContactController@index']);
+        $this->router->post('/contato', ['as' => 'blog.contact.send', 'uses' => 'ContactController@send']);
     }
 }

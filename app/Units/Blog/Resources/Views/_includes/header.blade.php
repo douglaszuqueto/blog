@@ -10,10 +10,10 @@
         margin-left: 50px;
     }
 
-    .active {
-        background-color: #2196F3 !important;
-        color: white !important;
-    }
+    /*.active {*/
+        /*background-color: #2196F3 !important;*/
+        /*color: white !important;*/
+    /*}*/
 </style>
 <nav>
     <div class="nav-wrapper">

@@ -12,11 +12,11 @@ class CreateContactTable extends Migration
     {
         $this->schema->create('contacts', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('title');
+            $table->string('name');
+            $table->string('email');
             $table->string('subject');
             $table->string('message');
-            $table->string('email');
-            $table->tinyInteger('state');
+            $table->tinyInteger('state')->default(0);
             $table->timestamps();
         });
     }

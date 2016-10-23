@@ -17,11 +17,10 @@ class ContactSeeder extends Seeder
     public function run()
     {
         DB::table('contacts')->insert([
-            'title' => 'News 1',
-            'subject' => 'Subject 1',
-            'message' => 'Message 1',
+            'name' => 'Douglas',
             'email' => 'email@mail.com',
-            'state' => 0,
+            'subject' => 'Subject 1',
+            'message' => 'Message 1'
         ]);
 
 //        factory(Contact::class)->create();

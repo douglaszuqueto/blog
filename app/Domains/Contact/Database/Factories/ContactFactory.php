@@ -17,11 +17,10 @@ class ContactFactory extends ModelFactory
     {
 
         return [
-            'title' => $this->faker->title,
-            'subject' => $this->faker->title,
-            'message' => $this->faker->text,
+            'name' => $this->faker->name,
             'email' => $this->faker->unique()->safeEmail,
-            'state' => 0,
+            'subject' => $this->faker->title,
+            'message' => $this->faker->text
         ];
     }
 }
