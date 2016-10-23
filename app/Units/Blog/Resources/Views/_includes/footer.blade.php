@@ -134,6 +134,7 @@
 </a>
 
 <script>
+    // Source: https://codepen.io/rdallaire/pen/apoyx
     $(window).scroll(function () {
         if ($(this).scrollTop() >= 50) {        // If page is scrolled more than 50px
             $('#return-to-top').fadeIn(200);    // Fade in the arrow
