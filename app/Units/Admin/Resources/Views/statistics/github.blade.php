@@ -4,42 +4,111 @@
     .github .card-panel {
         height: 200px !important;
     }
+
+    .repos .row {
+        margin-bottom: 5px;
+    }
+
+    .card-title {
+        margin-top: -20px;
+        margin-bottom: -10px;
+    }
 </style>
 
 @section('content')
     <div class="container github">
         <div class="row">
-            <div class="col s12 m4 l6">
-                <div class="card-panel ">
-                    <div class="col l3">
-                        <p class="" style="">
-                            <i class="material-icons medium green-text" title="Visitantes de Hoje">thumb_up</i>
-                        </p>
+            <div class="col s12 m4 l4 offset-l1">
+                <div class="card-panel" style="height: 200px">
+                    <div class="row">
+                        <div class="col l12 card-title">
+                            <h5 class="center-align">TCC</h5>
+                        </div>
                     </div>
-                    <div class="col l8">
-                        <h6 class="center-align">TCC</h6>
-                        <h4 class="center-align"><strong>{{$tcc['stars']}}</strong></h4>
-                        <h5 class="center-align"><strong>Forks {{$tcc['forks']}}</strong></h5>
-                        <h5 class="center-align"><strong>Subscribers {{$tcc['subscribers']}}</strong></h5>
-                    </div>
+                    <div class="col l12 repos">
+                        <div class="row">
+                            <div class="col l3">
+                                <i class="material-icons yellow-text text-darken-2">star</i>
+                            </div>
+                            <div class="col l5">
+                                <h6 class="left-align">Stars</h6>
+                            </div>
+                            <div class="col l4">
+                                <h6 class="left-align">{{$tcc['stars']}}</h6>
+                            </div>
+                        </div>
 
+                        <div class="row">
+                            <div class="col l3">
+                                <i class="material-icons green-text">visibility</i>
+                            </div>
+                            <div class="col l5">
+                                <h6 class="left-align">Subscribers</h6>
+                            </div>
+                            <div class="col l4">
+                                <h6 class="left-align">{{$tcc['subscribers']}}</h6>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col l3">
+                                <i class="material-icons deep-orange-text">perm_identity</i>
+                            </div>
+                            <div class="col l5">
+                                <h6 class="left-align">Forks</h6>
+                            </div>
+                            <div class="col l4">
+                                <h6 class="left-align">{{$tcc['forks']}}</h6>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <div class="col s12 m4 l6">
-                <div class="card-panel ">
-                    <div class="col l3">
-                        <p class="" style="">
-                            <i class="material-icons medium green-text" title="Visitantes Mês">thumb_up</i>
-                        </p>
+            <div class="col s12 m4 l4 offset-l1">
+                <div class="card-panel" style="height: 200px">
+                    <div class="row">
+                        <div class="col l12 card-title">
+                            <h5 class="center-align">BLOG</h5>
+                        </div>
                     </div>
-                    <div class="col l8">
-                        <h6 class="center-align">Blog</h6>
-                        <h4 class="center-align"><strong>{{$blog['stars']}}</strong></h4>
-                        <h5 class="center-align"><strong>Forks {{$blog['forks']}}</strong></h5>
-                        <h5 class="center-align"><strong>Subscribers {{$blog['subscribers']}}</strong></h5>
-                    </div>
+                    <div class="col l12 repos">
+                        <div class="row">
+                            <div class="col l3">
+                                <i class="material-icons yellow-text text-darken-2">star</i>
+                            </div>
+                            <div class="col l5">
+                                <h6 class="left-align">Stars</h6>
+                            </div>
+                            <div class="col l4">
+                                <h6 class="left-align">{{$blog['stars']}}</h6>
+                            </div>
+                        </div>
 
+                        <div class="row">
+                            <div class="col l3">
+                                <i class="material-icons green-text">visibility</i>
+                            </div>
+                            <div class="col l5">
+                                <h6 class="left-align">Subscribers</h6>
+                            </div>
+                            <div class="col l4">
+                                <h6 class="left-align">{{$blog['subscribers']}}</h6>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col l3">
+                                <i class="material-icons deep-orange-text">perm_identity</i>
+                            </div>
+                            <div class="col l5">
+                                <h6 class="left-align">Forks</h6>
+                            </div>
+                            <div class="col l4">
+                                <h6 class="left-align">{{$blog['forks']}}</h6>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
