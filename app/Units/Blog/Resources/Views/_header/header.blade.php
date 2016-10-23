@@ -21,5 +21,5 @@
     </div>
 </nav>
 <div class="l12">
-    <img src="{{asset('uploads/images/esp8266.jpg')}}" alt="" class="responsive-img">
+    <img src="{{asset('images/esp8266.jpg')}}" alt="" class="responsive-img">
 </div>
