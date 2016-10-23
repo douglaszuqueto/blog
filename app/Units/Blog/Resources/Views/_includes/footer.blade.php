@@ -1,6 +1,6 @@
 <style>
     footer {
-        height: 200px;
+        height: auto;
         background-color: #363839;
     }
 
@@ -80,7 +80,7 @@
 
 <div class="row">
     <div class="container">
-        <div class="col l4 social">
+        <div class="col s12 m4 l4 social">
             <h5 class="white-text">SOCIAL</h5>
 
             <li>
@@ -98,7 +98,7 @@
                 <a class="white-text" href="https://github.com/douglaszuqueto" title="GitHub" target="_blank">GitHub</a>
             </li>
         </div>
-        <div class="col l4 patrocinadores">
+        <div class="col s12 m4 l4 patrocinadores">
             <h5 class="white-text center">PATROCINADORES</h5>
 
             @foreach($sponsors->findWhere(['state' => 1]) as $sponsor)
@@ -109,7 +109,7 @@
             @endforeach
 
         </div>
-        <div class="col l4 apoiadores">
+        <div class="col s12 m4 l4 apoiadores">
             <h5 class="white-text center">APOIADORES</h5>
 
             @foreach($supporters->findWhere(['state' => 1]) as $supporter)
