@@ -30,7 +30,7 @@
 <body>
 
 <header>
-    @include('home::_header.header')
+    @include('home::_includes.header')
 </header>
 
 <main>
@@ -39,6 +39,9 @@
     </div>
 </main>
 
+<footer>
+    @include('home::_includes.footer')
+</footer>
 <script src="{{asset('js/materialize.min.js')}}"></script>
 
 </body>

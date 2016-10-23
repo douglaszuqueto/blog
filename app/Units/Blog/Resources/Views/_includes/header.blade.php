@@ -2,6 +2,7 @@
     nav {
         background-color: white;
         position: fixed;
+        z-index: 999;
         /*opacity: 0.8;*/
     }
 
@@ -26,6 +27,6 @@
         </ul>
     </div>
 </nav>
-<div class="l12 hide-on-med-and-down center" style="height: 300px">
-    <img src="{{asset('images/esp8266.jpg')}}" alt="" class="responsive-img" style="height: 300px">
+<div class="l12 hide-on-med-and-down center" style="height: 65px">
+{{--    <img src="{{asset('images/esp8266.jpg')}}" alt="" class="responsive-img" style="height: 300px">--}}
 </div>
