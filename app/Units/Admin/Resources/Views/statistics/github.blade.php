@@ -22,7 +22,7 @@
                 <div class="card-panel" style="height: 200px">
                     <div class="row">
                         <div class="col l12 card-title">
-                            <h5 class="center-align">TCC</h5>
+                            <h5 class="center-align"><a href="{{$tcc['url']}}" target="_blank">TCC</a></h5>
                         </div>
                     </div>
                     <div class="col l12 repos">
@@ -69,7 +69,7 @@
                 <div class="card-panel" style="height: 200px">
                     <div class="row">
                         <div class="col l12 card-title">
-                            <h5 class="center-align">BLOG</h5>
+                            <h5 class="center-align"><a href="{{$blog['url']}}" target="_blank">BLOG</a></h5>
                         </div>
                     </div>
                     <div class="col l12 repos">

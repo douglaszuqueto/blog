@@ -65,8 +65,19 @@
                     </ul>
                     <ul class="right">
                         <li>
-                            <a href="{{route('auth.logout')}}"><i
-                                        class="material-icons right">power_settings_new</i></a>
+                            <a>
+                                <i class="material-icons">add_alert</i>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <i class="material-icons">settings</i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{route('auth.logout')}}">
+                                <i class="material-icons">power_settings_new</i>
+                            </a>
                         </li>
                     </ul>
                 </div>

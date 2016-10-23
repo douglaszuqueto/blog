@@ -64,6 +64,7 @@ class StatisticsController extends Controller
 
             $data = json_decode($response->getbody());
             return [
+                'url' => $data->html_url,
                 'stars' => $data->stargazers_count,
                 'forks' => $data->forks,
                 'subscribers' => $data->subscribers_count,
