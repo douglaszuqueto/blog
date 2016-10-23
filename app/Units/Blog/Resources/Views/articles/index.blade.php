@@ -24,68 +24,65 @@
     }
 
     .avatar img {
-        width: 70%;
+        margin-top: 10px;
     }
 
-    .row {
-        margin-bottom: 10px !important;
-    }
 </style>
 @section('content')
     <div class="container index">
         <div class="row">
             <div class="col s12 l10">
-                <article class="col s12 l9 card">
-                    <div class="card-content black-text">
-                        <div class="row article-header">
-                            <div class="col s12 l2 hide-on-small-only">
-                                <span class="avatar">
-                                    <img src="https://douglaszuqueto.github.io/public/build/images/perfil.jpg"
-                                         class="responsive-img circle">
-                                </span>
-                            </div>
-                            <div class="col s12 l4">
-                                <div class="row">
-                                    <span class="author">Douglas Zuqueto</span>
-                                </div>
-                                <div class="row">
-                                    <span>23/10/2016 12:00</span>
+
+                @foreach($articles as $article)
+                    <article class="col s12 l9 card">
+                        <div class="card-content black-text">
+                            <div class="row article-header">
+                                <div class="col s12 l12">
+                                    <a href="{{$article->url}}" class="card-title black-text" style="font-weight: bold; font-size: 25px">
+                                        <span>{{$article->title}}</span>
+                                    </a>
                                 </div>
                             </div>
-                        </div>
-                        <div class="row article-image">
-                            <div class="col s12 l12">
-                                <a href="">
-                                    <img src="{{asset('images/esp8266.jpg')}}" class="responsive-img">
-                                </a>
+                            <div class="row article-image">
+                                <div class="col s12 l12">
+                                    <a href="{{$article->url}}">
+                                        <img src="{{$article->image}}" class="responsive-img">
+                                    </a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="card-content">
-                        <div class="row article-body">
-                            <div class="col s12 l12">
-                                <a href="" class="card-title black-text">Controlando Led usando MQTT e ESP8266</a>
-                                {{--<p>I am a very simple card. I am good at containing small bits of information.</p>--}}
+                        <div class="card-content">
+                            <div class="row article-body">
+                                <div class="col l12">
+                                    <p>{{$article->subtitle}}</p>
+                                </div>
                             </div>
-                        </div>
-                    </div>
 
-                    <div class="card-content" style="border-top: 1px solid rgba(160,160,160,0.2);">
-                        <div class="article-footer">
-                            <div class="chip">
-                                <a href="" class="black-text">Tag 1</a>
-                            </div>
-                            <div class="chip">
-                                <a href="" class="black-text">Tag 2</a>
-                            </div>
-                            <div class="chip">
-                                <a href="" class="black-text">Tag 3</a>
+                        </div>
+
+                        <div class="card-content" style="border-top: 1px solid rgba(160,160,160,0.2);">
+                            <div class="article-footer">
+                                <div class="chip">
+                                    <a href="" class="black-text">ESP8266</a>
+                                </div>
+                                <div class="chip">
+                                    <a href="" class="black-text">IoT</a>
+                                </div>
+                                <div class="chip">
+                                    <a href="" class="black-text">MQTT</a>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                        <div class="col s12 l12">
+                            <div class="row">
+                                <span class="author">Por <strong>Douglas Zuqueto</strong></span>
+                                <span class="right">{{$article->created_at}}</span>
+                            </div>
+                        </div>
 
+                    </article>
+                @endforeach
 
-                </article>
             </div>
         </div>
 
