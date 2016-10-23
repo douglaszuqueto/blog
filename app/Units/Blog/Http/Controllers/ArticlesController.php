@@ -67,7 +67,8 @@ class ArticlesController extends Controller
                 'section' => 'IoT',
                 'tag' => 'IoT, ESP8266, Arduino, MQTT'
             ])
-            ->addImage(['url' => 'https://douglaszuqueto.com/images/esp8266.jpg', 'size' => 300]);
+            ->addImage(['url' => 'https://douglaszuqueto.com/images/esp8266.jpg', 'size' => 300])
+            ->addImage('https://douglaszuqueto.com/images/esp8266.jpg');
 
 
         $article = $this->articlesRepository->scopeQuery(function ($query) use ($article) {
