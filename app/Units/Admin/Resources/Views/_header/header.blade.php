@@ -103,6 +103,7 @@
                     <ul>
                         <li><a href="{{route('admin.statistics.index')}}">Google Analytics</a></li>
                         <li><a href="{{route('admin.statistics.github')}}">Github</a></li>
+                        <li><a href="{{route('admin.statistics.instagram')}}">Instagram</a></li>
                     </ul>
                 </div>
             </li>

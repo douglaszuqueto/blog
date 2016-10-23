@@ -48,6 +48,31 @@ class StatisticsController extends Controller
         ]);
     }
 
+    public function instagram()
+    {
+        return $this->view($this->getView('instagram'), [
+            'instagram' => ($this->getInfoInstagram()),
+        ]);
+    }
+
+    public function getInfoInstagram()
+    {
+        return Cache::remember('statistics:instagram', 60, function () {
+            $client = new Client();
+            $promise = $client->getAsync('https://api.instagram.com/v1/users/self/?access_token=' . env('INSTAGRAM_TOKEN'));
+            $response = $promise->wait();
+
+            $data = (json_decode($response->getbody()))->data;
+            return [
+                'username' => $data->username,
+                'followed_by' => $data->counts->followed_by,
+                'follows' => $data->counts->follows,
+                'media' => $data->counts->media,
+            ];
+        });
+
+    }
+
     protected function getRepoInfo($repo)
     {
         /* URL: https://api.github.com/repos/douglaszuqueto/tcc */

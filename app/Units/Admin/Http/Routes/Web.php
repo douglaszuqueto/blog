@@ -47,6 +47,7 @@ class Web extends RouteFile
     {
         $this->router->get('/statistics', ['as' => 'admin.statistics.index', 'uses' => 'StatisticsController@index']);
         $this->router->get('/statistics/github', ['as' => 'admin.statistics.github', 'uses' => 'StatisticsController@github']);
+        $this->router->get('/statistics/instagram', ['as' => 'admin.statistics.instagram', 'uses' => 'StatisticsController@instagram']);
     }
 
     protected function usersRoutes()
