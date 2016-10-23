@@ -32,7 +32,7 @@ class ArticlesController extends Controller
 
         OpenGraph::setTitle('Artigos');
         OpenGraph::setDescription('Conteúdo sobre IoT');
-        OpenGraph::setUrl('hhttps://douglaszuqueto.com/artigos');
+        OpenGraph::setUrl('https://douglaszuqueto.com/artigos');
         OpenGraph::addProperty('type', 'articles');
         OpenGraph::addImage(['url' => 'https://douglaszuqueto.com/images/esp8266.jpg', 'size' => 300]);
 
