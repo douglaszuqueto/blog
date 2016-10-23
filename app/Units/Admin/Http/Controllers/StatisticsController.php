@@ -42,10 +42,6 @@ class StatisticsController extends Controller
 
     public function github()
     {
-        $visitors['day'] = $this->getVisitors(1);
-        $visitors['month'] = $this->getVisitors();
-        $visitors['all'] = $this->getVisitors(365);
-
         return $this->view($this->getView('github'), [
             'tcc' => ($this->getRepoInfo('tcc')),
             'blog' => ($this->getRepoInfo('blog')),
@@ -77,35 +73,43 @@ class StatisticsController extends Controller
 
     protected function getTopBrowsers()
     {
-        $startDate = Carbon::now()->subYear();
-        $endDate = Carbon::now();
+        return Cache::remember('statistics:browsers', 60, function () {
+            $startDate = Carbon::now()->subYear();
+            $endDate = Carbon::now();
 
-        $period = Period::create($startDate, $endDate);
+            $period = Period::create($startDate, $endDate);
 
-        return Analytics::fetchTopBrowsers($period);
+            return Analytics::fetchTopBrowsers($period);
+        });
+
     }
 
     protected function getTopReferrers()
     {
-        $startDate = Carbon::now()->subYear();
-        $endDate = Carbon::now();
+        return Cache::remember('statistics:referrers', 60, function () {
+            $startDate = Carbon::now()->subYear();
+            $endDate = Carbon::now();
 
-        $period = Period::create($startDate, $endDate);
+            $period = Period::create($startDate, $endDate);
 
-        return Analytics::fetchTopReferrers($period);
+            return Analytics::fetchTopReferrers($period);
+        });
+
     }
 
     protected function getVisitors($visitors = 30)
     {
-        $allVisitors = Analytics::fetchVisitorsAndPageViews(Period::days($visitors));
+        return Cache::remember('statistics:visitors:' . $visitors, 60, function () use ($visitors) {
+            $allVisitors = Analytics::fetchVisitorsAndPageViews(Period::days($visitors));
+            $visitors = 0;
 
-        $visitors = 0;
+            foreach ($allVisitors as $visitor) {
+                $visitors += $visitor['visitors'];
+            }
 
-        foreach ($allVisitors as $visitor) {
-            $visitors += $visitor['visitors'];
-        }
+            return $visitors;
+        });
 
-        return $visitors;
     }
 
 }
