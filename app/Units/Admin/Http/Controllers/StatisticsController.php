@@ -60,7 +60,7 @@ class StatisticsController extends Controller
 
         $promise = $client->getAsync('https://api.github.com/repos/douglaszuqueto/' . $repo, [
             'headers' => [
-                'Authorization' => 'token 3769e68543e98287bf0907e5cca4c696052fa3e3'
+                'Authorization' => 'token ' . env('GITHUB_TOKEN')
             ]
         ]);
         $response = $promise->wait();
