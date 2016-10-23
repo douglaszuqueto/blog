@@ -35,7 +35,7 @@ class IndexController extends Controller
 
     public function index()
     {
-        SEOMeta::setTitle('Home');
+        SEOMeta::setTitle('Página Inicial');
         SEOMeta::setDescription('Conteúdo sobre IoT');
         SEOMeta::setCanonical('https://douglaszuqueto.com');
 
