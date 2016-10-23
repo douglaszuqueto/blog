@@ -38,7 +38,7 @@
                 <article class="col s12 l9 card">
                     <div class="card-content black-text">
                         <div class="row article-header">
-                            <div class="col s12 l2">
+                            <div class="col s12 l2 hide-on-small-only">
                                 <span class="avatar">
                                     <img src="https://douglaszuqueto.github.io/public/build/images/perfil.jpg"
                                          class="responsive-img circle">
@@ -55,7 +55,9 @@
                         </div>
                         <div class="row article-image">
                             <div class="col s12 l12">
-                                <img src="{{asset('images/esp8266.jpg')}}" class="responsive-img">
+                                <a href="">
+                                    <img src="{{asset('images/esp8266.jpg')}}" class="responsive-img">
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -71,13 +73,13 @@
                     <div class="card-content" style="border-top: 1px solid rgba(160,160,160,0.2);">
                         <div class="article-footer">
                             <div class="chip">
-                                <a href="">Tag 1</a>
+                                <a href="" class="black-text">Tag 1</a>
                             </div>
                             <div class="chip">
-                                <a href="">Tag 2</a>
+                                <a href="" class="black-text">Tag 2</a>
                             </div>
                             <div class="chip">
-                                <a href="">Tag 3</a>
+                                <a href="" class="black-text">Tag 3</a>
                             </div>
                         </div>
                     </div>
@@ -87,7 +89,11 @@
             </div>
 
             <div class="col l2">
-                Rellateds
+                @foreach($lastArticles as $article)
+                    <div class="row">
+                        <h4>{{$article->title}}</h4>
+                    </div>
+                @endforeach
             </div>
         </div>
 

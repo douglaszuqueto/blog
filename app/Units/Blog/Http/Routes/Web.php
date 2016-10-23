@@ -19,6 +19,6 @@ class Web extends RouteFile
 
     protected function homeRoutes()
     {
-        $this->router->get('', ['as' => 'blog.index', 'uses' => 'HomeController@index']);
+        $this->router->get('', ['as' => 'blog.index', 'uses' => 'IndexController@index']);
     }
 }
