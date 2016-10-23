@@ -43,6 +43,7 @@ class IndexController extends Controller
         OpenGraph::setTitle('Página Inicial');
         OpenGraph::setUrl('hhttps://douglaszuqueto.com');
         OpenGraph::addProperty('type', 'articles');
+        OpenGraph::addImage('https://douglaszuqueto.com/images/esp8266.jpg');
 
         $articles = $this->articlesRepository->findWhere(['state' => 1]);
 
