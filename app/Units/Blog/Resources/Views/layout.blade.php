@@ -46,19 +46,16 @@
 
 <script>
 
-//    $(document).ready(function () {
-        var url = window.location.href;
+    var path = window.location.pathname.split("/")[1];
+    var url = window.location.href;
 
-        if (url === 'https://blog.dev/') {
-            var target = $('ul li a[href="https://blog.dev"]');
-            target.addClass('active');
-        }
-
-        var target = $('ul li a[href="' + url + '"]');
-
+    if (path === '') {
+        var target = $('ul li a[href="' + window.location.href.slice(0, -1) + '"]');
         target.addClass('active');
+    }
+    var target = $('ul li a[href="' + url + '"]');
+    target.addClass('active');
 
-//    });
 </script>
 </body>
 </html>
