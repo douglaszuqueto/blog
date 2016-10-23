@@ -192,7 +192,7 @@ return [
          * Units Service Providers...
          */
         App\Units\Authentication\Providers\UnitServiceProvider::class,
-        App\Units\Home\Providers\UnitServiceProvider::class,
+        App\Units\Blog\Providers\UnitServiceProvider::class,
         App\Units\Admin\Providers\UnitServiceProvider::class,
 
 

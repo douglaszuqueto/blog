@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Units\Home\Providers;
+namespace App\Units\Blog\Providers;
 
 use App\Support\Units\ServiceProvider;
 
