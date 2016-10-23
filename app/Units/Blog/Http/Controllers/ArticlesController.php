@@ -49,14 +49,26 @@ class ArticlesController extends Controller
     public function show($article)
     {
         SEOMeta::setTitle('Artigo 1');
-        SEOMeta::setDescription('Artigo sobre estação meteorologica com arduino');
+        SEOMeta::setDescription('Controlando Led usando MQTT e ESP8266');
         SEOMeta::setCanonical('https://douglaszuqueto.com/artigos/artigo-1');
 
-        OpenGraph::setTitle('Artigo 1');
-        OpenGraph::setDescription('Artigo sobre estação meteorologica com arduino');
-        OpenGraph::setUrl('https://douglaszuqueto.com/artigos/artigo-1');
-        OpenGraph::addProperty('type', 'articles');
-        OpenGraph::addImage(['url' => 'https://douglaszuqueto.com/images/esp8266.jpg', 'size' => 300]);
+//        OpenGraph::setTitle('Artigo 1');
+//        OpenGraph::setDescription('Controlando Led usando MQTT e ESP8266');
+//        OpenGraph::setUrl('https://douglaszuqueto.com/artigos/artigo-1');
+//        OpenGraph::addProperty('type', 'articles');
+//        OpenGraph::addImage(['url' => 'https://douglaszuqueto.com/images/esp8266.jpg', 'size' => 300]);
+
+        OpenGraph::setTitle('Artigo 1')
+            ->setDescription('Controlando Led usando MQTT e ESP8266')
+            ->setType('article')
+            ->setArticle([
+                'published_time' => '23/10/2016 12:00',
+                'author' => 'Douglas Zuqueto',
+                'section' => 'IoT',
+                'tag' => 'IoT, ESP8266, Arduino, MQTT'
+            ])
+            ->addImage(['url' => 'https://douglaszuqueto.com/images/esp8266.jpg', 'size' => 300]);
+
 
         $article = $this->articlesRepository->scopeQuery(function ($query) use ($article) {
             $query->orderBy('created_at', 'asc');
