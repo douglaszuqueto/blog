@@ -5,9 +5,13 @@ namespace App\Units\Blog\Http\Controllers;
 use App\Domains\Articles\Repositories\ArticlesRepository;
 use App\Domains\News\Repositories\NewsRepository;
 use App\Support\Http\Controllers\Controller;
+use Artesaos\SEOTools\Facades\OpenGraph;
+use Artesaos\SEOTools\Facades\SEOMeta;
+
 
 class IndexController extends Controller
 {
+
     /**
      * @var ArticlesRepository
      */
@@ -31,6 +35,15 @@ class IndexController extends Controller
 
     public function index()
     {
+        SEOMeta::setTitle('Home');
+        SEOMeta::setDescription('Conteúdo sobre IoT');
+        SEOMeta::setCanonical('https://douglaszuqueto.com');
+
+        OpenGraph::setDescription('Conteúdo sobre IoT');
+        OpenGraph::setTitle('Página Inicial');
+        OpenGraph::setUrl('hhttps://douglaszuqueto.com');
+        OpenGraph::addProperty('type', 'articles');
+
         $articles = $this->articlesRepository->findWhere(['state' => 1]);
 
         $lastArticles = $this->articlesRepository->scopeQuery(function ($query) {
