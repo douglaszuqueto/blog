@@ -14,7 +14,7 @@
     @media only screen and (min-width: 993px) {
         .container {
             padding-left: 10px;
-            width: 95%;
+            width: 80% !important;
         }
 
     }
@@ -86,14 +86,6 @@
 
 
                 </article>
-            </div>
-
-            <div class="col l2">
-                @foreach($lastArticles as $article)
-                    <div class="row">
-                        <h4>{{$article->title}}</h4>
-                    </div>
-                @endforeach
             </div>
         </div>
 

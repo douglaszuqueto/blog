@@ -13,12 +13,18 @@ class Web extends RouteFile
     protected function routes()
     {
         $this->router->group(['domain' => env('APP_DOMAIN')], function () {
-            $this->homeRoutes();
+            $this->indexRoutes();
+            $this->articlesRoutes();
         });
     }
 
-    protected function homeRoutes()
+    protected function indexRoutes()
     {
         $this->router->get('', ['as' => 'blog.index', 'uses' => 'IndexController@index']);
+    }
+
+    protected function articlesRoutes()
+    {
+        $this->router->get('/articles', ['as' => 'blog.articles.index', 'uses' => 'ArticlesController@index']);
     }
 }
