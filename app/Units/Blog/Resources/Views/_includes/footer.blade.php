@@ -22,6 +22,10 @@
         text-transform: uppercase;
     }
 
+    .patrocinadores h5, .apoiadores h5, .social h5 {
+        margin: 15px;
+    }
+
     .patrocinadores a, .apoiadores a {
         margin: 5px;
     }
@@ -32,13 +36,22 @@
 
 <div class="row">
     <div class="container">
-        <div class="col l4">
+        <div class="col l4 social">
             <h5 class="white-text">SOCIAL</h5>
 
-            <li><a class="white-text" href="">Facebook</a></li>
-            <li><a class="white-text" href="">Instagram</a></li>
-            <li><a class="white-text" href="">Telegram</a></li>
-            <li><a class="white-text" href="">GitHub</a></li>
+            <li>
+                <a class="white-text" href="https://www.facebook.com/douglaszuquetooficial"
+                   title="Facebook" target="_blank">Facebook</a>
+            </li>
+            <li>
+                <a class="white-text" href="https://www.instagram.com/douglaszuquetooficial/" title="Instagram" target="_blank">Instagram</a>
+            </li>
+            <li>
+                <a class="white-text" href="https://telegram.me/douglaszuqueto" title="Telegram" target="_blank">Telegram</a>
+            </li>
+            <li>
+                <a class="white-text" href="https://github.com/douglaszuqueto" title="GitHub" target="_blank">GitHub</a>
+            </li>
         </div>
         <div class="col l4 patrocinadores">
             <h5 class="white-text center">PATROCINADORES</h5>
