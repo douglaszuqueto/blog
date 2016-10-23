@@ -9,7 +9,7 @@
                 <table class="table highlight">
                     <thead>
                     <tr>
-                        <th>Titulo</th>
+                        <th>Subject</th>
                         <th width="10%" class="center-align">Data</th>
                         <th width="10%" class="center-align">Status</th>
                         <th width="10%" class="center-align">#</th>
@@ -19,7 +19,7 @@
                     <tbody>
                     @foreach($itens as $row)
                         <tr>
-                            <td>{{$row->title}}</td>
+                            <td>{{$row->subject}}</td>
                             <td class="center-align">{{date('d/m/Y', strtotime($row->created_at))}}</td>
                             <td class="center-align">
                                 <i class="material-icons {{$row->state ? 'green-text' : ''}}">visibility</i>
