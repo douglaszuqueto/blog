@@ -72,7 +72,7 @@ class ArticlesController extends Controller
 
         $article = $this->articlesRepository->scopeQuery(function ($query) use ($article) {
             $query->orderBy('created_at', 'asc');
-            return $query->where('state', '=', 1);
+            return $query->where('state', '=', 3);
         })->first();
 
         return $this->view('home::articles.show', [

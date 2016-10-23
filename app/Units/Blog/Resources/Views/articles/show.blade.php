@@ -19,72 +19,59 @@
 
     }
 
-    .card .card-content {
-        padding: 5px !important;
-    }
-
-    .avatar img {
-        width: 70%;
-    }
-
-    .row {
-        margin-bottom: 10px !important;
+    .article-view article h1 {
+        font-size: 41px;
+        line-height: 50px;
     }
 </style>
 @section('content')
-    <div class="container index">
+    <div class="container article-view">
         <div class="row">
             <div class="col s12 l10">
-                <article class="col s12 l9 card">
-                    <div class="card-content black-text">
-                        <div class="row article-header">
-                            <div class="col s12 l2 hide-on-small-only">
-                                <span class="avatar">
-                                    <img src="https://douglaszuqueto.github.io/public/build/images/perfil.jpg"
-                                         class="responsive-img circle">
-                                </span>
-                            </div>
-                            <div class="col s12 l4">
-                                <div class="row">
-                                    <span class="author">Douglas Zuqueto</span>
-                                </div>
-                                <div class="row">
-                                    <span>23/10/2016 12:00</span>
-                                </div>
-                            </div>
+                <article class="col s12 l8 offset-l2">
+                    <header>
+                        <h1>{{$article->title}}</h1>
+                        <div>
+                            Por <strong>Douglas Zuqueto</strong>
+                            - {{date('d/m/Y H:i', strtotime($article->created_at))}}
                         </div>
-                        <div class="row article-image">
-                            <div class="col s12 l12">
-                                <a href="">
-                                    <img src="{{asset('images/esp8266.jpg')}}" class="responsive-img">
-                                </a>
-                            </div>
+                    </header>
+                    <div class="article-body">
+                        <p>{{$article->subtitle}}</p>
+
+                        <div class="article-image">
+                            <img src="{{$article->image}}" alt="" width="100%">
+                        </div>
+
+                        <div class="article-content">
+                            <p>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de
+                                impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido
+                                pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos.
+                                Lorem Ipsum sobreviveu não só a cinco séculos, como também ao salto para a editoração
+                                eletrônica, permanecendo essencialmente inalterado. Se popularizou na década de 60,
+                                quando a Letraset lançou decalques contendo passagens de Lorem Ipsum, e mais
+                                recentemente quando passou a ser integrado a softwares de editoração eletrônica como
+                                Aldus PageMaker.</p>
+
+                            <p>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de
+                                impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido
+                                pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos.
+                                Lorem Ipsum sobreviveu não só a cinco séculos, como também ao salto para a editoração
+                                eletrônica, permanecendo essencialmente inalterado. Se popularizou na década de 60,
+                                quando a Letraset lançou decalques contendo passagens de Lorem Ipsum, e mais
+                                recentemente quando passou a ser integrado a softwares de editoração eletrônica como
+                                Aldus PageMaker.</p>
+
+                            <p>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de
+                                impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido
+                                pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos.
+                                Lorem Ipsum sobreviveu não só a cinco séculos, como também ao salto para a editoração
+                                eletrônica, permanecendo essencialmente inalterado. Se popularizou na década de 60,
+                                quando a Letraset lançou decalques contendo passagens de Lorem Ipsum, e mais
+                                recentemente quando passou a ser integrado a softwares de editoração eletrônica como
+                                Aldus PageMaker.</p>
                         </div>
                     </div>
-                    <div class="card-content">
-                        <div class="row article-body">
-                            <div class="col s12 l12">
-                                <a href="" class="card-title black-text">Controlando Led usando MQTT e ESP8266</a>
-                                {{--<p>I am a very simple card. I am good at containing small bits of information.</p>--}}
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="card-content" style="border-top: 1px solid rgba(160,160,160,0.2);">
-                        <div class="article-footer">
-                            <div class="chip">
-                                <a href="" class="black-text">Tag 1</a>
-                            </div>
-                            <div class="chip">
-                                <a href="" class="black-text">Tag 2</a>
-                            </div>
-                            <div class="chip">
-                                <a href="" class="black-text">Tag 3</a>
-                            </div>
-                        </div>
-                    </div>
-
-
                 </article>
             </div>
         </div>
