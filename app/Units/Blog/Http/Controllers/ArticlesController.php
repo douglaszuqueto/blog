@@ -30,11 +30,11 @@ class ArticlesController extends Controller
         SEOMeta::setDescription('Conteúdo sobre IoT');
         SEOMeta::setCanonical('https://douglaszuqueto.com/artigos');
 
-        OpenGraph::setDescription('Conteúdo sobre IoT');
         OpenGraph::setTitle('Artigos');
+        OpenGraph::setDescription('Conteúdo sobre IoT');
         OpenGraph::setUrl('hhttps://douglaszuqueto.com/artigos');
         OpenGraph::addProperty('type', 'articles');
-        OpenGraph::addImage('https://douglaszuqueto.com/images/esp8266.jpg');
+        OpenGraph::addImage(['url' => 'https://douglaszuqueto.com/images/esp8266.jpg', 'size' => 300]);
 
         $articles = $this->articlesRepository->scopeQuery(function ($query) {
             $query->orderBy('created_at', 'asc');
