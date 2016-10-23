@@ -13,6 +13,12 @@
         margin-top: 50px;
     }
 
+    .footer-copyright span {
+        font-weight: 500;
+        font-style: normal;
+        font-size: 1.5em;
+    }
+
     .container h5 {
         font-size: 18px;
         font-weight: 700;
