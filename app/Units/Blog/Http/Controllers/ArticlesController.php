@@ -46,22 +46,21 @@ class ArticlesController extends Controller
         ]);
     }
 
-    public function show($id)
+    public function show($article)
     {
         SEOMeta::setTitle('Artigo 1');
         SEOMeta::setDescription('Artigo sobre estação meteorologica com arduino');
-        SEOMeta::setCanonical('https://douglaszuqueto.com/artigos/1');
+        SEOMeta::setCanonical('https://douglaszuqueto.com/artigos/artigo-1');
 
         OpenGraph::setTitle('Artigo 1');
         OpenGraph::setDescription('Artigo sobre estação meteorologica com arduino');
-        OpenGraph::setUrl('https://douglaszuqueto.com/artigos/1');
+        OpenGraph::setUrl('https://douglaszuqueto.com/artigos/artigo-1');
         OpenGraph::addProperty('type', 'articles');
         OpenGraph::addImage(['url' => 'https://douglaszuqueto.com/images/esp8266.jpg', 'size' => 300]);
 
         $article = $this->articlesRepository->scopeQuery(function ($query) use ($id) {
             $query->orderBy('created_at', 'asc');
-            $query->where('state', '=', 1);
-            return $query->where('id', $id);
+            return $query->where('state', '=', 1);
         })->first();
 
         return $this->view('home::articles.show', [
