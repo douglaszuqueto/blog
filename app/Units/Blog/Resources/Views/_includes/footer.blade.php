@@ -1,7 +1,7 @@
 <style>
     footer {
         height: auto;
-        background-color: #363839;
+        background-color: black;
     }
 
     .footer-copyright {

@@ -34,7 +34,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        <input type="submit" value="Enviar" class="btn right">
+                        <input type="submit" value="Enviar" class="btn green right">
                     </div>
                 </form>
             </div>

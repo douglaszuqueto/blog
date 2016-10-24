@@ -1,9 +1,7 @@
 @extends('home::layout')
 
 <style>
-    .index {
-        background-color: #fafafa !important;
-    }
+
 
     @media only screen and (max-width: 992px) {
         .container {
