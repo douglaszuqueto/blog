@@ -4,6 +4,8 @@ namespace App\Units\Blog\Http\Controllers;
 
 use App\Domains\Contact\Repositories\ContactRepository;
 use App\Support\Http\Controllers\Controller;
+use Artesaos\SEOTools\Facades\OpenGraph;
+use Artesaos\SEOTools\Facades\SEOMeta;
 use Illuminate\Http\Request;
 
 class ContactController extends Controller
@@ -24,6 +26,16 @@ class ContactController extends Controller
 
     public function index()
     {
+        SEOMeta::setTitle('Contato');
+        SEOMeta::setDescription('Entre em contato conosco');
+        SEOMeta::setCanonical('https://douglaszuqueto.com/contato');
+
+        OpenGraph::setTitle('Contato');
+        OpenGraph::setDescription('Entre em contato conosco');
+        OpenGraph::setUrl('hhttps://douglaszuqueto.com/contato');
+        OpenGraph::addProperty('type', 'website');
+        OpenGraph::addImage('https://douglaszuqueto.com/images/esp8266.jpg');
+
         return $this->view('blog::contact.index');
     }
 
