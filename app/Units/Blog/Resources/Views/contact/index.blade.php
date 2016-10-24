@@ -26,7 +26,7 @@
                     </div>
                     <div class="row">
                         <div class="input-field col s12">
-                            <textarea id="message" name="message" class="materialize-textarea" required></textarea>
+                            <textarea id="message" name="message" class="materialize-textarea validate" required></textarea>
                             <label for="message">Mensagem</label>
                         </div>
                     </div>
