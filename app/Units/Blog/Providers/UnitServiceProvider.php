@@ -6,7 +6,7 @@ use App\Support\Units\ServiceProvider;
 
 class UnitServiceProvider extends ServiceProvider
 {
-    protected $alias = 'home';
+    protected $alias = 'blog';
 
     protected $hasViews = true;
 

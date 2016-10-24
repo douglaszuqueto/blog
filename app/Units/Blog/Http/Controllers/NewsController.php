@@ -28,7 +28,7 @@ class NewsController extends Controller
             return $query->where('state', '=', 1);
         })->all();
 
-        return $this->view('home::news.index', [
+        return $this->view('blog::news.index', [
             'news' => $news,
         ]);
     }

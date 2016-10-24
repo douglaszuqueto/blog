@@ -41,7 +41,7 @@ class ArticlesController extends Controller
             return $query->where('state', '=', 3);
         })->all();
 
-        return $this->view('home::articles.index', [
+        return $this->view('blog::articles.index', [
             'articles' => $articles,
         ]);
     }
@@ -77,7 +77,7 @@ class ArticlesController extends Controller
             ->addImage($article->image);
 
 
-        return $this->view('home::articles.show', [
+        return $this->view('blog::articles.show', [
             'article' => $article,
         ]);
     }

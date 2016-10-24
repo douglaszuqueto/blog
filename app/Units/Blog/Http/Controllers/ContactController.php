@@ -24,7 +24,7 @@ class ContactController extends Controller
 
     public function index()
     {
-        return $this->view('home::contact.index');
+        return $this->view('blog::contact.index');
     }
 
     public function send(Request $request)

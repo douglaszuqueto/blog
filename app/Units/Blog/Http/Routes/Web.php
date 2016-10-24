@@ -35,9 +35,7 @@ class Web extends RouteFile
 
     protected function projectRoutes()
     {
-        $this->router->get('/o-projeto', ['as' => 'blog.project.index', function(){
-            return view('home::project.index');
-        }]);
+        $this->router->get('/o-projeto', ['as' => 'blog.project.index', 'uses' => 'ProjectController@project']);
     }
 
     protected function newsRoutes()
@@ -48,9 +46,7 @@ class Web extends RouteFile
 
     protected function aboutMeRoutes()
     {
-        $this->router->get('/sobre-mim', ['as' => 'blog.about-me.index', function(){
-            return view('home::about-me.index');
-        }]);
+        $this->router->get('/sobre-mim', ['as' => 'blog.about-me.index', 'uses' => 'AboutMeController@about']);
     }
 
     protected function contactRoutes()

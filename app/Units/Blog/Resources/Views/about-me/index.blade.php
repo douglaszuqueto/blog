@@ -1,4 +1,4 @@
-@extends('home::layout')
+@extends('blog::layout')
 
 @section('content')
     <div class="container about-me">

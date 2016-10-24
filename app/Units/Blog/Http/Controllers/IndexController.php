@@ -53,7 +53,7 @@ class IndexController extends Controller
             return $query->limit(5);
         })->all();
 
-        return $this->view('home::index.index', [
+        return $this->view('blog::index.index', [
             'articles' => $articles,
             'lastArticles' => $lastArticles
         ]);
