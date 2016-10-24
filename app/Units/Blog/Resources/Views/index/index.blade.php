@@ -1,40 +1,5 @@
 @extends('home::layout')
 
-<style>
-    .index {
-        background-color: #fafafa !important;
-    }
-
-    @media only screen and (max-width: 992px) {
-        .container {
-            width: 95%;
-        }
-    }
-
-    @media only screen and (min-width: 993px) {
-        .container {
-            padding-left: 10px;
-            width: 80% !important;
-        }
-
-    }
-
-    .card .card-content {
-        padding: 5px !important;
-    }
-
-    .avatar img {
-        width: 70%;
-    }
-
-    .recentArticles > .row {
-        height: 220px;
-    }
-
-    /*.row {*/
-    /*margin-bottom: 10px !important;*/
-    /*}*/
-</style>
 @section('content')
     <div class="container index">
         <div class="row">

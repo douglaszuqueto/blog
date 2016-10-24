@@ -1,8 +1,5 @@
 @extends('home::layout')
 
-<style>
-
-</style>
 @section('content')
     <div class="container contact">
         <div class="row">

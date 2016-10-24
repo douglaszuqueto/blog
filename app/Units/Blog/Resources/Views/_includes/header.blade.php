@@ -1,34 +1,3 @@
-<style>
-    body {
-        background: #F9F9F9 !important;
-    }
-    nav {
-        background: rgba(0, 0, 0, 0.9);
-        position: fixed;
-        z-index: 999;
-    }
-
-    .brand-logo {
-        margin-left: 50px;
-    }
-
-    nav ul a {
-        font-size: 14pt;
-        font-family: 'Open Sans';
-        color: #fff;
-        padding: 0 20px;
-    }
-    nav ul a:hover {
-        padding: 0 20px;
-        font-size: 15pt;
-        color: #008BD3;
-    }
-
-    /*.active {*/
-    /*background-color: #2196F3 !important;*/
-    /*color: white !important;*/
-    /*}*/
-</style>
 <nav>
     <div class="nav-wrapper">
         <a href="{{route('blog.index')}}" class="brand-logo left">douglaszuqueto</a>

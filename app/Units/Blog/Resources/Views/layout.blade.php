@@ -15,6 +15,7 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 
     <link rel="stylesheet" href="{{asset('css/materialize.min.css')}}">
+    <link rel="stylesheet" href="{{asset('css/style.css')}}">
 
 
     <script src="{{asset('js/jquery.min.js')}}"></script>

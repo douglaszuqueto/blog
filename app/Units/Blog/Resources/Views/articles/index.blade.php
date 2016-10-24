@@ -1,31 +1,5 @@
 @extends('home::layout')
 
-<style>
-
-
-    @media only screen and (max-width: 992px) {
-        .container {
-            width: 95%;
-        }
-    }
-
-    @media only screen and (min-width: 993px) {
-        .container {
-            padding-left: 10px;
-            width: 80% !important;
-        }
-
-    }
-
-    .card .card-content {
-        padding: 5px !important;
-    }
-
-    .avatar img {
-        margin-top: 10px;
-    }
-
-</style>
 @section('content')
     <div class="container index">
         <div class="row">
