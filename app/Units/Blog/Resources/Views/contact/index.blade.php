@@ -6,6 +6,12 @@
             <div class="col s12 l12">
                 <h5>Formulário de Contato</h5>
 
+                @if (session('message'))
+                    <div class="col s12">
+                        <p>{{ session('message') }}</p>
+                    </div>
+                @endif
+
                 <form class="col s12 m10 l8" method="POST" action="{{route('blog.contact.send')}}">
                     <input type="hidden" name="_token" value="{{csrf_token()}}">
                     <div class="row">
@@ -26,7 +32,8 @@
                     </div>
                     <div class="row">
                         <div class="input-field col s12">
-                            <textarea id="message" name="message" class="materialize-textarea validate" required></textarea>
+                            <textarea id="message" name="message" class="materialize-textarea validate"
+                                      required></textarea>
                             <label for="message">Mensagem</label>
                         </div>
                     </div>

@@ -42,7 +42,9 @@ class ContactController extends Controller
     public function send(Request $request)
     {
         if ($this->contactRepository->create($request->all())) {
-            return redirect()->route('blog.contact.index');
+            return redirect()->route('blog.contact.index')->with([
+                'message' => 'Sua solicitação foi enviada. Aguarde nosso Retorno.'
+            ]);
         }
     }
 }
