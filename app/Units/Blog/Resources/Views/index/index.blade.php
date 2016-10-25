@@ -3,7 +3,7 @@
 @section('content')
     <div class="container index">
         <div class="row">
-            <div class="col s12 l10 recentArticles">
+            <div class="col s12 l9 recentArticles">
                 <div class="row">
                     <div class="col l5">
                         <img src="{{asset('images/IoT.jpg')}}" class="responsive-img">
@@ -33,12 +33,24 @@
                 </div>
             </div>
 
-            <div class="col l2">
-                @foreach($lastArticles as $article)
-                    <div class="row">
-                        <h4>{{$article->title}}</h4>
-                    </div>
-                @endforeach
+            <div class="col l3">
+                {{--@foreach($lastArticles as $article)--}}
+                {{--<div class="row">--}}
+                {{--<h6>{{$article->title}}</h6>--}}
+                {{--</div>--}}
+                {{--@endforeach--}}
+
+                <div class="fb-page"
+                     data-href="https://www.facebook.com/douglaszuquetooficial/"
+                     data-tabs="timeline"
+                     {{--data-width="250"--}}
+                     data-small-header="true"
+                     data-adapt-container-width="true"
+                     data-hide-cover="false"
+                     data-show-facepile="true">
+                    <blockquote cite="https://www.facebook.com/douglaszuquetooficial/" class="fb-xfbml-parse-ignore"><a
+                                href="https://www.facebook.com/douglaszuquetooficial/">Douglas Zuqueto</a></blockquote>
+                </div>
             </div>
         </div>
 

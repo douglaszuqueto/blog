@@ -58,6 +58,16 @@
     var target = $('ul li a[href="' + url + '"]');
     target.addClass('active');
 
+
 </script>
+<div id="fb-root"></div>
+<script>(function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.8&appId=191652421276345";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
 </body>
 </html>
