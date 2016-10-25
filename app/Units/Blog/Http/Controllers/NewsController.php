@@ -4,6 +4,8 @@ namespace App\Units\Blog\Http\Controllers;
 
 use App\Domains\News\Repositories\NewsRepository;
 use App\Support\Http\Controllers\Controller;
+use Artesaos\SEOTools\Facades\OpenGraph;
+use Artesaos\SEOTools\Facades\SEOMeta;
 
 class NewsController extends Controller
 {
@@ -23,6 +25,16 @@ class NewsController extends Controller
 
     public function index()
     {
+        SEOMeta::setTitle('Notícias');
+        SEOMeta::setDescription('Notícias sobre Embarcados, Internet das Coisas, Inovação, Sustentabilidade e Software');
+        SEOMeta::setCanonical('https://douglaszuqueto.com/noticias');
+
+        OpenGraph::setTitle('Notícias');
+        OpenGraph::setDescription('Notícias sobre Embarcados, Internet das Coisas, Inovação, Sustentabilidade e Software');
+        OpenGraph::setUrl('hhttps://douglaszuqueto.com/noticias');
+        OpenGraph::addProperty('type', 'website');
+        OpenGraph::addImage('https://douglaszuqueto.com/images/IoT.jpg');
+
         $news = $this->newsRepository->scopeQuery(function ($query) {
             $query->orderBy('created_at', 'asc');
             return $query->where('state', '=', 1);
