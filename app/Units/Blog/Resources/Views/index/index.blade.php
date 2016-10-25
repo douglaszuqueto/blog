@@ -6,13 +6,13 @@
             <div class="col s12 l10 recentArticles">
                 <div class="row">
                     <div class="col l5">
-                        <img src="{{asset('images/esp8266.jpg')}}" class="responsive-img">
+                        <img src="{{asset('images/IoT.jpg')}}" class="responsive-img">
                         <p>Title sdasdsadsadsad</p>
                         <time class="" datetime="2016-10-22T16:14:31-02:00">22/10/2016 12:00</time>
 
                     </div>
                     <div class="col l5">
-                        <img src="{{asset('images/esp8266.jpg')}}" class="responsive-img">
+                        <img src="{{asset('images/IoT.jpg')}}" class="responsive-img">
                         <p>Title sdasdsadsadsad</p>
                         <time class="" datetime="2016-10-22T16:14:31-02:00">22/10/2016 12:00</time>
 
@@ -20,12 +20,12 @@
                 </div>
                 <div class="row">
                     <div class="col l5">
-                        <img src="{{asset('images/esp8266.jpg')}}" class="responsive-img">
+                        <img src="{{asset('images/IoT.jpg')}}" class="responsive-img">
                         <p>Title sdasdsadsadsad</p>
                         <time class="" datetime="2016-10-22T16:14:31-02:00">22/10/2016 12:00</time>
                     </div>
                     <div class="col l5">
-                        <img src="{{asset('images/esp8266.jpg')}}" class="responsive-img">
+                        <img src="{{asset('images/IoT.jpg')}}" class="responsive-img">
                         <p>Title sdasdsadsadsad</p>
                         <time class="" datetime="2016-10-22T16:14:31-02:00">22/10/2016 12:00</time>
 
