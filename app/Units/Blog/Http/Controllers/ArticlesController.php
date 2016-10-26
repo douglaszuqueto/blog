@@ -34,7 +34,7 @@ class ArticlesController extends Controller
         OpenGraph::setDescription('Conteúdo sobre IoT');
         OpenGraph::setUrl('https://douglaszuqueto.com/artigos');
         OpenGraph::addProperty('type', 'articles');
-        OpenGraph::addImage(['url' => 'https://douglaszuqueto.com/images/esp8266.jpg', 'size' => 300]);
+        OpenGraph::addImage('https://douglaszuqueto.com/images/IoT.jpg');
 
         $articles = $this->articlesRepository->scopeQuery(function ($query) {
             $query->orderBy('created_at', 'asc');
