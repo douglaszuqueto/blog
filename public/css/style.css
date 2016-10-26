@@ -1,20 +1,69 @@
 body {
     background: #F9F9F9 !important;
+    font-size: 16px;
 }
 
 @media only screen and (max-width: 992px) {
     .container {
-        width: 95% !important;
+        width: 80% !important;
     }
 }
 
 @media only screen and (min-width: 993px) {
     .container {
         padding-left: 10px;
-        width: 80% !important;
+        width: 90% !important;
     }
 
 }
+
+.nav-left{
+    float: left;
+    margin-right: 30px;
+}
+.nav-left .title{
+    font-family: 'Miriam Libre',sans-serif;
+    font-weight: 700;
+    color: #525252 ;
+    letter-spacing: -.02em;
+    display: inline-block;
+    margin-left: 12px;
+    transform: translatey(2px);
+    font-size: 16pt;
+}
+
+.nav-right ul li a{
+    padding-top: 5px;
+}
+
+.nav-right ul li a:hover{
+    padding-top: 5px;
+}
+
+
+
+nav {
+    background: white;
+    position: relative;
+    z-index: 999;
+    border-top: 3px #1da1f2 solid;
+}
+
+
+
+nav ul a {
+    font-family: 'Miriam Libre';
+    font-size: 14pt;
+    color: #a1a1a1;
+    padding: 0 20px;
+}
+
+nav ul a:hover {
+    padding: 0 20px;
+    color: #008BD3;
+}
+
+
 
 .card .card-content {
     padding: 5px !important;
@@ -24,27 +73,9 @@ body {
     margin-top: 10px;
 }
 
-nav {
-    background: rgba(0, 0, 0, 0.9) !important;
-    position: fixed;
-    z-index: 999;
-}
 
 .brand-logo {
     margin-left: 50px;
-}
-
-nav ul a {
-    font-size: 14pt;
-    font-family: 'Open Sans';
-    color: #fff;
-    padding: 0 20px;
-}
-
-nav ul a:hover {
-    padding: 0 20px;
-    font-size: 15pt;
-    color: #008BD3;
 }
 
 /*.active {*/
