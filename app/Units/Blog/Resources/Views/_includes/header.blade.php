@@ -1,5 +1,4 @@
-<div class="">
-    <nav class="col l12">
+    <nav class="col l12 nav-bar">
         <div class="nav-wrapper container">
             <div class="nav-left">
                 <a href="{{route('blog.index')}}">
@@ -37,21 +36,8 @@
                     <li><a href="{{route('blog.contact.index')}}" class="menu">Contato</a></li>
                 </ul>
             </div>
-
-
-            {{--<div class="nav-right">--}}
-            {{--<ul>--}}
-            {{--<li><a href=""><span class="material-icons">info_outline</span></a></li>--}}
-            {{--<li><a href=""><span class="material-icons">info_outline</span></a></li>--}}
-            {{--</ul>--}}
-            {{--</div>--}}
-
         </div>
     </nav>
-    <div class="l12 hide-on-med-and-down center" style="height: 85px">
-        {{--    <img src="{{asset('images/esp8266.jpg')}}" alt="" class="responsive-img" style="height: 300px">--}}
-    </div>
-</div>
 <script>
     $(document).ready(function () {
         $(".button-collapse").sideNav();
