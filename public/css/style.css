@@ -7,12 +7,71 @@ body {
     .container {
         width: 80% !important;
     }
+
+    /*.title_menu {*/
+    /*width: 80% !important;*/
+    /*}*/
+    /*.logo{*/
+    /*width: 80% !important;*/
+    /*margin-top: 50px;*/
+    /*}*/
+    /*.nav-left {*/
+    /*max-width: 15% !important;*/
+    /*float: left;*/
+    /*}*/
+
+}
+
+@media only screen and (max-width: 480px) {
+    .nav-left {
+        width: 30% !important;
+    }
+
+    .title_menu {
+        max-width: 50% !important;
+        margin: -3px 0 0 12px !important;
+    }
+
+    .logo {
+        max-width: 100% !important;
+        width: 100% !important;
+        margin-top: 5px !important;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .nav-left .logo {
+        width: 100% !important;
+        margin-top: 5px !important;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .title_menu {
+        width: 80% !important;
+        margin: -3px 0 0 12px !important;
+    }
+
+    .logo {
+        width: 60% !important;
+        margin-top: 50px;
+    }
+
+    .nav-left {
+        max-width: 10% !important;
+        float: left;
+    }
+
 }
 
 @media only screen and (min-width: 993px) {
     .container {
         padding-left: 10px;
-        width: 90% !important;
+        width: 80% !important;
+    }
+
+    .title_menu {
+        width: 80%;
     }
 }
 
@@ -22,8 +81,9 @@ body {
     float: left;
 }
 
-.nav-left img {
-    margin-top: 5px;
+.nav-left .logo {
+    width: 80%;
+    margin-top: 9px;
 }
 
 .title_menu {
@@ -43,6 +103,17 @@ body {
     width: 70%;
     float: left;
 }
+.menu_toggle{
+    float: left;
+}
+
+.side-nav{
+    width: 240px;
+}
+#mobile-demo .logo_mobile{
+    width: 20%;
+    margin: 10px 0 10px 80px;
+}
 
 nav {
     background: white;
@@ -53,9 +124,9 @@ nav {
 
 nav ul a {
     font-family: 'Miriam Libre';
-    font-size: 14pt;
+    font-size: 12pt;
     color: #a1a1a1;
-    padding: 0 20px;
+    padding: 0 10px;
 }
 
 nav ul a:hover {
