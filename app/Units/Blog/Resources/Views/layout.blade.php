@@ -4,11 +4,20 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
-    <link rel="shortcut icon" type="image/x-icon" href="{{asset('images/favicon.ico')}}">
-    <meta name="apple-mobile-web-app-title" content="douglaszuqueto">
-    <meta name="application-name" content="douglaszuqueto">
+    <meta name="apple-mobile-web-app-title" content="Douglas Zuqueto">
+    <meta name="application-name" content="Douglas Zuqueto">
     <meta name="theme-color" content="#008BD3">
 
+    {{-- Icons --}}
+    <link rel="shortcut icon" type="image/x-icon" href="{{asset('images/favicon.ico')}}">
+
+    <link rel="icon" type="image/png" href="{{asset('images/icons/android/favicon-36x36.png')}}" sizes="36x36">
+    <link rel="icon" type="image/png" href="{{asset('images/icons/android/favicon-96x96.png')}}" sizes="96x96">
+    <link rel="icon" type="image/png" href="{{asset('images/icons/android/favicon-192x192.png')}}" sizes="192x192">
+
+    <link rel="apple-touch-icon" sizes="57x57" href="{{asset('images/icons/ios/apple-touch-icon-57x57.png')}}">
+    <link rel="apple-touch-icon" sizes="20x20" href="{{asset('images/icons/ios/apple-touch-icon-20x20.png')}}">
+    <link rel="apple-touch-icon" sizes="76x76" href="{{asset('images/icons/ios/apple-touch-icon-67x76.png')}}">
 
     {!! app('seotools')->generate() !!}
 
@@ -64,13 +73,13 @@
 </script>
 {{--<div id="fb-root"></div>--}}
 {{--<script>(function (d, s, id) {--}}
-        {{--var js, fjs = d.getElementsByTagName(s)[0];--}}
-        {{--if (d.getElementById(id)) return;--}}
-        {{--js = d.createElement(s);--}}
-        {{--js.id = id;--}}
-        {{--js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.8&appId=191652421276345";--}}
-        {{--fjs.parentNode.insertBefore(js, fjs);--}}
-    {{--}(document, 'script', 'facebook-jssdk'));</script>--}}
+{{--var js, fjs = d.getElementsByTagName(s)[0];--}}
+{{--if (d.getElementById(id)) return;--}}
+{{--js = d.createElement(s);--}}
+{{--js.id = id;--}}
+{{--js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.8&appId=191652421276345";--}}
+{{--fjs.parentNode.insertBefore(js, fjs);--}}
+{{--}(document, 'script', 'facebook-jssdk'));</script>--}}
 
 <!-- Go to www.addthis.com/dashboard to customize your tools -->
 {{--<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5808c7bd4956dafc"></script>--}}
