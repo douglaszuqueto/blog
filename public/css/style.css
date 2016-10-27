@@ -31,7 +31,7 @@ body {
 @media only screen and (max-width: 600px) {
     .nav-left .logo {
         width: 100% !important;
-        margin-top: 12px !important;
+        margin-top: 10px !important;
     }
 }
 
