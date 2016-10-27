@@ -8,7 +8,6 @@
     <meta name="application-name" content="Douglas Zuqueto">
     <meta name="theme-color" content="#008BD3">
 
-    {{-- Icons --}}
     <link rel="shortcut icon" type="image/x-icon" href="{{asset('images/favicon.ico')}}">
 
     <link rel="icon" type="image/png" href="{{asset('images/icons/android/favicon-36x36.png')}}" sizes="36x36">
@@ -17,7 +16,7 @@
 
     <link rel="apple-touch-icon" sizes="57x57" href="{{asset('images/icons/ios/apple-touch-icon-57x57.png')}}">
     <link rel="apple-touch-icon" sizes="20x20" href="{{asset('images/icons/ios/apple-touch-icon-20x20.png')}}">
-    <link rel="apple-touch-icon" sizes="76x76" href="{{asset('images/icons/ios/apple-touch-icon-67x76.png')}}">
+    <link rel="apple-touch-icon" sizes="76x76" href="{{asset('images/icons/ios/apple-touch-icon-76x76.png')}}">
 
     {!! app('seotools')->generate() !!}
 
