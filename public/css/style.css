@@ -14,34 +14,35 @@ body {
         padding-left: 10px;
         width: 90% !important;
     }
-
 }
 
-.nav-left{
+/* HEADER */
+.nav-left {
+    max-width: 5%;
     float: left;
-    margin-right: 30px;
 }
 
-.nav-left .title{
-    font-family: 'Miriam Libre',sans-serif;
+.nav-left img {
+    margin-top: 5px;
+}
+
+.title_menu {
+    width: 20%;
+    float: left;
+    margin: auto;
+    font-family: 'Miriam Libre', sans-serif;
     font-weight: 700;
-    color: #525252 ;
+    color: #525252;
     letter-spacing: -.02em;
     display: inline-block;
-    margin-left: 12px;
     transform: translatey(2px);
     font-size: 16pt;
 }
 
-.nav-right ul li a{
-    padding-top: 5px;
+.nav-menu {
+    width: 70%;
+    float: left;
 }
-
-.nav-right ul li a:hover{
-    padding-top: 5px;
-}
-
-
 
 nav {
     background: white;
@@ -50,8 +51,6 @@ nav {
     border-top: 3px #1da1f2 solid;
 }
 
-
-
 nav ul a {
     font-family: 'Miriam Libre';
     font-size: 14pt;
@@ -59,13 +58,15 @@ nav ul a {
     padding: 0 20px;
 }
 
+nav ul .material-icons {
+}
+
 nav ul a:hover {
     padding: 0 20px;
     color: #008BD3;
 }
 
-
-
+/* BODY */
 .card .card-content {
     padding: 5px !important;
 }
@@ -73,7 +74,6 @@ nav ul a:hover {
 .avatar img {
     margin-top: 10px;
 }
-
 
 .brand-logo {
     margin-left: 50px;
@@ -97,7 +97,7 @@ nav ul a:hover {
 }
 
 .article-view article h1 {
-    font-family: medium-content-sans-serif-font,"Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Arial,sans-serif;
+    font-family: medium-content-sans-serif-font, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
     letter-spacing: -.02em;
     font-weight: 700;
     font-style: normal;
@@ -107,7 +107,7 @@ nav ul a:hover {
     letter-spacing: -.028em;
 }
 
-.article-body .article-content p,  .article-body > p{
+.article-body .article-content p, .article-body > p {
     text-align: justify;
     text-justify: inter-word;
     font-family: medium-content-serif-font, Georgia, Cambria, "Times New Roman", Times, serif;

@@ -1,12 +1,13 @@
 <div class="">
-    <nav>
+    <nav class="col l12">
         <div class="nav-wrapper container">
             <div class="nav-left">
                 <a href="{{route('blog.index')}}">
-                    <img src="{{asset('images/logo_2.png')}}" alt="" width="10%" style="padding-top: 5px">
+                    <img src="{{asset('images/logo_2.png')}}" alt="" width="80%">
                 </a>
-                <p class="title">Douglas Zuqueto</p>
             </div>
+            <p class="title_menu">Douglas Zuqueto</p>
+
 
             <div class="nav-menu">
                 <ul id="nav-mobile" class="hide-on-med-and-down">
@@ -16,14 +17,16 @@
                     <li><a href="{{route('blog.news.index')}}" class="menu">Notícias</a></li>
                     <li><a href="{{route('blog.about-me.index')}}" class="menu">Sobre Mim</a></li>
                     <li><a href="{{route('blog.contact.index')}}" class="menu">Contato</a></li>
+
+
                 </ul>
             </div>
 
             {{--<div class="nav-right">--}}
-                {{--<ul>--}}
-                    {{--<li><a href=""><span class="material-icons">info_outline</span></a></li>--}}
-                    {{--<li><a href=""><span class="material-icons">info_outline</span></a></li>--}}
-                {{--</ul>--}}
+            {{--<ul>--}}
+            {{--<li><a href=""><span class="material-icons">info_outline</span></a></li>--}}
+            {{--<li><a href=""><span class="material-icons">info_outline</span></a></li>--}}
+            {{--</ul>--}}
             {{--</div>--}}
 
         </div>
