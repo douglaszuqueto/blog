@@ -7,22 +7,12 @@ body {
     .container {
         width: 80% !important;
     }
-
-    /*.title_menu {*/
-    /*width: 80% !important;*/
-    /*}*/
-    /*.logo{*/
-    /*width: 80% !important;*/
-    /*margin-top: 50px;*/
-    /*}*/
-    /*.nav-left {*/
-    /*max-width: 15% !important;*/
-    /*float: left;*/
-    /*}*/
-
 }
 
 @media only screen and (max-width: 480px) {
+    .container{
+        width: 90% !important;
+    }
     .nav-left {
         width: 30% !important;
     }
@@ -34,7 +24,6 @@ body {
 
     .logo {
         max-width: 100% !important;
-        width: 100% !important;
         margin-top: 5px !important;
     }
 }
@@ -42,7 +31,7 @@ body {
 @media only screen and (max-width: 600px) {
     .nav-left .logo {
         width: 100% !important;
-        margin-top: 5px !important;
+        margin-top: 12px !important;
     }
 }
 
