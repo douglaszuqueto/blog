@@ -1,5 +1,5 @@
 body {
-    background: #F9F9F9 !important;
+    background: #f5f5f5 !important;
     font-size: 16px;
 }
 
@@ -46,7 +46,7 @@ body {
 
 nav {
     background: white;
-    position: relative;
+    position: fixed;
     z-index: 999;
     border-top: 3px #1da1f2 solid;
 }
@@ -58,12 +58,23 @@ nav ul a {
     padding: 0 20px;
 }
 
-nav ul .material-icons {
-}
-
 nav ul a:hover {
     padding: 0 20px;
     color: #008BD3;
+}
+
+/* CONTATO*/
+
+.contact {
+    background-color: #fff;
+    transition: box-shadow .25s;
+    border-radius: 2px;
+    font-family: 'Miriam Libre';
+    font-weight: 700;
+    color: #525252;
+    letter-spacing: -.02em;
+    transform: translatey(2px);
+    font-size: 16pt;
 }
 
 /* BODY */
@@ -73,10 +84,6 @@ nav ul a:hover {
 
 .avatar img {
     margin-top: 10px;
-}
-
-.brand-logo {
-    margin-left: 50px;
 }
 
 /*.active {*/
