@@ -22,16 +22,15 @@ body {
         margin: -3px 0 0 12px !important;
     }
 
-    .logo {
-        max-width: 100% !important;
-        margin-top: 5px !important;
-    }
 }
 
 @media only screen and (max-width: 600px) {
     .nav-left .logo {
         width: 100% !important;
         margin-top: 10px !important;
+    }
+    .menu_toggle {
+        margin-top: 5px !important;
     }
 }
 
@@ -49,6 +48,10 @@ body {
     .nav-left {
         max-width: 10% !important;
         float: left;
+    }
+
+    .menu_toggle {
+        margin-top: 5px !important;
     }
 
 }
