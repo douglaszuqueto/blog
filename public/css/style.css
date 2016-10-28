@@ -10,9 +10,10 @@ body {
 }
 
 @media only screen and (max-width: 480px) {
-    .container{
+    .container {
         width: 90% !important;
     }
+
     .nav-left {
         width: 30% !important;
     }
@@ -29,6 +30,7 @@ body {
         width: 100% !important;
         margin-top: 10px !important;
     }
+
     .menu_toggle {
         margin-top: 5px !important;
     }
@@ -55,7 +57,7 @@ body {
         margin-top: 5px !important;
     }
 
-    main{
+    main {
         padding-top: 70px !important;
     }
 
@@ -100,14 +102,16 @@ body {
     width: 70%;
     float: left;
 }
-.menu_toggle{
+
+.menu_toggle {
     float: left;
 }
 
-.side-nav{
+.side-nav {
     width: 240px;
 }
-#mobile-demo .logo_mobile{
+
+#mobile-demo .logo_mobile {
     width: 20%;
     margin: 10px 0 10px 80px;
 }
@@ -131,8 +135,52 @@ nav ul a:hover {
 }
 
 /* MAIN */
-main{
+main {
     padding-top: 100px;
+}
+
+/* ARTICLES */
+.articles {
+    font-family: 'Miriam Libre';
+}
+
+.article {
+    background: white;
+    float: left;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 0 solid hsla(0,0%,100%,.25);
+    border-radius: 2px;
+}
+
+.articles h1 {
+    font-size: 3.75rem
+}
+
+.articles h2 {
+    font-size: 1.875rem;
+}
+
+.articles a {
+    text-decoration: none;
+    color: #1da1f2;
+}
+
+.articles p {
+    white-space: normal !important;
+    max-height: 375px;
+    margin-bottom: 1.25rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.articles h1, .articles h2 {
+    line-height: 1.2;
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-family: Miriam Libre, sans-serif;
+    font-weight: 400;
+    color: #525252;
 }
 
 /* CONTATO*/
@@ -200,7 +248,8 @@ main{
 
 footer {
     height: auto;
-    background-color: black !important;
+    font-family: 'Miriam Libre', sans-serif;
+    background-color: #525252;
 }
 
 .footer-copyright {
@@ -208,7 +257,7 @@ footer {
     height: 50px;
     line-height: 50px;
     color: rgba(255, 255, 255, 0.8);
-    background-color: #01579b !important;
+    background-color: #008ef2 !important;
     margin-top: 50px;
 }
 
