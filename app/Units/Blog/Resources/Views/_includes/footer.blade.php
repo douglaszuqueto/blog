@@ -1,39 +1,49 @@
 @inject('sponsors', 'App\Domains\Sponsors\Repositories\SponsorsRepository')
 @inject('supporters', 'App\Domains\Supporters\Repositories\SupportersRepository')
 
-<div class="row">
-    <div class="container">
-        <div class="col s12 m4 l4 social">
+<div class="container">
+    <div class="row">
+        <div class="col s12 m4 l12 social">
             <h5 class="white-text">SOCIAL</h5>
 
-            <li>
-                <a class="white-text" href="https://www.facebook.com/douglaszuquetooficial"
-                   title="Facebook" target="_blank">Facebook</a>
-            </li>
-            <li>
-                <a class="white-text" href="https://www.instagram.com/douglaszuquetooficial/" title="Instagram"
-                   target="_blank">Instagram</a>
-            </li>
-            <li>
-                <a class="white-text" href="https://telegram.me/douglaszuqueto" title="Telegram" target="_blank">Telegram</a>
-            </li>
-            <li>
-                <a class="white-text" href="https://github.com/douglaszuqueto" title="GitHub" target="_blank">GitHub</a>
-            </li>
+            <ul class="redes-sociais">
+                <li>
+                    <a href="https://www.facebook.com/douglaszuquetooficial" title="Facebook" target="_blank"
+                       class="facebook"></a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/douglaszuquetooficial" title="Instagram" target="_blank"
+                       class="instagram"></a>
+                </li>
+                <li>
+                    <a href="https://www.twitter.com/douglaszuqueto" title="Twitter" target="_blank"
+                       class="twitter"></a>
+                </li>
+                <li>
+                    <a href="https://www.youtube.com/douglaszuquetooficial" title="YouTube" target="_blank"
+                       class="youtube"></a>
+                </li>
+
+            </ul>
+
         </div>
+    </div>
+    <div class="row">
+
         <div class="col s12 m4 l4 patrocinadores">
-            <h5 class="white-text center">PATROCINADORES</h5>
+            <h5 class="white-text ">PATROCINADORES</h5>
 
             @foreach($sponsors->findWhere(['state' => 1]) as $sponsor)
                 <a href="{{$sponsor->url}}" target="_blank">
                     <img src="{{$sponsor->image_url}}"
-                         class="responsive-img " width="20%" alt="{{$sponsor->sponsor}}" title="{{$sponsor->sponsor}}">
+                         class="responsive-img " width="20%" alt="{{$sponsor->sponsor}}"
+                         title="{{$sponsor->sponsor}}">
                 </a>
             @endforeach
 
         </div>
         <div class="col s12 m4 l4 apoiadores">
-            <h5 class="white-text center">APOIADORES</h5>
+            <h5 class="white-text">APOIADORES</h5>
 
             @foreach($supporters->findWhere(['state' => 1]) as $supporter)
                 <a href="{{$supporter->url}}" target="_blank">
@@ -48,7 +58,7 @@
 <div class="footer-copyright">
     <div class="container">
         <div class="row center">
-            <span class="flow-text">© 2016 Douglas Zuqueto.</span>
+            <span class="flow-text">© 2016 Douglas Zuqueto</span>
         </div>
     </div>
 </div>

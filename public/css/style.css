@@ -149,7 +149,7 @@ main {
     float: left;
     padding: 10px;
     margin-bottom: 20px;
-    border: 0 solid hsla(0,0%,100%,.25);
+    border: 0 solid hsla(0, 0%, 100%, .25);
     border-radius: 2px;
 }
 
@@ -250,6 +250,63 @@ footer {
     height: auto;
     font-family: 'Miriam Libre', sans-serif;
     background-color: #525252;
+}
+
+.redes-sociais {
+    float: left;
+    margin: 15px 0 0 20px;
+}
+
+.redes-sociais li {
+    float: left;
+    display: inline;
+    margin: 0 10px;
+}
+
+.redes-sociais li a {
+    float: left;
+    width: 34px;
+    height: 34px;
+    background-repeat: no-repeat !important;
+    padding: 0 !important;
+}
+
+.redes-sociais li a.facebook {
+    background: url('../images/social/facebook.png');
+}
+
+.redes-sociais li a.instagram {
+    background: url('../images/social/instagram.png');
+}
+
+.redes-sociais li a.twitter {
+    background: url('../images/social/twitter.png');
+}
+
+.redes-sociais li a.youtube {
+    background: url('../images/social/youtube.png');
+}
+
+.redes-sociais li a:hover {
+    background-position: 0 -34px;
+}
+
+#mobile-demo .redes-sociais {
+    float: left;
+    width: 100%;
+    margin: 15px 0 0 0;
+}
+
+#mobile-demo .redes-sociais li {;
+    width: 25%;
+    text-align: center;
+    margin: 0 !important;
+}
+
+#mobile-demo .redes-sociais li a {
+    background-position: 0 -34px;
+    float: none;
+    display: inline-block;
 }
 
 .footer-copyright {
