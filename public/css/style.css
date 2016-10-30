@@ -287,6 +287,14 @@ footer {
     background: url('../images/social/youtube.png');
 }
 
+.redes-sociais li a.github {
+    background: url('../images/social/github.png');
+}
+
+.redes-sociais li a.telegram {
+    background: url('../images/social/telegram.png');
+}
+
 .redes-sociais li a:hover {
     background-position: 0 -34px;
 }

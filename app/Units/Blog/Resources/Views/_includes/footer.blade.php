@@ -23,6 +23,14 @@
                     <a href="https://www.youtube.com/douglaszuquetooficial" title="YouTube" target="_blank"
                        class="youtube"></a>
                 </li>
+                <li>
+                    <a href="https://github.com/douglaszuqueto" title="GitHub" target="_blank"
+                       class="github"></a>
+                </li>
+                <li>
+                    <a href="https://telegram.me/douglaszuqueto" title="Telegram" target="_blank"
+                       class="telegram"></a>
+                </li>
 
             </ul>
 

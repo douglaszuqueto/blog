@@ -18,7 +18,8 @@ COPY Caddyfile /home/php-user/Caddyfile
 COPY start.sh  /home/php-user/start.sh
 
 RUN chmod +x /home/php-user/start.sh && \
-    chown -R php-user:php-user /home/php-user
+    chown -R php-user:php-user /home/php-user && \
+    setcap CAP_NET_BIND_SERVICE=+eip /usr/local/bin/caddy
 
 # Define the running user
 USER php-user
