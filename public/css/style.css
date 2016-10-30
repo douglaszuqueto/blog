@@ -357,11 +357,15 @@ footer {
 }
 
 .patrocinadores h5, .apoiadores h5, .social h5 {
-    margin: 15px;
+    margin: 15px !important;
 }
 
 .patrocinadores a, .apoiadores a {
-    margin: 5px;
+    margin: 5px !important;
+}
+
+.digitalocean{
+    margin: 60px 0 0 0 !important;
 }
 
 #return-to-top {

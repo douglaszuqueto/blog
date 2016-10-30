@@ -61,6 +61,14 @@
                 </a>
             @endforeach
         </div>
+
+        <div class="col s12 m4 l4 digitalocean">
+                <a href="https://m.do.co/c/302f8d3a3de6" target="_blank">
+                    <img src="{{asset('images/digitalocean_vps.png')}}"
+                         class="responsive-img " width="70%" alt="Powered by Digital Ocean"
+                         title="Powered by Digital Ocean">
+                </a>
+        </div>
     </div>
 </div>
 <div class="footer-copyright">
