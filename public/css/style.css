@@ -183,18 +183,33 @@ main {
     color: #525252;
 }
 
-/* CONTATO*/
-
-.contact {
+/* PAGES */
+.contact, .about-me, .news, .project {
     background-color: #fff;
     transition: box-shadow .25s;
     border-radius: 2px;
     font-family: 'Miriam Libre';
     font-weight: 700;
-    color: #525252;
+    color: #2b2b2b;
     letter-spacing: -.02em;
     transform: translatey(2px);
     font-size: 16pt;
+}
+
+.project {
+
+}
+
+.news {
+
+}
+
+.about-me {
+
+}
+
+.contact {
+
 }
 
 /* BODY */
