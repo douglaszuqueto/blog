@@ -139,6 +139,90 @@ main {
     padding-top: 100px;
 }
 
+/* PAGES */
+.contact, .about-me, .news, .project {
+    background-color: #fff;
+    transition: box-shadow .25s;
+    border-radius: 2px;
+    font-family: 'Miriam Libre';
+    font-weight: 700;
+    color: #2b2b2b;
+    letter-spacing: -.02em;
+    transform: translatey(2px);
+    font-size: 16pt;
+}
+
+.index {
+    padding-top: 10px;
+}
+
+.index .articles-item {
+    height: 280px;
+    position: relative;
+    display: block;
+    float: left;
+    overflow: hidden;
+    width: 100%;
+}
+
+.index .articles-item img {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    max-width: none !important;
+    height: auto;
+    transition: transform .6s;
+}
+
+.recent-articles {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    z-index: 3;
+    padding: 30px;
+    transition: transform .2s;
+    color: #FFF;
+}
+
+.index .right {
+    background-color: #fff;
+    transition: box-shadow .25s;
+    border-radius: 2px;
+    padding: 10px;
+}
+
+.index .right .fb-page {
+    margin-top: 10px;
+}
+
+.index h1 {
+    font-size: 16pt;
+    padding: 10px;
+    margin-top: auto;
+
+}
+
+.index h1 a {
+    color: #FFF;
+}
+
+.project {
+
+}
+
+.news {
+
+}
+
+.about-me {
+
+}
+
+.contact {
+
+}
+
 /* ARTICLES */
 .articles {
     font-family: 'Miriam Libre';
@@ -181,35 +265,6 @@ main {
     font-family: Miriam Libre, sans-serif;
     font-weight: 400;
     color: #525252;
-}
-
-/* PAGES */
-.contact, .about-me, .news, .project {
-    background-color: #fff;
-    transition: box-shadow .25s;
-    border-radius: 2px;
-    font-family: 'Miriam Libre';
-    font-weight: 700;
-    color: #2b2b2b;
-    letter-spacing: -.02em;
-    transform: translatey(2px);
-    font-size: 16pt;
-}
-
-.project {
-
-}
-
-.news {
-
-}
-
-.about-me {
-
-}
-
-.contact {
-
 }
 
 /* BODY */
@@ -364,29 +419,26 @@ footer {
     margin: 5px !important;
 }
 
-.digitalocean{
+.digitalocean {
     margin: 60px 0 0 0 !important;
 }
 
+/* Return to Top
+Source: https://codepen.io/rdallaire/pen/apoyx
+*/
 #return-to-top {
     position: fixed;
     bottom: 20px;
     right: 20px;
     background: rgb(0, 0, 0);
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.9);
     width: 50px;
     height: 50px;
-    display: block;
     text-decoration: none;
     -webkit-border-radius: 35px;
     -moz-border-radius: 35px;
     border-radius: 35px;
     display: none;
-    -webkit-transition: all 0.3s linear;
-    -moz-transition: all 0.3s ease;
-    -ms-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-    transition: all 0.3s ease;
 }
 
 #return-to-top i {
@@ -396,15 +448,6 @@ footer {
     left: 16px;
     top: 13px;
     font-size: 19px;
-    -webkit-transition: all 0.3s ease;
-    -moz-transition: all 0.3s ease;
-    -ms-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-    transition: all 0.3s ease;
-}
-
-#return-to-top:hover {
-    background: rgba(0, 0, 0, 0.9);
 }
 
 #return-to-top:hover i {
