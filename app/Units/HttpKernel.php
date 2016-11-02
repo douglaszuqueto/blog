@@ -3,6 +3,7 @@
 namespace App\Units;
 
 use App\Units\Core\Http\Middleware\RedirectIfWrongUrlOrProtocol;
+use App\Units\Core\Http\Middleware\Tracker;
 use Illuminate\Foundation\Http\Kernel;
 
 class HttpKernel extends Kernel
@@ -16,6 +17,8 @@ class HttpKernel extends Kernel
      */
     protected $middleware = [
         \Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode::class,
+
+        Tracker::class
     ];
 
     /**
@@ -32,7 +35,8 @@ class HttpKernel extends Kernel
             \App\Units\Core\Http\Middleware\VerifyCsrfToken::class,
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
 
-            RedirectIfWrongUrlOrProtocol::class
+            RedirectIfWrongUrlOrProtocol::class,
+
         ],
 
         'api' => [

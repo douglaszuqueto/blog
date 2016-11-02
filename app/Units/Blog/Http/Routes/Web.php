@@ -12,7 +12,7 @@ class Web extends RouteFile
      */
     protected function routes()
     {
-        $this->router->group(['domain' => env('APP_DOMAIN')], function () {
+        $this->router->group(['domain' => env('APP_DOMAIN'), 'middleware' => ['web']], function () {
             $this->indexRoutes();
             $this->articlesRoutes();
             $this->projectRoutes();
@@ -25,6 +25,10 @@ class Web extends RouteFile
     protected function indexRoutes()
     {
         $this->router->get('', ['as' => 'blog.index', 'uses' => 'IndexController@index']);
+
+        $this->router->get('/error', ['as' => 'blog.error', function () {
+            return view('blog::error');
+        }]);
     }
 
     protected function articlesRoutes()

@@ -186,6 +186,7 @@ return [
         App\Domains\Supporters\Providers\DomainServiceProvider::class,
         App\Domains\Categories\Providers\DomainServiceProvider::class,
         App\Domains\Tags\Providers\DomainServiceProvider::class,
+        App\Domains\Tracker\Providers\DomainServiceProvider::class,
 
 
         /*

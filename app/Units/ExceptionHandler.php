@@ -5,6 +5,7 @@ namespace App\Units;
 use Exception;
 use Illuminate\Auth\AuthenticationException;
 use Illuminate\Foundation\Exceptions\Handler;
+use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 class ExceptionHandler extends Handler
 {
@@ -44,6 +45,10 @@ class ExceptionHandler extends Handler
      */
     public function render($request, Exception $exception)
     {
+        if ($exception instanceof NotFoundHttpException) {
+            return redirect()->route('blog.error');
+        }
+
         return parent::render($request, $exception);
     }
 
