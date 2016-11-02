@@ -25,23 +25,17 @@
                                 </div>
                             </div>
                             {{--<div class="col s12">--}}
-                                {{--<div class="row right ">--}}
-                                    {{--<div class="chip grey lighten-3">--}}
-                                        {{--<a href="" class="blue-text">ESP8266</a>--}}
-                                    {{--</div>--}}
-                                    {{--<div class="chip grey lighten-3">--}}
-                                        {{--<a href="" class="blue-text">IoT</a>--}}
-                                    {{--</div>--}}
-                                    {{--<div class="chip grey lighten-3">--}}
-                                        {{--<a href="" class="blue-text">MQTT</a>--}}
-                                    {{--</div>--}}
-                                {{--</div>--}}
+                            {{--<div class="row right ">--}}
+                            {{--<div class="chip grey lighten-3">--}}
+                            {{--<a href="" class="blue-text">ESP8266</a>--}}
                             {{--</div>--}}
-                            {{--<div class="col s12">--}}
-                                {{--<div class="row">--}}
-                                    {{--<span class="author">Por <strong>Douglas Zuqueto</strong></span>--}}
-                                    {{--<span class="">{{$article->created_at}}</span>--}}
-                                {{--</div>--}}
+                            {{--<div class="chip grey lighten-3">--}}
+                            {{--<a href="" class="blue-text">IoT</a>--}}
+                            {{--</div>--}}
+                            {{--<div class="chip grey lighten-3">--}}
+                            {{--<a href="" class="blue-text">MQTT</a>--}}
+                            {{--</div>--}}
+                            {{--</div>--}}
                             {{--</div>--}}
                         </div>
                     </article>
