@@ -6,6 +6,7 @@ use App\Domains\Articles\Repositories\ArticlesRepository;
 use App\Support\Http\Controllers\Controller;
 use Artesaos\SEOTools\Facades\OpenGraph;
 use Artesaos\SEOTools\Facades\SEOMeta;
+use Parsedown;
 
 class ArticlesController extends Controller
 {
@@ -72,9 +73,13 @@ class ArticlesController extends Controller
 //            ->addImage(['url' => $article->image, 'size' => 300])
             ->addImage($article->image);
 
+        $markdown = new Parsedown();
+
+        $text = $markdown->text($article->text);
 
         return $this->view('blog::articles.show', [
             'article' => $article,
+            'text' => $text,
         ]);
     }
 }

@@ -1,6 +1,10 @@
 @extends('blog::layout')
 
 @section('content')
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/highlight.min.js"></script>
+    <link rel="stylesheet" href="https://highlightjs.org/static/demo/styles/atom-one-dark.css">
+
     <div class="container articles-view">
         <div class="row">
             <div class="col s12 l8 offset-l2">
@@ -13,47 +17,17 @@
                         </div>
                     </header>
                     <div class="article-body">
-                        <p>{{$article->subtitle}}</p>
+                        {!! $text !!}
 
-                        <div class="article-images center">
-                            <img src="{{$article->image}}" alt="{{$article->title}}" title="{{$article->title}}">
-                        </div>
-
-                        <div class="article-content">
-                            <p>
-                                Nesse cenário, construiremos uma pequena aplicação que mandará informações para a
-                                plataforma test.mosquitto.org. Essa plataforma nos disponibiliza um Broker MQTT para
-                                fazer testes usando o protocolo, e também conta com um exemplo denominado "Demo
-                                temperatura".
-                            </p>
-
-                            <div class="article-images center">
-                                <img src="{{$article->image}}" alt="{{$article->title}}" title="{{$article->title}}">
-                            </div>
-
-                            <p>
-                                Nesse cenário, construiremos uma pequena aplicação que mandará informações para a
-                                plataforma test.mosquitto.org. Essa plataforma nos disponibiliza um Broker MQTT para
-                                fazer testes usando o protocolo, e também conta com um exemplo denominado "Demo
-                                temperatura".
-                            </p>
-
-                            <div class="article-images center">
-                                <img src="{{$article->image}}" alt="{{$article->title}}" title="{{$article->title}}">
-                            </div>
-
-                            <p>
-                                Nesse cenário, construiremos uma pequena aplicação que mandará informações para a
-                                plataforma test.mosquitto.org. Essa plataforma nos disponibiliza um Broker MQTT para
-                                fazer testes usando o protocolo, e também conta com um exemplo denominado "Demo
-                                temperatura".
-                            </p>
-                        </div>
                     </div>
                 </article>
             </div>
         </div>
 
     </div>
+    <script>
+        hljs.initHighlightingOnLoad();
+    </script>
+
 
 @endsection
