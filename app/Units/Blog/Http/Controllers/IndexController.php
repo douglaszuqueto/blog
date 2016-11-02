@@ -48,7 +48,7 @@ class IndexController extends Controller
         $articles = $this->articlesRepository->findWhere(['state' => 1]);
 
         $lastArticles = $this->articlesRepository->scopeQuery(function ($query) {
-            return $query->orderBy('created_at', 'asc')->where('state', '=', 3)->limit(4);
+            return $query->orderBy('created_at', 'desc')->where('state', '=', 3)->limit(4);
         })->all();
 
         return $this->view('blog::index.index', [
