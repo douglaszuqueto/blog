@@ -56,7 +56,7 @@ class ArticlesController extends Controller
         }
 
         SEOMeta::setTitle($article->title);
-        SEOMeta::setDescription($article->title);
+        SEOMeta::setDescription($article->subtitle);
         SEOMeta::setCanonical($article->url);
 
         OpenGraph::setTitle($article->title)
