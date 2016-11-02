@@ -6,11 +6,13 @@
             <div class="col s12 l9 recentArticles">
                 @foreach($lastArticles as $last)
                     <div class="article-item">
-                        <a href="#2" class="article-image">
-                            <img src="{{asset('images/esp.jpg')}}" class="responsive-img ">
+                        <a href="{{$last->url}}" class="article-image">
+                            <img src="{{$last->image}}" class="responsive-img ">
                         </a>
                         <div class="article-title">
-                            <h1>Controlando Led usando MQTT e ESP8266</h1>
+                            <a href="{{$last->url}}">
+                                <h1>{{$last->title}}</h1>
+                            </a>
                         </div>
                     </div>
                 @endforeach
