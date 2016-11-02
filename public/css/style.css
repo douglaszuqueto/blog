@@ -23,6 +23,10 @@ body {
         margin: -3px 0 0 12px !important;
     }
 
+    #return-to-top {
+        bottom: 50px !important;
+    }
+
 }
 
 @media only screen and (max-width: 600px) {
@@ -318,7 +322,7 @@ article .subtitle p::first-letter {
     font-weight: bold;
 }
 
-.article-view img{
+.article-view img {
     width: 80%;
     height: auto;
     margin: 0 auto;
