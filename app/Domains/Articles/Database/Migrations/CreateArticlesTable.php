@@ -13,6 +13,7 @@ class CreateArticlesTable extends Migration
         $this->schema->create('articles', function (Blueprint $table) {
             $table->increments('id');
             $table->string('title');
+            $table->string('url');
             $table->string('subtitle');
             $table->string('image')->nullable();
             $table->tinyInteger('state')->default(0);

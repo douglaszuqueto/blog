@@ -17,9 +17,10 @@ class ArticlesSeeder extends Seeder
     public function run()
     {
         DB::table('articles')->insert([
-            'title' => 'Title 1',
-            'subtitle' => 'Subtitle 1',
-            'image' => 'Image 1',
+            'title' => 'Controlando Led usando MQTT e ESP8266',
+            'subtitle' => 'Controlando Led usando MQTT e ESP8266',
+            'url' => 'https://douglaszuqueto.com/artigos',
+            'image' => 'https://douglaszuqueto.com/images/arduino.png',
             'state' => 0,
             'text' => '# Article',
         ]);
