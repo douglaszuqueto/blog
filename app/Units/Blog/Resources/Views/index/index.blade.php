@@ -5,13 +5,13 @@
         <div class="row">
             <div class="col s12 l9 recentArticles">
                 @foreach($lastArticles as $last)
-                    <div class="col l6 articles-item">
-                        <a href="{{$last->url}}" class="">
-                            <img src="{{$last->image}}" class="responsive-img">
-                            <div class="recent-articles">
-                                <h1>{{$last->title}}</h1>
-                            </div>
+                    <div class="article-item">
+                        <a href="#2" class="article-image">
+                            <img src="{{asset('images/esp.jpg')}}" class="responsive-img ">
                         </a>
+                        <div class="article-title">
+                            <h1>Controlando Led usando MQTT e ESP8266</h1>
+                        </div>
                     </div>
                 @endforeach
             </div>

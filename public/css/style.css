@@ -156,33 +156,54 @@ main {
     padding-top: 10px;
 }
 
-.index .articles-item {
-    height: 280px;
-    position: relative;
-    display: block;
+/* INDEX: Artigos Recentes */
+
+.recentArticles {
+    /*position: absolute;*/
+}
+
+@media only screen and (max-width: 600px) {
+    .article-item {
+        width: 95% !important;
+        margin: 0 0 10px 0;
+    }
+}
+
+.article-item {
+    width: 45%;
+    height: 250px;
     float: left;
+    background-color: #2a2a2a;
+    padding: 0 !important;
+    margin: 0 10px 10px 0;
+
+    /*position: relative;*/
+    /*display: block;*/
+    /*overflow: hidden;*/
+    /*width: 100%;*/
+}
+
+.article-image {
+    background-color: #c5c5c5;
+    max-height: 180px;
     overflow: hidden;
-    width: 100%;
+    display: block;
 }
 
-.index .articles-item img {
-    position: absolute;
-    z-index: 1;
+.article-image img {
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+    opacity: 1;
+    transition: opacity .2s ease-in-out;
     width: 100%;
-    max-width: none !important;
-    height: auto;
-    transition: transform .6s;
+    display: block;
 }
 
-.recent-articles {
-    position: absolute;
-    width: 100%;
-    bottom: 0;
-    left: 0;
-    z-index: 3;
-    padding: 30px;
-    transition: transform .2s;
+.article-title h1 {
     color: #FFF;
+    min-height: 120px;
+    font-family: 'Miriam Libre', sans-serif;
+    font-weight: 500;
 }
 
 .index .right {
@@ -200,7 +221,6 @@ main {
     font-size: 16pt;
     padding: 10px;
     margin-top: auto;
-
 }
 
 .index h1 a {
