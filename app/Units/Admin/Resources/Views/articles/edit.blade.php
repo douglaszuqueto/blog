@@ -3,23 +3,94 @@
 @section('content')
     <div class="container">
 
-        <h5>Visualizar Artigo</h5>
+        <h5>Editar Artigo</h5>
 
         <div class="row">
-            <div class="col l12">
+            <form class="col l12" role="form" method="POST" href="#">
+                {{ csrf_field() }}
+                <input type="hidden" name="_method" value="PUT">
 
-            </div>
+                <div class="row">
+                    <div class="input-field col l6">
 
-            <div class="col l12">
-                <script src="{{asset('js/marked.min.js')}}"></script>
+                        <label for="title" class="active">Title</label>
 
-                <div id="content"></div>
-                <script>
+                        <input type="text" id="title" name="title" value="{{$item->title}}">
 
-                    document.getElementById('content').innerHTML =
-                            marked('');
-                </script>
-            </div>
+                        @if ($errors->has('title'))
+                            <strong>{{ $errors->first('title') }}</strong>
+                        @endif
+
+                    </div>
+
+                    <div class="row">
+                        <div class="input-field col l6">
+                            <select name="state">
+                                <option value="1">Preview</option>
+                                <option value="3">Publicado</option>
+                                <option value="0">Não Publicado</option>
+                            </select>
+                            <label class="active">Status</label>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="row">
+                    <div class="input-field col l12">
+
+                        <label for="url" class="active">Url</label>
+
+                        <input type="url" id="url" name="url" value="{{$item->url}}">
+
+                        @if ($errors->has('url'))
+                            <strong>{{ $errors->first('url') }}</strong>
+                        @endif
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col l12">
+
+                        <textarea id="subtitle" class="materialize-textarea"
+                                  name="subtitle">{{$item->subtitle}}</textarea>
+                        <label for="subtitle" class="active">Subtitle</label>
+
+                        @if ($errors->has('subtitle'))
+                            <strong>{{ $errors->first('subtitle') }}</strong>
+                        @endif
+
+                    </div>
+                </div>
+
+                <div class="col l12">
+                    <textarea id="editor" name="text"></textarea>
+
+                    <script>
+                        var editor = new SimpleMDE({
+                            element: document.getElementById("editor"),
+                            spellChecker: false,
+                        });
+
+
+                    </script>
+                </div>
+
+                <div class="row">
+                    <div class="input-field col l12 ">
+                        <button id="submit" type="submit" class="waves-effect waves-light btn right">
+                            <i class="material-icons right">cloud</i>Salvar
+                        </button>
+                    </div>
+                </div>
+            </form>
         </div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $('select').material_select();
+        });
+    </script>
 
 @endsection

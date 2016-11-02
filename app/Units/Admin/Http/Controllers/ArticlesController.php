@@ -30,6 +30,47 @@ class ArticlesController extends AbstractCrudController
         $this->articlesSheduleRepository = $articlesSheduleRepository;
     }
 
+    public function index()
+    {
+        $articles = $this->repository->orderBy('state')->orderBy('created_at')->all();
+
+        foreach ($articles as $article) {
+
+            switch ($article->state) {
+
+                case 0:
+                    $article->state = '<i class="material-icons">visibility</i>';
+                    break;
+                case 1:
+                    /*
+                     * Implementar Funcionalidade de Preview do Artigo
+                     */
+                    $article->state = '<a href="' . $article->url . '" target="_blank"><i class="material-icons green-text">open_in_new</i></a>';
+                    break;
+                case 2:
+                    $article->state = '<i title="Agendado" class="material-icons green-text">snooze</i>';
+                    break;
+                case 3:
+                    $article->state = '<i title="Publicado" class="material-icons green-text">visibility</i>';
+                    break;
+            }
+        }
+
+
+        return $this->view('admin::articles.index', [
+            'itens' => $articles
+        ]);
+    }
+
+    public function update(Request $request, $id)
+    {
+        $data = $request->all();
+
+        $this->repository->update($data, $id);
+
+        return redirect()->route($this->getRoute('index'));
+    }
+
     public function shedule()
     {
 

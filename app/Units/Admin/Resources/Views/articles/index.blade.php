@@ -21,7 +21,7 @@
                         <tr>
                             <td>{{$row->title}}</td>
                             <td class="center-align">
-                                <span class="">Ativado</span>
+                                <span>{!! $row->state !!}</span>
                             </td>
                             <td class="center-align">
                                 <a href="{{route('admin.articles.edit', $row->id)}}">
@@ -29,7 +29,7 @@
                                 </a>
                             </td>
                             <td class="center-align">
-                                <a href="{{route('admin.articles.edit', $row->id)}}">
+                                <a class="removeArticle" href="#" data-id="{{$row->id}}">
                                     <i class="material-icons red-text">delete</i>
                                 </a>
                             </td>
@@ -40,5 +40,30 @@
             </div>
         </div>
     </div>
+    <script>
+        $(document).ready(function () {
+            $('.removeArticle').click(function () {
+                removeArticle($(this).attr('data-id'))
+            })
+        });
+
+        function removeArticle(article_id) {
+            $.ajax({
+                url: '/articles/' + article_id,
+                method: 'POST',
+                data: {
+                    '_token': window.Laravel.csrfToken,
+                    '_method': 'PUT',
+                    'state': 0
+                },
+                success: function (data) {
+                    Materialize.toast('Artigo excluido', 2000, null, function () {
+                        location.reload();
+                    });
+
+                }
+            });
+        }
+    </script>
 
 @endsection
