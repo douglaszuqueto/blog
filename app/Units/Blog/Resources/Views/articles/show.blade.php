@@ -1,10 +1,10 @@
 @extends('blog::layout')
 
 @section('content')
-    <div class="container article-view">
+    <div class="container articles-view">
         <div class="row">
-            <div class="col s12 l10">
-                <article class="col s12 l8 offset-l2">
+            <div class="col s12 l8 offset-l2">
+                <article class="col s12 l12 article-view">
                     <header>
                         <h1>{{$article->title}}</h1>
                         <div>
@@ -16,36 +16,38 @@
                         <p>{{$article->subtitle}}</p>
 
                         <div class="article-image">
-                            <img src="{{$article->image}}" alt="" width="100%">
+                            <img src="{{$article->image}}" alt="{{$article->title}}" title="{{$article->title}}">
                         </div>
 
                         <div class="article-content">
-                            <p>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de
-                                impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido
-                                pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos.
-                                Lorem Ipsum sobreviveu não só a cinco séculos, como também ao salto para a editoração
-                                eletrônica, permanecendo essencialmente inalterado. Se popularizou na década de 60,
-                                quando a Letraset lançou decalques contendo passagens de Lorem Ipsum, e mais
-                                recentemente quando passou a ser integrado a softwares de editoração eletrônica como
-                                Aldus PageMaker.</p>
+                            <p>
+                                Nesse cenário, construiremos uma pequena aplicação que mandará informações para a
+                                plataforma test.mosquitto.org. Essa plataforma nos disponibiliza um Broker MQTT para
+                                fazer testes usando o protocolo, e também conta com um exemplo denominado "Demo
+                                temperatura".
+                            </p>
 
-                            <p>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de
-                                impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido
-                                pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos.
-                                Lorem Ipsum sobreviveu não só a cinco séculos, como também ao salto para a editoração
-                                eletrônica, permanecendo essencialmente inalterado. Se popularizou na década de 60,
-                                quando a Letraset lançou decalques contendo passagens de Lorem Ipsum, e mais
-                                recentemente quando passou a ser integrado a softwares de editoração eletrônica como
-                                Aldus PageMaker.</p>
+                            <div class="article-image">
+                                <img src="{{$article->image}}" alt="{{$article->title}}" title="{{$article->title}}">
+                            </div>
 
-                            <p>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de
-                                impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido
-                                pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos.
-                                Lorem Ipsum sobreviveu não só a cinco séculos, como também ao salto para a editoração
-                                eletrônica, permanecendo essencialmente inalterado. Se popularizou na década de 60,
-                                quando a Letraset lançou decalques contendo passagens de Lorem Ipsum, e mais
-                                recentemente quando passou a ser integrado a softwares de editoração eletrônica como
-                                Aldus PageMaker.</p>
+                            <p>
+                                Nesse cenário, construiremos uma pequena aplicação que mandará informações para a
+                                plataforma test.mosquitto.org. Essa plataforma nos disponibiliza um Broker MQTT para
+                                fazer testes usando o protocolo, e também conta com um exemplo denominado "Demo
+                                temperatura".
+                            </p>
+
+                            <div class="article-image">
+                                <img src="{{$article->image}}" alt="{{$article->title}}" title="{{$article->title}}">
+                            </div>
+
+                            <p>
+                                Nesse cenário, construiremos uma pequena aplicação que mandará informações para a
+                                plataforma test.mosquitto.org. Essa plataforma nos disponibiliza um Broker MQTT para
+                                fazer testes usando o protocolo, e também conta com um exemplo denominado "Demo
+                                temperatura".
+                            </p>
                         </div>
                     </div>
                 </article>
