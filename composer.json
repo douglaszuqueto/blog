@@ -17,7 +17,8 @@
     "prettus/l5-repository": "^2.6",
     "spatie/laravel-analytics": "^2.2",
     "intervention/image": "^2.3",
-    "guzzlehttp/guzzle": "^6.2"
+    "guzzlehttp/guzzle": "^6.2",
+    "erusev/parsedown": "^1.6"
   },
   "require-dev": {
     "fzaninotto/faker": "~1.4",

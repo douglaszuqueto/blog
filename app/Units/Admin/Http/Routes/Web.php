@@ -76,6 +76,7 @@ class Web extends RouteFile
         $this->router->get('/articles/shedule', ['as' => 'admin.articles.shedule', 'uses' => 'ArticlesController@shedule']);
         $this->router->post('/articles/shedule', ['as' => 'admin.articles.shedule', 'uses' => 'ArticlesController@sheduleCreate']);
         $this->router->get('/articles', ['as' => 'admin.articles.index', 'uses' => 'ArticlesController@index']);
+        $this->router->get('/articles/{id}/preview', ['as' => 'admin.articles.preview', 'uses' => 'ArticlesController@preview']);
         $this->router->get('/articles/{id}', ['as' => 'admin.articles.edit', 'uses' => 'ArticlesController@edit']);
         $this->router->post('/articles', ['as' => 'admin.articles.store', 'uses' => 'ArticlesController@store']);
         $this->router->put('/articles/{id}', ['as' => 'admin.articles.update', 'uses' => 'ArticlesController@update']);

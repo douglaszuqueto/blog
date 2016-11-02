@@ -62,6 +62,20 @@ class ArticlesController extends AbstractCrudController
         ]);
     }
 
+    public function preview($id)
+    {
+        $article = $this->repository->find($id);
+
+        $markdown = new \Parsedown();
+
+        $text = $markdown->text($article->text);
+
+        return $this->view('admin::articles.preview', [
+            'item' => $article,
+            'text' => $text
+        ]);
+    }
+
     public function update(Request $request, $id)
     {
         $data = $request->all();

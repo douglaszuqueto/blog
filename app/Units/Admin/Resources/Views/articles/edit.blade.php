@@ -64,7 +64,7 @@
                 </div>
 
                 <div class="col l12">
-                    <textarea id="editor" name="text"></textarea>
+                    <textarea id="editor" name="text">{{$item->text}}</textarea>
 
                     <script>
                         var editor = new SimpleMDE({
