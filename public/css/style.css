@@ -318,6 +318,11 @@ article .subtitle p::first-letter {
     font-weight: bold;
 }
 
+.article-view img{
+    width: 80%;
+    height: auto;
+}
+
 /* ################################ */
 
 /* BODY */

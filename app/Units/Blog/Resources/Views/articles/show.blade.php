@@ -15,7 +15,7 @@
                     <div class="article-body">
                         <p>{{$article->subtitle}}</p>
 
-                        <div class="article-image">
+                        <div class="article-images center">
                             <img src="{{$article->image}}" alt="{{$article->title}}" title="{{$article->title}}">
                         </div>
 
@@ -27,7 +27,7 @@
                                 temperatura".
                             </p>
 
-                            <div class="article-image">
+                            <div class="article-images center">
                                 <img src="{{$article->image}}" alt="{{$article->title}}" title="{{$article->title}}">
                             </div>
 
@@ -38,7 +38,7 @@
                                 temperatura".
                             </p>
 
-                            <div class="article-image">
+                            <div class="article-images center">
                                 <img src="{{$article->image}}" alt="{{$article->title}}" title="{{$article->title}}">
                             </div>
 
