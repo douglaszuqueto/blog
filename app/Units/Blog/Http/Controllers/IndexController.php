@@ -45,14 +45,11 @@ class IndexController extends Controller
         OpenGraph::addProperty('type', 'articles');
         OpenGraph::addImage('https://douglaszuqueto.com/images/IoT.jpg');
 
-        $articles = $this->articlesRepository->findWhere(['state' => 1]);
-
         $lastArticles = $this->articlesRepository->scopeQuery(function ($query) {
             return $query->orderBy('created_at', 'desc')->where('state', '=', 3)->limit(4);
         })->all();
 
         return $this->view('blog::index.index', [
-            'articles' => $articles,
             'lastArticles' => $lastArticles
         ]);
     }
