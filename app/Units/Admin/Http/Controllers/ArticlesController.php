@@ -76,6 +76,25 @@ class ArticlesController extends AbstractCrudController
         ]);
     }
 
+    protected function getArticleUrl($title)
+    {
+        $title = str_replace(' ', '-', (strtolower($title)));
+
+        $url = 'https://' . env('APP_DOMAIN') . '/artigos/' . $title;
+
+        return $url;
+    }
+
+    public function store(Request $request)
+    {
+        $data = $request->all();
+        $data['url'] = $this->getArticleUrl($data['title']);
+
+        $this->repository->create($data);
+
+        return redirect()->route($this->getRoute('index'));
+    }
+
     public function update(Request $request, $id)
     {
         $data = $request->all();

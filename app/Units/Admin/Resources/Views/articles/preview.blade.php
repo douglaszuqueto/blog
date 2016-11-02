@@ -3,11 +3,7 @@
 @section('content')
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/highlight.min.js"></script>
-    {{--<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/styles/default.min.css">--}}
     <link rel="stylesheet" href="https://highlightjs.org/static/demo/styles/atom-one-dark.css">
-    {{--<link rel="stylesheet" href="https://highlightjs.org/static/demo/styles/zenburn.css">--}}
-    {{--<link rel="stylesheet" href="https://highlightjs.org/static/demo/styles/dracula.css">--}}
-    {{--    <link rel="stylesheet" href="{{asset('css/tomorrow-night.css')}}">--}}
 
     <div class="container">
 
@@ -58,7 +54,6 @@
         </style>
 
         <script>
-            //            hljs.iighlightBlock(block);
             hljs.initHighlightingOnLoad();
         </script>
 
