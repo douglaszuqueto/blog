@@ -11,7 +11,7 @@ MAINTAINER Diego Hernandes <diego@hernandev.com>
 USER root
 
 # Installs Caddy
-RUN curl https://getcaddy.com | bash
+RUN curl https://getcaddy.com | bash -s realip
 
 # Copy Caddyfile and entry script
 COPY Caddyfile /home/php-user/Caddyfile
