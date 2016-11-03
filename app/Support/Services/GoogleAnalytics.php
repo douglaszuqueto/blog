@@ -16,9 +16,7 @@ class GoogleAnalytics
         $startDate = Carbon::now()->subYear();
         $endDate = Carbon::now();
 
-        $period = Period::create($startDate, $endDate);
-
-        return Analytics::fetchTopBrowsers($period);
+        return Analytics::fetchTopBrowsers(Period::create($startDate, $endDate));
     }
 
 
@@ -27,9 +25,7 @@ class GoogleAnalytics
         $startDate = Carbon::now()->subYear();
         $endDate = Carbon::now();
 
-        $period = Period::create($startDate, $endDate);
-
-        return Analytics::fetchTopReferrers($period);
+        return Analytics::fetchTopReferrers(Period::create($startDate, $endDate), 5);
 
     }
 
@@ -61,7 +57,7 @@ class GoogleAnalytics
 
     public function getVisitorsCache($visitors = 30)
     {
-        return $this->set('statistics:visitors', function () use ($visitors) {
+        return $this->set('statistics:visitors' . $visitors, function () use ($visitors) {
             return $this->getVisitors($visitors);
         });
     }
