@@ -1,20 +1,14 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: dzuqueto
- * Date: 11/3/16
- * Time: 8:12 PM
- */
 
 namespace App\Support\Services\Http;
 
-
+use App\Support\Cache\CacheManager;
 use App\Support\Services\Http\Guzzle\Guzzle;
 use GuzzleHttp\Client;
-use Illuminate\Support\Facades\Cache;
 
 class Github extends Guzzle
 {
+    use CacheManager;
 
     public function __construct(Client $client)
     {
@@ -42,7 +36,7 @@ class Github extends Guzzle
 
     public function cache($repo)
     {
-        return Cache::remember('statistics:' . $repo, 60, function () use ($repo) {
+        return $this->set('statistics:' . $repo, function () use ($repo) {
             return $this->getRepoInfo($repo);
         });
     }

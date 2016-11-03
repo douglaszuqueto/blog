@@ -1,20 +1,15 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: dzuqueto
- * Date: 11/3/16
- * Time: 8:12 PM
- */
 
 namespace App\Support\Services;
 
 use Carbon\Carbon;
-use Illuminate\Support\Facades\Cache;
 use Analytics;
 use Spatie\Analytics\Period;
+use App\Support\Cache\CacheManager;
 
 class GoogleAnalytics
 {
+    use CacheManager;
 
     public function __construct()
     {
@@ -55,28 +50,23 @@ class GoogleAnalytics
         return $visitors;
     }
 
-    public function cache($key, $closure)
-    {
-        return Cache::remember('statistics:' . $key, 60, $closure);
-    }
-
     public function getTopBrowsersCache()
     {
-        return $this->cache('browsers', function () {
+        return $this->set('statistics:browsers', function () {
             return $this->getTopBrowsers();
         });
     }
 
     public function getTopReferrersCache()
     {
-        return $this->cache('referrers', function () {
+        return $this->set('statistics:referrers', function () {
             return $this->getTopReferrers();
         });
     }
 
     public function getVisitorsCache($visitors = 30)
     {
-        return $this->cache('visitors', function () use ($visitors) {
+        return $this->set('statistics:visitors', function () use ($visitors) {
             return $this->getVisitors($visitors);
         });
     }
