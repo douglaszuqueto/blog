@@ -2,7 +2,6 @@
 
 namespace App\Support\Services\Http\Guzzle;
 
-
 use GuzzleHttp\Client;
 
 class Guzzle
@@ -14,11 +13,10 @@ class Guzzle
 
     /**
      * Guzzle constructor.
-     * @param Client $client
      */
-    public function __construct(Client $client)
+    public function __construct()
     {
-        $this->client = $client;
+        $this->client = app()->make(Client::class);
     }
 
     public function get($url, $params = [])

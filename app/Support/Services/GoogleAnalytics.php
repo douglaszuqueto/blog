@@ -11,11 +11,6 @@ class GoogleAnalytics
 {
     use CacheManager;
 
-    public function __construct()
-    {
-
-    }
-
     public function getTopBrowsers()
     {
         $startDate = Carbon::now()->subYear();

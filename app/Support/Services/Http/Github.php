@@ -4,16 +4,10 @@ namespace App\Support\Services\Http;
 
 use App\Support\Cache\CacheManager;
 use App\Support\Services\Http\Guzzle\Guzzle;
-use GuzzleHttp\Client;
 
 class Github extends Guzzle
 {
     use CacheManager;
-
-    public function __construct(Client $client)
-    {
-        parent::__construct($client);
-    }
 
     public function getRepoInfo($repo)
     {

@@ -13,17 +13,8 @@ class StatisticsController extends Controller
     protected $page = 'Statistics';
     protected $page_description = 'listing';
 
-    /**
-     * StatisticsController constructor.
-     */
-    public function __construct()
-    {
-
-    }
-
     public function index()
     {
-
         $analytics = new GoogleAnalytics();
 
         return $this->view($this->getView('index'), [
@@ -39,7 +30,7 @@ class StatisticsController extends Controller
 
     public function github()
     {
-        $github = app()->make(Github::class);
+        $github = new Github();
 
         return $this->view($this->getView('github'), [
             'tcc' => $github->cache('tcc'),
@@ -49,10 +40,8 @@ class StatisticsController extends Controller
 
     public function instagram()
     {
-        $instagram = app()->make(Instagram::class);
-
         return $this->view($this->getView('instagram'), [
-            'instagram' => $instagram->cache(),
+            'instagram' => (new Instagram())->cache(),
         ]);
     }
 
