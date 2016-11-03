@@ -27,12 +27,12 @@ class StatisticsController extends Controller
         $analytics = new GoogleAnalytics();
 
         return $this->view($this->getView('index'), [
-            'browsers' => json_encode($analytics->getTopBrowsers()),
-            'referrers' => json_encode($analytics->getTopReferrers()),
+            'browsers' => json_encode($analytics->getTopBrowsersCache()),
+            'referrers' => json_encode($analytics->getTopReferrersCache()),
             'visitors' => [
-                'day' => $analytics->getVisitors(1),
-                'month' => $analytics->getVisitors(),
-                'all' => $analytics->getVisitors(365),
+                'day' => $analytics->getVisitorsCache(1),
+                'month' => $analytics->getVisitorsCache(),
+                'all' => $analytics->getVisitorsCache(365),
             ]
         ]);
     }

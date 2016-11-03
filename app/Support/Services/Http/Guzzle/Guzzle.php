@@ -21,11 +21,10 @@ class Guzzle
         $this->client = $client;
     }
 
-    public function get($url, $parans = [])
+    public function get($url, $params = [])
     {
-        $promise = $this->client->getAsync($url);
+        $promise = $this->client->getAsync($url, $params);
         $response = $promise->wait();
-
         return json_decode($response->getbody());
     }
 }
