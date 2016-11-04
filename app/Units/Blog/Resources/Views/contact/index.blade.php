@@ -3,8 +3,8 @@
 @section('content')
     <div class="container contact">
         <div class="row">
-            <div class="col s12 l12">
-                <h5>Formulário de Contato</h5>
+            <div class="col s12 l6 offset-l3 contact-item">
+                <h5 class="center">Formulário de Contato</h5>
 
                 @if (session('message'))
                     <div class="col s12">
@@ -12,7 +12,7 @@
                     </div>
                 @endif
 
-                <form class="col s12 m10 l8" method="POST" action="{{route('blog.contact.send')}}">
+                <form class="col s12 m10 l12" method="POST" action="{{route('blog.contact.send')}}">
                     <input type="hidden" name="_token" value="{{csrf_token()}}">
                     <div class="row">
                         <div class="input-field col s12 m6 l6">

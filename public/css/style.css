@@ -240,8 +240,9 @@ main {
 
 }
 
-.contact {
-
+/* Contato */
+.contact .contact-item h5{
+    margin-top: 20px;
 }
 
 /* Artigos: Lista de Artigos */
@@ -438,15 +439,6 @@ footer {
     font-weight: 500;
     font-style: normal;
     font-size: 1.5em;
-}
-
-.container h5 {
-    font-size: 18px;
-    font-weight: 700;
-    letter-spacing: 1px;
-    margin: 5px 0 10px;
-    padding-top: 0;
-    text-transform: uppercase;
 }
 
 .patrocinadores h5, .apoiadores h5, .social h5 {
