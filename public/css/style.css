@@ -3,15 +3,9 @@ body {
     font-size: 16px;
 }
 
-@media only screen and (max-width: 992px) {
-    .container {
-        width: 80% !important;
-    }
-}
-
 @media only screen and (max-width: 480px) {
     .container {
-        width: 90% !important;
+        width: 95% !important;
     }
 
     .nav-left {
@@ -42,6 +36,10 @@ body {
 
 @media only screen and (max-width: 992px) {
 
+    .container {
+        width: 95%;
+    }
+
     .title_menu {
         width: 80% !important;
         margin: -3px 0 0 12px !important;
@@ -69,8 +67,7 @@ body {
 
 @media only screen and (min-width: 993px) {
     .container {
-        padding-left: 10px;
-        width: 80% !important;
+        width: 80%;
     }
 
     .title_menu {
@@ -168,7 +165,7 @@ main {
 
 @media only screen and (max-width: 600px) {
     .article-item {
-        width: 95% !important;
+        width: 100% !important;
         margin: 0 0 10px 0;
     }
 }
@@ -178,7 +175,7 @@ main {
     height: 250px;
     float: left;
     background-color: #FFF;
-    padding: 0 !important;
+    /*padding: 0 !important;*/
     margin: 0 20px 20px 0;
 
     border: 0 solid hsla(0, 0%, 100%, .25);
