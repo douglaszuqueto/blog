@@ -21,10 +21,10 @@ services:
     ports:
       - "3306:3306"
     environment:
-      - MYSQL_ROOT_PASSWORD=blog
-      - MYSQL_DATABASE=blog
-      - MYSQL_USER=blog
-      - MYSQL_PASSWORD=blog
+      - MYSQL_ROOT_PASSWORD
+      - MYSQL_DATABASE
+      - MYSQL_USER
+      - MYSQL_PASSWORD
 
   # Redis
   cache:
