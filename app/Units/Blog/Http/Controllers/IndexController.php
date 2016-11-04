@@ -43,7 +43,7 @@ class IndexController extends Controller
         OpenGraph::setTitle('Página Inicial');
         OpenGraph::setUrl('hhttps://douglaszuqueto.com');
         OpenGraph::addProperty('type', 'articles');
-        OpenGraph::addImage('https://douglaszuqueto.com/images/DZ.png');
+        OpenGraph::addImage('https://douglaszuqueto.com/images/IoT.jpg');
 
         $lastArticles = $this->articlesRepository->scopeQuery(function ($query) {
             return $query->orderBy('created_at', 'desc')->where('state', '=', 3)->limit(4);
