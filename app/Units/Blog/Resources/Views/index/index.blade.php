@@ -18,11 +18,11 @@
                 @endforeach
             </div>
 
-            <div class="col l3 right">
+            <div class="col s12 l3 right">
                 <div class="top-articles">
                     {{--<h1 class="center">Artigos mais lidos</h1>--}}
                 </div>
-                <div class="divider"></div>
+                {{--<div class="divider"></div>--}}
                 <div class="fb-page"
                      data-href="https://www.facebook.com/douglaszuquetooficial/"
                      data-tabs="timeline"
