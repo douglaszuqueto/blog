@@ -17,7 +17,7 @@ trait Update
 
         $state = 0;
 
-        if (isset($data['state']) and $data['state'] == 'on') {
+        if (isset($data['state']) and ($data['state'] == 'on') || $data['state'] == 1) {
             $state = 1;
         }
         $data['state'] = $state;

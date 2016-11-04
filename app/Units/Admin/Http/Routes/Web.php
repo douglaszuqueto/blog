@@ -106,11 +106,10 @@ class Web extends RouteFile
 
     protected function contactRoutes()
     {
-        $this->router->get('/contact/create', ['as' => 'admin.contact.create', 'uses' => 'ContactController@create']);
         $this->router->get('/contact', ['as' => 'admin.contact.index', 'uses' => 'ContactController@index']);
-        $this->router->get('/contact/{id}', ['as' => 'admin.contact.edit', 'uses' => 'ContactController@edit']);
-        $this->router->post('/contact', ['as' => 'admin.contact.store', 'uses' => 'ContactController@store']);
+        $this->router->get('/contact/{id}', ['as' => 'admin.contact.view', 'uses' => 'ContactController@edit']);
         $this->router->put('/contact/{id}', ['as' => 'admin.contact.update', 'uses' => 'ContactController@update']);
+        $this->router->post('/contact/{id}', ['as' => 'admin.contact.remove', 'uses' => 'ContactController@remove']);
     }
 
     protected function categoriesRoutes()
