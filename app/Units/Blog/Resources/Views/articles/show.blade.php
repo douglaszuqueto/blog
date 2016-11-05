@@ -11,12 +11,15 @@
                 <article class="col s12 l12 article-view">
                     <header>
                         <h1>{{$article->title}}</h1>
-                        <div>
+                        <div class="author">
                             Por <strong>Douglas Zuqueto</strong>
-                            - {{date('d/m/Y H:i', strtotime($article->created_at))}}
+                            - {{date('d-m-Y H:i', strtotime($article->created_at))}}
                         </div>
                     </header>
                     <div class="article-body">
+                        <div>
+                            <img src="{{$article->image}}" alt="{{$article->title}}" title="{{$article->title}}">
+                        </div>
                         {!! $text !!}
 
                     </div>

@@ -241,7 +241,7 @@ main {
 }
 
 /* Contato */
-.contact .contact-item h5{
+.contact .contact-item h5 {
     margin-top: 20px;
 }
 
@@ -303,11 +303,40 @@ article .subtitle p::first-letter {
     font-family: 'Miriam Libre', sans-serif;
 }
 
-.article-view h1 {
-    font-weight: 600 !important;
-    color: #2b2b2b;
+.article-view .author{
+    margin: -10px 0 0 5px;
+}
+.article-view .author strong{
+    font-weight: bold;
+}
+
+.article-view h1, .article-view h2, .article-view h3, .article-view h4 {
+    color: #008BD3;
     letter-spacing: -.02em;
-    font-size: 22pt;
+}
+.article-view h2, .article-view h3, .article-view h4 {
+    margin: 40px 0 40px 10px;
+}
+
+
+.article-view h1 {
+    font-weight: 700 !important;
+    font-size: 26pt;
+}
+
+.article-view h2 {
+    font-weight: 600 !important;
+    font-size: 18pt;
+}
+
+.article-view h3 {
+    font-weight: 500 !important;
+    font-size: 16pt;
+}
+
+.article-view h4 {
+    font-weight: 500 !important;
+    font-size: 14pt;
 }
 
 .article-view p {
@@ -316,8 +345,9 @@ article .subtitle p::first-letter {
 
 .article-view p::first-letter {
     text-transform: capitalize;
-    font-size: 14pt !important;
+    font-size: 12pt !important;
     font-weight: bold;
+    margin-left: 10px;
 }
 
 .article-view img {
@@ -327,7 +357,7 @@ article .subtitle p::first-letter {
     display: block;
 }
 
-.articles-view .comments{
+.articles-view .comments {
     background: #FFF;
     margin-top: 10px;
 }
