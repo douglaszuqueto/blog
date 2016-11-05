@@ -39,6 +39,21 @@
 
                     </div>
                 </div>
+
+                <div class="row">
+                    <div class="input-field col s12 l12">
+
+                        <label for="password" class="active">Password</label>
+
+                        <input type="password" id="password" name="password">
+
+                        @if ($errors->has('password'))
+                            <strong>{{ $errors->first('password') }}</strong>
+                        @endif
+
+                    </div>
+                </div>
+
                 <div class="row">
                     <div class="">
                         <div class="col s12 l12">
