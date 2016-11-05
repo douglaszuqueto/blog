@@ -13,8 +13,8 @@ body {
     }
 
     .title_menu {
-        max-width: 70% !important;
-        margin: -3px 0 0 12px !important;
+        max-width: 75% !important;
+        padding: 15px 0 0 0;
     }
 
     #return-to-top {
@@ -42,7 +42,7 @@ body {
 
     .title_menu {
         width: 80% !important;
-        margin: -3px 0 0 12px !important;
+        margin: 15px 0 0 12px !important;
     }
 
     .logo {
@@ -88,9 +88,9 @@ body {
 
 .title_menu {
     width: 20%;
-    float: left;
-    margin: auto;
     font-family: 'Miriam Libre', sans-serif;
+    float: left;
+    margin-top: 15px;
     font-weight: 700;
     color: #525252;
     letter-spacing: -.02em;
@@ -290,7 +290,7 @@ main {
 }
 
 article .subtitle p::first-letter {
-    font-size: 30pt;
+    font-size: 20pt;
     text-transform: capitalize;
 }
 
@@ -303,10 +303,11 @@ article .subtitle p::first-letter {
     font-family: 'Miriam Libre', sans-serif;
 }
 
-.article-view .author{
+.article-view .author {
     margin: -10px 0 0 5px;
 }
-.article-view .author strong{
+
+.article-view .author strong {
     font-weight: bold;
 }
 
@@ -314,10 +315,10 @@ article .subtitle p::first-letter {
     color: #008BD3;
     letter-spacing: -.02em;
 }
+
 .article-view h2, .article-view h3, .article-view h4 {
     margin: 40px 0 40px 10px;
 }
-
 
 .article-view h1 {
     font-weight: 700 !important;
@@ -339,7 +340,9 @@ article .subtitle p::first-letter {
     font-size: 14pt;
 }
 
-.article-view p {
+.article-view p, .article-view a {
+    font-family: "Roboto", sans-serif;
+    font-size: 13pt;
     text-align: justify;
 }
 
@@ -348,6 +351,9 @@ article .subtitle p::first-letter {
     font-size: 12pt !important;
     font-weight: bold;
     margin-left: 10px;
+}
+
+.article-view ul li a {
 }
 
 .article-view img {
