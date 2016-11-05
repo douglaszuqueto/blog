@@ -60,18 +60,6 @@
                 </div>
 
                 <div class="row">
-                    <div class="input-field col l6">
-
-                        <label for="url">Url</label>
-
-                        <input type="url" id="url" name="url">
-
-                        @if ($errors->has('url'))
-                            <strong>{{ $errors->first('url') }}</strong>
-                        @endif
-
-                    </div>
-
                     <div class="file-field input-field col l6">
 
                         <div class="btn btn-flat right">
@@ -113,5 +101,21 @@
             </form>
         </div>
     </div>
+    @include('admin::articles._includes.btn-floating', [
+  'btns' => [
+          [ 'href' => route('admin.articles.index') ,
+          'icon' => 'comment',
+          'color' => 'blue'
+          ],
+          [ 'href' => route('admin.articles.create') ,
+          'icon' => 'save',
+          'color' => 'green'
+          ],
+          [ 'href' => route('admin.articles.shedule') ,
+          'icon' => 'alarm_on',
+          'color' => 'red'
+          ]
+          ]
+  ])
 
 @endsection

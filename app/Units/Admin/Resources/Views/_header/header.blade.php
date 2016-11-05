@@ -110,17 +110,10 @@
         </ul>
         <ul class="collapsible collapsible-accordion">
             <li class="bold">
-                <a class="collapsible-header  waves-effect waves-blue">
+                <a href="{{route('admin.articles.index')}}" class="waves-effect waves-blue">
                     <i class="material-icons blue-text text-darken-2">comment</i>
                     <span>Artigos</span>
                 </a>
-                <div class="collapsible-body">
-                    <ul>
-                        <li><a href="{{route('admin.articles.index')}}">Artigos</a></li>
-                        <li><a href="{{route('admin.articles.create')}}">Cadastrar Artigo</a></li>
-                        <li><a href="{{route('admin.articles.shedule')}}">Agendar Artigo</a></li>
-                    </ul>
-                </div>
             </li>
         </ul>
         <ul class="collapsible collapsible-accordion">

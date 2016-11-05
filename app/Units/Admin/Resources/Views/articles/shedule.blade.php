@@ -28,6 +28,22 @@
             </div>
         </div>
     </div>
+    @include('admin::articles._includes.btn-floating', [
+  'btns' => [
+          [ 'href' => route('admin.articles.index') ,
+          'icon' => 'comment',
+          'color' => 'blue'
+          ],
+          [ 'href' => route('admin.articles.create') ,
+          'icon' => 'save',
+          'color' => 'green'
+          ],
+          [ 'href' => route('admin.articles.shedule') ,
+          'icon' => 'alarm_on',
+          'color' => 'red'
+          ]
+          ]
+  ])
 
     <script>
         $(document).ready(function () {
