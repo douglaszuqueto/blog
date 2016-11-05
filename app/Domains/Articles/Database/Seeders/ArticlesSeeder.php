@@ -19,7 +19,7 @@ class ArticlesSeeder extends Seeder
         DB::table('articles')->insert([
             'title' => 'Controlando Led usando MQTT e ESP8266',
             'subtitle' => 'Controlando Led usando MQTT e ESP8266',
-            'url' => 'https://douglaszuqueto.com/artigos',
+            'url' => 'https://blog.dev/artigos/controlando-led-usando-mqtt-e-esp8266',
             'image' => 'https://douglaszuqueto.com/images/arduino.png',
             'state' => 0,
             'text' => '# Article',
