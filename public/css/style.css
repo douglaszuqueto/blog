@@ -327,6 +327,11 @@ article .subtitle p::first-letter {
     display: block;
 }
 
+.articles-view .comments{
+    background: #FFF;
+    margin-top: 10px;
+}
+
 /* ################################ */
 
 /* BODY */
