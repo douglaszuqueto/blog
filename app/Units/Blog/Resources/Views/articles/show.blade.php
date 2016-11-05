@@ -25,7 +25,7 @@
                     </div>
                 </article>
             </div>
-            <div class="col l8 offset-l2 comments">
+            <div class="col s12 l8 offset-l2 comments">
                 @include('blog::_includes.disqus')
             </div>
         </div>
