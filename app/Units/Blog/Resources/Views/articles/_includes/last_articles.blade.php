@@ -6,7 +6,7 @@
             </a>
         </div>
         <div class="col l9">
-            <a href="">
+            <a href="{{$last->url}}">
                 <h6 style="font-weight: bold; font-size: 12pt">{{$last->title}}</h6>
             </a>
             <p style="font-size: 10pt">{{$last->subtitle}}</p>
