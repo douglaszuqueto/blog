@@ -14,6 +14,7 @@ body {
 
     .title_menu {
         max-width: 75% !important;
+        margin: 0 0 0 10px !important;
         /*padding: 15px 0 0 0;*/
     }
 
@@ -42,7 +43,7 @@ body {
 
     .title_menu {
         width: 80% !important;
-        margin: 15px 0 0 12px !important;
+        /*margin: 15px 0 0 12px !important;*/
     }
 
     .logo {
@@ -90,7 +91,7 @@ body {
     width: 20%;
     font-family: 'Miriam Libre', sans-serif;
     float: left;
-    margin-top: 15px;
+    margin-top: -5px;
     font-weight: 700;
     color: #525252;
     letter-spacing: -.02em;

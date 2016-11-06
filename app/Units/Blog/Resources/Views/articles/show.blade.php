@@ -16,17 +16,19 @@
                             - {{date('d-m-Y H:i', strtotime($article->created_at))}}
                         </div>
                     </header>
-                    <div class="article-body">
+                    <main class="article-body">
                         <div>
                             <img src="{{$article->image}}" alt="{{$article->title}}" title="{{$article->title}}">
                         </div>
                         {!! $text !!}
 
-                    </div>
+                    </main>
+                    <div class="divider"></div>
+                    <footer class="comments">
+                        <h3 class="hide">Comentários</h3>
+                        @include('blog::_includes.disqus')
+                    </footer>
                 </article>
-            </div>
-            <div class="col s12 l8 offset-l2 comments">
-                @include('blog::_includes.disqus')
             </div>
         </div>
     </div>

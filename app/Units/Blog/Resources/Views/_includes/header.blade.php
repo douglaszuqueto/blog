@@ -5,7 +5,8 @@
                     <img src="{{asset('images/logo_2.png')}}" class="logo" alt="Logo Douglas Zuqueto">
                 </a>
             </div>
-            <h1 class="title_menu">Douglas Zuqueto</h1>
+            <h1 class="hide">Menu</h1>
+            <p class="title_menu">Douglas Zuqueto</p>
 
             <a class="menu_toggle button-collapse" href="#" data-activates="mobile-demo"><span
                         class="material-icons black-text">reorder</span></a>

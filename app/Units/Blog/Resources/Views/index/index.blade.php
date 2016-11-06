@@ -3,9 +3,10 @@
 @section('content')
     <div class="container index">
         <div class="row">
-            <div class="col s12 l9 recentArticles">
+            <section class="col s12 l9 recentArticles">
+                <h1 class="hide">Últimos Artigos</h1>
                 @foreach($lastArticles as $last)
-                    <div class="article-item">
+                    <article class="article-item">
                         <a href="{{$last->url}}" class="article-image">
                             <img src="{{$last->image}}" class="responsive-img ">
                         </a>
@@ -14,15 +15,19 @@
                                 <h1>{{$last->title}}</h1>
                             </a>
                         </div>
-                    </div>
+                    </article>
                 @endforeach
-            </div>
+            </section>
 
-            <div class="col s12 l3 right">
+            <section class="col s12 l3 right">
+                <h1 class="hide">Menu Lateral</h1>
+
+                <h2 class="hide">Artigos mais lidos</h2>
                 <div class="top-articles">
                     {{--<h1 class="center">Artigos mais lidos</h1>--}}
                 </div>
                 {{--<div class="divider"></div>--}}
+                <h2 class="hide">Fan Page</h2>
                 <div class="fb-page"
                      data-href="https://www.facebook.com/douglaszuquetooficial/"
                      data-tabs="timeline"
@@ -33,7 +38,7 @@
                     <blockquote cite="https://www.facebook.com/douglaszuquetooficial/" class="fb-xfbml-parse-ignore"><a
                                 href="https://www.facebook.com/douglaszuquetooficial/">Douglas Zuqueto</a></blockquote>
                 </div>
-            </div>
+            </section>
         </div>
 
 @endsection
