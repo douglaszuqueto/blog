@@ -3,6 +3,7 @@
 namespace App\Units\Blog\Http\Controllers;
 
 use App\Domains\Articles\Repositories\ArticlesRepository;
+use App\Domains\Tags\Repositories\TagsRepository;
 use App\Support\Http\Controllers\Controller;
 use Artesaos\SEOTools\Facades\OpenGraph;
 use Artesaos\SEOTools\Facades\SEOMeta;
@@ -14,15 +15,20 @@ class ArticlesController extends Controller
      * @var ArticlesRepository
      */
     private $articlesRepository;
-
+    /**
+     * @var TagsRepository
+     */
+    private $tagsRepository;
 
     /**
      * IndexController constructor.
      * @param ArticlesRepository $articlesRepository
+     * @param TagsRepository $tagsRepository
      */
-    public function __construct(ArticlesRepository $articlesRepository)
+    public function __construct(ArticlesRepository $articlesRepository, TagsRepository $tagsRepository)
     {
         $this->articlesRepository = $articlesRepository;
+        $this->tagsRepository = $tagsRepository;
     }
 
     public function index()
@@ -79,10 +85,12 @@ class ArticlesController extends Controller
         $article->text = $text;
 
         $lastArticles = $this->articlesRepository->orderBy('created_at', 'desc')->findWhere(['state' => 3])->take(5);
+        $tags = $this->tagsRepository->findWhere(['state' => 1]);
 
         return $this->view('blog::articles.show', [
             'article' => $article,
-            'lastArticles' => $lastArticles
+            'lastArticles' => $lastArticles,
+            'tags' => $tags
         ]);
     }
 }
