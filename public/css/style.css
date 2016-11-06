@@ -154,6 +154,14 @@ main {
     font-size: 16pt;
 }
 
+.about-me h3, .news h3,  .project h3 {
+    font-size: 24pt;
+}
+
+.about-me h4, .news h4, .project h4 {
+    font-size: 18pt;
+}
+
 .index {
     padding-top: 10px;
 }
@@ -312,13 +320,13 @@ article .subtitle p::first-letter {
     font-weight: bold;
 }
 
-.article-view h1, .article-view h2, .article-view h2 a, .article-view h3 a, .article-view h4 a{
+.article-view h1, .article-view h2, .article-view h2 a, .article-view h3 a, .article-view h4 a {
     font-family: 'Miriam Libre', sans-serif;
     color: #000;
     letter-spacing: -.02em;
 }
 
-.article-view h2 , .article-view h2 a, .article-view h3 a, .article-view h4 a{
+.article-view h2, .article-view h2 a, .article-view h3 a, .article-view h4 a {
     margin: 40px 0 40px 10px;
 }
 
@@ -327,17 +335,17 @@ article .subtitle p::first-letter {
     font-size: 26pt;
 }
 
-.article-view h2 , .article-view h2 a{
+.article-view h2, .article-view h2 a {
     font-weight: 700 !important;
     font-size: 24pt !important;
 }
 
-.article-view h3 a{
+.article-view h3 a {
     font-weight: 700 !important;
     font-size: 16pt;
 }
 
-.article-view h4 a{
+.article-view h4 a {
     font-weight: 700 !important;
     font-size: 14pt;
     margin-left: 20px;

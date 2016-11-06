@@ -3,13 +3,11 @@
 @section('content')
     <div class="container project">
         <div class="row">
-            <div class="row">
-                <section class="col s12 l12">
-                    <h2 class="center">O Projeto</h2>
-                    <br>
-                    <h3 class="center">Em construção</h3>
-                </section>
-            </div>
+            <section class="col s12 l12">
+                <h3 class="center">O Projeto</h3>
+                <br>
+                <h4 class="center">Em construção</h4>
+            </section>
         </div>
 
     </div>
