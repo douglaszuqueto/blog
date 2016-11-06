@@ -12,12 +12,12 @@ class CreateArticlesTable extends Migration
     {
         $this->schema->create('articles', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('title');
-            $table->string('url');
-            $table->string('subtitle');
+            $table->string('title')->nullable();
+            $table->string('url')->nullable();
+            $table->string('subtitle')->nullable();
             $table->string('image')->nullable();
             $table->tinyInteger('state')->default(0);
-            $table->text('text');
+            $table->text('text')->nullable();
             $table->timestamps();
         });
     }
