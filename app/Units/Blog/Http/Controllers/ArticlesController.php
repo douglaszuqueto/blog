@@ -59,11 +59,11 @@ class ArticlesController extends Controller
     {
         SEOMeta::setTitle('Busca por ' . $tag);
         SEOMeta::setDescription('Resultados da busca filtrados pela tag ' . $tag);
-        SEOMeta::setCanonical('https://douglaszuqueto.com/artigos/search' . $tag);
+        SEOMeta::setCanonical('https://douglaszuqueto.com/artigos/search/' . $tag);
 
         OpenGraph::setTitle('Busca por ' . $tag);
         OpenGraph::setDescription('Resultados da busca filtrados pela tag ' . $tag);
-        OpenGraph::setUrl('https://douglaszuqueto.com/artigos/search' . $tag);
+        OpenGraph::setUrl('https://douglaszuqueto.com/artigos/search/' . $tag);
         OpenGraph::addProperty('type', 'articles');
         OpenGraph::addImage('https://douglaszuqueto.com/images/IoT.jpg');
 
