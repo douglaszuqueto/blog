@@ -29,7 +29,6 @@
                                     @foreach($article->tags as $tag)
                                         <div class="chip">
                                             {{$tag->tag}}
-                                            <i class="close material-icons" data-id="{{$tag->id}}">close</i>
                                         </div>
                                     @endforeach
                                 </div>
@@ -39,11 +38,13 @@
                 @endforeach
 
             </section>
-            {{--<div class="col l4">--}}
-            {{--<div class="row">--}}
-            {{--<h2>Últimos artigos</h2>--}}
-            {{--</div>--}}
-            {{--</div>--}}
+            <div class="col l4">
+                <div class="col l12" style="background-color: white">
+                    <h5 class="center blue white-text" style="border-radius: 4px">Filtrar por tags</h5>
+                    {{--<h6 class="center">Em breve!</h6>--}}
+                    @include('blog::articles._includes.tags')
+                </div>
+            </div>
         </div>
 
     </div>

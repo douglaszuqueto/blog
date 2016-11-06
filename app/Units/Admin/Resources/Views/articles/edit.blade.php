@@ -73,7 +73,7 @@
                         @foreach($item->tags as $tag)
                             <div class="chip">
                                 {{$tag->tag}}
-                                <i class="close material-icons" data-id="{{$tag->id}}">close</i>
+                                <i class="close material-icons removeTag" data-id="{{$tag->id}}">close</i>
                             </div>
                         @endforeach
                     </div>
@@ -131,14 +131,25 @@
                 );
             });
 
-            $('.close').click(function () {
-                var id = $(this).data('id');
-                console.log(id);
+            $('.removeTag').click(function () {
+                removeTag($(this).attr('data-id'))
+            })
 
-                /*
-                 Fazer Requisicao para remover a tag do artigo
-                 */
-            });
+            function removeTag(tag_id) {
+                $.ajax({
+                    url: '/articles/' + {{$item->id}} +'/tags',
+                    method: 'POST',
+                    data: {
+                        '_token': window.Laravel.csrfToken,
+                        '_method': 'PUT',
+                        'tag_id': tag_id
+                    },
+                    success: function (data) {
+                        Materialize.toast('Tag removida', 1000);
+
+                    }
+                });
+            }
 
 
         });

@@ -99,6 +99,12 @@ class ArticlesController extends AbstractCrudController
         ]);
     }
 
+    public function tags(Request $request, $id)
+    {
+        $article = $this->repository->find($id);
+        return $article->tags()->detach($request->get('tag_id'));
+    }
+
     public function update(Request $request, $id)
     {
         if (!$this->service->update($request->all(), $id)) {

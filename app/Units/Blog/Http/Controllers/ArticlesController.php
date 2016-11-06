@@ -47,8 +47,11 @@ class ArticlesController extends Controller
             return $query->where('state', '=', 3)->orderBy('created_at', 'desc');
         })->all();
 
+        $tags = $this->tagsRepository->findWhere(['state' => 1]);
+
         return $this->view('blog::articles.index', [
             'articles' => $articles,
+            'tags' => $tags,
         ]);
     }
 
