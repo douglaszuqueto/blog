@@ -32,6 +32,10 @@
             </div>
             <div class="col l4">
                 <div class="col l12" style="background-color: white">
+                    <h5 class="center blue white-text" style="border-radius: 4px">Buscar</h5>
+                    @include('blog::articles._includes.search')
+                </div>
+                <div class="col l12" style="background-color: white">
                     <h5 class="center blue white-text" style="border-radius: 4px">Artigos recentes</h5>
                     @include('blog::articles._includes.last_articles')
 
