@@ -72,7 +72,7 @@
 
 </script>
 <div id="fb-root"></div>
-@if(env('APP_ENV') == 'production')
+@if(env('APP_GOOGLE_ANALYTICS'))
     <script>
         (function (i, s, o, g, r, a, m) {
             i['GoogleAnalyticsObject'] = r;
@@ -90,6 +90,9 @@
         ga('send', 'pageview');
 
     </script>
+@endif
+
+@if(env('APP_FACEBOOK'))
 
     <script>(function (d, s, id) {
             var js, fjs = d.getElementsByTagName(s)[0];
@@ -98,8 +101,11 @@
             js.id = id;
             js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.8&appId=191652421276345";
             fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));</script>
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+@endif
 
+@if(env('APP_ADDTHIS'))
     <!-- Go to www.addthis.com/dashboard to customize your tools -->
     <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5808c7bd4956dafc"></script>
 @endif
