@@ -34,6 +34,7 @@ class Web extends RouteFile
     protected function articlesRoutes()
     {
         $this->router->get('/artigos', ['as' => 'blog.articles.index', 'uses' => 'ArticlesController@index']);
+        $this->router->get('/artigos/search/{tag}', ['as' => 'blog.articles.searchByTag', 'uses' => 'ArticlesController@searchByTag']);
         $this->router->get('/artigos/{article}', ['as' => 'blog.articles.show', 'uses' => 'ArticlesController@show']);
     }
 

@@ -55,6 +55,35 @@ class ArticlesController extends Controller
         ]);
     }
 
+    public function searchByTag($tag)
+    {
+        SEOMeta::setTitle('Busca por ' . $tag);
+        SEOMeta::setDescription('Resultados da busca filtrados pela tag ' . $tag);
+        SEOMeta::setCanonical('https://douglaszuqueto.com/artigos/search' . $tag);
+
+        OpenGraph::setTitle('Busca por ' . $tag);
+        OpenGraph::setDescription('Resultados da busca filtrados pela tag ' . $tag);
+        OpenGraph::setUrl('https://douglaszuqueto.com/artigos/search' . $tag);
+        OpenGraph::addProperty('type', 'articles');
+        OpenGraph::addImage('https://douglaszuqueto.com/images/IoT.jpg');
+
+        $articles = $this->articlesRepository->scopeQuery(function ($query) use ($tag) {
+            return $query
+                ->where('state', '=', 3)
+                ->orderBy('created_at', 'desc')
+                ->whereHas('tags', function ($query) use ($tag) {
+                    $query->where('tag', '=', $tag);
+                });
+        })->all();
+
+        $tags = $this->tagsRepository->findWhere(['state' => 1]);
+
+        return $this->view('blog::articles.index', [
+            'articles' => $articles,
+            'tags' => $tags,
+        ]);
+    }
+
     public function show($article)
     {
         $url = 'https://' . env('APP_DOMAIN') . '/artigos/' . $article;

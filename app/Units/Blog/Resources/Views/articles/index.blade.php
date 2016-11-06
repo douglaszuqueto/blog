@@ -28,7 +28,9 @@
                                 <div class="row">
                                     @foreach($article->tags as $tag)
                                         <div class="chip">
-                                            {{$tag->tag}}
+                                            <a href="{{route('blog.articles.searchByTag', ['tag' => $tag->tag])}}">
+                                                {{$tag->tag}}
+                                            </a>
                                         </div>
                                     @endforeach
                                 </div>
