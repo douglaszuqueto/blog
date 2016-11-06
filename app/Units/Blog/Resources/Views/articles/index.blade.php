@@ -24,28 +24,25 @@
                                     <p>{{$article->subtitle}}</p>
                                 </div>
                             </div>
-                            {{--<div class="col s12">--}}
-                            {{--<div class="row right ">--}}
-                            {{--<div class="chip grey lighten-3">--}}
-                            {{--<a href="" class="blue-text">ESP8266</a>--}}
-                            {{--</div>--}}
-                            {{--<div class="chip grey lighten-3">--}}
-                            {{--<a href="" class="blue-text">IoT</a>--}}
-                            {{--</div>--}}
-                            {{--<div class="chip grey lighten-3">--}}
-                            {{--<a href="" class="blue-text">MQTT</a>--}}
-                            {{--</div>--}}
-                            {{--</div>--}}
-                            {{--</div>--}}
+                            <div class="col s12">
+                                <div class="row">
+                                    @foreach($article->tags as $tag)
+                                        <div class="chip">
+                                            {{$tag->tag}}
+                                            <i class="close material-icons" data-id="{{$tag->id}}">close</i>
+                                        </div>
+                                    @endforeach
+                                </div>
+                            </div>
                         </div>
                     </article>
                 @endforeach
 
             </section>
             {{--<div class="col l4">--}}
-                {{--<div class="row">--}}
-                    {{--<h2>Últimos artigos</h2>--}}
-                {{--</div>--}}
+            {{--<div class="row">--}}
+            {{--<h2>Últimos artigos</h2>--}}
+            {{--</div>--}}
             {{--</div>--}}
         </div>
 

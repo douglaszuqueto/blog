@@ -44,8 +44,7 @@ class ArticlesController extends Controller
         OpenGraph::addImage('https://douglaszuqueto.com/images/IoT.jpg');
 
         $articles = $this->articlesRepository->scopeQuery(function ($query) {
-            $query->orderBy('created_at', 'asc');
-            return $query->where('state', '=', 3);
+            return $query->where('state', '=', 3)->orderBy('created_at', 'desc');
         })->all();
 
         return $this->view('blog::articles.index', [

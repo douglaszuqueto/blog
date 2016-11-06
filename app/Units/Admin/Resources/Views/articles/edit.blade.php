@@ -70,7 +70,7 @@
                     </div>
 
                     <div class="col l6">
-                        @foreach($tags as $tag)
+                        @foreach($item->tags as $tag)
                             <div class="chip">
                                 {{$tag->tag}}
                                 <i class="close material-icons" data-id="{{$tag->id}}">close</i>
@@ -136,7 +136,7 @@
                 console.log(id);
 
                 /*
-                Fazer Requisicao para remover a tag do artigo
+                 Fazer Requisicao para remover a tag do artigo
                  */
             });
 

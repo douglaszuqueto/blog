@@ -96,8 +96,6 @@ class ArticlesController extends AbstractCrudController
     {
         return $this->view($this->getView('edit'), [
             'item' => $this->repository->find($id),
-            'tags' => $this->repository->find($id)->tags()->get()
-
         ]);
     }
 
