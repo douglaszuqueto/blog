@@ -27,7 +27,7 @@
                         <div class="input-field col l6">
                             <select name="state">
                                 <option value="1">Preview</option>
-                                <option value="3">Publicado</option>
+                                <option value="3" {{$item->state == 3 ? 'selected' : ''}}>Publicado</option>
                                 <option value="0">Não Publicado</option>
                             </select>
                             <label class="active">Status</label>

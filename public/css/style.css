@@ -312,12 +312,13 @@ article .subtitle p::first-letter {
     font-weight: bold;
 }
 
-.article-view h1, .article-view h2, .article-view h3, .article-view h4 {
-    color: #008BD3;
+.article-view h1, .article-view h2 a, .article-view h3 a, .article-view h4 a{
+    font-family: 'Miriam Libre', sans-serif;
+    color: #000;
     letter-spacing: -.02em;
 }
 
-.article-view h2, .article-view h3, .article-view h4 {
+.article-view h2 a, .article-view h3 a, .article-view h4 a{
     margin: 40px 0 40px 10px;
 }
 
@@ -326,25 +327,27 @@ article .subtitle p::first-letter {
     font-size: 26pt;
 }
 
-.article-view h2 {
-    font-weight: 600 !important;
-    font-size: 18pt;
+.article-view h2 a{
+    font-weight: 700 !important;
+    font-size: 24pt !important;
 }
 
-.article-view h3 {
-    font-weight: 500 !important;
+.article-view h3 a{
+    font-weight: 700 !important;
     font-size: 16pt;
 }
 
-.article-view h4 {
-    font-weight: 500 !important;
+.article-view h4 a{
+    font-weight: 700 !important;
     font-size: 14pt;
+    margin-left: 20px;
 }
 
 .article-view p, .article-view a {
     font-family: "Roboto", sans-serif;
     font-size: 13pt;
     text-align: justify;
+    margin: 0 10px 0 10px;
 }
 
 .article-view p::first-letter {
@@ -362,8 +365,9 @@ article .subtitle p::first-letter {
 .article-view img {
     width: 80%;
     height: auto;
-    margin: 0 auto;
+    margin: 30px auto 30px auto;
     display: block;
+
 }
 
 .articles-view .comments {
