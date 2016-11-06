@@ -354,7 +354,9 @@ article .subtitle p::first-letter {
     margin-left: 10px;
 }
 
-.article-view ul li a {
+.article-view ul li {
+    list-style: disc;
+    margin-left: 40px;
 }
 
 .article-view img {
@@ -448,7 +450,7 @@ footer {
 }
 
 /*.redes-sociais li a:hover {*/
-    /*background-position: 0 -34px;*/
+/*background-position: 0 -34px;*/
 /*}*/
 
 #mobile-demo .redes-sociais {
@@ -488,7 +490,7 @@ footer {
     margin: 10px !important;
 }
 
-.patrocinadores h6 a, .apoiadores h6 a{
+.patrocinadores h6 a, .apoiadores h6 a {
     margin: 0 -10px 5px -10px !important;
     float: left;
 }
