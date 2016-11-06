@@ -63,6 +63,22 @@
                     </div>
                 </div>
 
+                <div class="row">
+                    <div class="col l6 tags">
+                        <label for="chips" class="active">Tags</label>
+                        <div class="chips"></div>
+                    </div>
+
+                    <div class="col l6">
+                        @foreach($tags as $tag)
+                            <div class="chip">
+                                {{$tag->tag}}
+                                <i class="close material-icons" data-id="{{$tag->id}}">close</i>
+                            </div>
+                        @endforeach
+                    </div>
+                </div>
+
                 <div class="col l12">
                     <textarea id="editor" name="text">{{$item->text}}</textarea>
 
@@ -106,6 +122,25 @@
     <script>
         $(document).ready(function () {
             $('select').material_select();
+            $('.chips').material_chip();
+            $('.chips').on('chip.add', function (e, chip) {
+                console.log(chip);
+
+                $('.tags').append(
+                        '<input type="hidden" id="tags" name="tags[]" value="' + chip.tag + '">'
+                );
+            });
+
+            $('.close').click(function () {
+                var id = $(this).data('id');
+                console.log(id);
+
+                /*
+                Fazer Requisicao para remover a tag do artigo
+                 */
+            });
+
+
         });
     </script>
 

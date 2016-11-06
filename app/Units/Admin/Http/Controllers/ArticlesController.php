@@ -4,6 +4,7 @@ namespace App\Units\Admin\Http\Controllers;
 
 use App\Domains\Articles\Repositories\ArticlesRepository;
 use App\Domains\Articles\Repositories\ArticlesSheduleRepository;
+use App\Domains\Articles\Services\ArticlesService;
 use App\Support\Http\Controllers\AbstractCrudController;
 use DateTime;
 use Illuminate\Http\Request;
@@ -18,16 +19,22 @@ class ArticlesController extends AbstractCrudController
      * @var ArticlesSheduleRepository
      */
     private $articlesSheduleRepository;
+    /**
+     * @var ArticlesService
+     */
+    private $service;
 
     /**
      * UsersController constructor.
      * @param ArticlesRepository $repository
+     * @param ArticlesService $service
      * @param ArticlesSheduleRepository $articlesSheduleRepository
      */
-    public function __construct(ArticlesRepository $repository, ArticlesSheduleRepository $articlesSheduleRepository)
+    public function __construct(ArticlesRepository $repository, ArticlesService $service, ArticlesSheduleRepository $articlesSheduleRepository)
     {
         $this->repository = $repository;
         $this->articlesSheduleRepository = $articlesSheduleRepository;
+        $this->service = $service;
     }
 
     public function index()
@@ -76,15 +83,6 @@ class ArticlesController extends AbstractCrudController
         ]);
     }
 
-    protected function getArticleUrl($title)
-    {
-        $title = str_replace(' ', '-', (strtolower($title)));
-
-        $url = 'https://' . env('APP_DOMAIN') . '/artigos/' . $title;
-
-        return $url;
-    }
-
     public function create()
     {
         $article = $this->repository->create([
@@ -94,15 +92,20 @@ class ArticlesController extends AbstractCrudController
         return redirect()->route($this->getRoute('update'), ['id' => $article->id]);
     }
 
+    public function edit($id)
+    {
+        return $this->view($this->getView('edit'), [
+            'item' => $this->repository->find($id),
+            'tags' => $this->repository->find($id)->tags()->get()
+
+        ]);
+    }
+
     public function update(Request $request, $id)
     {
-        $data = $request->all();
-        if (empty($data['url'])) {
-            $data['url'] = $this->getArticleUrl($data['title']);
+        if (!$this->service->update($request->all(), $id)) {
+            echo 'erro';
         }
-
-        $this->repository->update($data, $id);
-
         return redirect()->route($this->getRoute('index'));
     }
 
