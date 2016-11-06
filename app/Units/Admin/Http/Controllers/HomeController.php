@@ -35,8 +35,8 @@ class HomeController extends Controller
     protected function getArticlesCount()
     {
         $articles['pending'] = $this->repository->articlesCount(0);
-        $articles['preview'] = $this->repository->articlesCount(2);
-        $articles['scheduled'] = $this->repository->articlesCount(1);
+        $articles['preview'] = $this->repository->articlesCount(1);
+        $articles['scheduled'] = $this->repository->articlesCount(2);
         $articles['published'] = $this->repository->articlesCount(3);
 
         return $articles;
