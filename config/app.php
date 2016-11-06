@@ -180,12 +180,12 @@ return [
          */
         App\Domains\Users\Providers\DomainServiceProvider::class,
         App\Domains\News\Providers\DomainServiceProvider::class,
+        App\Domains\Tags\Providers\DomainServiceProvider::class,
         App\Domains\Articles\Providers\DomainServiceProvider::class,
         App\Domains\Contact\Providers\DomainServiceProvider::class,
         App\Domains\Sponsors\Providers\DomainServiceProvider::class,
         App\Domains\Supporters\Providers\DomainServiceProvider::class,
         App\Domains\Categories\Providers\DomainServiceProvider::class,
-        App\Domains\Tags\Providers\DomainServiceProvider::class,
         App\Domains\Tracker\Providers\DomainServiceProvider::class,
 
 
