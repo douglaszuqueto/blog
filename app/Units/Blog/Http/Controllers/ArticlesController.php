@@ -76,10 +76,13 @@ class ArticlesController extends Controller
         $markdown = new Parsedown();
 
         $text = $markdown->text($article->text);
+        $article->text = $text;
+
+        $lastArticles = $this->articlesRepository->orderBy('created_at', 'desc')->findWhere(['state' => 3])->take(5);
 
         return $this->view('blog::articles.show', [
             'article' => $article,
-            'text' => $text,
+            'lastArticles' => $lastArticles
         ]);
     }
 }

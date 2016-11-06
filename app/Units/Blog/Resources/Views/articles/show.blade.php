@@ -20,7 +20,7 @@
                         <div>
                             <img src="{{$article->image}}" alt="{{$article->title}}" title="{{$article->title}}">
                         </div>
-                        {!! $text !!}
+                        {!! $article->text !!}
 
                     </main>
                     <div class="divider"></div>
@@ -30,29 +30,20 @@
                     </footer>
                 </article>
             </div>
-            {{--<div class="col l3 offset-l1">--}}
-                {{--<div class="" style="position: fixed">--}}
+            <div class="col l4">
+                <div class="col l12" style="background-color: white">
+                    <h5 class="center blue white-text" style="border-radius: 4px">Artigos recentes</h5>
+                    @include('blog::articles._includes.last_articles')
 
-                    {{--<div class="row">--}}
-                        {{--<h6>Artigos mais lidos</h6>--}}
-                    {{--</div>--}}
-                    {{--<div class="row">--}}
-                        {{--<div class="col l3">--}}
-                            {{--<img src="{{$article->image}}" width="100%" alt="">--}}
-                        {{--</div>--}}
-                        {{--<div class="col l9">--}}
-                            {{--<h6 style="font-weight: bold">{{$article->title}}</h6>--}}
-                        {{--</div>--}}
+                </div>
+                <div class="col l12" style="background-color: white">
+                    <h5 class="center blue white-text" style="border-radius: 4px">Filtrar por tags</h5>
+                    <h6 class="center">Em breve!</h6>
+                </div>
 
-                    {{--</div>--}}
-                    {{--<div class="l12">--}}
-                        {{--<h6>{{$article->subtitle}}</h6>--}}
-                    {{--</div>--}}
+            </div>
 
-                    {{--<div class="divider"></div>--}}
-                {{--</div>--}}
-            {{--</div>--}}
-        {{--</div>--}}
+        </div>
     </div>
     <script>
         hljs.initHighlightingOnLoad();

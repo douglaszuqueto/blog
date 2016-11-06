@@ -42,9 +42,11 @@
                 @endforeach
 
             </section>
-            <div class="col l4">
-
-            </div>
+            {{--<div class="col l4">--}}
+                {{--<div class="row">--}}
+                    {{--<h2>Últimos artigos</h2>--}}
+                {{--</div>--}}
+            {{--</div>--}}
         </div>
 
     </div>
