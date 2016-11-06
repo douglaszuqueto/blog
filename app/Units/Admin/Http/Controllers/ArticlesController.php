@@ -85,19 +85,21 @@ class ArticlesController extends AbstractCrudController
         return $url;
     }
 
-    public function store(Request $request)
+    public function create()
     {
-        $data = $request->all();
-        $data['url'] = $this->getArticleUrl($data['title']);
+        $article = $this->repository->create([
+            'title' => 'Artigo pré criado'
+        ]);
 
-        $this->repository->create($data);
-
-        return redirect()->route($this->getRoute('index'));
+        return redirect()->route($this->getRoute('update'), ['id' => $article->id]);
     }
 
     public function update(Request $request, $id)
     {
         $data = $request->all();
+        if (empty($data['url'])) {
+            $data['url'] = $this->getArticleUrl($data['title']);
+        }
 
         $this->repository->update($data, $id);
 

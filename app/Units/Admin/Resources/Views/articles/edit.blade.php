@@ -37,7 +37,7 @@
                 </div>
 
                 <div class="row">
-                    <div class="input-field col l12">
+                    <div class="input-field col l6">
 
                         <label for="url" class="active">Url</label>
 
