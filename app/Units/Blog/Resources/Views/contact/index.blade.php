@@ -4,7 +4,9 @@
     <div class="container contact">
         <div class="row">
             <section class="col s12 l6 offset-l3 contact-item">
-                <h5 class="center">Formulário de Contato</h5>
+                <h5 class="center">
+                    Alguma dúvida, reclamação ou sugestão? Entre já em contato conosco :P
+                </h5>
 
                 @if (session('message'))
                     <div class="col s12">
