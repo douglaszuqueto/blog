@@ -3,71 +3,100 @@
 
 <div class="container">
     <div class="row">
-        <div class="col s12 m4 l12 social">
-            <h5 class="white-text">SOCIAL</h5>
+        <section class="col s12 m4 l12 social">
+            <h5 class="white-text">Social</h5>
 
             <ul class="redes-sociais">
                 <li>
-                    <a href="https://www.facebook.com/douglaszuquetooficial" title="Facebook" target="_blank"
-                       class="facebook"></a>
+                    <h6>
+                        <a href="https://www.facebook.com/douglaszuquetooficial" title="Facebook" target="_blank"
+                           class="facebook">
+                            <span class="hide">Facebook</span>
+                        </a>
+                    </h6>
                 </li>
                 <li>
-                    <a href="https://www.instagram.com/douglaszuquetooficial" title="Instagram" target="_blank"
-                       class="instagram"></a>
+                    <h6>
+                        <a href="https://www.instagram.com/douglaszuquetooficial" title="Instagram" target="_blank"
+                           class="instagram">
+                            <span class="hide">Instagram</span>
+                        </a>
+                    </h6>
                 </li>
                 <li>
-                    <a href="https://www.twitter.com/douglaszuqueto" title="Twitter" target="_blank"
-                       class="twitter"></a>
+                    <h6>
+                        <a href="https://www.twitter.com/douglaszuqueto" title="Twitter" target="_blank"
+                           class="twitter">
+                            <span class="hide">Twitter</span>
+                        </a>
+                    </h6>
+                </li>
+                {{--<li>--}}
+                    {{--<h6>--}}
+                        {{--<a href="https://www.youtube.com/douglaszuquetooficial" title="YouTube" target="_blank"--}}
+                           {{--class="youtube">--}}
+                            {{--<span class="hide">YouTube</span>--}}
+                        {{--</a>--}}
+                    {{--</h6>--}}
+                {{--</li>--}}
+                <li>
+                    <h6>
+                        <a href="https://github.com/douglaszuqueto" title="GitHub" target="_blank"
+                           class="github">
+                            <span class="hide">GitHub</span>
+                        </a>
+                    </h6>
                 </li>
                 <li>
-                    <a href="https://www.youtube.com/douglaszuquetooficial" title="YouTube" target="_blank"
-                       class="youtube"></a>
+                    <h6>
+                        <a href="https://telegram.me/douglaszuqueto" title="Telegram" target="_blank"
+                           class="telegram">
+                            <span class="hide">Telegram</span>
+                        </a>
+                    </h6>
                 </li>
-                <li>
-                    <a href="https://github.com/douglaszuqueto" title="GitHub" target="_blank"
-                       class="github"></a>
-                </li>
-                <li>
-                    <a href="https://telegram.me/douglaszuqueto" title="Telegram" target="_blank"
-                       class="telegram"></a>
-                </li>
-
             </ul>
 
-        </div>
+        </section>
     </div>
     <div class="row">
 
-        <div class="col s12 m4 l4 patrocinadores">
-            <h5 class="white-text ">PATROCINADORES</h5>
+        <section class="col s12 m4 l4 patrocinadores">
+            <h5 class="white-text ">Patrocinadores</h5>
 
             @foreach($sponsors->findWhere(['state' => 1]) as $sponsor)
-                <a href="{{$sponsor->url}}" target="_blank">
-                    <img src="{{$sponsor->image_url}}"
-                         class="responsive-img " width="20%" alt="{{$sponsor->sponsor}}"
-                         title="{{$sponsor->sponsor}}">
-                </a>
+                <h6>
+                    <a href="{{$sponsor->url}}" target="_blank">
+                        <img src="{{$sponsor->image_url}}"
+                             class="responsive-img " width="70%" alt="{{$sponsor->sponsor}}"
+                             title="{{$sponsor->sponsor}}">
+                        <span class="hide">{{$sponsor->sponsor}}</span>
+                    </a>
+                </h6>
             @endforeach
 
-        </div>
-        <div class="col s12 m4 l4 apoiadores">
-            <h5 class="white-text">APOIADORES</h5>
+        </section>
+        <section class="col s12 m4 l4 apoiadores">
+            <h5 class="white-text">Apoiadores</h5>
 
             @foreach($supporters->findWhere(['state' => 1]) as $supporter)
-                <a href="{{$supporter->url}}" target="_blank">
-                    <img src="{{$supporter->image_url}}"
-                         class="responsive-img " width="20%" alt="{{$supporter->supporter}}"
-                         title="{{$supporter->supporter}}">
-                </a>
+                <h6>
+                    <a href="{{$supporter->url}}" target="_blank">
+                        <img src="{{$supporter->image_url}}"
+                             class="responsive-img " width="70%" alt="{{$supporter->supporter}}"
+                             title="{{$supporter->supporter}}">
+                        <span class="hide">{{$supporter->supporter}}</span>
+                    </a>
+                </h6>
             @endforeach
-        </div>
+        </section>
 
         <div class="col s12 m4 l4 digitalocean">
-                <a href="https://m.do.co/c/302f8d3a3de6" target="_blank">
-                    <img src="{{asset('images/digitalocean_vps.png')}}"
-                         class="responsive-img " width="70%" alt="Powered by Digital Ocean"
-                         title="Powered by Digital Ocean">
-                </a>
+            <a href="https://m.do.co/c/302f8d3a3de6" target="_blank">
+                <img src="{{asset('images/digitalocean_vps.png')}}"
+                     class="responsive-img " width="60%" alt="Powered by Digital Ocean"
+                     title="Powered by Digital Ocean">
+            </a>
         </div>
     </div>
 </div>

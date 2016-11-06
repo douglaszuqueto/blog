@@ -14,7 +14,7 @@ body {
 
     .title_menu {
         max-width: 75% !important;
-        padding: 15px 0 0 0;
+        /*padding: 15px 0 0 0;*/
     }
 
     #return-to-top {
@@ -422,32 +422,33 @@ footer {
 }
 
 .redes-sociais li a.facebook {
-    background: url('../images/social/facebook.png');
+    background: url('../images/social/facebook.png') 0 -34px;
 }
 
 .redes-sociais li a.instagram {
-    background: url('../images/social/instagram.png');
+    background: url('../images/social/instagram.png') 0 -34px;
 }
 
 .redes-sociais li a.twitter {
-    background: url('../images/social/twitter.png');
+    background: url('../images/social/twitter.png') 0 -34px;
 }
 
 .redes-sociais li a.youtube {
-    background: url('../images/social/youtube.png');
+    background: url('../images/social/youtube.png') 0 -34px;
 }
 
 .redes-sociais li a.github {
     background: url('../images/social/github.png');
+    border-radius: 17px !important;
 }
 
 .redes-sociais li a.telegram {
     background: url('../images/social/telegram.png');
 }
 
-.redes-sociais li a:hover {
-    background-position: 0 -34px;
-}
+/*.redes-sociais li a:hover {*/
+    /*background-position: 0 -34px;*/
+/*}*/
 
 #mobile-demo .redes-sociais {
     float: left;
@@ -483,11 +484,16 @@ footer {
 }
 
 .patrocinadores h5, .apoiadores h5, .social h5 {
-    margin: 15px !important;
+    margin: 10px !important;
 }
 
-.patrocinadores a, .apoiadores a {
-    margin: 5px !important;
+.patrocinadores h6 a, .apoiadores h6 a{
+    margin: 0 -10px 5px -10px !important;
+    float: left;
+}
+
+.patrocinadores h6, .apoiadores h6 {
+    /*margin: 5px !important;*/
 }
 
 .digitalocean {

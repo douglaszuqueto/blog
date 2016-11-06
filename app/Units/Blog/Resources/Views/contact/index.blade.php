@@ -3,7 +3,7 @@
 @section('content')
     <div class="container contact">
         <div class="row">
-            <div class="col s12 l6 offset-l3 contact-item">
+            <section class="col s12 l6 offset-l3 contact-item">
                 <h5 class="center">Formulário de Contato</h5>
 
                 @if (session('message'))
@@ -41,7 +41,7 @@
                         <input type="submit" value="Enviar" class="btn green right">
                     </div>
                 </form>
-            </div>
+            </section>
         </div>
 
     </div>

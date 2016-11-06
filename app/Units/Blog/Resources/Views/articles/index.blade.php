@@ -3,7 +3,7 @@
 @section('content')
     <div class="container articles">
         <div class="row">
-            <div class="col s12 l8 offset-l2">
+            <section class="col s12 l8 offset-l2">
                 <h1>Artigos</h1>
 
                 @foreach($articles as $article)
@@ -41,7 +41,7 @@
                     </article>
                 @endforeach
 
-            </div>
+            </section>
             <div class="col l2">
 
             </div>

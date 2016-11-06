@@ -41,7 +41,7 @@
 
 </head>
 <body>
-
+<h1 class="hide">Douglas Zuqueto</h1>
 <header>
     @include('blog::_includes.header')
 </header>
