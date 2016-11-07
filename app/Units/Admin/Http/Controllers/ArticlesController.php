@@ -99,6 +99,18 @@ class ArticlesController extends AbstractCrudController
         ]);
     }
 
+    public function images($id)
+    {
+        return $this->view($this->getView('images'), [
+            'item' => $this->repository->find($id),
+        ]);
+    }
+
+    public function imagesSave(Request $request, $id)
+    {
+        dd($request->file('image'));
+    }
+
     public function tags(Request $request, $id)
     {
         $article = $this->repository->find($id);

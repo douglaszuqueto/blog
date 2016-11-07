@@ -48,6 +48,12 @@
                         @endif
 
                     </div>
+
+                    <div class="input-field col l6">
+                        <a href="#modalImages" class="btn green modal-trigger">
+                            Upload de Imagens
+                        </a>
+                    </div>
                 </div>
                 <div class="row">
                     <div class="input-field col l12">
@@ -78,6 +84,25 @@
                         @endforeach
                     </div>
                 </div>
+                <div class="row">
+                    <div class="col l12">
+                        @foreach($item->images as $image)
+                            <div class="col s12 m7 l2">
+                                <div class="card">
+                                    <div class="card-image">
+                                        <img src="{{$image->image_url}}">
+                                    </div>
+                                    <div class="card-content">
+                                        <p>{{$image->image_name}}</p>
+                                        <a class="removeImage" href="" data-id="{{$image->id}}">
+                                            <i class="material-icons red-text">delete</i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        @endforeach
+                    </div>
+                </div>
 
                 <div class="col l12">
                     <textarea id="editor" name="text">{{$item->text}}</textarea>
@@ -102,20 +127,48 @@
             </form>
         </div>
     </div>
+    <div id="modalImages" class="modal">
+        <div class="modal-content">
+            <h5>Upload de Fotos</h5>
+            <form action="" enctype="multipart/form-data">
+                <div class="file-field input-field">
+                    <div class="btn">
+                        <span>Imagem</span>
+                        <input type="file">
+                    </div>
+                    <div class="file-path-wrapper">
+                        <input class="file-path validate" type="text">
+                    </div>
+                </div>
+                <div class="input-field">
+                    <button class="btn green" type="submit">Enviar</button>
+                </div>
+            </form>
+        </div>
+
+    </div>
     @include('admin::articles._includes.btn-floating', [
   'btns' => [
-          [ 'href' => route('admin.articles.index') ,
-          'icon' => 'comment',
-          'color' => 'blue'
-          ],
-          [ 'href' => route('admin.articles.create') ,
-          'icon' => 'save',
-          'color' => 'green'
-          ],
-          [ 'href' => route('admin.articles.shedule') ,
-          'icon' => 'alarm_on',
-          'color' => 'red'
-          ]
+              [
+                  'href' => route('admin.articles.index') ,
+                  'icon' => 'comment',
+                  'color' => 'blue'
+              ],
+              [
+                  'href' => route('admin.articles.create') ,
+                  'icon' => 'save',
+                  'color' => 'green'
+              ],
+              [
+                  'href' => route('admin.articles.shedule') ,
+                  'icon' => 'alarm_on',
+                  'color' => 'red'
+              ],
+              [
+                  'href' => route('admin.articles.images', ['id' => $item->id]),
+                  'icon' => 'picture_in_picture',
+                  'color'=> 'yellow'
+              ]
           ]
   ])
 
@@ -129,6 +182,10 @@
                 $('.tags').append(
                         '<input type="hidden" id="tags" name="tags[]" value="' + chip.tag + '">'
                 );
+            });
+
+            $('.modal-trigger').leanModal({
+                starting_top: '100%'
             });
 
             $('.removeTag').click(function () {
