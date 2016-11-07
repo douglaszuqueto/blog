@@ -3,6 +3,7 @@
 namespace App\Domains\Articles\Providers;
 
 use App\Domains\Articles\Database\Factories\ArticlesFactory;
+use App\Domains\Articles\Database\Migrations\CreateArticlesImagesTable;
 use App\Domains\Articles\Database\Migrations\CreateArticlesSheduleTable;
 use App\Domains\Articles\Database\Migrations\CreateArticlesTable;
 use App\Domains\Articles\Database\Migrations\CreateArticlesTagsTable;
@@ -27,6 +28,7 @@ class DomainServiceProvider extends ServiceProvider
             CreateArticlesTable::class,
             CreateArticlesSheduleTable::class,
             CreateArticlesTagsTable::class,
+            CreateArticlesImagesTable::class,
         ]);
     }
 
