@@ -28,6 +28,11 @@ class Articles extends Model
         return $this->hasOne(ArticlesShedule::class, 'article_id', 'id');
     }
 
+    public function images()
+    {
+        return $this->hasMany(ArticlesImages::class, 'article_id', 'id');
+    }
+
     public function tags()
     {
         return $this->belongsToMany(Tags::class, 'articles_tags', 'article_id', 'tag_id');
