@@ -2,11 +2,14 @@
 
 namespace App\Domains\Articles\Services;
 
+use App\Domains\Articles\Repositories\ArticlesImagesRepository;
 use App\Domains\Articles\Repositories\ArticlesRepository;
 use App\Domains\Tags\Repositories\TagsRepository;
+use App\Support\Http\Controllers\Traits\FileUpload;
 
 class ArticlesService
 {
+    use FileUpload;
     /**
      * @var ArticlesRepository
      */
@@ -15,16 +18,22 @@ class ArticlesService
      * @var TagsRepository
      */
     private $tagsRepository;
+    /**
+     * @var ArticlesImagesRepository
+     */
+    private $imagesRepository;
 
     /**
      * ArticlesService constructor.
      * @param ArticlesRepository $repository
      * @param TagsRepository $tagsRepository
+     * @param ArticlesImagesRepository $imagesRepository
      */
-    public function __construct(ArticlesRepository $repository, TagsRepository $tagsRepository)
+    public function __construct(ArticlesRepository $repository, TagsRepository $tagsRepository, ArticlesImagesRepository $imagesRepository)
     {
         $this->repository = $repository;
         $this->tagsRepository = $tagsRepository;
+        $this->imagesRepository = $imagesRepository;
     }
 
     public function update(array $data, $id)
@@ -58,12 +67,29 @@ class ArticlesService
         }
     }
 
+    protected function getArticleName($title)
+    {
+        return str_replace(' ', '-', (strtolower($title)));
+    }
+
     protected function getArticleUrl($title)
     {
-        $title = str_replace(' ', '-', (strtolower($title)));
-
-        $url = 'https://' . env('APP_DOMAIN') . '/artigos/' . $title;
+        $url = 'https://' . env('APP_DOMAIN') . '/artigos/' . $this->getArticleName($title);
 
         return $url;
+    }
+
+    public function imageUpload(array $data, $id)
+    {
+        $data['image_name'] = $this->getArticleName($data['image_name']);
+        $data['article_id'] = $id;
+
+        $image = $this->setPath('articles/' . $this->getArticleName($data['title']) . '/')
+            ->upload($data['image'], $data['image_name']);
+
+        $data['image_url'] = $image['image_url'];
+
+        $this->imagesRepository->create($data);
+
     }
 }

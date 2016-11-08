@@ -7,11 +7,12 @@ use Intervention\Image\Facades\Image;
 
 trait FileUpload
 {
-    protected $imagesPath = 'uploads/images/';
+    protected $basePath = 'uploads/';
+    protected $imagePath;
 
-    public function upload(UploadedFile $image, $width = null)
+    public function upload(UploadedFile $image, $name, $width = null)
     {
-        $data['image_name'] = $this->getFileName($image->getClientOriginalExtension());
+        $data['image_name'] = $this->getFileName($name, $image->getClientOriginalExtension());
         $data['image_url'] = $this->getFileUrl($data['image_name']);
 
         $this->resizing($image, $data, $width);
@@ -19,21 +20,33 @@ trait FileUpload
         return $data;
     }
 
-    protected function getFileName($extension)
+    public function setPath($path)
     {
-        return 'img-' . md5(date('d/m/Y H:i:s')) . '.' . $extension;
+        $imagePath = $this->basePath . $path;
+        if (!is_dir($imagePath)) {
+            mkdir($imagePath);
+        }
+
+        $this->imagePath = $imagePath;
+
+        return $this;
+    }
+
+    protected function getFileName($name, $extension)
+    {
+        return $name . '.' . $extension;
     }
 
     protected function getFileUrl($image_name)
     {
-        return asset('uploads/images/' . $image_name);
+        return asset($this->imagePath . $image_name);
     }
 
     protected function resizing($image, $data, $width)
     {
         if (!$width) {
-            return Image::make($image)->save($this->imagesPath . $data['image_name']);
+            return Image::make($image)->save($this->imagePath . $data['image_name']);
         }
-        return Image::make($image)->fit($width)->save($this->imagesPath . $data['image_name']);
+        return Image::make($image)->fit($width)->save($this->imagePath . $data['image_name']);
     }
 }

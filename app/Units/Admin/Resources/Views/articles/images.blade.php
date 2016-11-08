@@ -6,22 +6,33 @@
             <div class="col l12">
                 <h5>Imagens Artigo: {{$item->title}}</h5>
 
-                <form class="col l8 offset-l2" action="{{route('admin.articles.imagesSave', ['id' => $item->id])}}"
+                <form class="col l12" action="{{route('admin.articles.imagesSave', ['id' => $item->id])}}"
                       method="POST"
                       enctype="multipart/form-data">
                     <input type="hidden" name="_token" value="{{csrf_token()}}">
+                    <input type="hidden" name="title" value="{{$item->title}}">
 
-                    <div class="file-field input-field col l6">
-                        <input type="file" name="image" id="image">
-                        <label for="image" class="active">Imagem</label>
-                        <div class="file-path-wrapper">
-                            <input class="file-path validate" type="text">
+                    <div class="row">
+                        <div class="input-field col l6">
+                            <input type="text" name="image_name" id="image_name" value="{{$item->title}}">
+                            <label for="image_name" class="active">Nome</label>
+
+                        </div>
+                        <div class="file-field input-field col l6">
+                            <input type="file" name="image" id="image">
+                            <label for="image" class="active">Imagem</label>
+                            <div class="file-path-wrapper">
+                                <input class="file-path validate" type="text">
+                            </div>
                         </div>
                     </div>
 
-                    <div class="input-field col l6">
-                        <button class="btn green" type="submit">Enviar</button>
+                    <div class="row">
+                        <div class="input-field col l12">
+                            <button class="btn green right" type="submit">Enviar</button>
+                        </div>
                     </div>
+
                 </form>
             </div>
         </div>

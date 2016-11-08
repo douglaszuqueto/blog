@@ -2,15 +2,19 @@
 
 namespace App\Units\Admin\Http\Controllers;
 
+use App\Domains\Articles\Repositories\ArticlesImagesRepository;
 use App\Domains\Articles\Repositories\ArticlesRepository;
 use App\Domains\Articles\Repositories\ArticlesSheduleRepository;
 use App\Domains\Articles\Services\ArticlesService;
 use App\Support\Http\Controllers\AbstractCrudController;
-use DateTime;
+use App\Support\Http\Controllers\Traits\FileUpload;
 use Illuminate\Http\Request;
 
 class ArticlesController extends AbstractCrudController
 {
+
+    use FileUpload;
+
     protected $modulo = 'admin';
     protected $page = 'Articles';
     protected $page_description = 'listing';
@@ -23,18 +27,29 @@ class ArticlesController extends AbstractCrudController
      * @var ArticlesService
      */
     private $service;
+    /**
+     * @var ArticlesImagesRepository
+     */
+    private $imagesRepository;
 
     /**
      * UsersController constructor.
      * @param ArticlesRepository $repository
      * @param ArticlesService $service
      * @param ArticlesSheduleRepository $articlesSheduleRepository
+     * @param ArticlesImagesRepository $imagesRepository
      */
-    public function __construct(ArticlesRepository $repository, ArticlesService $service, ArticlesSheduleRepository $articlesSheduleRepository)
+    public function __construct(
+        ArticlesRepository $repository,
+        ArticlesService $service,
+        ArticlesSheduleRepository $articlesSheduleRepository,
+        ArticlesImagesRepository $imagesRepository
+    )
     {
         $this->repository = $repository;
         $this->articlesSheduleRepository = $articlesSheduleRepository;
         $this->service = $service;
+        $this->imagesRepository = $imagesRepository;
     }
 
     public function index()
@@ -108,7 +123,11 @@ class ArticlesController extends AbstractCrudController
 
     public function imagesSave(Request $request, $id)
     {
-        dd($request->file('image'));
+
+        $this->service->imageUpload($request->all(), $id);
+
+        return redirect()->route($this->getRoute('images'), ['id' => $id]);
+
     }
 
     public function tags(Request $request, $id)
