@@ -48,12 +48,6 @@
                         @endif
 
                     </div>
-
-                    <div class="input-field col l6">
-                        <a href="#modalImages" class="btn green modal-trigger">
-                            Upload de Imagens
-                        </a>
-                    </div>
                 </div>
                 <div class="row">
                     <div class="input-field col l12">
@@ -91,12 +85,6 @@
                                 <div class="card">
                                     <div class="card-image">
                                         <img src="{{$image->image_url}}">
-                                    </div>
-                                    <div class="card-content">
-                                        <p>{{$image->image_name}}</p>
-                                        <a class="removeImage" href="" data-id="{{$image->id}}">
-                                            <i class="material-icons red-text">delete</i>
-                                        </a>
                                     </div>
                                 </div>
                             </div>
