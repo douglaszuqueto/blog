@@ -50,11 +50,11 @@
                     @foreach($item->images as $image)
                         <tr>
                             <td width="20%">
-                                <img src="{{$image->image_url}}" width="100%" alt="">
+                                <img src="{{$image->image_url}}" width="60%" alt="">
                             </td>
                             <td>{{$image->image_name}}</td>
                             <td class="center-align">
-                                <a class="removeArticle" href="#" data-id="{{$image->id}}">
+                                <a class="removeImage" href="#" data-id="{{$image->id}}">
                                     <i class="material-icons red-text">delete</i>
                                 </a>
                             </td>
@@ -96,7 +96,28 @@
             $('.modal-trigger').leanModal({
                 starting_top: '100%'
             });
+
+            $('.removeImage').click(function () {
+                removeImage($(this).attr('data-id'))
+            })
         });
+
+        function removeImage(image_id) {
+            $.ajax({
+                url: '/articles/' + {{$item->id}} +'/images/' + image_id,
+                method: 'POST',
+                data: {
+                    '_token': window.Laravel.csrfToken,
+                    '_method': 'PUT',
+                },
+                success: function (data) {
+                    Materialize.toast('Artigo excluido', 2000, null, function () {
+                        location.reload();
+                    });
+
+                }
+            });
+        }
     </script>
 
 @endsection
