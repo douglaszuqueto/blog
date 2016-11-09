@@ -38,21 +38,30 @@
         </div>
         <div class="row">
             <div class="col l12">
-                @foreach($item->images as $image)
-                    <div class="col s12 m7 l2">
-                        <div class="card">
-                            <div class="card-image">
-                                <img src="{{$image->image_url}}">
-                            </div>
-                            <div class="card-content">
-                                <p>{{$image->image_name}}</p>
-                                <a class="removeImage" href="" data-id="{{$image->id}}">
+                <table class="table highlight">
+                    <thead>
+                    <tr>
+                        <th width="20%">#</th>
+                        <th>Imagem</th>
+                        <th width="10%" class="center-align">#</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    @foreach($item->images as $image)
+                        <tr>
+                            <td width="20%">
+                                <img src="{{$image->image_url}}" width="100%" alt="">
+                            </td>
+                            <td>{{$image->image_name}}</td>
+                            <td class="center-align">
+                                <a class="removeArticle" href="#" data-id="{{$image->id}}">
                                     <i class="material-icons red-text">delete</i>
                                 </a>
-                            </div>
-                        </div>
-                    </div>
-                @endforeach
+                            </td>
+                        </tr>
+                    @endforeach
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>
