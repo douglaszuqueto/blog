@@ -130,6 +130,11 @@ class ArticlesController extends AbstractCrudController
 
     }
 
+    public function imagesRemove($id, $id_image)
+    {
+        return $this->service->imageRemove($id, $id_image);
+    }
+
     public function tags(Request $request, $id)
     {
         $article = $this->repository->find($id);

@@ -79,6 +79,7 @@ class Web extends RouteFile
         $this->router->get('/articles/{id}/preview', ['as' => 'admin.articles.preview', 'uses' => 'ArticlesController@preview']);
         $this->router->get('/articles/{id}/images', ['as' => 'admin.articles.images', 'uses' => 'ArticlesController@images']);
         $this->router->post('/articles/{id}/images', ['as' => 'admin.articles.imagesSave', 'uses' => 'ArticlesController@imagesSave']);
+        $this->router->put('/articles/{id}/images/{id_image}', ['as' => 'admin.articles.imagesRemove', 'uses' => 'ArticlesController@imagesRemove']);
         $this->router->get('/articles/{id}', ['as' => 'admin.articles.edit', 'uses' => 'ArticlesController@edit']);
         $this->router->post('/articles', ['as' => 'admin.articles.store', 'uses' => 'ArticlesController@store']);
         $this->router->put('/articles/{id}/tags', ['as' => 'admin.articles.tags', 'uses' => 'ArticlesController@tags']);

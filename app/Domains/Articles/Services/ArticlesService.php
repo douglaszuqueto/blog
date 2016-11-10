@@ -6,6 +6,7 @@ use App\Domains\Articles\Repositories\ArticlesImagesRepository;
 use App\Domains\Articles\Repositories\ArticlesRepository;
 use App\Domains\Tags\Repositories\TagsRepository;
 use App\Support\Http\Controllers\Traits\FileUpload;
+use Illuminate\Support\Facades\Storage;
 
 class ArticlesService
 {
@@ -91,5 +92,18 @@ class ArticlesService
 
         $this->imagesRepository->create($data);
 
+    }
+
+    public function imageRemove($id, $id_image)
+    {
+        $image = $this->imagesRepository->findWhere(['article_id' => $id, 'id' => $id_image])->first();
+
+        $path = explode('/', $image->image_url);
+        $path = '/' . $path[3] . '/' . $path[4] . '/' . $path[5] . '/' . $path[6];
+        $path = public_path() . $path;
+
+        unlink($path);
+
+        $this->imagesRepository->delete($id_image);
     }
 }

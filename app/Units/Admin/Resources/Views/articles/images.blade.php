@@ -41,7 +41,7 @@
                 <table class="table highlight">
                     <thead>
                     <tr>
-                        <th width="20%">#</th>
+                        <th width="20%" class="center-align">#</th>
                         <th>Imagem</th>
                         <th width="10%" class="center-align">#</th>
                     </tr>
@@ -49,7 +49,7 @@
                     <tbody>
                     @foreach($item->images as $image)
                         <tr>
-                            <td width="20%">
+                            <td width="20%" class="center-align">
                                 <img src="{{$image->image_url}}" width="60%" alt="">
                             </td>
                             <td>{{$image->image_name}}</td>
@@ -112,7 +112,7 @@
                 },
                 success: function (data) {
                     Materialize.toast('Artigo excluido', 2000, null, function () {
-                        location.reload();
+//                        location.reload();
                     });
 
                 }
