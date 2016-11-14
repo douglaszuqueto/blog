@@ -8,7 +8,7 @@
                 @foreach($lastArticles as $last)
                     <article class="article-item">
                         <a href="{{$last->url}}" class="article-image">
-                            <img src="{{$last->image}}" class="responsive-img ">
+                            <img src="{{$last->image_url}}" class="responsive-img" title="{{$last->title}}" alt="{{$last->title}}">
                         </a>
                         <div class="article-title">
                             <a href="{{$last->url}}">
