@@ -6,6 +6,9 @@
             <section class="col s12 l8">
                 <h1>Artigos</h1>
 
+                @if(count($articles) == 0)
+                    <h4>Nenhum artigo encontrado.</h4>
+                @endif
                 @foreach($articles as $article)
                     <article class="article">
                         <div class="col s12">
