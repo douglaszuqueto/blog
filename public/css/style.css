@@ -320,6 +320,10 @@ article .subtitle p::first-letter {
     font-weight: bold;
 }
 
+.article-view .article-body{
+    margin-top: -100px;
+}
+
 .article-view h1, .article-view h2, .article-view h2 a, .article-view h3 a, .article-view h4 a {
     font-family: 'Miriam Libre', sans-serif;
     color: #000;
