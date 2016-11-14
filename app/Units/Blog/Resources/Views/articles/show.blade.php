@@ -36,14 +36,13 @@
                     @include('blog::articles._includes.search')
                 </div>
                 <div class="col l12" style="background-color: white">
+                    <h5 class="center blue white-text" style="border-radius: 4px">Filtrar por tags</h5>
+                    @include('blog::articles._includes.tags')
+                </div>
+                <div class="col l12" style="background-color: white">
                     <h5 class="center blue white-text" style="border-radius: 4px">Artigos recentes</h5>
                     @include('blog::articles._includes.last_articles')
 
-                </div>
-                <div class="col l12" style="background-color: white">
-                    <h5 class="center blue white-text" style="border-radius: 4px">Filtrar por tags</h5>
-                    {{--<h6 class="center">Em breve!</h6>--}}
-                    @include('blog::articles._includes.tags')
                 </div>
 
             </div>
@@ -55,11 +54,10 @@
     </script>
     <script>
         $(document).ready(function () {
-            $('ul li a').click(function () {
-                var el = $(this).attr('href');
-                console.log(el);
-
-            })
+//            $('ul li a').click(function () {
+//                var el = $(this).attr('href');
+//                console.log(el);
+//            })
         });
     </script>
 
