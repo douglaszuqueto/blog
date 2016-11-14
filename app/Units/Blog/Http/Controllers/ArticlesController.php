@@ -127,8 +127,7 @@ class ArticlesController extends Controller
 
         $tags = [];
 
-        foreach ($article->tags()->get(['tag']) as $tag)
-        {
+        foreach ($article->tags()->get(['tag']) as $tag) {
             $tags[$tag->tag] = $tag->tag;
         }
 
@@ -144,8 +143,7 @@ class ArticlesController extends Controller
             ->setUrl($article->url)
             ->setArticle([
                 'published_time' => $article->created_at,
-                'author' => 'Douglas Zuqueto',
-//                'section' => 'IoT',
+                'author' => 'https://www.facebook.com/douglaszuqueto',
                 'tag' => $tags
             ])
 //            ->addImage(['url' => $article->image, 'size' => 300])
