@@ -35,6 +35,7 @@ class Web extends RouteFile
     {
         $this->router->get('/artigos', ['as' => 'blog.articles.index', 'uses' => 'ArticlesController@index']);
         $this->router->get('/artigos/search/{tag}', ['as' => 'blog.articles.searchByTag', 'uses' => 'ArticlesController@searchByTag']);
+        $this->router->post('/artigos/search', ['as' => 'blog.articles.searchByInput', 'uses' => 'ArticlesController@searchByInput']);
         $this->router->get('/artigos/{article}', ['as' => 'blog.articles.show', 'uses' => 'ArticlesController@show']);
     }
 

@@ -7,6 +7,7 @@ use App\Domains\Tags\Repositories\TagsRepository;
 use App\Support\Http\Controllers\Controller;
 use Artesaos\SEOTools\Facades\OpenGraph;
 use Artesaos\SEOTools\Facades\SEOMeta;
+use Illuminate\Http\Request;
 use Parsedown;
 
 class ArticlesController extends Controller
@@ -74,6 +75,37 @@ class ArticlesController extends Controller
                 ->whereHas('tags', function ($query) use ($tag) {
                     $query->where('tag', '=', $tag);
                 });
+        })->all();
+
+        $tags = $this->tagsRepository->findWhere(['state' => 1]);
+
+        return $this->view('blog::articles.index', [
+            'articles' => $articles,
+            'tags' => $tags,
+        ]);
+    }
+
+    public function searchByInput(Request $request)
+    {
+        $filter = $request->get('search');
+
+        SEOMeta::setTitle('Busca por ' . $filter);
+        SEOMeta::setDescription('Resultados da busca filtrados pela tag ' . $filter);
+        SEOMeta::setCanonical('https://douglaszuqueto.com/artigos/search/' . $filter);
+
+        OpenGraph::setTitle('Busca por ' . $filter);
+        OpenGraph::setDescription('Resultados da busca filtrados pela tag ' . $filter);
+        OpenGraph::setUrl('https://douglaszuqueto.com/artigos/search/' . $filter);
+        OpenGraph::addProperty('type', 'articles');
+        OpenGraph::addImage('https://douglaszuqueto.com/images/IoT.jpg');
+
+        $articles = $this->articlesRepository->scopeQuery(function ($query) use ($filter) {
+            return $query
+                ->where('state', '=', 3)
+                ->orderBy('created_at', 'desc')
+                ->where('title', 'LIKE', '%' . $filter . '%')
+                ->OrWhere('subtitle', 'LIKE', '%' . $filter . '%')
+                ->OrWhere('text', 'LIKE', '%' . $filter . '%');
         })->all();
 
         $tags = $this->tagsRepository->findWhere(['state' => 1]);
