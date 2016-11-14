@@ -8,7 +8,6 @@ use App\Support\Http\Controllers\Controller;
 use Artesaos\SEOTools\Facades\OpenGraph;
 use Artesaos\SEOTools\Facades\SEOMeta;
 use Illuminate\Http\Request;
-use Parsedown;
 
 class ArticlesController extends Controller
 {
@@ -153,6 +152,8 @@ class ArticlesController extends Controller
         $markdown = new Parsedown();
 
         $text = $markdown->text($article->text);
+//        dd($text);
+
         $article->text = $text;
 
         $lastArticles = $this->articlesRepository->orderBy('created_at', 'desc')->findWhere(['state' => 3])->take(5);

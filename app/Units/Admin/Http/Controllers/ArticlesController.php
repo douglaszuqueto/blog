@@ -146,7 +146,7 @@ class ArticlesController extends AbstractCrudController
         if (!$this->service->update($request->all(), $id)) {
             echo 'erro';
         }
-        return redirect()->route($this->getRoute('index'));
+        return redirect()->route($this->getRoute('update'), ['id' => $id]);
     }
 
     public function shedule()
