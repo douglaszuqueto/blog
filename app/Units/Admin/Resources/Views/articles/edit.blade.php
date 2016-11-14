@@ -84,7 +84,8 @@
                             <div class="col s12 m7 l2">
                                 <div class="card">
                                     <div class="card-image">
-                                        <img src="{{$image->image_url}}">
+                                        <img src="{{$image->image_url}}" name="{{$image->image_name}}"
+                                             title="{{$image->image_name}}">
                                     </div>
                                 </div>
                             </div>
