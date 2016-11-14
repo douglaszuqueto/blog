@@ -132,6 +132,8 @@ class ArticlesController extends Controller
             $tags[$tag->tag] = $tag->tag;
         }
 
+        $tags = array_values($tags);
+
         SEOMeta::setTitle($article->title);
         SEOMeta::setDescription($article->subtitle);
         SEOMeta::setCanonical($article->url);
