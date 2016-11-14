@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col l3">
             <a href="{{$last->url}}">
-                <img src="{{$last->image}}" width="100%" style="margin: 10px 0 0 10px" alt="">
+                <img src="{{$last->image_url}}" width="100%" style="margin: 10px 0 0 10px" alt="">
             </a>
         </div>
         <div class="col l9">

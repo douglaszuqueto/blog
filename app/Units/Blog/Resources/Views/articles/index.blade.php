@@ -20,7 +20,7 @@
                                 </div>
                                 <div class="col s12 center">
                                     <a href="{{$article->url}}">
-                                        <img src="{{$article->image}}" class="responsive-img">
+                                        <img src="{{$article->image_url}}" class="responsive-img">
                                     </a>
                                 </div>
                                 <div class="col s12 subtitle">

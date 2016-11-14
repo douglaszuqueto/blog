@@ -6,7 +6,7 @@
         <h5>Editar Artigo</h5>
 
         <div class="row">
-            <form class="col l12" role="form" method="POST" href="#">
+            <form class="col l12" role="form" method="POST" href="#" enctype="multipart/form-data">
                 {{ csrf_field() }}
                 <input type="hidden" name="_method" value="PUT">
 
@@ -46,6 +46,15 @@
                         @if ($errors->has('url'))
                             <strong>{{ $errors->first('url') }}</strong>
                         @endif
+
+                    </div>
+                    <div class="file-field input-field col l6">
+
+                        <input type="file" name="image" id="image">
+                        <label for="image" class="active">Imagem</label>
+                        <div class="file-path-wrapper">
+                            <input class="file-path validate" type="text">
+                        </div>
 
                     </div>
                 </div>

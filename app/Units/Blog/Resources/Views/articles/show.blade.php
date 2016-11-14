@@ -18,7 +18,7 @@
                     </header>
                     <main class="article-body">
                         <div>
-                            <img src="{{$article->image}}" alt="{{$article->title}}" title="{{$article->title}}">
+                            <img src="{{$article->image_url}}" alt="{{$article->title}}" title="{{$article->title}}">
                         </div>
                         {!! $article->text !!}
 

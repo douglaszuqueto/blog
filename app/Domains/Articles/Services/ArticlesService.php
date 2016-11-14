@@ -51,6 +51,16 @@ class ArticlesService
 
         }
 
+        if (isset($data['image'])) {
+            $data['image_name'] = 'Imagem de Capa';
+
+            $image = $this->setPath('articles/' . $this->getArticleName($data['title']) . '/')
+                ->upload($data['image'], $data['image_name']);
+
+            $data['image_url'] = $image['image_url'];
+
+        }
+
         if (!$this->repository->update($data, $id)) {
             return false;
         }

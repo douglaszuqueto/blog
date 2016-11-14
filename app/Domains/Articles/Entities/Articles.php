@@ -17,7 +17,8 @@ class Articles extends Model
         'title',
         'subtitle',
         'url',
-        'image',
+        'image_name',
+        'image_url',
         'text',
         'state',
     ];
