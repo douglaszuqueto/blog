@@ -136,6 +136,7 @@ class ArticlesController extends Controller
         SEOMeta::setTitle($article->title);
         SEOMeta::setDescription($article->subtitle);
         SEOMeta::setCanonical($article->url);
+        SEOMeta::addMeta('fb:app_id', '191652421276345');
 
         OpenGraph::setTitle($article->title)
             ->setDescription($article->subtitle)
