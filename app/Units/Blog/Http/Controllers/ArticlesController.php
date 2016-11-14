@@ -125,6 +125,13 @@ class ArticlesController extends Controller
             return $this->view('blog::error');
         }
 
+        $tags = [];
+
+        foreach ($article->tags()->get(['tag']) as $tag)
+        {
+            $tags[$tag->tag] = $tag->tag;
+        }
+
         SEOMeta::setTitle($article->title);
         SEOMeta::setDescription($article->subtitle);
         SEOMeta::setCanonical($article->url);
@@ -137,7 +144,7 @@ class ArticlesController extends Controller
                 'published_time' => $article->created_at,
                 'author' => 'Douglas Zuqueto',
 //                'section' => 'IoT',
-//                'tag' => 'IoT, ESP8266, Arduino, MQTT'
+                'tag' => $tags
             ])
 //            ->addImage(['url' => $article->image, 'size' => 300])
             ->addImage($article->image);
