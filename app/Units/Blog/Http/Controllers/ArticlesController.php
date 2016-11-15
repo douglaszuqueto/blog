@@ -64,8 +64,8 @@ class ArticlesController extends Controller
         OpenGraph::setTitle('Busca por ' . $tag);
         OpenGraph::setDescription('Resultados da busca filtrados pela tag ' . $tag);
         OpenGraph::setUrl('https://douglaszuqueto.com/artigos/search/' . $tag);
-        OpenGraph::addProperty('type', 'articles');
-        OpenGraph::addImage('https://douglaszuqueto.com/images/IoT.jpg');
+        OpenGraph::addProperty('type', 'website');
+        OpenGraph::addImage('https://douglaszuqueto.com/images/identidade-visual/social-share-default.png');
 
         $articles = $this->articlesRepository->scopeQuery(function ($query) use ($tag) {
             return $query
@@ -89,14 +89,14 @@ class ArticlesController extends Controller
         $filter = $request->get('search');
 
         SEOMeta::setTitle('Busca por ' . $filter);
-        SEOMeta::setDescription('Resultados da busca filtrados pela tag ' . $filter);
+        SEOMeta::setDescription('Resultados da busca filtrados por ' . $filter);
         SEOMeta::setCanonical('https://douglaszuqueto.com/artigos/search/' . $filter);
 
         OpenGraph::setTitle('Busca por ' . $filter);
-        OpenGraph::setDescription('Resultados da busca filtrados pela tag ' . $filter);
+        OpenGraph::setDescription('Resultados da busca filtrados por ' . $filter);
         OpenGraph::setUrl('https://douglaszuqueto.com/artigos/search/' . $filter);
-        OpenGraph::addProperty('type', 'articles');
-        OpenGraph::addImage('https://douglaszuqueto.com/images/IoT.jpg');
+        OpenGraph::addProperty('type', 'website');
+        OpenGraph::addImage('https://douglaszuqueto.com/images/identidade-visual/social-share-default.png');
 
         $articles = $this->articlesRepository->scopeQuery(function ($query) use ($filter) {
             return $query
@@ -147,7 +147,7 @@ class ArticlesController extends Controller
                 'tag' => $tags
             ])
 //            ->addImage(['url' => $article->image, 'size' => 300])
-            ->addImage($article->image);
+            ->addImage($article->image_url);
 
         $markdown = new Parsedown();
 
