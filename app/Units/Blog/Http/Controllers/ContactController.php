@@ -35,7 +35,7 @@ class ContactController extends Controller
         OpenGraph::setDescription('Alguma dúvida, reclamação ou sugestão? Entre já em contato conosco :P');
         OpenGraph::setUrl('https://douglaszuqueto.com/contato');
         OpenGraph::addProperty('type', 'website');
-        OpenGraph::addImage('https://douglaszuqueto.com/images/identidade-visuao/social-share-default.png');
+        OpenGraph::addImage('https://douglaszuqueto.com/images/identidade-visual/social-share-default.png');
 
         return $this->view('blog::contact.index');
     }
