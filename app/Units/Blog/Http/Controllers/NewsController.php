@@ -31,7 +31,7 @@ class NewsController extends Controller
 
         OpenGraph::setTitle('Portal de Notícias');
         OpenGraph::setDescription('Notícias sobre Embarcados, Internet das Coisas, Inovação, Sustentabilidade e Software');
-        OpenGraph::setUrl('hhttps://douglaszuqueto.com/noticias');
+        OpenGraph::setUrl('https://douglaszuqueto.com/noticias');
         OpenGraph::addProperty('type', 'website');
         OpenGraph::addImage('https://douglaszuqueto.com/images/identidade-visual/social-share-default.png');
 
