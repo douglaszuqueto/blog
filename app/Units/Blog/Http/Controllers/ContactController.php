@@ -6,6 +6,7 @@ use App\Domains\Contact\Repositories\ContactRepository;
 use App\Support\Http\Controllers\Controller;
 use Artesaos\SEOTools\Facades\OpenGraph;
 use Artesaos\SEOTools\Facades\SEOMeta;
+use Artesaos\SEOTools\Traits\SEOTools;
 use Illuminate\Http\Request;
 
 class ContactController extends Controller
@@ -26,15 +27,15 @@ class ContactController extends Controller
 
     public function index()
     {
-        SEOMeta::setTitle('Contato');
-        SEOMeta::setDescription('Entre em contato conosco');
+        SEOMeta::setTitle('Formulário de Contato');
+        SEOMeta::setDescription('Alguma dúvida, reclamação ou sugestão? Entre já em contato conosco :P');
         SEOMeta::setCanonical('https://douglaszuqueto.com/contato');
 
-        OpenGraph::setTitle('Contato');
-        OpenGraph::setDescription('Entre em contato conosco');
+        OpenGraph::setTitle('Formulário de Contato');
+        OpenGraph::setDescription('Alguma dúvida, reclamação ou sugestão? Entre já em contato conosco :P');
         OpenGraph::setUrl('hhttps://douglaszuqueto.com/contato');
         OpenGraph::addProperty('type', 'website');
-        OpenGraph::addImage('https://douglaszuqueto.com/images/IoT.jpg');
+        OpenGraph::addImage('https://douglaszuqueto.com/images/identidade-visuao/social-share-default.png');
 
         return $this->view('blog::contact.index');
     }
