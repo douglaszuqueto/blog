@@ -15,7 +15,8 @@ class CreateArticlesTable extends Migration
             $table->string('title')->nullable();
             $table->string('url')->nullable();
             $table->string('subtitle')->nullable();
-            $table->string('image')->nullable();
+            $table->string('image_name')->nullable();
+            $table->string('image_url')->nullable();
             $table->tinyInteger('state')->default(0);
             $table->text('text')->nullable();
             $table->timestamps();

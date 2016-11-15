@@ -17,6 +17,7 @@ class CreateTrackerTable extends Migration
             $table->string('remote_addr');
             $table->string('remote_host');
             $table->string('request_uri');
+            $table->string('http_referer');
             $table->string('so');
             $table->string('browser');
             $table->string('user_agent');
