@@ -40,7 +40,7 @@ class ArticlesController extends Controller
         OpenGraph::setTitle('Artigos');
         OpenGraph::setDescription('Artigos sobre Internet das Coisas');
         OpenGraph::setUrl('https://douglaszuqueto.com/artigos');
-        OpenGraph::addProperty('type', 'articles');
+        OpenGraph::addProperty('type', 'website');
         OpenGraph::addImage('https://douglaszuqueto.com/images/identidade-visual/social-share-default.png');
 
         $articles = $this->articlesRepository->scopeQuery(function ($query) {
