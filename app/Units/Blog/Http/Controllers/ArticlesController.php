@@ -35,13 +35,13 @@ class ArticlesController extends Controller
     {
         SEOMeta::setTitle('Artigos');
         SEOMeta::setDescription('Artigos sobre Internet das Coisas');
-        SEOMeta::setCanonical('https://douglaszuqueto.com/artigos');
+        SEOMeta::setCanonical('https://douglaszuquetooficial.com/artigos');
 
         OpenGraph::setTitle('Artigos');
         OpenGraph::setDescription('Artigos sobre Internet das Coisas');
-        OpenGraph::setUrl('https://douglaszuqueto.com/artigos');
+        OpenGraph::setUrl('https://douglaszuquetooficial.com/artigos');
         OpenGraph::addProperty('type', 'website');
-        OpenGraph::addImage('https://douglaszuqueto.com/images/identidade-visual/social-share-default.png');
+        OpenGraph::addImage('https://douglaszuquetooficial.com/images/identidade-visual/social-share-default.png');
 
         $articles = $this->articlesRepository->scopeQuery(function ($query) {
             return $query->where('state', '=', 3)->orderBy('created_at', 'desc');
@@ -59,13 +59,13 @@ class ArticlesController extends Controller
     {
         SEOMeta::setTitle('Busca por ' . $tag);
         SEOMeta::setDescription('Resultados da busca filtrados pela tag ' . $tag);
-        SEOMeta::setCanonical('https://douglaszuqueto.com/artigos/search/' . $tag);
+        SEOMeta::setCanonical('https://douglaszuquetooficial.com/artigos/search/' . $tag);
 
         OpenGraph::setTitle('Busca por ' . $tag);
         OpenGraph::setDescription('Resultados da busca filtrados pela tag ' . $tag);
-        OpenGraph::setUrl('https://douglaszuqueto.com/artigos/search/' . $tag);
+        OpenGraph::setUrl('https://douglaszuquetooficial.com/artigos/search/' . $tag);
         OpenGraph::addProperty('type', 'website');
-        OpenGraph::addImage('https://douglaszuqueto.com/images/identidade-visual/social-share-default.png');
+        OpenGraph::addImage('https://douglaszuquetooficial.com/images/identidade-visual/social-share-default.png');
 
         $articles = $this->articlesRepository->scopeQuery(function ($query) use ($tag) {
             return $query
@@ -90,13 +90,13 @@ class ArticlesController extends Controller
 
         SEOMeta::setTitle('Busca por ' . $filter);
         SEOMeta::setDescription('Resultados da busca filtrados por ' . $filter);
-        SEOMeta::setCanonical('https://douglaszuqueto.com/artigos/search/' . $filter);
+        SEOMeta::setCanonical('https://douglaszuquetooficial.com/artigos/search/' . $filter);
 
         OpenGraph::setTitle('Busca por ' . $filter);
         OpenGraph::setDescription('Resultados da busca filtrados por ' . $filter);
-        OpenGraph::setUrl('https://douglaszuqueto.com/artigos/search/' . $filter);
+        OpenGraph::setUrl('https://douglaszuquetooficial.com/artigos/search/' . $filter);
         OpenGraph::addProperty('type', 'website');
-        OpenGraph::addImage('https://douglaszuqueto.com/images/identidade-visual/social-share-default.png');
+        OpenGraph::addImage('https://douglaszuquetooficial.com/images/identidade-visual/social-share-default.png');
 
         $articles = $this->articlesRepository->scopeQuery(function ($query) use ($filter) {
             return $query
@@ -143,7 +143,7 @@ class ArticlesController extends Controller
             ->setUrl($article->url)
             ->setArticle([
                 'published_time' => $article->created_at,
-                'author' => 'https://www.facebook.com/douglaszuqueto',
+                'author' => 'https://www.facebook.com/douglaszuquetooficial',
                 'tag' => $tags
             ])
 //            ->addImage(['url' => $article->image, 'size' => 300])
