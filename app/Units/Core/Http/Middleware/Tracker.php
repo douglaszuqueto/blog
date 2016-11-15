@@ -25,6 +25,7 @@ class Tracker
                 'remote_host' => $request->server->get('REMOTE_HOST'),
                 'request_uri' => $request->server->get('REQUEST_URI'),
                 'user_agent' => $request->server->get('HTTP_USER_AGENT'),
+                'http_referer' => $request->server->get('HTTP_REFERER'),
             ];
 
             $service = app()->make(TrackerService::class);

@@ -23,6 +23,7 @@ class Tracker extends Model
         'so',
         'browser',
         'user_agent',
+        'http_referer',
     ];
 
 }
