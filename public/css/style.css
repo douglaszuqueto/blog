@@ -154,7 +154,7 @@ main {
     font-size: 16pt;
 }
 
-.about-me h3, .news h3,  .project h3 {
+.about-me h3, .news h3, .project h3 {
     font-size: 24pt;
 }
 
@@ -199,7 +199,6 @@ main {
     overflow: hidden;
     display: block;
 
-
 }
 
 .article-image img {
@@ -207,8 +206,6 @@ main {
     border-top-right-radius: 2px;
     width: 100%;
     display: block;
-
-
 
 }
 
@@ -312,7 +309,8 @@ article .subtitle p::first-letter {
 
 .article-view {
     background: #FFF;
-    font-family: 'Miriam Libre', sans-serif;
+    font-family: 'Miriam Libre', sans-serif !important;
+    color: #525252;
 }
 
 .article-view .author {
@@ -323,35 +321,51 @@ article .subtitle p::first-letter {
     font-weight: bold;
 }
 
-.article-view .article-body{
+.article-view .article-body {
     margin-top: -100px;
 }
 
-.article-view h1, .article-view h2, .article-view h2 a, .article-view h3 a, .article-view h4 a {
-    font-family: 'Miriam Libre', sans-serif;
-    color: #000;
-    letter-spacing: -.02em;
+.article-view h1,
+.article-view h2,
+.article-view h2 a,
+.article-view h3,
+.article-view h3 a,
+.article-view h4 a {
+    letter-spacing: .02em;
+    color: #525252;
 }
 
-.article-view h2, .article-view h2 a, .article-view h3 a, .article-view h4 a {
+.article-view h2,
+.article-view h2 a,
+.article-view h3,
+.article-view h3 a,
+.article-view h4,
+.article-view h4 a {
     margin: 40px 0 40px 10px;
 }
 
 .article-view h1 {
+    font-size: 1.875rem;
     font-weight: 700 !important;
-    font-size: 26pt;
 }
 
-.article-view h2, .article-view h2 a {
-    font-weight: 700 !important;
-    font-size: 24pt !important;
+.article-view h2,
+.article-view h2 a {
+    font-size: 1.875rem;
+    line-height: 1.2;
+    font-weight: 400;
 }
 
+.article-view h3,
 .article-view h3 a {
-    font-weight: 700 !important;
-    font-size: 16pt;
+    font-size: 1.500rem;
+    line-height: 1.2;
+    font-weight: 400;
+    margin-left: 20px;
+
 }
 
+.article-view h4,
 .article-view h4 a {
     font-weight: 700 !important;
     font-size: 14pt;
@@ -359,22 +373,27 @@ article .subtitle p::first-letter {
 }
 
 .article-view p, .article-view a {
-    font-family: "Roboto", sans-serif;
     font-size: 13pt;
     text-align: justify;
-    margin: 0 10px 0 10px;
+    margin: 5px 10px 20px 15px;
+}
+
+.article-view p {
+    font-size: 1.25rem !important;
+    line-height: 1.5em;
 }
 
 .article-view p::first-letter {
     text-transform: capitalize;
-    font-size: 12pt !important;
-    font-weight: bold;
-    margin-left: 10px;
+    font-size: 1.50rem !important;
+    margin-left: 25px;
 }
 
 .article-view ul li {
+    font-size: 1.25rem !important;
     list-style: disc;
     margin-left: 40px;
+    color: #525252;
 }
 
 .article-view img {
@@ -382,7 +401,6 @@ article .subtitle p::first-letter {
     height: auto;
     margin: 30px auto 30px auto;
     display: block;
-
 }
 
 .articles-view .comments {
