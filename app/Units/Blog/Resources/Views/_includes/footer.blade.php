@@ -32,12 +32,12 @@
                     </h6>
                 </li>
                 {{--<li>--}}
-                    {{--<h6>--}}
-                        {{--<a href="https://www.youtube.com/douglaszuquetooficial" title="YouTube" target="_blank"--}}
-                           {{--class="youtube">--}}
-                            {{--<span class="hide">YouTube</span>--}}
-                        {{--</a>--}}
-                    {{--</h6>--}}
+                {{--<h6>--}}
+                {{--<a href="https://www.youtube.com/douglaszuquetooficial" title="YouTube" target="_blank"--}}
+                {{--class="youtube">--}}
+                {{--<span class="hide">YouTube</span>--}}
+                {{--</a>--}}
+                {{--</h6>--}}
                 {{--</li>--}}
                 <li>
                     <h6>
@@ -64,6 +64,11 @@
         <section class="col s12 m4 l4 patrocinadores">
             <h5 class="white-text ">Patrocinadores</h5>
 
+            @if(count($sponsors->findWhere(['state' => 1])) == 0)
+                <a href="{{route('blog.contact.index')}}">
+                    <p class="white-text">Deseja ser um Patrocinador? Entre já em contato conosco</p>
+                </a>
+            @endif
             @foreach($sponsors->findWhere(['state' => 1]) as $sponsor)
                 <h6>
                     <a href="{{$sponsor->url}}" target="_blank">
@@ -78,7 +83,11 @@
         </section>
         <section class="col s12 m4 l4 apoiadores">
             <h5 class="white-text">Apoiadores</h5>
-
+            @if(count($supporters->findWhere(['state' => 1])) == 0)
+                <a href="{{route('blog.contact.index')}}">
+                    <p class="white-text">Deseja ser um Apoiador? Entre já em contato conosco</p>
+                </a>
+            @endif
             @foreach($supporters->findWhere(['state' => 1]) as $supporter)
                 <h6>
                     <a href="{{$supporter->url}}" target="_blank">
