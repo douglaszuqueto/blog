@@ -7,6 +7,7 @@ use App\Domains\Tags\Repositories\TagsRepository;
 use App\Support\Http\Controllers\Controller;
 use Artesaos\SEOTools\Facades\OpenGraph;
 use Artesaos\SEOTools\Facades\SEOMeta;
+use Artesaos\SEOTools\Facades\TwitterCard;
 use Illuminate\Http\Request;
 
 class ArticlesController extends Controller
@@ -43,6 +44,13 @@ class ArticlesController extends Controller
         OpenGraph::addProperty('type', 'website');
         OpenGraph::addImage('https://douglaszuqueto.com/images/identidade-visual/social-share-default.png');
 
+        TwitterCard::addValue('card', 'summary');
+        TwitterCard::setTitle('Artigos');
+        TwitterCard::setDescription('Artigos sobre Internet das Coisas');
+        TwitterCard::setSite('https://douglaszuqueto.com/artigos');
+        TwitterCard::setUrl('https://douglaszuqueto.com/artigos');
+        TwitterCard::addValue('image', 'https://douglaszuqueto.com/images/identidade-visual/social-share-default.png');
+
         $articles = $this->articlesRepository->scopeQuery(function ($query) {
             return $query->where('state', '=', 3)->orderBy('created_at', 'desc');
         })->all();
@@ -66,6 +74,13 @@ class ArticlesController extends Controller
         OpenGraph::setUrl('https://douglaszuqueto.com/artigos/search/' . $tag);
         OpenGraph::addProperty('type', 'website');
         OpenGraph::addImage('https://douglaszuqueto.com/images/identidade-visual/social-share-default.png');
+
+        TwitterCard::addValue('card', 'summary');
+        TwitterCard::setTitle('Busca por ' . $tag);
+        TwitterCard::setDescription('Resultados da busca filtrados pela tag ' . $tag);
+        TwitterCard::setSite('https://douglaszuqueto.com/artigos/search/' . $tag);
+        TwitterCard::setUrl('https://douglaszuqueto.com/artigos/search/' . $tag);
+        TwitterCard::addValue('image', 'https://douglaszuqueto.com/images/identidade-visual/social-share-default.png');
 
         $articles = $this->articlesRepository->scopeQuery(function ($query) use ($tag) {
             return $query
@@ -97,6 +112,13 @@ class ArticlesController extends Controller
         OpenGraph::setUrl('https://douglaszuqueto.com/artigos/search/' . $filter);
         OpenGraph::addProperty('type', 'website');
         OpenGraph::addImage('https://douglaszuqueto.com/images/identidade-visual/social-share-default.png');
+
+        TwitterCard::addValue('card', 'summary');
+        TwitterCard::setTitle('Busca por ' . $filter);
+        TwitterCard::setDescription('Resultados da busca filtrados por ' . $filter);
+        TwitterCard::setSite('https://douglaszuqueto.com/artigos/search/' . $filter);
+        TwitterCard::setUrl('https://douglaszuqueto.com/artigos/search/' . $filter);
+        TwitterCard::addValue('image', 'https://douglaszuqueto.com/images/identidade-visual/social-share-default.png');
 
         $articles = $this->articlesRepository->scopeQuery(function ($query) use ($filter) {
             return $query
@@ -148,6 +170,15 @@ class ArticlesController extends Controller
             ])
 //            ->addImage(['url' => $article->image, 'size' => 300])
             ->addImage($article->image_url);
+
+
+        TwitterCard::addValue('card', 'summary');
+        TwitterCard::setTitle($article->title);
+        TwitterCard::setDescription($article->subtitle);
+        TwitterCard::setSite($article->url);
+        TwitterCard::setUrl($article->url);
+        TwitterCard::addValue('image', $article->image_url);
+
 
         $markdown = new Parsedown();
 
