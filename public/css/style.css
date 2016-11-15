@@ -198,15 +198,18 @@ main {
     max-height: 180px;
     overflow: hidden;
     display: block;
+
+
 }
 
 .article-image img {
     border-top-left-radius: 2px;
     border-top-right-radius: 2px;
-    opacity: 1;
-    transition: opacity .2s ease-in-out;
     width: 100%;
     display: block;
+
+
+
 }
 
 .article-title h1 {
