@@ -64,7 +64,7 @@
 
             @if(count($sponsors->findWhere(['state' => 1])) == 0)
                 <a href="{{route('blog.contact.index')}}">
-                    <p class="white-text" style="font-size: 12px">Deseja ser um Patrocinador? Entre já em contato
+                    <p class="white-text" style="font-size: 12px">Deseja ser um Patrocinador? Entre em contato
                         conosco</p>
                 </a>
             @endif
@@ -84,7 +84,7 @@
             <h5 class="white-text">Apoiadores</h5>
             @if(count($supporters->findWhere(['state' => 1])) == 0)
                 <a href="{{route('blog.contact.index')}}">
-                    <p class="white-text" style="font-size: 12px">Deseja ser um Apoiador? Entre já em contato
+                    <p class="white-text" style="font-size: 12px">Deseja ser um Apoiador? Entre em contato
                         conosco</p>
                 </a>
             @endif
