@@ -11,15 +11,15 @@ class ProjectController extends Controller
 
     public function project()
     {
-        SEOMeta::setTitle('O Projeto');
-        SEOMeta::setDescription('Venha conhecer o projeto IoTBr');
+        SEOMeta::setTitle('Projeto Douglas Zuqueto');
+        SEOMeta::setDescription('Este projeto tem como objetivo disseminar conhecimento através de Artigos, Notícias e Videos abordando conteúdos sobre Hardware, Software e Plataformas para IoT');
         SEOMeta::setCanonical('https://douglaszuqueto.com/o-projeto');
 
         OpenGraph::setTitle('O Projeto');
         OpenGraph::setDescription('Venha conhecer o projeto IoTBr');
-        OpenGraph::setUrl('hhttps://douglaszuqueto.com/o-projeto');
+        OpenGraph::setUrl('https://douglaszuqueto.com/o-projeto');
         OpenGraph::addProperty('type', 'website');
-        OpenGraph::addImage('https://douglaszuqueto.com/images/IoT.jpg');
+        OpenGraph::addImage('https://douglaszuqueto.com/images/identidade-visual/social-share-default.png');
 
         return $this->view('blog::project.index');
     }
