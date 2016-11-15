@@ -46,7 +46,7 @@ class IndexController extends Controller
         OpenGraph::addProperty('type', 'website');
         OpenGraph::addImage('https://douglaszuqueto.com/images/identidade-visual/social-share-default.png');
 
-        TwitterCard::setType('summary');
+        TwitterCard::addValue('card', 'summary');
         TwitterCard::setTitle('Página Inicial');
         TwitterCard::setDescription('Conteúdo sobre Internet das Coisas');
         TwitterCard::setUrl('https://douglaszuqueto.com');
