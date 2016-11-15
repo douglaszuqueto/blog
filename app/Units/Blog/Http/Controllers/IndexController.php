@@ -41,7 +41,7 @@ class IndexController extends Controller
 
         OpenGraph::setDescription('Conteúdo sobre IoT');
         OpenGraph::setTitle('Página Inicial');
-        OpenGraph::setUrl('hhttps://douglaszuqueto.com');
+        OpenGraph::setUrl('https://douglaszuqueto.com');
         OpenGraph::addProperty('type', 'website');
         OpenGraph::addImage('https://douglaszuqueto.com/images/identidade-visual/social-share-default.png');
 
