@@ -33,7 +33,7 @@ class ContactController extends Controller
 
         OpenGraph::setTitle('Formulário de Contato');
         OpenGraph::setDescription('Alguma dúvida, reclamação ou sugestão? Entre já em contato conosco :P');
-        OpenGraph::setUrl('hhttps://douglaszuqueto.com/contato');
+        OpenGraph::setUrl('https://douglaszuqueto.com/contato');
         OpenGraph::addProperty('type', 'website');
         OpenGraph::addImage('https://douglaszuqueto.com/images/identidade-visuao/social-share-default.png');
 
