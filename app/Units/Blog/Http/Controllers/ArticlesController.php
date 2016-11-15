@@ -168,7 +168,6 @@ class ArticlesController extends Controller
                 'author' => 'https://www.facebook.com/douglaszuqueto',
                 'tag' => $tags
             ])
-//            ->addImage(['url' => $article->image, 'size' => 300])
             ->addImage($article->image_url);
 
 
@@ -179,15 +178,13 @@ class ArticlesController extends Controller
         TwitterCard::setUrl($article->url);
         TwitterCard::addValue('image', $article->image_url);
 
+        $article->text = (new Parsedown())->text($article->text);
 
-        $markdown = new Parsedown();
+        $lastArticles = $this->articlesRepository
+            ->orderBy('created_at', 'desc')
+            ->findWhere(['state' => 3, ['id', '<>', $article->id]])
+            ->take(5);
 
-        $text = $markdown->text($article->text);
-//        dd($text);
-
-        $article->text = $text;
-
-        $lastArticles = $this->articlesRepository->orderBy('created_at', 'desc')->findWhere(['state' => 3])->take(5);
         $tags = $this->tagsRepository->findWhere(['state' => 1]);
 
         return $this->view('blog::articles.show', [
