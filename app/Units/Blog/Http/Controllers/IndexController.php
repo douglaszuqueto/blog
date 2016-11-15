@@ -36,10 +36,10 @@ class IndexController extends Controller
     public function index()
     {
         SEOMeta::setTitle('Página Inicial');
-        SEOMeta::setDescription('Conteúdo sobre IoT');
+        SEOMeta::setDescription('Conteúdo sobre Internet das Coisas');
         SEOMeta::setCanonical('https://douglaszuqueto.com');
 
-        OpenGraph::setDescription('Conteúdo sobre IoT');
+        OpenGraph::setDescription('Conteúdo sobre Internet das Coisas');
         OpenGraph::setTitle('Página Inicial');
         OpenGraph::setUrl('https://douglaszuqueto.com');
         OpenGraph::addProperty('type', 'website');
