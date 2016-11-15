@@ -42,8 +42,8 @@ class IndexController extends Controller
         OpenGraph::setDescription('Conteúdo sobre IoT');
         OpenGraph::setTitle('Página Inicial');
         OpenGraph::setUrl('hhttps://douglaszuqueto.com');
-        OpenGraph::addProperty('type', 'articles');
-        OpenGraph::addImage('https://douglaszuqueto.com/images/dz_2.png');
+        OpenGraph::addProperty('type', 'website');
+        OpenGraph::addImage('https://douglaszuqueto.com/images/identidade-visual/social-share-default.png');
 
         $lastArticles = $this->articlesRepository->scopeQuery(function ($query) {
             return $query->orderBy('created_at', 'desc')->where('state', '=', 3)->limit(4);
