@@ -32,7 +32,7 @@ class SponsorsController extends AbstractCrudController
     {
         $data = $request->except(['images']);
 
-        $upload = $this->upload($request->file('image'), 100);
+        $upload = $this->setPath('images/')->upload($request->file('image'), $data['sponsor'], 100);
 
         $data['image_name'] = $upload['image_name'];
         $data['image_url'] = $upload['image_url'];
@@ -60,7 +60,7 @@ class SponsorsController extends AbstractCrudController
             if ($item->image_name && file_exists(public_path('uploads/images/') . $item->image_name)) {
                 unlink(public_path('uploads/images/') . $item->image_name);
             }
-            $upload = $this->upload($request->file('image'), 600);
+            $upload = $this->setPath('images/')->upload($request->file('image'), $data['sponsor'], 100);
             $data['image_name'] = $upload['image_name'];
             $data['image_url'] = $upload['image_url'];
         }
