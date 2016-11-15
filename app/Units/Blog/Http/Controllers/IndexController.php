@@ -49,6 +49,7 @@ class IndexController extends Controller
         TwitterCard::addValue('card', 'summary');
         TwitterCard::setTitle('Página Inicial');
         TwitterCard::setDescription('Conteúdo sobre Internet das Coisas');
+        TwitterCard::setSite('https://douglaszuqueto.com');
         TwitterCard::setUrl('https://douglaszuqueto.com');
         TwitterCard::addValue('image','https://douglaszuqueto.com/images/identidade-visual/social-share-default.png');
 
