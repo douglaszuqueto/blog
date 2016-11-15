@@ -50,7 +50,7 @@ class IndexController extends Controller
         TwitterCard::setTitle('Página Inicial');
         TwitterCard::setDescription('Conteúdo sobre Internet das Coisas');
         TwitterCard::setUrl('https://douglaszuqueto.com');
-        TwitterCard::addImage('https://douglaszuqueto.com/images/identidade-visual/social-share-default.png');
+        TwitterCard::addValue('image','https://douglaszuqueto.com/images/identidade-visual/social-share-default.png');
 
         $lastArticles = $this->articlesRepository->scopeQuery(function ($query) {
             return $query->orderBy('created_at', 'desc')->where('state', '=', 3)->limit(4);
