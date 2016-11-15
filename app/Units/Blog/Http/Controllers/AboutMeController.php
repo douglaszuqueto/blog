@@ -12,14 +12,14 @@ class AboutMeController extends Controller
     public function about()
     {
         SEOMeta::setTitle('Sobre mim');
-        SEOMeta::setDescription('Página destinada ao meu perfil');
+        SEOMeta::setDescription('Confira um pouco mais sobre meu perfil');
         SEOMeta::setCanonical('https://douglaszuqueto.com/sobre-mim');
 
         OpenGraph::setTitle('Sobre mim');
-        OpenGraph::setDescription('Página destinada ao meu perfil');
+        OpenGraph::setDescription('Confira um pouco mais sobre meu perfil');
         OpenGraph::setUrl('hhttps://douglaszuqueto.com/sobre-mim');
         OpenGraph::addProperty('type', 'website');
-        OpenGraph::addImage('https://douglaszuqueto.com/images/IoT.jpg');
+        OpenGraph::addImage('https://douglaszuqueto.com/images/identidade-visual/social-share-default.png');
 
         return $this->view('blog::about-me.index');
     }
