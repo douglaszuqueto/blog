@@ -25,7 +25,7 @@
                     </main>
                     <div class="divider"></div>
                     <footer class="comments">
-                        <h3 class="hide">Comentários</h3>
+                        <h2 class="hide">Comentários</h2>
                         @include('blog::_includes.disqus')
                     </footer>
                 </article>
