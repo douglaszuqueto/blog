@@ -25,23 +25,23 @@ class NewsController extends Controller
 
     public function index()
     {
-        SEOMeta::setTitle('Notícias');
+        SEOMeta::setTitle('Portal de Notícias');
         SEOMeta::setDescription('Notícias sobre Embarcados, Internet das Coisas, Inovação, Sustentabilidade e Software');
         SEOMeta::setCanonical('https://douglaszuqueto.com/noticias');
 
-        OpenGraph::setTitle('Notícias');
+        OpenGraph::setTitle('Portal de Notícias');
         OpenGraph::setDescription('Notícias sobre Embarcados, Internet das Coisas, Inovação, Sustentabilidade e Software');
         OpenGraph::setUrl('hhttps://douglaszuqueto.com/noticias');
         OpenGraph::addProperty('type', 'website');
-        OpenGraph::addImage('https://douglaszuqueto.com/images/IoT.jpg');
+        OpenGraph::addImage('https://douglaszuqueto.com/images/identidade-visual/social-share-default.png');
 
-        $news = $this->newsRepository->scopeQuery(function ($query) {
-            $query->orderBy('created_at', 'asc');
-            return $query->where('state', '=', 1);
-        })->all();
+//        $news = $this->newsRepository->scopeQuery(function ($query) {
+//            $query->orderBy('created_at', 'asc');
+//            return $query->where('state', '=', 1);
+//        })->all();
 
         return $this->view('blog::news.index', [
-            'news' => $news,
+//            'news' => $news,
         ]);
     }
 }
