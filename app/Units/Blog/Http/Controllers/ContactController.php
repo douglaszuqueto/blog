@@ -6,7 +6,7 @@ use App\Domains\Contact\Repositories\ContactRepository;
 use App\Support\Http\Controllers\Controller;
 use Artesaos\SEOTools\Facades\OpenGraph;
 use Artesaos\SEOTools\Facades\SEOMeta;
-use Artesaos\SEOTools\Traits\SEOTools;
+use Artesaos\SEOTools\Facades\TwitterCard;
 use Illuminate\Http\Request;
 
 class ContactController extends Controller
@@ -36,6 +36,13 @@ class ContactController extends Controller
         OpenGraph::setUrl('https://douglaszuqueto.com/contato');
         OpenGraph::addProperty('type', 'website');
         OpenGraph::addImage('https://douglaszuqueto.com/images/identidade-visual/social-share-default.png');
+
+        TwitterCard::addValue('card', 'summary');
+        TwitterCard::setTitle('Formulário de Contato');
+        TwitterCard::setDescription('Alguma dúvida, reclamação ou sugestão? Entre já em contato conosco :P');
+        TwitterCard::setSite('https://douglaszuqueto.com/contato');
+        TwitterCard::setUrl('https://douglaszuqueto.com/contato');
+        TwitterCard::addValue('image', 'https://douglaszuqueto.com/images/identidade-visual/social-share-default.png');
 
         return $this->view('blog::contact.index');
     }

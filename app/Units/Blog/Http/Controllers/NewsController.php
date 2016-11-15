@@ -6,6 +6,7 @@ use App\Domains\News\Repositories\NewsRepository;
 use App\Support\Http\Controllers\Controller;
 use Artesaos\SEOTools\Facades\OpenGraph;
 use Artesaos\SEOTools\Facades\SEOMeta;
+use Artesaos\SEOTools\Facades\TwitterCard;
 
 class NewsController extends Controller
 {
@@ -34,6 +35,13 @@ class NewsController extends Controller
         OpenGraph::setUrl('https://douglaszuqueto.com/noticias');
         OpenGraph::addProperty('type', 'website');
         OpenGraph::addImage('https://douglaszuqueto.com/images/identidade-visual/social-share-default.png');
+
+        TwitterCard::addValue('card', 'summary');
+        TwitterCard::setTitle('Portal de Notícias');
+        TwitterCard::setDescription('Notícias sobre Embarcados, Internet das Coisas, Inovação, Sustentabilidade e Software');
+        TwitterCard::setSite('https://douglaszuqueto.com/noticias');
+        TwitterCard::setUrl('https://douglaszuqueto.com/noticias');
+        TwitterCard::addValue('image', 'https://douglaszuqueto.com/images/identidade-visual/social-share-default.png');
 
 //        $news = $this->newsRepository->scopeQuery(function ($query) {
 //            $query->orderBy('created_at', 'asc');
