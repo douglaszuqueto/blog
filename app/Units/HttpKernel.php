@@ -18,7 +18,6 @@ class HttpKernel extends Kernel
     protected $middleware = [
         \Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode::class,
 
-        Tracker::class
     ];
 
     /**
@@ -35,8 +34,20 @@ class HttpKernel extends Kernel
             \App\Units\Core\Http\Middleware\VerifyCsrfToken::class,
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
 
+            /*
+             * Application Middlewares
+             */
             RedirectIfWrongUrlOrProtocol::class,
 
+        ],
+
+        'blog' => [
+
+            /*
+            * Application Middlewares
+            */
+            RedirectIfWrongUrlOrProtocol::class,
+            Tracker::class
         ],
 
         'api' => [
