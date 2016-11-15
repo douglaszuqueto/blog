@@ -7,6 +7,7 @@ use App\Domains\News\Repositories\NewsRepository;
 use App\Support\Http\Controllers\Controller;
 use Artesaos\SEOTools\Facades\OpenGraph;
 use Artesaos\SEOTools\Facades\SEOMeta;
+use Artesaos\SEOTools\Facades\TwitterCard;
 
 
 class IndexController extends Controller
@@ -39,11 +40,17 @@ class IndexController extends Controller
         SEOMeta::setDescription('Conteúdo sobre Internet das Coisas');
         SEOMeta::setCanonical('https://douglaszuqueto.com');
 
-        OpenGraph::setDescription('Conteúdo sobre Internet das Coisas');
         OpenGraph::setTitle('Página Inicial');
+        OpenGraph::setDescription('Conteúdo sobre Internet das Coisas');
         OpenGraph::setUrl('https://douglaszuqueto.com');
         OpenGraph::addProperty('type', 'website');
         OpenGraph::addImage('https://douglaszuqueto.com/images/identidade-visual/social-share-default.png');
+
+        TwitterCard::setType('summary');
+        TwitterCard::setTitle('Página Inicial');
+        TwitterCard::setDescription('Conteúdo sobre Internet das Coisas');
+        TwitterCard::setUrl('https://douglaszuqueto.com');
+        TwitterCard::addImage('https://douglaszuqueto.com/images/identidade-visual/social-share-default.png\'');
 
         $lastArticles = $this->articlesRepository->scopeQuery(function ($query) {
             return $query->orderBy('created_at', 'desc')->where('state', '=', 3)->limit(4);
