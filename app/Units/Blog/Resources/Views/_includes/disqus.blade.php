@@ -2,7 +2,7 @@
 <script>
     var disqus_config = function () {
         this.page.url = '{{$article->url}}';
-        this.page.identifier = {{$article->title}};
+        this.page.identifier = '{{$article->title}}';
 
     };
     (function () {  // DON'T EDIT BELOW THIS LINE
