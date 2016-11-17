@@ -86,7 +86,7 @@
             m.parentNode.insertBefore(a, m)
         })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
-        ga('create', 'UA-73205063-1', 'auto');
+        ga('create', 'UA-73205063-2', 'auto');
         ga('send', 'pageview');
 
     </script>
@@ -107,7 +107,8 @@
 
 @if(env('APP_ADDTHIS'))
     <!-- Go to www.addthis.com/dashboard to customize your tools -->
-    <script async type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5808c7bd4956dafc"></script>
+    <script async type="text/javascript"
+            src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5808c7bd4956dafc"></script>
 @endif
 
 @if(env('APP_HOTJAR'))
