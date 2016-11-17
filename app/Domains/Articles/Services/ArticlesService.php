@@ -52,7 +52,7 @@ class ArticlesService
         }
 
         if (isset($data['image'])) {
-            $data['image_name'] = 'Imagem de Capa';
+            $data['image_name'] = 'capa';
 
             $image = $this->setPath('articles/' . $this->getArticleName($data['title']) . '/')
                 ->upload($data['image'], $data['image_name']);
