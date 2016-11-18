@@ -383,6 +383,10 @@ article .subtitle p::first-letter {
     line-height: 1.5em;
 }
 
+.article-view strong {
+    font-weight: bold !important;
+}
+
 .article-view p::first-letter {
     text-transform: capitalize;
     font-size: 1.50rem !important;
