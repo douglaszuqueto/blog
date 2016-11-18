@@ -20,8 +20,9 @@
                         <div>
                             <img src="{{$article->image_url}}" alt="{{$article->title}}" title="{{$article->title}}">
                         </div>
-                        {!! $article->text !!}
-
+                        <div class="article-text">
+                            {!! $article->text !!}
+                        </div>
                     </main>
                     <div class="divider"></div>
                     <footer class="comments">
@@ -54,10 +55,7 @@
     </script>
     <script>
         $(document).ready(function () {
-//            $('ul li a').click(function () {
-//                var el = $(this).attr('href');
-//                console.log(el);
-//            })
+            $('.article-text img').materialbox();
         });
     </script>
 
