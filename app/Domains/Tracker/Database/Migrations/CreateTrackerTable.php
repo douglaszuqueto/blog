@@ -20,7 +20,7 @@ class CreateTrackerTable extends Migration
             $table->text('http_referer');
             $table->string('so');
             $table->string('browser');
-            $table->string('user_agent');
+            $table->text('user_agent');
             $table->timestamps();
         });
     }
