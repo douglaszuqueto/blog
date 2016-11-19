@@ -31,9 +31,9 @@
                     </li>
                     <li><a href="{{route('blog.index')}}" class="menu">Home</a></li>
                     <li><a href="{{route('blog.articles.index')}}" class="menu">Artigos</a></li>
-                    <li><a href="{{route('blog.project.index')}}" class="menu">O Projeto</a></li>
-                    <li><a href="{{route('blog.news.index')}}" class="menu">Notícias</a></li>
-                    <li><a href="{{route('blog.about-me.index')}}" class="menu">Sobre Mim</a></li>
+                    <li class="hide"><a href="{{route('blog.project.index')}}" class="menu">O Projeto</a></li>
+                    <li class="hide"><a href="{{route('blog.news.index')}}" class="menu">Notícias</a></li>
+                    <li class="hide"><a href="{{route('blog.about-me.index')}}" class="menu">Sobre Mim</a></li>
                     <li><a href="{{route('blog.contact.index')}}" class="menu">Contato</a></li>
                 </ul>
             </div>
