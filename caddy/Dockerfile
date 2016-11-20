@@ -1,11 +1,7 @@
-#####
-# Ambientum 1.0
-# PHP 7.0 bundled with the Awesome Caddy webserver
-######
-FROM ambientum/php:7.0
+FROM douglaszuqueto/php
 
 # Repository/Image Maintainer
-MAINTAINER Diego Hernandes <diego@hernandev.com>
+MAINTAINER Douglas Zuqueto <douglas.zuqueto@gmail.com>
 
 # Reset user to root to allow software install
 USER root
