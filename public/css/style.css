@@ -401,7 +401,7 @@ article .subtitle p::first-letter {
 }
 
 .article-view img {
-    width: 80%;
+    width: 100%;
     height: auto;
     margin: 30px auto 30px auto;
     display: block;
