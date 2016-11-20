@@ -39,7 +39,8 @@ trait FileUpload
 
     protected function getFileUrl($image_name)
     {
-        return asset($this->imagePath . $image_name);
+        $basePath = 'https://' . env('APP_DOMAIN') . DIRECTORY_SEPARATOR . $this->imagePath . $image_name;
+        return $basePath;
     }
 
     protected function resizing($image, $data, $width)

@@ -64,9 +64,6 @@ class ArticlesController extends AbstractCrudController
                     $article->state = '<i class="material-icons">visibility</i>';
                     break;
                 case 1:
-                    /*
-                     * Implementar Funcionalidade de Preview do Artigo
-                     */
                     $article->state = '<a href="' . route('admin.articles.preview', ['id' => $article->id]) . '" target="_blank"><i class="material-icons green-text">open_in_new</i></a>';
                     break;
                 case 2:

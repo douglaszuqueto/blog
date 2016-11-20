@@ -54,7 +54,7 @@ class ArticlesService
         if (isset($data['image'])) {
             $data['image_name'] = 'capa';
 
-            $image = $this->setPath('articles/' . $this->getArticleName($data['title']) . '/')
+            $image = $this->setPath('articles/artigo-' . $id . '/')
                 ->upload($data['image'], $data['image_name']);
 
             $data['image_url'] = $image['image_url'];
@@ -95,7 +95,7 @@ class ArticlesService
         $data['image_name'] = $this->getArticleName($data['image_name']);
         $data['article_id'] = $id;
 
-        $image = $this->setPath('articles/' . $this->getArticleName($data['title']) . '/')
+        $image = $this->setPath('articles/artigo-' . $id . '/')
             ->upload($data['image'], $data['image_name']);
 
         $data['image_url'] = $image['image_url'];
