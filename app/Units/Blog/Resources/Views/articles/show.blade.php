@@ -25,10 +25,12 @@
                         </div>
                     </main>
                     <div class="divider"></div>
-                    <footer class="comments">
-                        <h2 class="hide">Comentários</h2>
-                        @include('blog::_includes.disqus')
-                    </footer>
+                    @if(env('APP_COMMENTS'))
+                        <footer class="comments">
+                            <h2 class="hide">Comentários</h2>
+                            @include('blog::_includes.disqus')
+                        </footer>
+                    @endif
                 </article>
             </div>
             <div class="col s12 l4">
