@@ -126,22 +126,6 @@
         </ul>
         <ul class="collapsible collapsible-accordion">
             <li class="bold">
-                <a href="{{route('admin.sponsors.index')}}" class="waves-effect waves-blue">
-                    <i class="material-icons blue-text text-darken-2">business</i>
-                    <span>Patrocinadores</span>
-                </a>
-            </li>
-        </ul>
-        <ul class="collapsible collapsible-accordion">
-            <li class="bold">
-                <a href="{{route('admin.supporters.index')}}" class="waves-effect waves-blue">
-                    <i class="material-icons blue-text text-darken-2">business</i>
-                    <span>Apoiadores</span>
-                </a>
-            </li>
-        </ul>
-        <ul class="collapsible collapsible-accordion">
-            <li class="bold">
                 <a href="{{route('admin.contact.index')}}" class="waves-effect waves-blue">
                     <i class="material-icons blue-text text-darken-2">email</i>
                     <span>Mensagens</span>
@@ -164,7 +148,19 @@
                 </a>
                 <div class="collapsible-body">
                     <ul>
-                        <li><a href="">Configurações</a></li>
+                        <li class="bold">
+                            <a href="{{route('admin.sponsors.index')}}" class="waves-effect waves-blue">
+                                <i class="material-icons blue-text text-darken-2">business</i>
+                                <span>Patrocinadores</span>
+                            </a>
+                        </li>
+                        <li class="bold">
+                            <a href="{{route('admin.supporters.index')}}" class="waves-effect waves-blue">
+                                <i class="material-icons blue-text text-darken-2">business</i>
+                                <span>Apoiadores</span>
+                            </a>
+                        </li>
+
                         <li><a href="{{route('admin.categories.index')}}">Categorias</a></li>
                         <li><a href="{{route('admin.tags.index')}}">Tags</a></li>
                     </ul>
@@ -174,10 +170,10 @@
     </li>
 </ul>
 <script>
-  $(document).ready(function ($) {
-    $('.button-collapse').sideNav({'edge': 'left'});
-    $('.collapsible').collapsible({
-      accordion: false
+    $(document).ready(function ($) {
+        $('.button-collapse').sideNav({'edge': 'left'});
+        $('.collapsible').collapsible({
+            accordion: false
+        });
     });
-  });
 </script>
