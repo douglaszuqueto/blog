@@ -42,14 +42,14 @@ class ArticlesController extends Controller
     OpenGraph::setDescription('Artigos sobre Internet das Coisas');
     OpenGraph::setUrl('https://douglaszuqueto.com/artigos');
     OpenGraph::addProperty('type', 'website');
-    OpenGraph::addImage('https://douglaszuqueto.com/images/identidade-visual/social-share-default.png');
+    OpenGraph::addImage('https://douglaszuqueto.com/images/logo_2.png');
 
     TwitterCard::addValue('card', 'summary');
     TwitterCard::setTitle('Artigos');
     TwitterCard::setDescription('Artigos sobre Internet das Coisas');
     TwitterCard::setSite('https://douglaszuqueto.com/artigos');
     TwitterCard::setUrl('https://douglaszuqueto.com/artigos');
-    TwitterCard::addValue('image', 'https://douglaszuqueto.com/images/identidade-visual/social-share-default.png');
+    TwitterCard::addValue('image', 'https://douglaszuqueto.com/images/logo_2.png');
 
     $articles = $this->articlesRepository->scopeQuery(function ($query) {
       return $query->where('state', '=', 3)->orderBy('created_at', 'desc');
@@ -73,14 +73,14 @@ class ArticlesController extends Controller
     OpenGraph::setDescription('Resultados da busca filtrados pela tag ' . $tag);
     OpenGraph::setUrl('https://douglaszuqueto.com/artigos/search/' . $tag);
     OpenGraph::addProperty('type', 'website');
-    OpenGraph::addImage('https://douglaszuqueto.com/images/identidade-visual/social-share-default.png');
+    OpenGraph::addImage('https://douglaszuqueto.com/images/logo_2.png');
 
     TwitterCard::addValue('card', 'summary');
     TwitterCard::setTitle('Busca por ' . $tag);
     TwitterCard::setDescription('Resultados da busca filtrados pela tag ' . $tag);
     TwitterCard::setSite('https://douglaszuqueto.com/artigos/search/' . $tag);
     TwitterCard::setUrl('https://douglaszuqueto.com/artigos/search/' . $tag);
-    TwitterCard::addValue('image', 'https://douglaszuqueto.com/images/identidade-visual/social-share-default.png');
+    TwitterCard::addValue('image', 'https://douglaszuqueto.com/images/logo_2.png');
 
     $articles = $this->articlesRepository->scopeQuery(function ($query) use ($tag) {
       return $query
@@ -111,14 +111,14 @@ class ArticlesController extends Controller
     OpenGraph::setDescription('Resultados da busca filtrados por ' . $filter);
     OpenGraph::setUrl('https://douglaszuqueto.com/artigos/search/' . $filter);
     OpenGraph::addProperty('type', 'website');
-    OpenGraph::addImage('https://douglaszuqueto.com/images/identidade-visual/social-share-default.png');
+    OpenGraph::addImage('https://douglaszuqueto.com/images/logo_2.png');
 
     TwitterCard::addValue('card', 'summary');
     TwitterCard::setTitle('Busca por ' . $filter);
     TwitterCard::setDescription('Resultados da busca filtrados por ' . $filter);
     TwitterCard::setSite('https://douglaszuqueto.com/artigos/search/' . $filter);
     TwitterCard::setUrl('https://douglaszuqueto.com/artigos/search/' . $filter);
-    TwitterCard::addValue('image', 'https://douglaszuqueto.com/images/identidade-visual/social-share-default.png');
+    TwitterCard::addValue('image', 'https://douglaszuqueto.com/images/logo_2.png');
 
     $articles = $this->articlesRepository->scopeQuery(function ($query) use ($filter) {
       return $query

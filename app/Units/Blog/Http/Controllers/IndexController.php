@@ -44,14 +44,14 @@ class IndexController extends Controller
     OpenGraph::setDescription('Conteúdo sobre Internet das Coisas');
     OpenGraph::setUrl('https://douglaszuqueto.com');
     OpenGraph::addProperty('type', 'website');
-    OpenGraph::addImage('https://douglaszuqueto.com/images/identidade-visual/social-share-default.png');
+    OpenGraph::addImage('https://douglaszuqueto.com/images/logo_2.png');
 
     TwitterCard::addValue('card', 'summary');
     TwitterCard::setTitle('Página Inicial');
     TwitterCard::setDescription('Conteúdo sobre Internet das Coisas');
     TwitterCard::setSite('https://douglaszuqueto.com');
     TwitterCard::setUrl('https://douglaszuqueto.com');
-    TwitterCard::addValue('image', 'https://douglaszuqueto.com/images/identidade-visual/social-share-default.png');
+    TwitterCard::addValue('image', 'https://douglaszuqueto.com/images/logo_2.png');
 
     $lastArticles = $this->articlesRepository->scopeQuery(function ($query) {
       return $query->orderBy('created_at', 'desc')->where('state', '=', 3)->limit(4);

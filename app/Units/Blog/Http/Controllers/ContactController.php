@@ -35,14 +35,14 @@ class ContactController extends Controller
     OpenGraph::setDescription('Alguma dúvida, reclamação ou sugestão? Entre já em contato conosco :P');
     OpenGraph::setUrl('https://douglaszuqueto.com/contato');
     OpenGraph::addProperty('type', 'website');
-    OpenGraph::addImage('https://douglaszuqueto.com/images/identidade-visual/social-share-default.png');
+    OpenGraph::addImage('https://douglaszuqueto.com/images/logo_2.png');
 
     TwitterCard::addValue('card', 'summary');
     TwitterCard::setTitle('Formulário de Contato');
     TwitterCard::setDescription('Alguma dúvida, reclamação ou sugestão? Entre já em contato conosco :P');
     TwitterCard::setSite('https://douglaszuqueto.com/contato');
     TwitterCard::setUrl('https://douglaszuqueto.com/contato');
-    TwitterCard::addValue('image', 'https://douglaszuqueto.com/images/identidade-visual/social-share-default.png');
+    TwitterCard::addValue('image', 'https://douglaszuqueto.com/images/logo_2.png');
 
     return $this->view('blog::contact.index');
   }
