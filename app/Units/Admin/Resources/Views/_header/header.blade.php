@@ -118,9 +118,9 @@
         </ul>
         <ul class="collapsible collapsible-accordion">
             <li class="bold">
-                <a href="{{route('admin.news.index')}}" class="waves-effect waves-blue">
-                    <i class="material-icons blue-text text-darken-2">subject</i>
-                    <span>Notícias</span>
+                <a href="{{route('admin.suggestions.index')}}" class="waves-effect waves-blue">
+                    <i class="material-icons blue-text text-darken-2">speaker_notes</i>
+                    <span>Sugestões</span>
                 </a>
             </li>
         </ul>

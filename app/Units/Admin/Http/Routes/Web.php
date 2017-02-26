@@ -22,6 +22,8 @@ class Web extends RouteFile
 
       $this->newsRoutes();
 
+      $this->suggestionsRoutes();
+
       $this->supportersRoutes();
 
       $this->sponsorsRoutes();
@@ -67,6 +69,17 @@ class Web extends RouteFile
     $this->router->post('/news', ['as' => 'admin.news.store', 'uses' => 'NewsController@store']);
     $this->router->put('/news/{id}', ['as' => 'admin.news.update', 'uses' => 'NewsController@update']);
     $this->router->delete('/news/{id}', ['as' => 'admin.news.remove', 'uses' => 'NewsController@remove']);
+
+  }
+
+  protected function suggestionsRoutes()
+  {
+    $this->router->get('/suggestions/create', ['as' => 'admin.suggestions.create', 'uses' => 'SuggestionsController@create']);
+    $this->router->get('/suggestions', ['as' => 'admin.suggestions.index', 'uses' => 'SuggestionsController@index']);
+    $this->router->get('/suggestions/{id}', ['as' => 'admin.suggestions.edit', 'uses' => 'SuggestionsController@edit']);
+    $this->router->post('/suggestions', ['as' => 'admin.suggestions.store', 'uses' => 'SuggestionsController@store']);
+    $this->router->put('/suggestions/{id}', ['as' => 'admin.suggestions.update', 'uses' => 'SuggestionsController@update']);
+    $this->router->delete('/suggestions/{id}', ['as' => 'admin.suggestions.remove', 'uses' => 'SuggestionsController@remove']);
 
   }
 
