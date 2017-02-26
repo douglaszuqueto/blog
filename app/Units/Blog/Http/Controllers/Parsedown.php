@@ -25,6 +25,15 @@ class Parsedown extends \Parsedown
     return $Image;
   }
 
+  protected function inlineLink($Excerpt)
+  {
+    $Link = parent::inlineLink($Excerpt);
+
+    $Link['element']['attributes']['target'] = '_blank';
+
+    return $Link;
+  }
+
   protected function transformToTitle($string)
   {
     $string = explode('-', $string);
