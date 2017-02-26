@@ -15,10 +15,12 @@ class Web extends RouteFile
     $this->router->group(['domain' => env('APP_DOMAIN'), 'middleware' => ['web', 'blog']], function () {
       $this->indexRoutes();
       $this->articlesRoutes();
-      $this->projectRoutes();
-      $this->newsRoutes();
-      $this->aboutMeRoutes();
+      $this->suggestionsRoutes();
       $this->contactRoutes();
+      
+//      $this->projectRoutes();
+//      $this->newsRoutes();
+//      $this->aboutMeRoutes();
     });
   }
 
@@ -48,6 +50,12 @@ class Web extends RouteFile
   {
     $this->router->get('/noticias', ['as' => 'blog.news.index', 'uses' => 'NewsController@index']);
     $this->router->get('/noticias/{news}', ['as' => 'blog.news.show', 'uses' => 'NewsController@show']);
+  }
+
+  protected function suggestionsRoutes()
+  {
+    $this->router->get('/fabrica-de-artigos', ['as' => 'blog.suggestions.index', 'uses' => 'SuggestionsController@index']);
+    $this->router->post('/fabrica-de-artigos', ['as' => 'blog.suggestions.send', 'uses' => 'SuggestionsController@send']);
   }
 
   protected function aboutMeRoutes()
