@@ -8,14 +8,14 @@ use Prettus\Repository\Eloquent\BaseRepository;
 class ArticlesImagesRepository extends BaseRepository
 {
 
-    /**
-     * Specify Model class name
-     *
-     * @return string
-     */
-    public function model()
-    {
-        return ArticlesImages::class;
-    }
+  /**
+   * Specify Model class name
+   *
+   * @return string
+   */
+  public function model()
+  {
+    return ArticlesImages::class;
+  }
 
 }

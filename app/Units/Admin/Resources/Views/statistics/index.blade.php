@@ -59,36 +59,36 @@
                 <div id='browserChart'></div>
 
                 <script>
-                    var chartBrowser = c3.generate({
-                        bindto: '#browserChart',
-                        data: {
-                            columns: [],
-                            type: 'pie',
-                            onclick: function (d, i) {
-                                console.log("onclick", d.value);
-                            },
-                        },
-                        pie: {
-                            label: {
-                                format: function (value, ratio, id) {
-                                    return d3.format('')(value);
-                                }
-                            }
+                  var chartBrowser = c3.generate({
+                    bindto: '#browserChart',
+                    data: {
+                      columns: [],
+                      type: 'pie',
+                      onclick: function (d, i) {
+                        console.log("onclick", d.value);
+                      },
+                    },
+                    pie: {
+                      label: {
+                        format: function (value, ratio, id) {
+                          return d3.format('')(value);
                         }
-                    });
+                      }
+                    }
+                  });
 
-                    var dataBrowserJson = {!! $browsers !!};
-                    var browsersData = [];
+                  var dataBrowserJson = {!! $browsers !!};
+                  var browsersData = [];
 
-                    dataBrowserJson.forEach(function (element, index, array) {
-                        browsersData.push([
-                            element.browser,
-                            element.sessions
-                        ]);
-                    });
-                    chartBrowser.load({
-                        columns: browsersData,
-                    });
+                  dataBrowserJson.forEach(function (element, index, array) {
+                    browsersData.push([
+                      element.browser,
+                      element.sessions
+                    ]);
+                  });
+                  chartBrowser.load({
+                    columns: browsersData,
+                  });
                 </script>
             </div>
             <div class="col s12 l6">
@@ -96,36 +96,36 @@
 
                 <script>
 
-                    var chartReferrer = c3.generate({
-                        bindto: '#referrersChart',
-                        data: {
-                            columns: {},
-                            type: 'pie',
-                            onclick: function (d, i) {
-                                console.log("onclick", d.value);
-                            }
-                        },
-                        pie: {
-                            label: {
-                                format: function (value, ratio, id) {
-                                    return d3.format('')(value);
-                                }
-                            }
+                  var chartReferrer = c3.generate({
+                    bindto: '#referrersChart',
+                    data: {
+                      columns: {},
+                      type: 'pie',
+                      onclick: function (d, i) {
+                        console.log("onclick", d.value);
+                      }
+                    },
+                    pie: {
+                      label: {
+                        format: function (value, ratio, id) {
+                          return d3.format('')(value);
                         }
-                    });
+                      }
+                    }
+                  });
 
-                    var dataReferrersJson = {!! $referrers !!};
-                    var referrersData = [];
+                  var dataReferrersJson = {!! $referrers !!};
+                  var referrersData = [];
 
-                    dataReferrersJson.forEach(function (element, index, array) {
-                        referrersData.push([
-                            element.url,
-                            element.pageViews
-                        ]);
-                    });
-                    chartReferrer.load({
-                        columns: referrersData,
-                    });
+                  dataReferrersJson.forEach(function (element, index, array) {
+                    referrersData.push([
+                      element.url,
+                      element.pageViews
+                    ]);
+                  });
+                  chartReferrer.load({
+                    columns: referrersData,
+                  });
                 </script>
             </div>
         </div>

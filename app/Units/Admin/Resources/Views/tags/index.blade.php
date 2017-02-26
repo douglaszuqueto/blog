@@ -54,29 +54,29 @@
         </ul>
     </div>
     <script>
-        $(document).ready(function () {
-            $('.removeTag').click(function () {
-                removeTag($(this).attr('data-id'))
-            })
-        });
+      $(document).ready(function () {
+        $('.removeTag').click(function () {
+          removeTag($(this).attr('data-id'))
+        })
+      });
 
-        function removeTag(tag_id) {
-            $.ajax({
-                url: '/tags/' + tag_id,
-                method: 'POST',
-                data: {
-                    '_token': window.Laravel.csrfToken,
-                    '_method': 'DELETE',
-                    'state': 0
-                },
-                success: function (data) {
-                    Materialize.toast(data.error_message, 1000, null, function () {
-                        location.reload();
-                    });
-
-                }
+      function removeTag(tag_id) {
+        $.ajax({
+          url: '/tags/' + tag_id,
+          method: 'POST',
+          data: {
+            '_token': window.Laravel.csrfToken,
+            '_method': 'DELETE',
+            'state': 0
+          },
+          success: function (data) {
+            Materialize.toast(data.error_message, 1000, null, function () {
+              location.reload();
             });
-        }
+
+          }
+        });
+      }
     </script>
 
 @endsection

@@ -15,13 +15,13 @@ use Prettus\Repository\Contracts\RepositoryInterface;
 abstract class AbstractCrudController extends Controller implements Contract
 {
 
-    use SEOTools;
+  use SEOTools;
 
-    use Index;
-    use Create;
-    use Store;
-    use Edit;
-    use Update;
-    use Remove;
+  use Index;
+  use Create;
+  use Store;
+  use Edit;
+  use Update;
+  use Remove;
 
 }

@@ -42,26 +42,26 @@
         </div>
     </div>
     <script>
-        $(document).ready(function () {
-            $('.removeContact').click(function () {
-                removeContact($(this).attr('data-id'))
-            })
-        });
+      $(document).ready(function () {
+        $('.removeContact').click(function () {
+          removeContact($(this).attr('data-id'))
+        })
+      });
 
-        function removeContact(contact_id) {
-            $.ajax({
-                url: '/contact/' + contact_id,
-                method: 'POST',
-                data: {
-                    '_token': window.Laravel.csrfToken,
-                },
-                success: function (data) {
-                    Materialize.toast('Contato excluido', 2000, null, function () {
-                        location.reload();
-                    });
-                }
+      function removeContact(contact_id) {
+        $.ajax({
+          url: '/contact/' + contact_id,
+          method: 'POST',
+          data: {
+            '_token': window.Laravel.csrfToken,
+          },
+          success: function (data) {
+            Materialize.toast('Contato excluido', 2000, null, function () {
+              location.reload();
             });
-        }
+          }
+        });
+      }
     </script>
 
 @endsection

@@ -55,26 +55,26 @@
         </ul>
     </div>
     <script>
-        $(document).ready(function () {
-            $('.removeUser').click(function () {
-                removeUser($(this).attr('data-id'))
-            })
-        });
+      $(document).ready(function () {
+        $('.removeUser').click(function () {
+          removeUser($(this).attr('data-id'))
+        })
+      });
 
-        function removeUser(user_id) {
-            $.ajax({
-                url: '/users/' + user_id,
-                method: 'POST',
-                data: {
-                    '_token': window.Laravel.csrfToken,
-                    '_method': 'PUT',
-                    'state': 0
-                },
-                success: function (data) {
-                    Materialize.toast('Usuário excluido', 2000);
-                }
-            });
-        }
+      function removeUser(user_id) {
+        $.ajax({
+          url: '/users/' + user_id,
+          method: 'POST',
+          data: {
+            '_token': window.Laravel.csrfToken,
+            '_method': 'PUT',
+            'state': 0
+          },
+          success: function (data) {
+            Materialize.toast('Usuário excluido', 2000);
+          }
+        });
+      }
     </script>
 
 

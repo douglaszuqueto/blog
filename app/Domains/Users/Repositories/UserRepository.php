@@ -8,13 +8,13 @@ use Prettus\Repository\Eloquent\BaseRepository;
 class UserRepository extends BaseRepository
 {
 
-    /**
-     * Specify Model class name
-     *
-     * @return string
-     */
-    public function model()
-    {
-        return User::class;
-    }
+  /**
+   * Specify Model class name
+   *
+   * @return string
+   */
+  public function model()
+  {
+    return User::class;
+  }
 }

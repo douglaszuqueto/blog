@@ -8,19 +8,19 @@ use App\Support\Database\ModelFactory;
 class SponsorsFactory extends ModelFactory
 {
 
-    protected $model = Sponsors::class;
+  protected $model = Sponsors::class;
 
-    /**
-     * @return array
-     */
-    protected function fields()
-    {
+  /**
+   * @return array
+   */
+  protected function fields()
+  {
 
-        return [
-            'sponsor' => $this->faker->name,
-            'url' => $this->faker->url,
-            'image' => $this->faker->url,
-            'state' => 1,
-        ];
-    }
+    return [
+      'sponsor' => $this->faker->name,
+      'url' => $this->faker->url,
+      'image' => $this->faker->url,
+      'state' => 1,
+    ];
+  }
 }

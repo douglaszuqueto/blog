@@ -8,17 +8,17 @@ use App\Support\Http\Controllers\AbstractCrudController;
 class TagsController extends AbstractCrudController
 {
 
-    protected $modulo = 'admin';
-    protected $page = 'Tags';
-    protected $page_description = 'listing';
+  protected $modulo = 'admin';
+  protected $page = 'Tags';
+  protected $page_description = 'listing';
 
-    /**
-     * TagsController constructor.
-     * @param TagsRepository $repository
-     */
-    public function __construct(TagsRepository $repository)
-    {
-        $this->repository = $repository;
-    }
+  /**
+   * TagsController constructor.
+   * @param TagsRepository $repository
+   */
+  public function __construct(TagsRepository $repository)
+  {
+    $this->repository = $repository;
+  }
 
 }

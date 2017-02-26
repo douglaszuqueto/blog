@@ -57,29 +57,29 @@
             ]
     ])
     <script>
-        $(document).ready(function () {
-            $('.removeArticle').click(function () {
-                removeArticle($(this).attr('data-id'))
-            })
-        });
+      $(document).ready(function () {
+        $('.removeArticle').click(function () {
+          removeArticle($(this).attr('data-id'))
+        })
+      });
 
-        function removeArticle(article_id) {
-            $.ajax({
-                url: '/articles/' + article_id,
-                method: 'POST',
-                data: {
-                    '_token': window.Laravel.csrfToken,
-                    '_method': 'PUT',
-                    'state': 0
-                },
-                success: function (data) {
-                    Materialize.toast('Artigo excluido', 2000, null, function () {
-                        location.reload();
-                    });
-
-                }
+      function removeArticle(article_id) {
+        $.ajax({
+          url: '/articles/' + article_id,
+          method: 'POST',
+          data: {
+            '_token': window.Laravel.csrfToken,
+            '_method': 'PUT',
+            'state': 0
+          },
+          success: function (data) {
+            Materialize.toast('Artigo excluido', 2000, null, function () {
+              location.reload();
             });
-        }
+
+          }
+        });
+      }
     </script>
 
 @endsection

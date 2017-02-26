@@ -38,7 +38,7 @@
     <script src="{{asset('js/c3.min.js')}}"></script>
     <!-- Token for JS -->
     <script>
-        window.Laravel = {!!   json_encode([
+      window.Laravel = {!!   json_encode([
                 'csrfToken' => csrf_token(),
             ])
         !!}

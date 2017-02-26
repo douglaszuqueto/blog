@@ -10,31 +10,31 @@ use Migrator\MigratorTrait as HasMigrations;
 
 class DomainServiceProvider extends ServiceProvider
 {
-    use HasMigrations;
+  use HasMigrations;
 
-    public function register()
-    {
-        $this->registerMigrations();
-        $this->registerFactories();
-        $this->registerSeeders();
-    }
+  public function register()
+  {
+    $this->registerMigrations();
+    $this->registerFactories();
+    $this->registerSeeders();
+  }
 
-    protected function registerMigrations()
-    {
-        $this->migrations([
-            CreateTagsTable::class,
-        ]);
-    }
+  protected function registerMigrations()
+  {
+    $this->migrations([
+      CreateTagsTable::class,
+    ]);
+  }
 
-    protected function registerFactories()
-    {
-        (new TagsFactory())->define();
-    }
+  protected function registerFactories()
+  {
+    (new TagsFactory())->define();
+  }
 
-    protected function registerSeeders()
-    {
-        $this->seeders([
-            TagsSeeder::class,
-        ]);
-    }
+  protected function registerSeeders()
+  {
+    $this->seeders([
+      TagsSeeder::class,
+    ]);
+  }
 }

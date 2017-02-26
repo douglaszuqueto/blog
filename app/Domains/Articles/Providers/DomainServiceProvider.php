@@ -13,34 +13,34 @@ use Migrator\MigratorTrait as HasMigrations;
 
 class DomainServiceProvider extends ServiceProvider
 {
-    use HasMigrations;
+  use HasMigrations;
 
-    public function register()
-    {
-        $this->registerMigrations();
-        $this->registerFactories();
-        $this->registerSeeders();
-    }
+  public function register()
+  {
+    $this->registerMigrations();
+    $this->registerFactories();
+    $this->registerSeeders();
+  }
 
-    protected function registerMigrations()
-    {
-        $this->migrations([
-            CreateArticlesTable::class,
-            CreateArticlesSheduleTable::class,
-            CreateArticlesTagsTable::class,
-            CreateArticlesImagesTable::class,
-        ]);
-    }
+  protected function registerMigrations()
+  {
+    $this->migrations([
+      CreateArticlesTable::class,
+      CreateArticlesSheduleTable::class,
+      CreateArticlesTagsTable::class,
+      CreateArticlesImagesTable::class,
+    ]);
+  }
 
-    protected function registerFactories()
-    {
-        (new ArticlesFactory())->define();
-    }
+  protected function registerFactories()
+  {
+    (new ArticlesFactory())->define();
+  }
 
-    protected function registerSeeders()
-    {
-        $this->seeders([
-            ArticlesSeeder::class,
-        ]);
-    }
+  protected function registerSeeders()
+  {
+    $this->seeders([
+      ArticlesSeeder::class,
+    ]);
+  }
 }

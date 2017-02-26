@@ -8,17 +8,17 @@ use App\Support\Database\ModelFactory;
 class CategoriesFactory extends ModelFactory
 {
 
-    protected $model = Categories::class;
+  protected $model = Categories::class;
 
-    /**
-     * @return array
-     */
-    protected function fields()
-    {
+  /**
+   * @return array
+   */
+  protected function fields()
+  {
 
-        return [
-            'category' => $this->faker->name,
-            'state' => 1,
-        ];
-    }
+    return [
+      'category' => $this->faker->name,
+      'state' => 1,
+    ];
+  }
 }

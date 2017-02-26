@@ -54,28 +54,28 @@
         </ul>
     </div>
     <script>
-        $(document).ready(function () {
-            $('.removeCategory').click(function () {
-                removeCategory($(this).attr('data-id'))
-            })
-        });
+      $(document).ready(function () {
+        $('.removeCategory').click(function () {
+          removeCategory($(this).attr('data-id'))
+        })
+      });
 
-        function removeCategory(category_id) {
-            $.ajax({
-                url: '/categories/' + category_id,
-                method: 'POST',
-                data: {
-                    '_token': window.Laravel.csrfToken,
-                    '_method': 'DELETE',
-                    'state': 0
-                },
-                success: function (data) {
-                    Materialize.toast(data.error_message, 1000, null, function () {
-                        location.reload();
-                    });
-                }
+      function removeCategory(category_id) {
+        $.ajax({
+          url: '/categories/' + category_id,
+          method: 'POST',
+          data: {
+            '_token': window.Laravel.csrfToken,
+            '_method': 'DELETE',
+            'state': 0
+          },
+          success: function (data) {
+            Materialize.toast(data.error_message, 1000, null, function () {
+              location.reload();
             });
-        }
+          }
+        });
+      }
     </script>
 
 @endsection

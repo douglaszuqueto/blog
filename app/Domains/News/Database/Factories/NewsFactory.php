@@ -8,19 +8,19 @@ use App\Support\Database\ModelFactory;
 class NewsFactory extends ModelFactory
 {
 
-    protected $model = News::class;
+  protected $model = News::class;
 
-    /**
-     * @return array
-     */
-    protected function fields()
-    {
+  /**
+   * @return array
+   */
+  protected function fields()
+  {
 
-        return [
-            'title' => $this->faker->title,
-            'url' => $this->faker->url,
-            'image_name' => $this->faker->name,
-            'image_url' => $this->faker->url,
-        ];
-    }
+    return [
+      'title' => $this->faker->title,
+      'url' => $this->faker->url,
+      'image_name' => $this->faker->name,
+      'image_url' => $this->faker->url,
+    ];
+  }
 }

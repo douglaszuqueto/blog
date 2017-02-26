@@ -11,32 +11,32 @@ use Migrator\MigratorTrait as HasMigrations;
 
 class DomainServiceProvider extends ServiceProvider
 {
-    use HasMigrations;
+  use HasMigrations;
 
-    public function register()
-    {
-        $this->registerMigrations();
-        $this->registerFactories();
-        $this->registerSeeders();
-    }
+  public function register()
+  {
+    $this->registerMigrations();
+    $this->registerFactories();
+    $this->registerSeeders();
+  }
 
-    protected function registerMigrations()
-    {
-        $this->migrations([
-            CreateUsersTable::class,
-            CreatePasswordResetsTable::class
-        ]);
-    }
+  protected function registerMigrations()
+  {
+    $this->migrations([
+      CreateUsersTable::class,
+      CreatePasswordResetsTable::class
+    ]);
+  }
 
-    protected function registerFactories()
-    {
-        (new UserFactory())->define();
-    }
+  protected function registerFactories()
+  {
+    (new UserFactory())->define();
+  }
 
-    protected function registerSeeders()
-    {
-        $this->seeders([
-            UserSeeder::class,
-        ]);
-    }
+  protected function registerSeeders()
+  {
+    $this->seeders([
+      UserSeeder::class,
+    ]);
+  }
 }

@@ -8,17 +8,17 @@ use App\Support\Database\ModelFactory;
 class TagsFactory extends ModelFactory
 {
 
-    protected $model = Tags::class;
+  protected $model = Tags::class;
 
-    /**
-     * @return array
-     */
-    protected function fields()
-    {
+  /**
+   * @return array
+   */
+  protected function fields()
+  {
 
-        return [
-            'tag' => $this->faker->name,
-            'state' => 1,
-        ];
-    }
+    return [
+      'tag' => $this->faker->name,
+      'state' => 1,
+    ];
+  }
 }

@@ -92,32 +92,32 @@
   ])
 
     <script>
-        $(document).ready(function () {
-            $('.modal-trigger').leanModal({
-                starting_top: '100%'
-            });
-
-            $('.removeImage').click(function () {
-                removeImage($(this).attr('data-id'))
-            })
+      $(document).ready(function () {
+        $('.modal-trigger').leanModal({
+          starting_top: '100%'
         });
 
-        function removeImage(image_id) {
-            $.ajax({
-                url: '/articles/' + {{$item->id}} +'/images/' + image_id,
-                method: 'POST',
-                data: {
-                    '_token': window.Laravel.csrfToken,
-                    '_method': 'PUT',
-                },
-                success: function (data) {
-                    Materialize.toast('Artigo excluido', 2000, null, function () {
-//                        location.reload();
-                    });
+        $('.removeImage').click(function () {
+          removeImage($(this).attr('data-id'))
+        })
+      });
 
-                }
+      function removeImage(image_id) {
+        $.ajax({
+          url: '/articles/' + {{$item->id}} +'/images/' + image_id,
+          method: 'POST',
+          data: {
+            '_token': window.Laravel.csrfToken,
+            '_method': 'PUT',
+          },
+          success: function (data) {
+            Materialize.toast('Artigo excluido', 2000, null, function () {
+//                        location.reload();
             });
-        }
+
+          }
+        });
+      }
     </script>
 
 @endsection

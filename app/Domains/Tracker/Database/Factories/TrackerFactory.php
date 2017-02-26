@@ -8,17 +8,17 @@ use App\Support\Database\ModelFactory;
 class TrackerFactory extends ModelFactory
 {
 
-    protected $model = Tracker::class;
+  protected $model = Tracker::class;
 
-    /**
-     * @return array
-     */
-    protected function fields()
-    {
+  /**
+   * @return array
+   */
+  protected function fields()
+  {
 
-        return [
-            'tag' => $this->faker->name,
-            'state' => 1,
-        ];
-    }
+    return [
+      'tag' => $this->faker->name,
+      'state' => 1,
+    ];
+  }
 }

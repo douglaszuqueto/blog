@@ -106,10 +106,10 @@
                     <textarea id="editor" name="text">{{$item->text}}</textarea>
 
                     <script>
-                        var editor = new SimpleMDE({
-                            element: document.getElementById("editor"),
-                            spellChecker: false,
-                        });
+                      var editor = new SimpleMDE({
+                        element: document.getElementById("editor"),
+                        spellChecker: false,
+                      });
 
 
                     </script>
@@ -171,43 +171,43 @@
   ])
 
     <script>
-        $(document).ready(function () {
-            $('select').material_select();
-            $('.chips').material_chip();
-            $('.chips').on('chip.add', function (e, chip) {
-                console.log(chip);
+      $(document).ready(function () {
+        $('select').material_select();
+        $('.chips').material_chip();
+        $('.chips').on('chip.add', function (e, chip) {
+          console.log(chip);
 
-                $('.tags').append(
-                        '<input type="hidden" id="tags" name="tags[]" value="' + chip.tag + '">'
-                );
-            });
-
-            $('.modal-trigger').leanModal({
-                starting_top: '100%'
-            });
-
-            $('.removeTag').click(function () {
-                removeTag($(this).attr('data-id'))
-            })
-
-            function removeTag(tag_id) {
-                $.ajax({
-                    url: '/articles/' + {{$item->id}} +'/tags',
-                    method: 'POST',
-                    data: {
-                        '_token': window.Laravel.csrfToken,
-                        '_method': 'PUT',
-                        'tag_id': tag_id
-                    },
-                    success: function (data) {
-                        Materialize.toast('Tag removida', 1000);
-
-                    }
-                });
-            }
-
-
+          $('.tags').append(
+            '<input type="hidden" id="tags" name="tags[]" value="' + chip.tag + '">'
+          );
         });
+
+        $('.modal-trigger').leanModal({
+          starting_top: '100%'
+        });
+
+        $('.removeTag').click(function () {
+          removeTag($(this).attr('data-id'))
+        })
+
+        function removeTag(tag_id) {
+          $.ajax({
+            url: '/articles/' + {{$item->id}} +'/tags',
+            method: 'POST',
+            data: {
+              '_token': window.Laravel.csrfToken,
+              '_method': 'PUT',
+              'tag_id': tag_id
+            },
+            success: function (data) {
+              Materialize.toast('Tag removida', 1000);
+
+            }
+          });
+        }
+
+
+      });
     </script>
 
 @endsection

@@ -6,17 +6,17 @@ use App\Domains\Sponsors\Repositories\SponsorsRepository;
 
 class SponsorsService
 {
-    /**
-     * @var SponsorsRepository
-     */
-    private $repository;
+  /**
+   * @var SponsorsRepository
+   */
+  private $repository;
 
-    /**
-     * SponsorsService constructor.
-     * @param SponsorsRepository $repository
-     */
-    public function __construct(SponsorsRepository $repository)
-    {
-        $this->repository = $repository;
-    }
+  /**
+   * SponsorsService constructor.
+   * @param SponsorsRepository $repository
+   */
+  public function __construct(SponsorsRepository $repository)
+  {
+    $this->repository = $repository;
+  }
 }

@@ -53,12 +53,12 @@
         </div>
     </div>
     <script>
-        hljs.initHighlightingOnLoad();
+      hljs.initHighlightingOnLoad();
     </script>
     <script>
-        $(document).ready(function () {
-            $('.article-text img').materialbox();
-        });
+      $(document).ready(function () {
+        $('.article-text img').materialbox();
+      });
     </script>
 
 

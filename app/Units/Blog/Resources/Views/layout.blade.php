@@ -33,7 +33,7 @@
 
     <!-- Token for JS -->
     <script>
-        window.Laravel = {!!   json_encode([
+      window.Laravel = {!!   json_encode([
                 'csrfToken' => csrf_token(),
             ])
         !!}
@@ -59,35 +59,35 @@
 
 <script>
 
-    var path = window.location.pathname.split("/")[1];
-    var url = window.location.href;
+  var path = window.location.pathname.split("/")[1];
+  var url = window.location.href;
 
-    if (path === '') {
-        var target = $('ul li a[href="' + window.location.href.slice(0, -1) + '"]');
-        target.addClass('active');
-    }
-    var target = $('ul li a[href="' + url + '"]');
+  if (path === '') {
+    var target = $('ul li a[href="' + window.location.href.slice(0, -1) + '"]');
     target.addClass('active');
+  }
+  var target = $('ul li a[href="' + url + '"]');
+  target.addClass('active');
 
 
 </script>
 <div id="fb-root"></div>
 @if(env('APP_GOOGLE_ANALYTICS'))
     <script>
-        (function (i, s, o, g, r, a, m) {
-            i['GoogleAnalyticsObject'] = r;
-            i[r] = i[r] || function () {
-                        (i[r].q = i[r].q || []).push(arguments)
-                    }, i[r].l = 1 * new Date();
-            a = s.createElement(o),
-                    m = s.getElementsByTagName(o)[0];
-            a.async = 1;
-            a.src = g;
-            m.parentNode.insertBefore(a, m)
-        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+      (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+          }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+          m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+      })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
-        ga('create', 'UA-73205063-2', 'auto');
-        ga('send', 'pageview');
+      ga('create', 'UA-73205063-2', 'auto');
+      ga('send', 'pageview');
 
     </script>
 @endif
@@ -95,24 +95,37 @@
 @if(env('APP_FACEBOOK'))
 
     <script>(function (d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) return;
-            js = d.createElement(s);
-            js.id = id;
-            js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.8&appId=191652421276345";
-            fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.8&appId=191652421276345";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
     </script>
 
     <!-- Facebook Pixel Code -->
     <script>
-        !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-                n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
-            n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
-            t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
-                document,'script','https://connect.facebook.net/en_US/fbevents.js');
-        fbq('init', '1190730830976691');
-        fbq('track', 'PageView');
+      !function (f, b, e, v, n, t, s) {
+        if (f.fbq)return;
+        n = f.fbq = function () {
+          n.callMethod ?
+            n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = '2.0';
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s)
+      }(window,
+        document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '1190730830976691');
+      fbq('track', 'PageView');
     </script>
     <noscript><img height="1" width="1" style="display:none"
                    src="https://www.facebook.com/tr?id=1190730830976691&ev=PageView&noscript=1"
@@ -130,17 +143,17 @@
 @if(env('APP_HOTJAR'))
     <!-- Hotjar Tracking Code for https://douglaszuqueto.com/ -->
     <script>
-        (function (h, o, t, j, a, r) {
-            h.hj = h.hj || function () {
-                        (h.hj.q = h.hj.q || []).push(arguments)
-                    };
-            h._hjSettings = {hjid: 335629, hjsv: 5};
-            a = o.getElementsByTagName('head')[0];
-            r = o.createElement('script');
-            r.async = 1;
-            r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
-            a.appendChild(r);
-        })(window, document, '//static.hotjar.com/c/hotjar-', '.js?sv=');
+      (function (h, o, t, j, a, r) {
+        h.hj = h.hj || function () {
+            (h.hj.q = h.hj.q || []).push(arguments)
+          };
+        h._hjSettings = {hjid: 335629, hjsv: 5};
+        a = o.getElementsByTagName('head')[0];
+        r = o.createElement('script');
+        r.async = 1;
+        r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+        a.appendChild(r);
+      })(window, document, '//static.hotjar.com/c/hotjar-', '.js?sv=');
     </script>
 @endif
 

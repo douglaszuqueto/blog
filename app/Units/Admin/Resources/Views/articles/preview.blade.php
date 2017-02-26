@@ -70,7 +70,7 @@
         </style>
 
         <script>
-            hljs.initHighlightingOnLoad();
+          hljs.initHighlightingOnLoad();
         </script>
 
 

@@ -46,17 +46,17 @@
   ])
 
     <script>
-        $(document).ready(function () {
-            $('.modal-trigger').leanModal({
-                starting_top: '100%'
-            });
-
-            $('ul.tabs').tabs();
-
-            $('.datepicker').pickadate({
-                selectMonths: true,
-                format: 'yyyy-mm-dd'
-            });
+      $(document).ready(function () {
+        $('.modal-trigger').leanModal({
+          starting_top: '100%'
         });
+
+        $('ul.tabs').tabs();
+
+        $('.datepicker').pickadate({
+          selectMonths: true,
+          format: 'yyyy-mm-dd'
+        });
+      });
     </script>
 @endsection

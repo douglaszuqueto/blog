@@ -57,28 +57,28 @@
         </ul>
     </div>
     <script>
-        $(document).ready(function () {
-            $('.removeNews').click(function () {
-                removeNews($(this).attr('data-id'))
-            })
-        });
+      $(document).ready(function () {
+        $('.removeNews').click(function () {
+          removeNews($(this).attr('data-id'))
+        })
+      });
 
-        function removeNews(news_id) {
-            $.ajax({
-                url: '/news/' + news_id,
-                method: 'POST',
-                data: {
-                    '_token': window.Laravel.csrfToken,
-                    '_method': 'DELETE',
-                    'state': 0
-                },
-                success: function (data) {
-                    Materialize.toast(data.error_message, 1000, null, function () {
-                        location.reload();
-                    });
-                }
+      function removeNews(news_id) {
+        $.ajax({
+          url: '/news/' + news_id,
+          method: 'POST',
+          data: {
+            '_token': window.Laravel.csrfToken,
+            '_method': 'DELETE',
+            'state': 0
+          },
+          success: function (data) {
+            Materialize.toast(data.error_message, 1000, null, function () {
+              location.reload();
             });
-        }
+          }
+        });
+      }
     </script>
 
 @endsection

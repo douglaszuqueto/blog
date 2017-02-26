@@ -8,13 +8,13 @@ use Prettus\Repository\Eloquent\BaseRepository;
 class TagsRepository extends BaseRepository
 {
 
-    /**
-     * Specify Model class name
-     *
-     * @return string
-     */
-    public function model()
-    {
-        return Tags::class;
-    }
+  /**
+   * Specify Model class name
+   *
+   * @return string
+   */
+  public function model()
+  {
+    return Tags::class;
+  }
 }

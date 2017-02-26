@@ -6,11 +6,11 @@ use App\Support\Units\ServiceProvider;
 
 class UnitServiceProvider extends ServiceProvider
 {
-    protected $alias = 'admin';
+  protected $alias = 'admin';
 
-    protected $hasViews = true;
+  protected $hasViews = true;
 
-    protected $providers = [
-        RouteServiceProvider::class,
-    ];
+  protected $providers = [
+    RouteServiceProvider::class,
+  ];
 }

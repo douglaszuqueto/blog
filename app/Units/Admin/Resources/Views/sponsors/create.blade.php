@@ -6,7 +6,8 @@
         <h5>Cadastrar Patrocinador</h5>
 
         <div class="row">
-            <form class="col s12 l6 offset-l3" role="form" method="POST" enctype="multipart/form-data" action="{{ route('admin.sponsors.store') }}">
+            <form class="col s12 l6 offset-l3" role="form" method="POST" enctype="multipart/form-data"
+                  action="{{ route('admin.sponsors.store') }}">
                 {{ csrf_field() }}
 
                 <div class="row">
@@ -43,7 +44,7 @@
                         <input type="file" id="image" name="image">
                     </div>
                     <div class="file-path-wrapper">
-                        <input type="text"  placeholder="Image">
+                        <input type="text" placeholder="Image">
                     </div>
 
 

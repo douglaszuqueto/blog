@@ -9,64 +9,64 @@ use Closure;
  */
 class RedirectIfWrongUrlOrProtocol
 {
-    /** @var Request */
-    protected $request;
+  /** @var Request */
+  protected $request;
 
-    public function handle($request, Closure $next)
-    {
-        if (!app()->runningInConsole()) {
-            $this->request = $request;
+  public function handle($request, Closure $next)
+  {
+    if (!app()->runningInConsole()) {
+      $this->request = $request;
 
-            $this->trustProxies();
+      $this->trustProxies();
 
-            if (!$this->isTheRightDomain() || !$this->isTheRightProtocol()) {
-                return $this->redirect();
-            }
-        }
-
-        return $next($request);
+      if (!$this->isTheRightDomain() || !$this->isTheRightProtocol()) {
+        return $this->redirect();
+      }
     }
 
-    protected function trustProxies()
-    {
-        // trust proxies before anything
-        $this->request->setTrustedProxies($this->request->getClientIps());
-    }
+    return $next($request);
+  }
 
-    protected function getDomain()
-    {
-        return preg_replace('/^http(s)?:\/\//', null, $this->request->root());
-    }
+  protected function trustProxies()
+  {
+    // trust proxies before anything
+    $this->request->setTrustedProxies($this->request->getClientIps());
+  }
 
-    protected function redirect()
-    {
-        $protocol = config('app.secure') ? 'https://' : 'http://';
+  protected function getDomain()
+  {
+    return preg_replace('/^http(s)?:\/\//', null, $this->request->root());
+  }
 
-        $currentDomain = $this->getDomain();
+  protected function redirect()
+  {
+    $protocol = config('app.secure') ? 'https://' : 'http://';
 
-        $domain = explode('.', $currentDomain);
-        $domain = $domain[0] == 'admin' ? env('APP_DOMAIN_ADMIN') : env('APP_DOMAIN');
+    $currentDomain = $this->getDomain();
 
-        $path = $this->request->path() == '/' ? '' : '/' . $this->request->path();
+    $domain = explode('.', $currentDomain);
+    $domain = $domain[0] == 'admin' ? env('APP_DOMAIN_ADMIN') : env('APP_DOMAIN');
 
-        return redirect()->to($protocol . $domain . $path);
-    }
+    $path = $this->request->path() == '/' ? '' : '/' . $this->request->path();
 
-    protected function isTheRightDomain()
-    {
-        $currentDomain = $this->getDomain();
+    return redirect()->to($protocol . $domain . $path);
+  }
 
-        $domain = explode('.', $currentDomain);
-        $defaultDomain = $domain[0] == 'admin' ? env('APP_DOMAIN_ADMIN') : env('APP_DOMAIN');
+  protected function isTheRightDomain()
+  {
+    $currentDomain = $this->getDomain();
 
-        return $defaultDomain == $currentDomain;
-    }
+    $domain = explode('.', $currentDomain);
+    $defaultDomain = $domain[0] == 'admin' ? env('APP_DOMAIN_ADMIN') : env('APP_DOMAIN');
 
-    protected function isTheRightProtocol()
-    {
-        $shouldBeSecure = config('app.secure');
-        $isSecure = $this->request->isSecure();
+    return $defaultDomain == $currentDomain;
+  }
 
-        return $shouldBeSecure == $isSecure;
-    }
+  protected function isTheRightProtocol()
+  {
+    $shouldBeSecure = config('app.secure');
+    $isSecure = $this->request->isSecure();
+
+    return $shouldBeSecure == $isSecure;
+  }
 }

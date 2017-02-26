@@ -9,18 +9,18 @@ use Illuminate\Support\Facades\DB;
 class TrackerSeeder extends Seeder
 {
 
-    /**
-     * Run the database seeds.
-     *
-     * @return void
-     */
-    public function run()
-    {
-        DB::table('tracker')->insert([
-            'tag' => 'Tag 1',
-            'state' => 1,
-        ]);
+  /**
+   * Run the database seeds.
+   *
+   * @return void
+   */
+  public function run()
+  {
+    DB::table('tracker')->insert([
+      'tag' => 'Tag 1',
+      'state' => 1,
+    ]);
 
 //        factory(tracker::class)->create();
-    }
+  }
 }

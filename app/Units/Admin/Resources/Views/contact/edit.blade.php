@@ -19,28 +19,28 @@
     </div>
 
     <script>
-        $(document).ready(function () {
-            $('.isRead').click(function () {
-                isRead($(this).attr('data-id'))
-            })
-        });
+      $(document).ready(function () {
+        $('.isRead').click(function () {
+          isRead($(this).attr('data-id'))
+        })
+      });
 
-        function isRead(contact_id) {
-            $.ajax({
-                url: '/contact/' + contact_id,
-                method: 'POST',
-                data: {
-                    '_token': window.Laravel.csrfToken,
-                    '_method': 'PUT',
-                    'state': 1
-                },
-                success: function (data) {
-                    Materialize.toast('Mensagem marcada como lida', 2000, null, function () {
-                        location.reload();
-                    });
-                }
+      function isRead(contact_id) {
+        $.ajax({
+          url: '/contact/' + contact_id,
+          method: 'POST',
+          data: {
+            '_token': window.Laravel.csrfToken,
+            '_method': 'PUT',
+            'state': 1
+          },
+          success: function (data) {
+            Materialize.toast('Mensagem marcada como lida', 2000, null, function () {
+              location.reload();
             });
-        }
+          }
+        });
+      }
     </script>
 
 @endsection

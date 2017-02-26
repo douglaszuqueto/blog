@@ -8,19 +8,19 @@ use App\Support\Database\ModelFactory;
 class SupportersFactory extends ModelFactory
 {
 
-    protected $model = Supporters::class;
+  protected $model = Supporters::class;
 
-    /**
-     * @return array
-     */
-    protected function fields()
-    {
+  /**
+   * @return array
+   */
+  protected function fields()
+  {
 
-        return [
-            'supporter' => $this->faker->name,
-            'url' => $this->faker->url,
-            'image' => $this->faker->url,
-            'state' => 1,
-        ];
-    }
+    return [
+      'supporter' => $this->faker->name,
+      'url' => $this->faker->url,
+      'image' => $this->faker->url,
+      'state' => 1,
+    ];
+  }
 }

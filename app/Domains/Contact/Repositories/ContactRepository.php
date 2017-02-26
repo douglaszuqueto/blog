@@ -8,22 +8,22 @@ use Prettus\Repository\Eloquent\BaseRepository;
 class ContactRepository extends BaseRepository
 {
 
-    /**
-     * Specify Model class name
-     *
-     * @return string
-     */
-    public function model()
-    {
-        return Contact::class;
-    }
+  /**
+   * Specify Model class name
+   *
+   * @return string
+   */
+  public function model()
+  {
+    return Contact::class;
+  }
 
-    /**
-     * @param int $state
-     * @return mixed
-     */
-    public function getContactsCount($state = 0)
-    {
-        return $this->findWhere(['state' => $state])->count();
-    }
+  /**
+   * @param int $state
+   * @return mixed
+   */
+  public function getContactsCount($state = 0)
+  {
+    return $this->findWhere(['state' => $state])->count();
+  }
 }
