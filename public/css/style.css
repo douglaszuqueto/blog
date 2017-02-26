@@ -142,7 +142,7 @@ main {
 }
 
 /* PAGES */
-.contact, .about-me, .news, .project {
+.contact, .about-me, .project {
     background-color: #fff;
     transition: box-shadow .25s;
     border-radius: 2px;
@@ -241,8 +241,15 @@ main {
 
 }
 
-.news {
-
+.suggestions {
+    background-color: #fff;
+    transition: box-shadow .25s;
+    border-radius: 2px;
+    font-family: 'Miriam Libre';
+    font-weight: 700;
+    color: #2b2b2b;
+    letter-spacing: -.02em;
+    font-size: 12pt;
 }
 
 .about-me {

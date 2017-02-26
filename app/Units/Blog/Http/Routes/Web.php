@@ -17,7 +17,7 @@ class Web extends RouteFile
       $this->articlesRoutes();
       $this->suggestionsRoutes();
       $this->contactRoutes();
-      
+
 //      $this->projectRoutes();
 //      $this->newsRoutes();
 //      $this->aboutMeRoutes();
@@ -55,7 +55,12 @@ class Web extends RouteFile
   protected function suggestionsRoutes()
   {
     $this->router->get('/fabrica-de-artigos', ['as' => 'blog.suggestions.index', 'uses' => 'SuggestionsController@index']);
-    $this->router->post('/fabrica-de-artigos', ['as' => 'blog.suggestions.send', 'uses' => 'SuggestionsController@send']);
+
+    $this->router->group(['middleware' => ['throttle:5']], function () {
+      $this->router->post('/fabrica-de-artigos', ['as' => 'blog.suggestions.send', 'uses' => 'SuggestionsController@send']);
+    });
+
+    $this->router->put('/fabrica-de-artigos/voto/{id}', ['as' => 'blog.suggestions.updateVote', 'uses' => 'SuggestionsController@updateVote']);
   }
 
   protected function aboutMeRoutes()

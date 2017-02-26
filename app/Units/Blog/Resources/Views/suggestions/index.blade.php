@@ -1,77 +1,129 @@
 @extends('blog::layout')
 
 @section('content')
-  <div class="container contact">
+  <div class="container suggestions">
     <div class="row">
-      <section class="col s12 l6 offset-l3 contact-item">
+      <section class="col s12 l10 offset-l1 ">
         <h5 class="center">
-          Fábrica de Artigos: Deixe uma sugestão
+          Fábrica de Artigos
         </h5>
-
+        <br>
+        <br>
         @if (session('message'))
           <div class="col s12">
             <p>{{ session('message') }}</p>
           </div>
         @endif
 
-        <form class="col s12 m10 l12" method="POST" action="{{route('blog.suggestions.send')}}">
-          <input type="hidden" name="_token" value="{{csrf_token()}}">
-          <div class="row">
-            <div class="input-field col s12 l12">
-              <label for="title">Título</label>
-              <input type="text" id="title" name="title" required>
-
-              @if ($errors->has('title'))
-                <strong>{{ $errors->first('title') }}</strong>
-              @endif
-            </div>
+        <a href="#suggestion_submit" class="suggestion_submit waves-effect waves-light btn right blue">
+          <i class="material-icons right">note_add</i>Submeter sugestão
+        </a>
+        <div id="suggestion_submit" class="modal">
+          <div class="modal-content">
+            @include('blog::suggestions.create')
           </div>
-
-          <div class="row">
-            <div class="input-field col s12 l12">
-                            <textarea id="description" name="description" class="materialize-textarea"
-                                      required></textarea>
-              <label for="description">Descrição</label>
-
-              @if ($errors->has('description'))
-                <strong>{{ $errors->first('description') }}</strong>
-              @endif
-            </div>
+          <div class="modal-footer">
+            <br>
+            <br>
           </div>
+        </div>
 
-          <div class="row">
-            <div class="input-field col s12 l12">
-              <label for="name">Seu nome</label>
-              <input type="text" id="name" name="name" required>
+        <table class="table highlight">
+          <thead>
+          <tr>
+            <th width="15%" class="center-align">Votos</th>
+            <th width="75%">Título</th>
+            <th width="10%" class="center-align">Status</th>
+          </tr>
+          </thead>
+          <tbody>
+          @foreach($suggestions as $row)
+            <tr>
+              <td class="center-align">
+                <div class="vote-badge">
+                  <a href="#" class="white-text vote" data-id="{{$row->id}}">
+                    <i class="vote-icon material-icons ">thumb_up</i>
+                  </a>
+                  <p class="vote-votes"><span class="vote-{{$row->id}}">{{$row->votes}}</span> Votos</p>
+                </div>
 
-              @if ($errors->has('name'))
-                <strong>{{ $errors->first('name') }}</strong>
-              @endif
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="input-field col s12 l12">
-              <label for="email">Seu email</label>
-              <input type="email" id="email" name="email">
-
-              @if ($errors->has('email'))
-                <strong>{{ $errors->first('email') }}</strong>
-              @endif
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="input-field col s12 l12 ">
-              <button type="submit" class="waves-effect waves-light btn right green">
-                <i class="material-icons right">cloud</i>Cadastrar
-              </button>
-            </div>
-          </div>
-        </form>
+              </td>
+              <td>{{$row->title}}</td>
+              <td class="center-align">{!! $row->state_ !!}</td>
+            </tr>
+          @endforeach
+          </tbody>
+        </table>
       </section>
     </div>
 
   </div>
+  <style>
+    .vote-badge {
+      background: #66bb6a;
+      border-radius: 10px;
+      max-width: 100%;
+      color: #FFF;
+    }
 
+    .vote-icon {
+      padding-top: 10px;
+      cursor: pointer;
+    }
+
+    .vote-votes {
+      margin-top: -5px;
+    }
+
+  </style>
+  <script>
+    $(document).ready(function () {
+      $('.suggestion_submit').leanModal();
+
+      $('.vote').on('click', function () {
+        let suggestion_id = $(this).data('id');
+        let votesTarget = $('.vote-' + suggestion_id);
+
+        if (!JSON.parse(window.localStorage.getItem('isVoted-' + suggestion_id))) {
+          window.localStorage.setItem('isVoted-' + suggestion_id, JSON.stringify({
+            'id': suggestion_id,
+            'state': false
+          }));
+        }
+
+        let voted = JSON.parse(window.localStorage.getItem('isVoted-' + suggestion_id));
+
+        if (voted.state === true && voted.id === suggestion_id) {
+          Materialize.toast('Você já votou nesta sugestão', 2000);
+          return false;
+        }
+
+        if (voted.state === false && voted.id === suggestion_id) {
+
+          $.ajax({
+            url: '/fabrica-de-artigos/voto/' + suggestion_id,
+            method: 'POST',
+            data: {
+              '_token': window.Laravel.csrfToken,
+              '_method': 'PUT'
+            },
+            success: function (data) {
+              Materialize.toast(data.error_message, 1000, null, function () {
+
+                window.localStorage.setItem('isVoted-' + suggestion_id, JSON.stringify({
+                  'id': suggestion_id,
+                  'state': true
+                }));
+                window.location.reload();
+              });
+            }
+          });
+        }
+
+        return false;
+      });
+
+    })
+    ;
+  </script>
 @endsection
