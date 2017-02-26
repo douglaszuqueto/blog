@@ -88,6 +88,13 @@
                     </div>
                 </div>
                 <div class="row">
+                    <div class="input-field col l12 ">
+                        <button id="submit" type="submit" class="waves-effect waves-light btn right green">
+                            <i class="material-icons right">cloud</i>Salvar
+                        </button>
+                    </div>
+                </div>
+                <div class="row">
                     <div class="col l12">
                         @foreach($item->images as $image)
                             <div class="col s12 m7 l2">
@@ -106,10 +113,10 @@
                     <textarea id="editor" name="text">{{$item->text}}</textarea>
 
                     <script>
-                      var editor = new SimpleMDE({
-                        element: document.getElementById("editor"),
-                        spellChecker: false,
-                      });
+                        var editor = new SimpleMDE({
+                            element: document.getElementById("editor"),
+                            spellChecker: false,
+                        });
 
 
                     </script>
@@ -117,7 +124,7 @@
 
                 <div class="row">
                     <div class="input-field col l12 ">
-                        <button id="submit" type="submit" class="waves-effect waves-light btn right">
+                        <button id="submit" type="submit" class="waves-effect waves-light btn right green">
                             <i class="material-icons right">cloud</i>Salvar
                         </button>
                     </div>
@@ -171,43 +178,43 @@
   ])
 
     <script>
-      $(document).ready(function () {
-        $('select').material_select();
-        $('.chips').material_chip();
-        $('.chips').on('chip.add', function (e, chip) {
-          console.log(chip);
+        $(document).ready(function () {
+            $('select').material_select();
+            $('.chips').material_chip();
+            $('.chips').on('chip.add', function (e, chip) {
+                console.log(chip);
 
-          $('.tags').append(
-            '<input type="hidden" id="tags" name="tags[]" value="' + chip.tag + '">'
-          );
-        });
+                $('.tags').append(
+                        '<input type="hidden" id="tags" name="tags[]" value="' + chip.tag + '">'
+                );
+            });
 
-        $('.modal-trigger').leanModal({
-          starting_top: '100%'
-        });
+            $('.modal-trigger').leanModal({
+                starting_top: '100%'
+            });
 
-        $('.removeTag').click(function () {
-          removeTag($(this).attr('data-id'))
-        })
+            $('.removeTag').click(function () {
+                removeTag($(this).attr('data-id'))
+            })
 
-        function removeTag(tag_id) {
-          $.ajax({
-            url: '/articles/' + {{$item->id}} +'/tags',
-            method: 'POST',
-            data: {
-              '_token': window.Laravel.csrfToken,
-              '_method': 'PUT',
-              'tag_id': tag_id
-            },
-            success: function (data) {
-              Materialize.toast('Tag removida', 1000);
+            function removeTag(tag_id) {
+                $.ajax({
+                    url: '/articles/' + {{$item->id}} +'/tags',
+                    method: 'POST',
+                    data: {
+                        '_token': window.Laravel.csrfToken,
+                        '_method': 'PUT',
+                        'tag_id': tag_id
+                    },
+                    success: function (data) {
+                        Materialize.toast('Tag removida', 1000);
 
+                    }
+                });
             }
-          });
-        }
 
 
-      });
+        });
     </script>
 
 @endsection

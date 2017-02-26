@@ -52,7 +52,7 @@ class ArticlesService
     }
 
     if (isset($data['image'])) {
-      $data['image_name'] = $this->getArticleName($data['title']);
+      $data['image_name'] = $this->getImageNameFromUrl($data['url']);
 
       $image = $this->setPath('articles/artigo-' . $id . '/')
         ->upload($data['image'], $data['image_name']);
@@ -88,6 +88,13 @@ class ArticlesService
     $url = 'https://' . env('APP_DOMAIN') . '/artigos/' . $this->getArticleName($title);
 
     return $url;
+  }
+
+  protected function getImageNameFromUrl($url)
+  {
+    $urlExplode = explode('/', $url);
+
+    return $urlExplode[4];
   }
 
   public function imageUpload(array $data, $id)
