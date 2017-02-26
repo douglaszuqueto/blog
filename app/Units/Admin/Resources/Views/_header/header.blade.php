@@ -61,7 +61,7 @@
                 </a>
                 <div class="nav-wrapper">
                     <ul id="nav-title" class="left">
-                        <h4 class="">douglaszuqueto</h4>
+                        <h4 class="">Douglas Zuqueto</h4>
                     </ul>
                     <ul class="right">
                         <li>
