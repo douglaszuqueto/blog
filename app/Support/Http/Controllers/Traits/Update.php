@@ -22,13 +22,13 @@ trait Update
       $data['password'] = Hash::make($data['password']);
     }
 
-    if (isset($data['state']) and ($data['state'] == 'on') || $data['state'] == 1) {
-      $state = 1;
+    if (isset($data['state'])) {
+      $state = $data['state'];
     }
     $data['state'] = $state;
 
     $this->repository->update($data, $id);
 
-    return redirect()->route($this->getRoute('index'));
+    return redirect()->route($this->getRoute('edit'), ['id' => $id]);
   }
 }

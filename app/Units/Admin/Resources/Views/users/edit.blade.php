@@ -57,7 +57,7 @@
                 <div class="row">
                     <div class="">
                         <div class="col s12 l12">
-                            <input type="checkbox" id="state" name="state" {{$item->state ? 'checked' : ''}}/>
+                            <input type="checkbox" id="state" name="state" value="1" {{$item->state ? 'checked' : ''}}/>
                             <label for="state">Status</label>
                         </div>
                     </div>
