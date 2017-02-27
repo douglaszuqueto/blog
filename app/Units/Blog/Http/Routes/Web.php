@@ -17,6 +17,7 @@ class Web extends RouteFile
       $this->articlesRoutes();
       $this->suggestionsRoutes();
       $this->contactRoutes();
+      $this->newsletterRoutes();
 
 //      $this->projectRoutes();
 //      $this->newsRoutes();
@@ -66,6 +67,11 @@ class Web extends RouteFile
   protected function aboutMeRoutes()
   {
     $this->router->get('/sobre-mim', ['as' => 'blog.about-me.index', 'uses' => 'AboutMeController@about']);
+  }
+
+  protected function newsletterRoutes()
+  {
+    $this->router->get('/newsletter/send', ['as' => 'blog.newsletter.index', 'uses' => 'NewsletterController@send']);
   }
 
   protected function contactRoutes()
