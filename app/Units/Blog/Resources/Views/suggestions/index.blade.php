@@ -18,6 +18,7 @@
         <a href="#suggestion_submit" class="suggestion_submit waves-effect waves-light btn right blue">
           <i class="material-icons right">note_add</i>Submeter sugestão
         </a>
+
         <div id="suggestion_submit" class="modal">
           <div class="modal-content">
             @include('blog::suggestions.create')
@@ -27,33 +28,38 @@
             <br>
           </div>
         </div>
-
-        <table class="table highlight">
-          <thead>
-          <tr>
-            <th width="15%" class="center-align">Votos</th>
-            <th width="75%">Título</th>
-            <th width="10%" class="center-align">Status</th>
-          </tr>
-          </thead>
-          <tbody>
-          @foreach($suggestions as $row)
+        @if(!empty($suggestions))
+          <table class="table highlight">
+            <thead>
             <tr>
-              <td class="center-align">
-                <div class="vote-badge">
-                  <a href="#" class="white-text vote" data-id="{{$row->id}}">
-                    <i class="vote-icon material-icons ">thumb_up</i>
-                  </a>
-                  <p class="vote-votes"><span class="vote-{{$row->id}}">{{$row->votes}}</span> Votos</p>
-                </div>
-
-              </td>
-              <td>{{$row->title}}</td>
-              <td class="center-align">{!! $row->state_ !!}</td>
+              <th width="15%" class="center-align">Votos</th>
+              <th width="75%">Título</th>
+              <th width="10%" class="center-align">Status</th>
             </tr>
-          @endforeach
-          </tbody>
-        </table>
+            </thead>
+            <tbody>
+            @foreach($suggestions as $row)
+              <tr>
+                <td class="center-align ">
+                  <div class="vote-badge"
+                       style="background: {{$row->state == 2 || $row->state == 3 ? '#757575' : '#66bb6a'}}">
+                    <a href="#" class="white-text vote"
+                       data-id="{{$row->id}}" {{$row->state == 2 || $row->state == 3 ? 'disabled' : ''}}>
+                      <i class="vote-icon material-icons ">thumb_up</i>
+                    </a>
+                    <p class="vote-votes"><span class="vote-{{$row->id}}">{{$row->votes}}</span> Votos</p>
+                  </div>
+
+                </td>
+                <td>{{$row->title}}</td>
+                <td class="center-align">{!! $row->state_ !!}</td>
+              </tr>
+            @endforeach
+            </tbody>
+          </table>
+        @else
+          <p>Ainda não há nenhuma sugestão cadastrada em nossa plataforma!</p>
+        @endif
       </section>
     </div>
 
@@ -83,6 +89,11 @@
       $('.vote').on('click', function () {
         let suggestion_id = $(this).data('id');
         let votesTarget = $('.vote-' + suggestion_id);
+
+        if ($(this).attr('disabled')) {
+          Materialize.toast('Esta sugestão já está em desenvolvimento ou já foi desenvolvida', 2000);
+          return false;
+        }
 
         if (!JSON.parse(window.localStorage.getItem('isVoted-' + suggestion_id))) {
           window.localStorage.setItem('isVoted-' + suggestion_id, JSON.stringify({

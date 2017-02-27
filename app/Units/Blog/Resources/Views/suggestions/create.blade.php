@@ -2,6 +2,10 @@
   Fábrica de Artigos: Deixe sua sugestão
 </h5>
 
+<p class="grey-text">Obs: Antes de submeter uma nova sugestão verifique se a mesma já não existe e também veja se a
+  sugestão
+  tem ligação com os temas abordados aqui no Douglas Zuqueto.</p>
+
 <form class="col s12 m10 l12" method="POST" action="{{route('blog.suggestions.send')}}">
   <input type="hidden" name="_token" value="{{csrf_token()}}">
   <div class="row">
@@ -36,7 +40,7 @@
       @endif
     </div>
     <div class="input-field col s12 l6">
-      <label for="email">Seu email</label>
+      <label for="email">Seu email (opcional)</label>
       <input type="email" id="email" name="email">
 
       @if ($errors->has('email'))
