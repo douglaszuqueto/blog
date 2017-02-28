@@ -1,179 +1,186 @@
 <style>
+  main, footer {
+    padding-left: 240px;
+    padding-top: 65px;
+  }
+
+  header {
+    position: absolute;
+    width: 100%;
+    z-index: 9999;
+  }
+
+  .side-nav {
+    height: 100% !important;
+  }
+
+  #nav-mobile {
+    margin-top: 65px;
+  }
+
+  #nav-title {
+    margin: -5px 0 0 10px;
+  }
+
+  @media only screen and (max-width: 992px) {
     main, footer {
-        padding-left: 240px;
-        padding-top: 65px;
+      padding-left: 0;
     }
 
-    header {
-        position: absolute;
-        width: 100%;
-        z-index: 9999;
-    }
-
-    .side-nav {
-        height: 100% !important;
-    }
-
-    #nav-mobile {
-        margin-top: 65px;
+    .container {
+      width: 95%;
     }
 
     #nav-title {
-        margin: -5px 0 0 10px;
+      display: none;
+    }
+  }
+
+  @media only screen and (min-width: 993px) {
+    .container {
+      padding-left: 10px;
+      width: 95%;
     }
 
-    @media only screen and (max-width: 992px) {
-        main, footer {
-            padding-left: 0;
-        }
+  }
 
-        .container {
-            width: 95%;
-        }
+  header nav {
+    background-color: #008BD3 !important;
+  }
 
-        #nav-title {
-            display: none;
-        }
-    }
-
-    @media only screen and (min-width: 993px) {
-        .container {
-            padding-left: 10px;
-            width: 95%;
-        }
-
-    }
-
-    header nav {
-        background-color: #008BD3 !important;
-    }
-
-    .waves-effect.waves-blue .waves-ripple {
-        background-color: #008BD3;
-    }</style>
+  .waves-effect.waves-blue .waves-ripple {
+    background-color: #008BD3;
+  }</style>
 <header>
-    <div class="navbar-fixed">
+  <div class="navbar-fixed">
 
-        <nav>
-            <div class="">
-                <a href="#" data-activates="nav-mobile" class="button-collapse top-nav full hide-on-large-only">
-                    <i class="material-icons">menu</i>
-                </a>
-                <div class="nav-wrapper">
-                    <ul id="nav-title" class="left">
-                        <h4 class="">Douglas Zuqueto</h4>
-                    </ul>
-                    <ul class="right">
-                        <li>
-                            <a>
-                                <i class="material-icons">add_alert</i>
-                            </a>
-                        </li>
-                        <li>
-                            <a>
-                                <i class="material-icons">settings</i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="{{route('auth.logout')}}">
-                                <i class="material-icons">power_settings_new</i>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </div>
+    <nav>
+      <div class="">
+        <a href="#" data-activates="nav-mobile" class="button-collapse top-nav full hide-on-large-only">
+          <i class="material-icons">menu</i>
+        </a>
+        <div class="nav-wrapper">
+          <ul id="nav-title" class="left">
+            <h4 class="">Douglas Zuqueto</h4>
+          </ul>
+          <ul class="right">
+            <li>
+              <a>
+                <i class="material-icons">add_alert</i>
+              </a>
+            </li>
+            <li>
+              <a>
+                <i class="material-icons">settings</i>
+              </a>
+            </li>
+            <li>
+              <a href="{{route('auth.logout')}}">
+                <i class="material-icons">power_settings_new</i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
 </header>
 <ul id="nav-mobile" class="side-nav fixed">
-    <li class="bold">
-        <a href="{{route('admin.dashboard.index')}}" class="waves-effect waves-blue">
-            <i class="material-icons blue-text text-darken-2">dashboard</i>
-            <span>Dashboard</span>
+  <li class="bold">
+    <a href="{{route('admin.dashboard.index')}}" class="waves-effect waves-blue">
+      <i class="material-icons blue-text text-darken-2">dashboard</i>
+      <span>Dashboard</span>
+    </a>
+  </li>
+  <li class="no-padding">
+    <ul class="collapsible collapsible-accordion">
+      <li class="bold">
+        <a class="collapsible-header  waves-effect waves-blue">
+          <i class="material-icons blue-text text-darken-2">equalizer</i>
+          <span>Estatísticas</span>
         </a>
-    </li>
-    <li class="no-padding">
-        <ul class="collapsible collapsible-accordion">
+        <div class="collapsible-body">
+          <ul>
+            <li><a href="{{route('admin.statistics.index')}}">Google Analytics</a></li>
+            <li><a href="{{route('admin.statistics.github')}}">Github</a></li>
+            <li><a href="{{route('admin.statistics.instagram')}}">Instagram</a></li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+    <ul class="collapsible collapsible-accordion">
+      <li class="bold">
+        <a href="{{route('admin.articles.index')}}" class="waves-effect waves-blue">
+          <i class="material-icons blue-text text-darken-2">comment</i>
+          <span>Artigos</span>
+        </a>
+      </li>
+    </ul>
+    <ul class="collapsible collapsible-accordion">
+      <li class="bold">
+        <a href="{{route('admin.suggestions.index')}}" class="waves-effect waves-blue">
+          <i class="material-icons blue-text text-darken-2">speaker_notes</i>
+          <span>Sugestões</span>
+        </a>
+      </li>
+    </ul>
+    <ul class="collapsible collapsible-accordion">
+      <li class="bold">
+        <a href="{{route('admin.newsletter.index')}}" class="waves-effect waves-blue">
+          <i class="material-icons blue-text text-darken-2">email</i>
+          <span>Newsletter</span>
+        </a>
+      </li>
+    </ul>
+    <ul class="collapsible collapsible-accordion">
+      <li class="bold">
+        <a href="{{route('admin.contact.index')}}" class="waves-effect waves-blue">
+          <i class="material-icons blue-text text-darken-2">email</i>
+          <span>Mensagens</span>
+        </a>
+      </li>
+    </ul>
+    <ul class="collapsible collapsible-accordion">
+      <li class="bold">
+        <a href="{{route('admin.users.index')}}" class="waves-effect waves-blue">
+          <i class="material-icons blue-text text-darken-2">person_pin</i>
+          <span>Usuários</span>
+        </a>
+      </li>
+    </ul>
+    <ul class="collapsible collapsible-accordion">
+      <li class="bold">
+        <a class="collapsible-header  waves-effect waves-blue">
+          <i class="material-icons blue-text text-darken-2">settings</i>
+          <span>Configurações</span>
+        </a>
+        <div class="collapsible-body">
+          <ul>
+            <li><a href="{{route('admin.categories.index')}}">Categorias</a></li>
+            <li><a href="{{route('admin.tags.index')}}">Tags</a></li>
             <li class="bold">
-                <a class="collapsible-header  waves-effect waves-blue">
-                    <i class="material-icons blue-text text-darken-2">equalizer</i>
-                    <span>Estatísticas</span>
-                </a>
-                <div class="collapsible-body">
-                    <ul>
-                        <li><a href="{{route('admin.statistics.index')}}">Google Analytics</a></li>
-                        <li><a href="{{route('admin.statistics.github')}}">Github</a></li>
-                        <li><a href="{{route('admin.statistics.instagram')}}">Instagram</a></li>
-                    </ul>
-                </div>
+              <a href="{{route('admin.sponsors.index')}}" class="waves-effect waves-blue">
+                <i class="material-icons blue-text text-darken-2">business</i>
+                <span>Patrocinadores</span>
+              </a>
             </li>
-        </ul>
-        <ul class="collapsible collapsible-accordion">
             <li class="bold">
-                <a href="{{route('admin.articles.index')}}" class="waves-effect waves-blue">
-                    <i class="material-icons blue-text text-darken-2">comment</i>
-                    <span>Artigos</span>
-                </a>
+              <a href="{{route('admin.supporters.index')}}" class="waves-effect waves-blue">
+                <i class="material-icons blue-text text-darken-2">business</i>
+                <span>Apoiadores</span>
+              </a>
             </li>
-        </ul>
-        <ul class="collapsible collapsible-accordion">
-            <li class="bold">
-                <a href="{{route('admin.suggestions.index')}}" class="waves-effect waves-blue">
-                    <i class="material-icons blue-text text-darken-2">speaker_notes</i>
-                    <span>Sugestões</span>
-                </a>
-            </li>
-        </ul>
-        <ul class="collapsible collapsible-accordion">
-            <li class="bold">
-                <a href="{{route('admin.contact.index')}}" class="waves-effect waves-blue">
-                    <i class="material-icons blue-text text-darken-2">email</i>
-                    <span>Mensagens</span>
-                </a>
-            </li>
-        </ul>
-        <ul class="collapsible collapsible-accordion">
-            <li class="bold">
-                <a href="{{route('admin.users.index')}}" class="waves-effect waves-blue">
-                    <i class="material-icons blue-text text-darken-2">person_pin</i>
-                    <span>Usuários</span>
-                </a>
-            </li>
-        </ul>
-        <ul class="collapsible collapsible-accordion">
-            <li class="bold">
-                <a class="collapsible-header  waves-effect waves-blue">
-                    <i class="material-icons blue-text text-darken-2">settings</i>
-                    <span>Configurações</span>
-                </a>
-                <div class="collapsible-body">
-                    <ul>
-                        <li class="bold">
-                            <a href="{{route('admin.sponsors.index')}}" class="waves-effect waves-blue">
-                                <i class="material-icons blue-text text-darken-2">business</i>
-                                <span>Patrocinadores</span>
-                            </a>
-                        </li>
-                        <li class="bold">
-                            <a href="{{route('admin.supporters.index')}}" class="waves-effect waves-blue">
-                                <i class="material-icons blue-text text-darken-2">business</i>
-                                <span>Apoiadores</span>
-                            </a>
-                        </li>
-
-                        <li><a href="{{route('admin.categories.index')}}">Categorias</a></li>
-                        <li><a href="{{route('admin.tags.index')}}">Tags</a></li>
-                    </ul>
-                </div>
-            </li>
-        </ul>
-    </li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+  </li>
 </ul>
 <script>
-    $(document).ready(function ($) {
-        $('.button-collapse').sideNav({'edge': 'left'});
-        $('.collapsible').collapsible({
-            accordion: false
-        });
+  $(document).ready(function ($) {
+    $('.button-collapse').sideNav({'edge': 'left'});
+    $('.collapsible').collapsible({
+      accordion: false
     });
+  });
 </script>
