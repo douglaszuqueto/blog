@@ -14,6 +14,7 @@ class CreateNewsletterTable extends Migration
       $table->increments('id');
       $table->string('campaign');
       $table->smallInteger('state')->default(0);
+      $table->smallInteger('send')->default(0);
       $table->timestamps();
     });
   }

@@ -19,6 +19,7 @@ class Newsletter extends Model
   protected $fillable = [
     'campaign',
     'state',
+    'send',
   ];
 
 }

@@ -25,12 +25,23 @@
         <div class="row">
           <div class="input-field col l12">
             <select name="state">
-              <option value="0" {{$item->state == 0 ? 'selected' : ''}}>Não enviada.</option>
-              <option value="1" {{$item->state == 1 ? 'selected' : ''}}>Enviada.</option>
-              <option value="2" {{$item->state == 2 ? 'selected' : ''}}>Falha ao enviar.
+              <option value="0" {{$item->state == 0 ? 'selected' : ''}}>Desativada</option>
+              <option value="1" {{$item->state == 1 ? 'selected' : ''}}>Ativada</option>
               </option>
             </select>
             <label class="active">Status</label>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="input-field col l12">
+            <select>
+              <option value="0" {{$item->send == 0 ? 'selected' : ''}}>Não Enviada</option>
+              <option value="1" {{$item->send == 1 ? 'selected' : ''}}>Enviada</option>
+              <option value="1" {{$item->send == 2 ? 'selected' : ''}}>Reenviada</option>
+              </option>
+            </select>
+            <label class="active">Send</label>
           </div>
         </div>
 
