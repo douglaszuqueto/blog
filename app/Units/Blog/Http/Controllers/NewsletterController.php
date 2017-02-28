@@ -21,8 +21,13 @@ class NewsletterController extends Controller
       'image' => 'https://douglaszuqueto.com/uploads/articles/artigo-25/capa.jpg'
     ];
 
-    Mail::queue('emails.test', ['article' => $newArticle], function ($message) {
-      $message->to('douglas.zuqueto@gmail.com', 'Douglas Zuqueto')->subject('Welcome');
+    $subriscriber = [
+      'name' => 'Douglas Zuqueto',
+      'email' => 'douglas.zuqueto@gmail.com'
+    ];
+
+    Mail::queue('emails.test', ['article' => $newArticle, 'subscriber' => $subriscriber], function ($message) use ($newArticle, $subriscriber) {
+      $message->to($subriscriber['email'], $subriscriber['name'])->subject($newArticle['title']);
     });
   }
 
