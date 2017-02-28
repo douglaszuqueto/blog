@@ -14,6 +14,7 @@ class CreateNewsletterSubscribersTable extends Migration
       $table->increments('id');
       $table->string('name');
       $table->string('email');
+      $table->smallInteger('state')->default(1);
       $table->timestamps();
     });
   }
