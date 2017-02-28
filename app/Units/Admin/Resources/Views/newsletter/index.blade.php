@@ -29,9 +29,15 @@
                 </a>
               </td>
               <td class="center-align">
-                <a href="{{route('admin.newsletter.send', $row->id)}}">
-                  <i class="material-icons">email</i>
-                </a>
+                @if($row->send == 0)
+                  <a href="{{route('admin.newsletter.send', $row->id)}}">
+                    <i class="material-icons">email</i>
+                  </a>
+                @else
+                  <a href="#" class="black-text">
+                    <i class="material-icons">email</i>
+                  </a>
+                @endif
               </td>
             </tr>
           @endforeach

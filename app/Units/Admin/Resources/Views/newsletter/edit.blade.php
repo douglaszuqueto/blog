@@ -35,10 +35,10 @@
 
         <div class="row">
           <div class="input-field col l12">
-            <select>
+            <select name="send">
               <option value="0" {{$item->send == 0 ? 'selected' : ''}}>Não Enviada</option>
               <option value="1" {{$item->send == 1 ? 'selected' : ''}}>Enviada</option>
-              <option value="1" {{$item->send == 2 ? 'selected' : ''}}>Reenviada</option>
+              <option value="2" {{$item->send == 2 ? 'selected' : ''}}>Reenviada</option>
               </option>
             </select>
             <label class="active">Send</label>
