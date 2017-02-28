@@ -266,49 +266,79 @@ main {
     font-family: 'Miriam Libre', sans-serif;
 }
 
-.articles h1, .articles h2 {
-    line-height: 1.2;
-    margin-top: 0;
-    margin-bottom: 20px;
-    font-weight: 400;
-    color: #525252;
-}
-
 .articles h1 {
-    font-size: 3.75rem
+    font-weight: 500 !important;
+    font-size: 2.5rem;
+    line-height: 1.0em;
 }
 
-.articles h2 a {
+.articles .card {
+    padding: 5px;
+    max-height: 380px;
+}
+
+.articles .card-image {
+}
+
+.articles .card-image img {
+    overflow: hidden;
+    max-height: 195px;
+}
+
+.articles .card-content h2 {
     font-weight: 600 !important;
     color: #2b2b2b;
-    letter-spacing: -.02em;
-    font-size: 22pt;
-}
-
-.articles .article {
-    background: white;
-    float: left;
-    margin-bottom: 30px;
-    border: 0 solid hsla(0, 0%, 100%, .25);
-    border-radius: 2px;
-    box-shadow: 5px 5px 5px #dcdcdc;
-}
-
-.article .subtitle {
-    max-height: 120px;
-    overflow: hidden;
-}
-
-.article .subtitle p {
-    text-align: justify;
-    font-size: 1rem;
+    font-size: 1.1rem;
     line-height: 1.5em;
 }
 
-article .subtitle p::first-letter {
-    font-size: 20pt;
-    text-transform: capitalize;
+.articles .card-content h2 a {
+    color: #2b2b2b;
 }
+
+/*.articles h1 {*/
+/*line-height: 1.2;*/
+/*margin-top: 0;*/
+/*margin-bottom: 20px;*/
+/*font-weight: 400;*/
+/*color: #525252;*/
+/*}*/
+
+/*.articles h1 {*/
+/*font-size: 3.75rem*/
+/*}*/
+
+/*.articles h2 a {*/
+/*!*font-weight: 600 !important;*!*/
+/*color: #2b2b2b;*/
+/*font-size: 1.1rem;*/
+/*line-height: 1.5em;*/
+/*}*/
+
+/*.articles .article {*/
+/*background: white;*/
+/*float: left;*/
+/*margin-bottom: 30px;*/
+/*border: 0 solid hsla(0, 0%, 100%, .25);*/
+/*border-radius: 2px;*/
+/*box-shadow: 5px 5px 5px #dcdcdc;*/
+/*}*/
+
+/*.article .subtitle {*/
+/*max-height: 120px;*/
+/*overflow: hidden;*/
+/*}*/
+
+/*.article .subtitle p {*/
+/*text-align: justify;*/
+/*font-size: 1rem;*/
+/*line-height: 1.5em;*/
+/*}*/
+
+/*article .subtitle p::first-letter {*/
+/*font-size: 20pt;*/
+/*text-transform: capitalize;*/
+/*}*/
 
 /* ################################ */
 
