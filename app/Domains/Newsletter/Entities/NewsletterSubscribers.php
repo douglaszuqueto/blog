@@ -4,7 +4,7 @@ namespace App\Domains\Newsletter\Entities;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Newsletter extends Model
+class NewsletterSubscribers extends Model
 {
 
   /**
@@ -13,8 +13,8 @@ class Newsletter extends Model
    * @var array
    */
   protected $fillable = [
-    'campaign',
-    'state',
+    'name',
+    'email',
   ];
 
 }

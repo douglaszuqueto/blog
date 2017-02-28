@@ -17,8 +17,8 @@ class NewsletterFactory extends ModelFactory
   {
 
     return [
-      'name' => $this->faker->name,
-      'email' => $this->faker->email,
+      'campaign' => $this->faker->name,
+      'state' => 0,
     ];
   }
 }

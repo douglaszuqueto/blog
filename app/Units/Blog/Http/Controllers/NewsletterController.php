@@ -21,7 +21,7 @@ class NewsletterController extends Controller
       'image' => 'https://douglaszuqueto.com/uploads/articles/artigo-25/capa.jpg'
     ];
 
-    $subriscriber = [
+    $subscriber = [
       'name' => 'Douglas Zuqueto',
       'email' => 'douglas.zuqueto@gmail.com'
     ];

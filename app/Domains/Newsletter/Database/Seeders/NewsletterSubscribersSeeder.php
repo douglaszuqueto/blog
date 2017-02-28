@@ -5,7 +5,7 @@ namespace App\Domains\Newsletter\Database\Seeders;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
-class NewsletterSeeder extends Seeder
+class NewsletterSubscribersSeeder extends Seeder
 {
 
   /**
@@ -15,9 +15,9 @@ class NewsletterSeeder extends Seeder
    */
   public function run()
   {
-    DB::table('newsletter')->insert([
-      'campaign' => 'Newsletter 1',
-      'state' => 0
+    DB::table('newsletter_subscribers')->insert([
+      'name' => 'Douglas Zuqueto',
+      'email' => 'douglas.zuqueto@gmail.com',
     ]);
 
   }
