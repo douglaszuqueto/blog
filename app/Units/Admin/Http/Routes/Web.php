@@ -24,6 +24,8 @@ class Web extends RouteFile
 
       $this->suggestionsRoutes();
 
+      $this->newsletterSubscribersRoutes();
+
       $this->newsletterRoutes();
 
       $this->supportersRoutes();
@@ -88,15 +90,20 @@ class Web extends RouteFile
   protected function newsletterRoutes()
   {
     $this->router->get('/newsletter/create', ['as' => 'admin.newsletter.create', 'uses' => 'NewsletterController@create']);
-
-    $this->router->get('/newsletter/subscribers', ['as' => 'admin.newsletter.subscribers', 'uses' => 'NewsletterSubscribersController@index']);
-    $this->router->delete('/newsletter/subscribers/{id}', ['as' => 'admin.newsletter.updateSubscribers', 'uses' => 'NewsletterSubscribersController@delete']);
-
     $this->router->get('/newsletter', ['as' => 'admin.newsletter.index', 'uses' => 'NewsletterController@index']);
     $this->router->get('/newsletter/{id}', ['as' => 'admin.newsletter.edit', 'uses' => 'NewsletterController@edit']);
     $this->router->post('/newsletter', ['as' => 'admin.newsletter.store', 'uses' => 'NewsletterController@store']);
     $this->router->put('/newsletter/{id}', ['as' => 'admin.newsletter.update', 'uses' => 'NewsletterController@update']);
     $this->router->delete('/newsletter/{id}', ['as' => 'admin.newsletter.remove', 'uses' => 'NewsletterController@remove']);
+
+  }
+
+  protected function newsletterSubscribersRoutes()
+  {
+    $this->router->get('/newsletter/subscribers', ['as' => 'admin.subscribers.index', 'uses' => 'NewsletterSubscribersController@index']);
+    $this->router->delete('/newsletter/subscribers/{id}', ['as' => 'admin.subscribers.remove', 'uses' => 'NewsletterSubscribersController@delete']);
+    $this->router->get('/newsletter/subscribers/{id}', ['as' => 'admin.subscribers.edit', 'uses' => 'NewsletterSubscribersController@edit']);
+    $this->router->put('/newsletter/subscribers/{id}', ['as' => 'admin.subscribers.update', 'uses' => 'NewsletterSubscribersController@update']);
 
   }
 

@@ -26,7 +26,9 @@
                 <i class="material-icons {{$row->state ? 'green-text' : ''}}">visibility</i>
               </td>
               <td class="center-align">
-                #
+                <a href="{{route('admin.subscribers.edit', ['id' => $row->id])}}">
+                  <i class="material-icons blue-text">edit</i>
+                </a>
               </td>
               <td class="center-align">
                 <a class="removeSubscriber" href="#" data-id="{{$row->id}}">
@@ -46,8 +48,8 @@
     </a>
     <ul>
       <li>
-        <a href="{{route('admin.newsletter.create')}}" class="btn-floating green">
-          <i class="material-icons">save</i>
+        <a href="{{route('admin.newsletter.index')}}" class="btn-floating green">
+          <i class="material-icons">mail</i>
         </a>
       </li>
     </ul>

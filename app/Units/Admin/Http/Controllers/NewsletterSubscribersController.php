@@ -5,14 +5,14 @@ namespace App\Units\Admin\Http\Controllers;
 use App\Domains\Newsletter\Repositories\NewsletterSubscribersRepository;
 use App\Support\Http\Controllers\AbstractCrudController;
 use App\Support\Http\Controllers\Traits\FileUpload;
-use Illuminate\Support\Facades\Request;
+use Illuminate\Http\Request;
 
 class NewsletterSubscribersController extends AbstractCrudController
 {
   use FileUpload;
 
   protected $modulo = 'admin';
-  protected $page = 'NewsletterSubscribers';
+  protected $page = 'newsletterSubscribers';
   protected $page_description = 'listing';
 
   /**
@@ -23,7 +23,6 @@ class NewsletterSubscribersController extends AbstractCrudController
   {
     $this->repository = $repository;
   }
-
 
   /**
    * @param Request $request
@@ -41,5 +40,13 @@ class NewsletterSubscribersController extends AbstractCrudController
     return [
       'error_message' => 'Erro ao desativar assinante.'
     ];
+  }
+
+  public function update(Request $request, $id)
+  {
+    $this->repository->update($request->all(), $id);
+
+    return redirect()->route('admin.subscribers.edit', ['id' => $id]);
+
   }
 }

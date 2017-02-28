@@ -45,8 +45,8 @@
         </a>
       </li>
       <li>
-        <a href="{{route('admin.newsletter.subscribers')}}" class="btn-floating green">
-          <i class="material-icons">email</i>
+        <a href="{{route('admin.subscribers.index')}}" class="btn-floating yellow">
+          <i class="material-icons">contacts</i>
         </a>
       </li>
     </ul>
