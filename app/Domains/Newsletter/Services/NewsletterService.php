@@ -79,4 +79,9 @@ class NewsletterService
     });
   }
 
+  public function create($all)
+  {
+
+  }
+
 }

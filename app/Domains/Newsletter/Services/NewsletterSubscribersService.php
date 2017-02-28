@@ -21,4 +21,18 @@ class NewsletterSubscribersService
     $this->repository = $repository;
   }
 
+  public function create($data)
+  {
+    $subscriber = $this->repository->findWhere(['email' => $data['email']]);
+
+    if (count($subscriber) > 0) {
+      return 'Esse email já está cadastrado em nosso sistema.';
+    }
+
+    $this->repository->create($data);
+
+    return 'Email cadastrado com sucesso';
+
+  }
+
 }

@@ -16,6 +16,7 @@ class Web extends RouteFile
       $this->indexRoutes();
       $this->articlesRoutes();
       $this->suggestionsRoutes();
+      $this->newsletterRoutes();
       $this->contactRoutes();
       $this->newsletterRoutes();
 
@@ -71,7 +72,8 @@ class Web extends RouteFile
 
   protected function newsletterRoutes()
   {
-    $this->router->get('/newsletter/send', ['as' => 'blog.newsletter.index', 'uses' => 'NewsletterController@send']);
+    $this->router->get('/newsletter', ['as' => 'blog.newsletter.index', 'uses' => 'SubscribersController@index']);
+    $this->router->post('/newsletter', ['as' => 'blog.newsletter.send', 'uses' => 'SubscribersController@send']);
   }
 
   protected function contactRoutes()

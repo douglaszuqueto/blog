@@ -17,6 +17,7 @@
                 <li><a href="{{route('blog.index')}}" class="menu">Home</a></li>
                 <li><a href="{{route('blog.articles.index')}}" class="menu">Artigos</a></li>
                 <li><a href="{{route('blog.suggestions.index')}}" class="menu">Fábrica de Artigos</a></li>
+                <li><a href="{{route('blog.newsletter.index')}}" class="menu">Newsletter</a></li>
                 <li><a href="{{route('blog.contact.index')}}" class="menu">Contato</a></li>
 
                 {{--<li class="hide"><a href="{{route('blog.project.index')}}" class="menu">O Projeto</a></li>--}}
