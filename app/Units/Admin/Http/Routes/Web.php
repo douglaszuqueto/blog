@@ -88,6 +88,7 @@ class Web extends RouteFile
   protected function newsletterRoutes()
   {
     $this->router->get('/newsletter/create', ['as' => 'admin.newsletter.create', 'uses' => 'NewsletterController@create']);
+    $this->router->get('/newsletter/subscribers', ['as' => 'admin.newsletter.subscribers', 'uses' => 'NewsletterController@subscribers']);
     $this->router->get('/newsletter', ['as' => 'admin.newsletter.index', 'uses' => 'NewsletterController@index']);
     $this->router->get('/newsletter/{id}', ['as' => 'admin.newsletter.edit', 'uses' => 'NewsletterController@edit']);
     $this->router->post('/newsletter', ['as' => 'admin.newsletter.store', 'uses' => 'NewsletterController@store']);

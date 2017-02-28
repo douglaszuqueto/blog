@@ -3,30 +3,24 @@
 @section('content')
   <div class="container">
 
-    <h5>Newsletter</h5>
+    <h5>Newsletter - Subscribers</h5>
 
     <div class="row">
       <div class="col s12 m10 l10 offset-l1">
         <table class="table highlight">
           <thead>
           <tr>
-            <th width="80%">Campanha</th>
-            <th width="10%" class="center-align">Status</th>
-            <th width="10%" class="center-align">#</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th class="center-align">#</th>
           </tr>
           </thead>
           <tbody>
           @foreach($itens as $row)
             <tr>
-              <td>{{$row->campaign}}</td>
-              <td class="center-align">
-                <i class="material-icons {{$row->state ? 'green-text' : ''}}">visibility</i>
-              </td>
-              <td class="center-align">
-                <a href="{{route('admin.newsletter.edit', $row->id)}}">
-                  <i class="material-icons">mode_edit</i>
-                </a>
-              </td>
+              <td>{{$row->name}}</td>
+              <td>{{$row->email}}</td>
+              <td>{{$row->state}}</td>
             </tr>
           @endforeach
           </tbody>
@@ -42,11 +36,6 @@
       <li>
         <a href="{{route('admin.newsletter.create')}}" class="btn-floating green">
           <i class="material-icons">save</i>
-        </a>
-      </li>
-      <li>
-        <a href="{{route('admin.newsletter.subscribers')}}" class="btn-floating green">
-          <i class="material-icons">email</i>
         </a>
       </li>
     </ul>
