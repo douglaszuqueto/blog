@@ -10,8 +10,12 @@ class Newsletter extends Model
   /**
    * The attributes that are mass assignable.
    *
+   **/
+
+  protected $table = 'newsletter';
+  /**
    * @var array
-   */
+   **/
   protected $fillable = [
     'campaign',
     'state',
