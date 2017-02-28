@@ -6,6 +6,7 @@ use App\Domains\Newsletter\Repositories\NewsletterRepository;
 use App\Domains\Newsletter\Repositories\NewsletterSubscribersRepository;
 use App\Support\Http\Controllers\AbstractCrudController;
 use App\Support\Http\Controllers\Traits\FileUpload;
+use Illuminate\Support\Facades\Request;
 
 class NewsletterController extends AbstractCrudController
 {
@@ -33,4 +34,14 @@ class NewsletterController extends AbstractCrudController
     return $this->view($this->getView('subscribers'), ['itens' => $subscribersRepository->all()]);
   }
 
+  /**
+   * @param Request $request
+   * @param $id
+   * @param NewsletterSubscribersRepository $subscribersRepository
+   * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+   */
+  public function updateSubscribers(Request $request, $id, NewsletterSubscribersRepository $subscribersRepository)
+  {
+    dd($id);
+  }
 }
