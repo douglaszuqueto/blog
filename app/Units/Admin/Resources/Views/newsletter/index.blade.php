@@ -10,9 +10,10 @@
         <table class="table highlight">
           <thead>
           <tr>
-            <th width="80%">Campanha</th>
+            <th width="70%">Campanha</th>
             <th width="10%" class="center-align">Status</th>
             <th width="10%" class="center-align">#</th>
+            <th width="10%" class="center-align">Send</th>
           </tr>
           </thead>
           <tbody>
@@ -26,6 +27,17 @@
                 <a href="{{route('admin.newsletter.edit', $row->id)}}">
                   <i class="material-icons">mode_edit</i>
                 </a>
+              </td>
+              <td class="center-align">
+                @if($row->send == 2)
+                  <a href="{{route('admin.newsletter.send', $row->id)}}">
+                    <i class="material-icons">email</i>
+                  </a>
+                @else
+                  <a href="#" class="black-text">
+                    <i class="material-icons">email</i>
+                  </a>
+                @endif
               </td>
             </tr>
           @endforeach

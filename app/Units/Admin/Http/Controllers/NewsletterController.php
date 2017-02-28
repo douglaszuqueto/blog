@@ -3,10 +3,9 @@
 namespace App\Units\Admin\Http\Controllers;
 
 use App\Domains\Newsletter\Repositories\NewsletterRepository;
-use App\Domains\Newsletter\Repositories\NewsletterSubscribersRepository;
 use App\Support\Http\Controllers\AbstractCrudController;
 use App\Support\Http\Controllers\Traits\FileUpload;
-use Illuminate\Support\Facades\Request;
+use Illuminate\Support\Facades\Mail;
 
 class NewsletterController extends AbstractCrudController
 {
@@ -25,23 +24,26 @@ class NewsletterController extends AbstractCrudController
     $this->repository = $repository;
   }
 
-  /**
-   * @param NewsletterSubscribersRepository $subscribersRepository
-   * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
-   */
-  public function subscribers(NewsletterSubscribersRepository $subscribersRepository)
+  public function send($id)
   {
-    return $this->view($this->getView('subscribers'), ['itens' => $subscribersRepository->all()]);
-  }
+    $newArticle = [
+      'title' => 'Configurando o ESP8266 para trabalhar com MQTT',
+      'subtitle' => 'Neste artigo iremos tratar do módulo wifi mais badalado do mundo - esp8266 juntamente com o protocolo de IoT MQTT.',
+      'url' => 'https://douglaszuqueto.com/artigos/primeiros-passos-com-linkit-smart-7688-duo',
+      'image' => 'https://douglaszuqueto.com/uploads/articles/artigo-25/capa.jpg'
+    ];
 
-  /**
-   * @param Request $request
-   * @param $id
-   * @param NewsletterSubscribersRepository $subscribersRepository
-   * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
-   */
-  public function updateSubscribers(Request $request, $id, NewsletterSubscribersRepository $subscribersRepository)
-  {
-    dd($id);
+    $subscriber = [
+      'name' => 'Douglas Zuqueto',
+      'email' => 'douglas.zuqueto@gmail.com'
+    ];
+
+    Mail::queue('emails.test', ['article' => $newArticle, 'subscriber' => $subscriber], function ($message) use ($newArticle, $subscriber) {
+      $message->to($subscriber['email'], $subscriber['name'])->subject($newArticle['title']);
+    });
+
+    $this->repository->update(['send' => 2], $id);
+
+    return redirect()->route('admin.newsletter.index');
   }
 }

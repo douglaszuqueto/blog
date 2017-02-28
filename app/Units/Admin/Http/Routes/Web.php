@@ -91,6 +91,7 @@ class Web extends RouteFile
   {
     $this->router->get('/newsletter/create', ['as' => 'admin.newsletter.create', 'uses' => 'NewsletterController@create']);
     $this->router->get('/newsletter', ['as' => 'admin.newsletter.index', 'uses' => 'NewsletterController@index']);
+    $this->router->get('/newsletter/send/{id}', ['as' => 'admin.newsletter.send', 'uses' => 'NewsletterController@send']);
     $this->router->get('/newsletter/{id}', ['as' => 'admin.newsletter.edit', 'uses' => 'NewsletterController@edit']);
     $this->router->post('/newsletter', ['as' => 'admin.newsletter.store', 'uses' => 'NewsletterController@store']);
     $this->router->put('/newsletter/{id}', ['as' => 'admin.newsletter.update', 'uses' => 'NewsletterController@update']);
