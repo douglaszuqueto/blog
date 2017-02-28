@@ -67,8 +67,7 @@
         method: 'POST',
         data: {
           '_token': window.Laravel.csrfToken,
-          '_method': 'DELETE',
-          'state': 0
+          '_method': 'DELETE'
         },
         success: function (data) {
           Materialize.toast(data.error_message, 1000, null, function () {

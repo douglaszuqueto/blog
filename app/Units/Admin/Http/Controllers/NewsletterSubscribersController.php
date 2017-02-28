@@ -25,20 +25,19 @@ class NewsletterSubscribersController extends AbstractCrudController
   }
 
   /**
-   * @param Request $request
    * @param $id
    * @return array
    */
-  public function delete(Request $request, $id)
+  public function delete($id)
   {
-    if ($this->repository->update(['state' => 0], $id)) {
+    if ($this->repository->delete($id)) {
       return [
-        'error_message' => 'Assinante desativado.'
+        'error_message' => 'Assinante removido.'
       ];
     }
 
     return [
-      'error_message' => 'Erro ao desativar assinante.'
+      'error_message' => 'Erro ao remover assinante.'
     ];
   }
 
