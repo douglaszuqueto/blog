@@ -114,23 +114,21 @@
   <p>Douglas Zuqueto - Newsletter</p>
 </header>
 <main>
-  <h1 class="welcome">Olá Douglas</h1>
+  <h1 class="welcome">Olá {{$subscriber['name']}}</h1>
   <p class="description">
     Você está recebendo este e-mail porque recebemos um pedido de redefinição de senha para sua conta.
   </p>
 
   <div class="article">
     <div class="article-image">
-      <img src="https://douglaszuqueto.com/uploads/articles/artigo-25/capa.jpg"
-           alt="Configurando o ESP8266 para trabalhar com MQTT" width="200px">
+      <img src="{{$article['image']}}"
+           alt="{{$article['title']}}" width="200px">
     </div>
     <div class="article-content">
-      <a href="https://douglaszuqueto.com/artigos/primeiros-passos-com-linkit-smart-7688-duo" target="_blank">
-        <h2>Configurando o ESP8266 para trabalhar com MQTT</h2>
+      <a href="{{$article['url']}}" target="_blank">
+        <h2>{{$article['title']}}</h2>
       </a>
-      <h3>Neste artigo iremos tratar do módulo wifi mais badalado do mundo - esp8266 juntamente com o protocolo de
-        IoT MQTT.
-      </h3>
+      <h3>{{$article['subtitle']}}</h3>
     </div>
   </div>
 </main>

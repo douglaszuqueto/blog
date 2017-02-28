@@ -74,7 +74,7 @@ class NewsletterService
 
   protected function sendMail($article, $subscriber)
   {
-    Mail::queue('emails.test', ['article' => $article, 'subscriber' => $subscriber], function ($message) use ($article, $subscriber) {
+    Mail::queue('emails.newsletter', ['article' => $article, 'subscriber' => $subscriber], function ($message) use ($article, $subscriber) {
       $message->to($subscriber['email'], $subscriber['name'])->subject($article['title']);
     });
   }
