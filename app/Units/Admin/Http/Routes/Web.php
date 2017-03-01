@@ -3,6 +3,7 @@
 namespace App\Units\Admin\Http\Routes;
 
 use App\Support\Http\Routing\RouteFile;
+use Pusher;
 
 class Web extends RouteFile
 {
@@ -47,6 +48,28 @@ class Web extends RouteFile
   protected function dashboardRoutes()
   {
     $this->router->get('/', ['as' => 'admin.dashboard.index', 'uses' => 'HomeController@index']);
+
+    $this->router->get('/notification', function () {
+
+      $options = array(
+        'encrypted' => true
+      );
+
+      $pusher = new Pusher(
+        env('PUSHER_KEY'),
+        env('PUSHER_SECRET'),
+        env('PUSHER_APP_ID'),
+        $options
+      );
+
+      $data = [
+        'title' => 'Primeiros passos com a Linkit Smart 7688 Duo',
+        'url' => 'https://douglaszuqueto.com/artigos/primeiros-passos-com-linkit-smart-7688-duo'
+      ];
+
+      $pusher->trigger('articles', 'new-article', $data);
+
+    });
   }
 
   protected function statisticsRoutes()

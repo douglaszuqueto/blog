@@ -28,7 +28,7 @@
             <br>
           </div>
         </div>
-        @if(!empty($suggestions))
+        @if(count($suggestions) > 0)
           <table class="table highlight">
             <thead>
             <tr>
