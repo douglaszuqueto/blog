@@ -2,7 +2,7 @@
   <div class="row">
     <div class="col s3 l3">
       <a href="{{$last->url}}">
-        <img src="/uploads/articles/artigo-25/thumbs/primeiros-passos-com-linkit-smart-7688-duo.jpg" width="100%" style="margin: 10px 0 0 10px" alt="">
+        <img src="{{$last->image_thumb}}" width="100%" style="margin: 10px 0 0 10px" alt="">
       </a>
     </div>
     <div class="col s9 l9">

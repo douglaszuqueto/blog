@@ -58,10 +58,11 @@ class ArticlesService
         ->upload($data['image'], $data['image_name']);
 
       /* Icon */
-      $this->setPath('articles/artigo-' . $id . '/thumbs/')
+      $thumb = $this->setPath('articles/artigo-' . $id . '/thumbs/')
         ->upload($data['image'], $data['image_name'], 68);
 
       $data['image_url'] = $image['image_url'];
+      $data['image_thumb'] = $thumb['image_url'];
 
     }
 
