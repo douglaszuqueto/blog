@@ -118,13 +118,14 @@
   </div>
 </div>
 
+
 <div class="fixed-action-btn ">
   <a class="btn-floating left btn-large waves-effect waves-light blue" onclick="notifications()">
     <i class="material-icons tooltipped" data-position="top" data-delay="50" data-tooltip="Ativar notificações?">add_alert</i>
   </a>
 </div>
 
-<a href="javascript:" id="return-to-top">
+<a href="javascript:" id="return-to-top" style="display: inline">
   <i class="material-icons">import_export</i>
 </a>
 
@@ -172,6 +173,7 @@
       $('#return-to-top').fadeOut(200);   // Else fade out the arrow
     }
   });
+
   $('#return-to-top').click(function () {      // When arrow is clicked
     $('body,html').animate({
       scrollTop: 0                       // Scroll to top of body
