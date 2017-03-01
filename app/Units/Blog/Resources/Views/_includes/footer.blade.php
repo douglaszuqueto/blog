@@ -119,7 +119,7 @@
 </div>
 
 <div class="fixed-action-btn ">
-  <a class="btn-floating left btn-large waves-effect waves-light blue">
+  <a class="btn-floating left btn-large waves-effect waves-light blue" onclick="notifications()">
     <i class="material-icons tooltipped" data-position="top" data-delay="50" data-tooltip="Ativar notificações?">add_alert</i>
   </a>
 </div>
@@ -129,6 +129,41 @@
 </a>
 
 <script>
+  var pusher = new Pusher('a40d6974ca933a602c50', {
+    encrypted: true
+  });
+
+  let channel = pusher.subscribe('articles');
+
+  function notifications() {
+
+    if (!("Notification" in window)) {
+      alert("O browser utilizado não possui suporte à Notificações");
+    }
+
+    else if (Notification.permission === "granted") {
+    }
+    else if (Notification.permission !== 'denied') {
+      Notification.requestPermission(function (permission) {
+        if (permission === "granted") {
+        }
+      });
+    }
+  }
+
+  channel.bind('new-article', function (data) {
+    let message = JSON.parse(JSON.stringify(data));
+    let options = {
+      icon: 'https://blog.dev/images/logo_2.png',
+    };
+    var notification = new Notification(message.title, options);
+
+    notification.onclick = function (event) {
+      event.preventDefault();
+      window.open(message.url, '_blank');
+    }
+  });
+
   // Source: https://codepen.io/rdallaire/pen/apoyx
   $(window).scroll(function () {
     if ($(this).scrollTop() >= 50) {        // If page is scrolled more than 50px
