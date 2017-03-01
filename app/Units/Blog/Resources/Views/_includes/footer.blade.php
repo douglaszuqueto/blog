@@ -118,12 +118,11 @@
   </div>
 </div>
 
-
-<div class="fixed-action-btn ">
-  <a class="btn-floating left btn-large waves-effect waves-light blue" onclick="notifications()">
-    <i class="material-icons tooltipped" data-position="top" data-delay="50" data-tooltip="Ativar notificações?">add_alert</i>
-  </a>
-</div>
+{{--<div class="fixed-action-btn ">--}}
+{{--<a href="javascript:" class="btn-floating left btn-large waves-effect waves-light blue" onclick="notifications()">--}}
+{{--<i class="material-icons tooltipped" data-position="top" data-delay="50" data-tooltip="Ativar notificações?">add_alert</i>--}}
+{{--</a>--}}
+{{--</div>--}}
 
 <a href="javascript:" id="return-to-top" style="display: inline">
   <i class="material-icons">import_export</i>
