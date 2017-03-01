@@ -43,13 +43,12 @@
           @include('blog::articles._includes.newsletter')
         </div>
         <div class="col s12" style="background-color: white">
-          <h5 class="center blue white-text" style="border-radius: 4px">Filtrar por tags</h5>
-          @include('blog::articles._includes.tags')
-        </div>
-        <div class="col s12" style="background-color: white">
           <h5 class="center blue white-text" style="border-radius: 4px">Artigos recentes</h5>
           @include('blog::articles._includes.last_articles')
-
+        </div>
+        <div class="col s12" style="background-color: white">
+          <h5 class="center blue white-text" style="border-radius: 4px">Filtrar por tags</h5>
+          @include('blog::articles._includes.tags')
         </div>
 
       </div>
