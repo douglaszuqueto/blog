@@ -48,7 +48,7 @@ trait FileUpload
     if (!$width) {
       return Image::make($image)->save($this->imagePath . $data['image_name']);
     }
-    return Image::make($image)->resize($width, null, function($constraint){
+    return Image::make($image)->resize($width, null, function ($constraint) {
       $constraint->aspectRatio();
       $constraint->upsize();
 

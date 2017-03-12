@@ -78,10 +78,10 @@
     (function (i, s, o, g, r, a, m) {
       i['GoogleAnalyticsObject'] = r;
       i[r] = i[r] || function () {
-            (i[r].q = i[r].q || []).push(arguments)
-          }, i[r].l = 1 * new Date();
+          (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
       a = s.createElement(o),
-          m = s.getElementsByTagName(o)[0];
+        m = s.getElementsByTagName(o)[0];
       a.async = 1;
       a.src = g;
       m.parentNode.insertBefore(a, m)
@@ -111,7 +111,7 @@
       if (f.fbq)return;
       n = f.fbq = function () {
         n.callMethod ?
-            n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+          n.callMethod.apply(n, arguments) : n.queue.push(arguments)
       };
       if (!f._fbq) f._fbq = n;
       n.push = n;
@@ -124,7 +124,7 @@
       s = b.getElementsByTagName(e)[0];
       s.parentNode.insertBefore(t, s)
     }(window,
-        document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+      document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
     fbq('init', '1190730830976691');
     fbq('track', 'PageView');
   </script>
@@ -146,8 +146,8 @@
   <script>
     (function (h, o, t, j, a, r) {
       h.hj = h.hj || function () {
-            (h.hj.q = h.hj.q || []).push(arguments)
-          };
+          (h.hj.q = h.hj.q || []).push(arguments)
+        };
       h._hjSettings = {hjid: 335629, hjsv: 5};
       a = o.getElementsByTagName('head')[0];
       r = o.createElement('script');

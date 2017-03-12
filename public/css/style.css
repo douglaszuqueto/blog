@@ -1,241 +1,241 @@
 body {
-    background: #f5f5f5 !important;
-    font-size: 16px;
+  background: #f5f5f5 !important;
+  font-size: 16px;
 }
 
 @media only screen and (max-width: 480px) {
-    .container {
-        width: 95% !important;
-    }
+  .container {
+    width: 95% !important;
+  }
 
-    .nav-left {
-        width: 30% !important;
-    }
+  .nav-left {
+    width: 30% !important;
+  }
 
-    .title_menu {
-        max-width: 75% !important;
-        margin: 0 0 0 10px !important;
-        /*padding: 15px 0 0 0;*/
-    }
+  .title_menu {
+    max-width: 75% !important;
+    margin: 0 0 0 10px !important;
+    /*padding: 15px 0 0 0;*/
+  }
 
-    #return-to-top {
-        bottom: 50px !important;
-    }
+  #return-to-top {
+    bottom: 50px !important;
+  }
 
 }
 
 @media only screen and (max-width: 600px) {
-    .nav-left .logo {
-        width: 100% !important;
-        margin-top: 10px !important;
-    }
+  .nav-left .logo {
+    width: 100% !important;
+    margin-top: 10px !important;
+  }
 
-    .menu_toggle {
-        margin-top: 5px !important;
-    }
+  .menu_toggle {
+    margin-top: 5px !important;
+  }
 }
 
 @media only screen and (max-width: 992px) {
 
-    .container {
-        width: 95%;
-    }
+  .container {
+    width: 95%;
+  }
 
-    .title_menu {
-        width: 80% !important;
-        /*margin: 15px 0 0 12px !important;*/
-    }
+  .title_menu {
+    width: 80% !important;
+    /*margin: 15px 0 0 12px !important;*/
+  }
 
-    .logo {
-        width: 60% !important;
-        margin-top: 50px;
-    }
+  .logo {
+    width: 60% !important;
+    margin-top: 50px;
+  }
 
-    .nav-left {
-        max-width: 10% !important;
-        float: left;
-    }
+  .nav-left {
+    max-width: 10% !important;
+    float: left;
+  }
 
-    .menu_toggle {
-        margin-top: 5px !important;
-    }
+  .menu_toggle {
+    margin-top: 5px !important;
+  }
 
-    main {
-        padding-top: 70px !important;
-    }
+  main {
+    padding-top: 70px !important;
+  }
 
 }
 
 @media only screen and (min-width: 993px) {
-    .container {
-        width: 80%;
-    }
+  .container {
+    width: 80%;
+  }
 
-    .title_menu {
-        width: 80%;
-    }
+  .title_menu {
+    width: 80%;
+  }
 }
 
 /* HEADER */
 .nav-left {
-    max-width: 5%;
-    float: left;
+  max-width: 5%;
+  float: left;
 }
 
 .nav-left .logo {
-    width: 80%;
-    margin-top: 9px;
+  width: 80%;
+  margin-top: 9px;
 }
 
 .title_menu {
-    width: 20%;
-    font-family: 'Miriam Libre', sans-serif;
-    float: left;
-    margin-top: -5px;
-    font-weight: 700;
-    color: #525252;
-    letter-spacing: -.02em;
-    display: inline-block;
-    transform: translatey(2px);
-    font-size: 16pt;
+  width: 20%;
+  font-family: 'Miriam Libre', sans-serif;
+  float: left;
+  margin-top: -5px;
+  font-weight: 700;
+  color: #525252;
+  letter-spacing: -.02em;
+  display: inline-block;
+  transform: translatey(2px);
+  font-size: 16pt;
 }
 
 .nav-menu {
-    width: 70%;
-    float: left;
+  width: 70%;
+  float: left;
 }
 
 .menu_toggle {
-    float: left;
+  float: left;
 }
 
 .side-nav {
-    width: 240px;
+  width: 240px;
 }
 
 #mobile-demo .logo_mobile {
-    width: 20%;
-    margin: 10px 0 10px 80px;
+  width: 20%;
+  margin: 10px 0 10px 80px;
 }
 
 nav {
-    background: white;
-    position: fixed;
-    z-index: 999;
-    border-top: 3px #1da1f2 solid;
+  background: white;
+  position: fixed;
+  z-index: 999;
+  border-top: 3px #1da1f2 solid;
 }
 
 nav ul a {
-    font-family: 'Miriam Libre';
-    font-size: 12pt;
-    color: #a1a1a1;
-    padding: 0 10px;
+  font-family: 'Miriam Libre';
+  font-size: 12pt;
+  color: #a1a1a1;
+  padding: 0 10px;
 }
 
 nav ul a:hover {
-    color: #008BD3;
+  color: #008BD3;
 }
 
 /* MAIN */
 main {
-    padding-top: 100px;
+  padding-top: 100px;
 }
 
 /* PAGES */
 .contact, .about-me, .project {
-    background-color: #fff;
-    transition: box-shadow .25s;
-    border-radius: 2px;
-    font-family: 'Miriam Libre';
-    font-weight: 700;
-    color: #2b2b2b;
-    letter-spacing: -.02em;
-    transform: translatey(2px);
-    font-size: 16pt;
+  background-color: #fff;
+  transition: box-shadow .25s;
+  border-radius: 2px;
+  font-family: 'Miriam Libre';
+  font-weight: 700;
+  color: #2b2b2b;
+  letter-spacing: -.02em;
+  transform: translatey(2px);
+  font-size: 16pt;
 }
 
 .about-me h3, .news h3, .project h3 {
-    font-size: 24pt;
+  font-size: 24pt;
 }
 
 .about-me h4, .news h4, .project h4 {
-    font-size: 18pt;
+  font-size: 18pt;
 }
 
 .index {
-    padding-top: 10px;
+  padding-top: 10px;
 }
 
 /* INDEX: Artigos Recentes */
 
 .recentArticles {
-    /*position: absolute;*/
+  /*position: absolute;*/
 }
 
 @media only screen and (max-width: 600px) {
-    .article-item {
-        width: 100% !important;
-        margin: 0 0 10px 0;
-    }
+  .article-item {
+    width: 100% !important;
+    margin: 0 0 10px 0;
+  }
 }
 
 .article-item {
-    width: 45%;
-    height: 285px;
-    float: left;
-    background-color: #FFF;
-    /*padding: 0 !important;*/
-    margin: 0 20px 20px 0;
+  width: 45%;
+  height: 285px;
+  float: left;
+  background-color: #FFF;
+  /*padding: 0 !important;*/
+  margin: 0 20px 20px 0;
 
-    border: 0 solid hsla(0, 0%, 100%, .25);
-    border-radius: 2px;
-    box-shadow: 5px 5px 5px #dcdcdc;
+  border: 0 solid hsla(0, 0%, 100%, .25);
+  border-radius: 2px;
+  box-shadow: 5px 5px 5px #dcdcdc;
 
 }
 
 .article-item .article-title a h1 {
-    font-size: 1.2em;
+  font-size: 1.2em;
 }
 
 .article-image {
-    background-color: #c5c5c5;
+  background-color: #c5c5c5;
 }
 
 .article-image img {
-    border-top-left-radius: 2px;
-    border-top-right-radius: 2px;
-    width: 100%;
-    overflow: hidden;
-    max-height: 195px;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  width: 100%;
+  overflow: hidden;
+  max-height: 195px;
 
 }
 
 .article-title h1 {
-    margin-top: 0;
-    font-family: Miriam Libre, sans-serif;
-    font-weight: 400;
-    color: #525252;
+  margin-top: 0;
+  font-family: Miriam Libre, sans-serif;
+  font-weight: 400;
+  color: #525252;
 }
 
 .index .right {
-    background-color: #fff;
-    transition: box-shadow .25s;
-    border-radius: 2px;
-    padding: 10px;
+  background-color: #fff;
+  transition: box-shadow .25s;
+  border-radius: 2px;
+  padding: 10px;
 }
 
 .index .right .fb-page {
-    margin-top: 10px;
+  margin-top: 10px;
 }
 
 .index h1 {
-    font-size: 16pt;
-    padding: 10px;
-    margin-top: auto;
+  font-size: 16pt;
+  padding: 10px;
+  margin-top: auto;
 }
 
 .index h1 a {
-    color: #FFF;
+  color: #FFF;
 }
 
 .project {
@@ -243,14 +243,14 @@ main {
 }
 
 .suggestions {
-    background-color: #fff;
-    transition: box-shadow .25s;
-    border-radius: 2px;
-    font-family: 'Miriam Libre';
-    font-weight: 700;
-    color: #2b2b2b;
-    letter-spacing: -.02em;
-    font-size: 12pt;
+  background-color: #fff;
+  transition: box-shadow .25s;
+  border-radius: 2px;
+  font-family: 'Miriam Libre';
+  font-weight: 700;
+  color: #2b2b2b;
+  letter-spacing: -.02em;
+  font-size: 12pt;
 }
 
 .about-me {
@@ -259,42 +259,42 @@ main {
 
 /* Contato */
 .contact .contact-item h5 {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 /* Artigos: Lista de Artigos */
 .articles {
-    font-family: 'Miriam Libre', sans-serif;
+  font-family: 'Miriam Libre', sans-serif;
 }
 
 .articles h1 {
-    font-weight: 500 !important;
-    font-size: 2.5rem;
-    line-height: 1.0em;
+  font-weight: 500 !important;
+  font-size: 2.5rem;
+  line-height: 1.0em;
 
 }
 
 .articles .card {
-    padding: 5px;
-    max-height: 380px;
+  padding: 5px;
+  max-height: 380px;
 }
 
 .articles .card-image {
 }
 
 .articles .card-image img {
-    overflow: hidden;
-    max-height: 195px;
+  overflow: hidden;
+  max-height: 195px;
 }
 
 .articles .card-content h2 {
-    font-weight: 600 !important;
-    font-size: 1.1rem;
-    line-height: 1.5em;
+  font-weight: 600 !important;
+  font-size: 1.1rem;
+  line-height: 1.5em;
 }
 
 .articles .card-content h2 a {
-    color: #525252;
+  color: #525252;
 }
 
 /* ################################ */
@@ -302,21 +302,21 @@ main {
 /* Artigos: Leitura de Artigo */
 
 .article-view {
-    background: #FFF;
-    font-family: 'Miriam Libre', sans-serif !important;
-    color: #525252;
+  background: #FFF;
+  font-family: 'Miriam Libre', sans-serif !important;
+  color: #525252;
 }
 
 .article-view .author {
-    margin: -10px 0 0 5px;
+  margin: -10px 0 0 5px;
 }
 
 .article-view .author strong {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .article-view .article-body {
-    margin-top: -100px;
+  margin-top: -100px;
 }
 
 .article-view h1,
@@ -325,8 +325,8 @@ main {
 .article-view h3,
 .article-view h3 a,
 .article-view h4 a {
-    letter-spacing: .02em;
-    color: #525252;
+  letter-spacing: .02em;
+  color: #525252;
 }
 
 .article-view h2,
@@ -335,86 +335,86 @@ main {
 .article-view h3 a,
 .article-view h4,
 .article-view h4 a {
-    margin: 40px 0 40px 10px;
+  margin: 40px 0 40px 10px;
 }
 
 .article-view h1 {
-    font-size: 1.875rem;
-    font-weight: 700 !important;
+  font-size: 1.875rem;
+  font-weight: 700 !important;
 }
 
 .article-view h2,
 .article-view h2 a {
-    font-size: 1.875rem;
-    line-height: 1.2;
-    font-weight: 400;
+  font-size: 1.875rem;
+  line-height: 1.2;
+  font-weight: 400;
 }
 
 .article-view h3,
 .article-view h3 a {
-    font-size: 1.500rem;
-    line-height: 1.2;
-    font-weight: 400;
-    margin-left: 20px;
+  font-size: 1.500rem;
+  line-height: 1.2;
+  font-weight: 400;
+  margin-left: 20px;
 
 }
 
 .article-view h4,
 .article-view h4 a {
-    font-weight: 700 !important;
-    font-size: 14pt;
-    margin-left: 20px;
+  font-weight: 700 !important;
+  font-size: 14pt;
+  margin-left: 20px;
 }
 
 .article-view p, .article-view a {
-    font-size: 13pt;
-    text-align: justify;
-    margin: 5px 10px 20px 15px;
+  font-size: 13pt;
+  text-align: justify;
+  margin: 5px 10px 20px 15px;
 }
 
 .article-view p {
-    font-size: 1.25rem !important;
-    line-height: 1.5em;
+  font-size: 1.25rem !important;
+  line-height: 1.5em;
 }
 
 .article-view strong {
-    font-weight: bold !important;
+  font-weight: bold !important;
 }
 
 .article-view p::first-letter {
-    text-transform: capitalize;
-    font-size: 1.50rem !important;
-    margin-left: 25px;
+  text-transform: capitalize;
+  font-size: 1.50rem !important;
+  margin-left: 25px;
 }
 
 .article-view ul li {
-    font-size: 1.25rem !important;
-    list-style: disc;
-    margin-left: 40px;
-    color: #525252;
+  font-size: 1.25rem !important;
+  list-style: disc;
+  margin-left: 40px;
+  color: #525252;
 }
 
 .article-view img {
-    width: 80%;
-    height: auto;
-    margin: 30px auto 30px auto;
-    display: block;
+  width: 80%;
+  height: auto;
+  margin: 30px auto 30px auto;
+  display: block;
 }
 
 .articles-view .comments {
-    background: #FFF;
-    margin-top: 10px;
+  background: #FFF;
+  margin-top: 10px;
 }
 
 /* ################################ */
 
 /* BODY */
 .card .card-content {
-    padding: 5px !important;
+  padding: 5px !important;
 }
 
 .avatar img {
-    margin-top: 10px;
+  margin-top: 10px;
 }
 
 /*.active {*/
@@ -423,65 +423,65 @@ main {
 /*}*/
 
 .card .card-content {
-    padding: 5px !important;
+  padding: 5px !important;
 }
 
 .avatar img {
-    width: 70%;
+  width: 70%;
 }
 
 .recentArticles > .row {
-    height: 220px;
+  height: 220px;
 }
 
 footer {
-    height: auto;
-    font-family: 'Miriam Libre', sans-serif;
-    background-color: #525252;
+  height: auto;
+  font-family: 'Miriam Libre', sans-serif;
+  background-color: #525252;
 }
 
 .redes-sociais {
-    float: left;
-    margin: 15px 0 0 20px;
+  float: left;
+  margin: 15px 0 0 20px;
 }
 
 .redes-sociais li {
-    float: left;
-    display: inline;
-    margin: 0 10px;
+  float: left;
+  display: inline;
+  margin: 0 10px;
 }
 
 .redes-sociais li a {
-    float: left;
-    width: 34px;
-    height: 34px;
-    background-repeat: no-repeat !important;
-    padding: 0 !important;
+  float: left;
+  width: 34px;
+  height: 34px;
+  background-repeat: no-repeat !important;
+  padding: 0 !important;
 }
 
 .redes-sociais li a.facebook {
-    background: url('../images/social/facebook.png') 0 -34px;
+  background: url('../images/social/facebook.png') 0 -34px;
 }
 
 .redes-sociais li a.instagram {
-    background: url('../images/social/instagram.png') 0 -34px;
+  background: url('../images/social/instagram.png') 0 -34px;
 }
 
 .redes-sociais li a.twitter {
-    background: url('../images/social/twitter.png') 0 -34px;
+  background: url('../images/social/twitter.png') 0 -34px;
 }
 
 .redes-sociais li a.youtube {
-    background: url('../images/social/youtube.png') 0 -34px;
+  background: url('../images/social/youtube.png') 0 -34px;
 }
 
 .redes-sociais li a.github {
-    background: url('../images/social/github.png');
-    border-radius: 17px !important;
+  background: url('../images/social/github.png');
+  border-radius: 17px !important;
 }
 
 .redes-sociais li a.telegram {
-    background: url('../images/social/telegram.png');
+  background: url('../images/social/telegram.png');
 }
 
 /*.redes-sociais li a:hover {*/
@@ -489,83 +489,83 @@ footer {
 /*}*/
 
 #mobile-demo .redes-sociais {
-    float: left;
-    width: 100%;
-    margin: 15px 0 0 0;
+  float: left;
+  width: 100%;
+  margin: 15px 0 0 0;
 }
 
 #mobile-demo .redes-sociais li {;
-    width: 25%;
-    text-align: center;
-    margin: 0 !important;
+  width: 25%;
+  text-align: center;
+  margin: 0 !important;
 }
 
 #mobile-demo .redes-sociais li a {
-    background-position: 0 -34px;
-    float: none;
-    display: inline-block;
+  background-position: 0 -34px;
+  float: none;
+  display: inline-block;
 }
 
 .footer-copyright {
-    overflow: hidden;
-    height: 50px;
-    line-height: 50px;
-    color: rgba(255, 255, 255, 0.8);
-    background-color: #008ef2 !important;
-    margin-top: 50px;
+  overflow: hidden;
+  height: 50px;
+  line-height: 50px;
+  color: rgba(255, 255, 255, 0.8);
+  background-color: #008ef2 !important;
+  margin-top: 50px;
 }
 
 .footer-copyright span {
-    font-weight: 500;
-    font-style: normal;
-    font-size: 1.5em;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1.5em;
 }
 
 .patrocinadores h5, .apoiadores h5, .social h5 {
-    margin: 10px !important;
+  margin: 10px !important;
 }
 
 .patrocinadores h6 a, .apoiadores h6 a {
-    margin: 0 -10px 5px -10px !important;
-    float: left;
+  margin: 0 -10px 5px -10px !important;
+  float: left;
 }
 
 .patrocinadores h6, .apoiadores h6 {
-    /*margin: 5px !important;*/
+  /*margin: 5px !important;*/
 }
 
 .digitalocean {
-    margin: 60px 0 0 0 !important;
+  margin: 60px 0 0 0 !important;
 }
 
 /* Return to Top
 Source: https://codepen.io/rdallaire/pen/apoyx
 */
 #return-to-top {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: rgb(0, 0, 0);
-    background: rgba(0, 0, 0, 0.9);
-    width: 50px;
-    height: 50px;
-    text-decoration: none;
-    -webkit-border-radius: 35px;
-    -moz-border-radius: 35px;
-    border-radius: 35px;
-    display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.9);
+  width: 50px;
+  height: 50px;
+  text-decoration: none;
+  -webkit-border-radius: 35px;
+  -moz-border-radius: 35px;
+  border-radius: 35px;
+  display: none;
 }
 
 #return-to-top i {
-    color: #fff;
-    margin: 0;
-    position: relative;
-    left: 16px;
-    top: 13px;
-    font-size: 19px;
+  color: #fff;
+  margin: 0;
+  position: relative;
+  left: 16px;
+  top: 13px;
+  font-size: 19px;
 }
 
 #return-to-top:hover i {
-    color: #fff;
-    /*top: 5px;*/
+  color: #fff;
+  /*top: 5px;*/
 }

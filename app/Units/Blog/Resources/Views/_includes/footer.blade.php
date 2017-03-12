@@ -135,15 +135,15 @@
 
   let channel = pusher.subscribe('articles');
 
-//  if ('serviceWorker' in navigator) {
-//    navigator.serviceWorker.register('/js/sw.js')
-//        .then((registration)=> {
-//          console.log('running', registration)
-//        })
-//        .catch((err) => {
-//          console.log(err);
-//        });
-//  }
+  //  if ('serviceWorker' in navigator) {
+  //    navigator.serviceWorker.register('/js/sw.js')
+  //        .then((registration)=> {
+  //          console.log('running', registration)
+  //        })
+  //        .catch((err) => {
+  //          console.log(err);
+  //        });
+  //  }
 
   function notifications() {
 
@@ -161,18 +161,18 @@
     }
   }
 
-//  channel.bind('new-article', function (data) {
-//    let message = JSON.parse(JSON.stringify(data));
-//    let options = {
-//      icon: 'https://blog.dev/images/logo_2.png',
-//    };
-//    var notification = new Notification(message.title, options);
-//
-//    notification.onclick = function (event) {
-//      event.preventDefault();
-//      window.open(message.url, '_blank');
-//    }
-//  });
+  //  channel.bind('new-article', function (data) {
+  //    let message = JSON.parse(JSON.stringify(data));
+  //    let options = {
+  //      icon: 'https://blog.dev/images/logo_2.png',
+  //    };
+  //    var notification = new Notification(message.title, options);
+  //
+  //    notification.onclick = function (event) {
+  //      event.preventDefault();
+  //      window.open(message.url, '_blank');
+  //    }
+  //  });
 
   // Source: https://codepen.io/rdallaire/pen/apoyx
   $(window).scroll(function () {

@@ -35,7 +35,7 @@
              data-adapt-container-width="true"
              data-hide-cover="false">
           <blockquote cite="https://www.facebook.com/douglaszuquetooficial/" class="fb-xfbml-parse-ignore"><a
-                href="https://www.facebook.com/douglaszuquetooficial/">Douglas Zuqueto</a></blockquote>
+              href="https://www.facebook.com/douglaszuquetooficial/">Douglas Zuqueto</a></blockquote>
         </div>
       </section>
     </div>
