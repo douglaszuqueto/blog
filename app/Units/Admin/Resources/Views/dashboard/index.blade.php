@@ -76,14 +76,36 @@
           </div>
         </div>
       </div>
-
+    </div>
+    <div class="row">
       <div class="col s12 m4 l3">
         <div class="card-panel ">
           <p class="center-align" style="margin-top: -20px">
-            <a href="{{route('admin.contact.index')}}"><i class="material-icons medium green-text"
-                                                          title="Caixa de Entrada">email</i></a>
+            <a href="{{route('admin.contact.index')}}">
+              <i class="material-icons medium green-text" title="Caixa de Entrada">email</i>
+            </a>
           </p>
           <h4 class="center-align">{{$contacts}}</h4>
+        </div>
+      </div>
+      <div class="col s12 m4 l3">
+        <div class="card-panel ">
+          <p class="center-align" style="margin-top: -20px">
+            <a href="{{route('admin.suggestions.index')}}">
+              <i class="material-icons medium blue-text" title="Sugestões">speaker_notes</i>
+            </a>
+          </p>
+          <h4 class="center-align">{{$suggestions}}</h4>
+        </div>
+      </div>
+      <div class="col s12 m4 l3">
+        <div class="card-panel ">
+          <p class="center-align" style="margin-top: -20px">
+            <a href="{{route('admin.subscribers.index')}}">
+              <i class="material-icons medium yellow-text" title="Newsletter">person_pin</i>
+            </a>
+          </p>
+          <h4 class="center-align">{{$subscribers}}</h4>
         </div>
       </div>
     </div>

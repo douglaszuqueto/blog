@@ -17,4 +17,9 @@ class SuggestionsRepository extends BaseRepository
   {
     return Suggestions::class;
   }
+
+  public function getSuggestionsCount($state = 0)
+  {
+    return $this->findWhere(['state' => $state])->count();
+  }
 }

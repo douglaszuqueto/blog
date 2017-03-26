@@ -17,4 +17,9 @@ class NewsletterSubscribersRepository extends BaseRepository
   {
     return NewsletterSubscribers::class;
   }
+
+  public function getSubscribersCount($state = 1)
+  {
+    return $this->findWhere(['state' => $state])->count();
+  }
 }
