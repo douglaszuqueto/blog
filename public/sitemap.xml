@@ -8,110 +8,128 @@
 
   <url>
     <loc>https://douglaszuqueto.com/</loc>
-    <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://douglaszuqueto.com/artigos</loc>
-    <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://douglaszuqueto.com/o-projeto</loc>
-    <changefreq>weekly</changefreq>
+    <loc>https://douglaszuqueto.com/fabrica-de-artigos</loc>
   </url>
   <url>
-    <loc>https://douglaszuqueto.com/noticias</loc>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://douglaszuqueto.com/sobre-mim</loc>
-    <changefreq>weekly</changefreq>
+    <loc>https://douglaszuqueto.com/newsletter</loc>
   </url>
   <url>
     <loc>https://douglaszuqueto.com/contato</loc>
-    <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://douglaszuqueto.com/artigos/docker-na-raspberry-pi-sim-e-possivel</loc>
-    <changefreq>weekly</changefreq>
+    <loc>https://douglaszuqueto.com/artigos/primeiros-passos-com-linkit-smart-7688-duo</loc>
   </url>
   <url>
-    <loc>https://douglaszuqueto.com/artigos/primeiros-passos-com-raspberry-pi-3</loc>
-    <changefreq>weekly</changefreq>
+    <loc>https://douglaszuqueto.com/artigos/shield-de-automacao-interface-de-controle-para-acionamento-dos-reles</loc>
   </url>
   <url>
-    <loc>https://douglaszuqueto.com/artigos/conhecendo-o-projeto-iotbr-parte-3</loc>
-    <changefreq>weekly</changefreq>
+    <loc>https://douglaszuqueto.com/artigos/utilizando-o-mcp9808-na-raspberry-pi</loc>
   </url>
   <url>
-    <loc>https://douglaszuqueto.com/artigos/conhecendo-o-projeto-iotbr-parte-2</loc>
-    <changefreq>weekly</changefreq>
+    <loc>https://douglaszuqueto.com/artigos/shield-de-automacao-acionando-reles</loc>
   </url>
   <url>
-    <loc>https://douglaszuqueto.com/artigos/search/docker</loc>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://douglaszuqueto.com/artigos/search/raspberry</loc>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://douglaszuqueto.com/artigos/search/embarcado</loc>
-    <changefreq>weekly</changefreq>
+    <loc>https://douglaszuqueto.com/artigos/search/linkit</loc>
   </url>
   <url>
     <loc>https://douglaszuqueto.com/artigos/search/iot</loc>
-    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://douglaszuqueto.com/artigos/search/embarcado</loc>
+  </url>
+  <url>
+    <loc>https://douglaszuqueto.com/artigos/search/raspberry</loc>
   </url>
   <url>
     <loc>https://douglaszuqueto.com/artigos/search/mqtt</loc>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://douglaszuqueto.com/artigos/search/esp8266</loc>
-    <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://douglaszuqueto.com/artigos/search/websockets</loc>
-    <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://douglaszuqueto.com/artigos/search/arduino</loc>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://douglaszuqueto.com/artigos/conhecendo-o-projeto-iotbr-parte-1</loc>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://douglaszuqueto.com/artigos/conhecendo-meu-ambiente-de-desenvolvimento</loc>
-    <changefreq>weekly</changefreq>
+    <loc>https://douglaszuqueto.com/artigos/integrando-a-aplicacao-web-com-banco-de-dados</loc>
   </url>
   <url>
     <loc>https://douglaszuqueto.com/artigos/search/software</loc>
-    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://douglaszuqueto.com/artigos/search/banco-de-dados</loc>
+  </url>
+  <url>
+    <loc>https://douglaszuqueto.com/artigos/conhecendo-o-shield-de-automacao-residencial-para-raspberry-pi</loc>
+  </url>
+  <url>
+    <loc>https://douglaszuqueto.com/artigos/sensoriamento-real-time-com-mqtt-e-websockets</loc>
+  </url>
+  <url>
+    <loc>https://douglaszuqueto.com/artigos/search/esp8266</loc>
+  </url>
+  <url>
+    <loc>https://douglaszuqueto.com/artigos/conhecendo-o-aplicativo-iot-mqtt-dashboard</loc>
+  </url>
+  <url>
+    <loc>https://douglaszuqueto.com/artigos/search/app</loc>
+  </url>
+  <url>
+    <loc>https://douglaszuqueto.com/artigos/configurando-o-esp8266-para-trabalhar-com-mqtt</loc>
+  </url>
+  <url>
+    <loc>https://douglaszuqueto.com/artigos/wiringpi-dockerizado-manipule-suas-gpio-a-partir-de-um-container-docker</loc>
+  </url>
+  <url>
+    <loc>https://douglaszuqueto.com/artigos/search/docker</loc>
+  </url>
+  <url>
+    <loc>https://douglaszuqueto.com/artigos/controle-suas-gpio-atraves-da-internet</loc>
+  </url>
+  <url>
+    <loc>https://douglaszuqueto.com/artigos/do-hello-world-a-integracao-com-mqtt</loc>
+  </url>
+  <url>
+    <loc>https://douglaszuqueto.com/artigos/hello-world-com-gpio-na-rpi3</loc>
+  </url>
+  <url>
+    <loc>https://douglaszuqueto.com/artigos/docker-na-raspberry-pi-sim-e-possivel</loc>
+  </url>
+  <url>
+    <loc>https://douglaszuqueto.com/artigos/primeiros-passos-com-raspberry-pi-3</loc>
+  </url>
+  <url>
+    <loc>https://douglaszuqueto.com/artigos/conhecendo-o-projeto-iotbr-parte-3</loc>
+  </url>
+  <url>
+    <loc>https://douglaszuqueto.com/artigos/search/arduino</loc>
+  </url>
+  <url>
+    <loc>https://douglaszuqueto.com/artigos/conhecendo-o-projeto-iotbr-parte-2</loc>
+  </url>
+  <url>
+    <loc>https://douglaszuqueto.com/artigos/conhecendo-o-projeto-iotbr-parte-1</loc>
+  </url>
+  <url>
+    <loc>https://douglaszuqueto.com/artigos/conhecendo-meu-ambiente-de-desenvolvimento</loc>
   </url>
   <url>
     <loc>https://douglaszuqueto.com/artigos/search/environment</loc>
-    <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://douglaszuqueto.com/artigos/artigo-de-lancamento-do-projeto</loc>
-    <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://douglaszuqueto.com/artigos/search/empreendedorismo</loc>
-    <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://douglaszuqueto.com/artigos/search/protocolo</loc>
-    <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://douglaszuqueto.com/artigos/search/hardware</loc>
-    <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://douglaszuqueto.com/artigos/search/api</loc>
-    <changefreq>weekly</changefreq>
   </url>
 </urlset>
