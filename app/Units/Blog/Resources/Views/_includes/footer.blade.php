@@ -129,11 +129,11 @@
 </a>
 
 <script>
-  var pusher = new Pusher('a40d6974ca933a602c50', {
-    encrypted: true
-  });
-
-  let channel = pusher.subscribe('articles');
+//  var pusher = new Pusher('a40d6974ca933a602c50', {
+//    encrypted: true
+//  });
+//
+//  let channel = pusher.subscribe('articles');
 
   //  if ('serviceWorker' in navigator) {
   //    navigator.serviceWorker.register('/js/sw.js')
@@ -145,21 +145,21 @@
   //        });
   //  }
 
-  function notifications() {
-
-    if (!('Notification' in window)) {
-      alert("O browser utilizado não possui suporte à Notificações");
-    }
-
-    else if (Notification.permission === "granted") {
-    }
-    else if (Notification.permission !== 'denied') {
-      Notification.requestPermission(function (permission) {
-        if (permission === "granted") {
-        }
-      });
-    }
-  }
+//  function notifications() {
+//
+//    if (!('Notification' in window)) {
+//      alert("O browser utilizado não possui suporte à Notificações");
+//    }
+//
+//    else if (Notification.permission === "granted") {
+//    }
+//    else if (Notification.permission !== 'denied') {
+//      Notification.requestPermission(function (permission) {
+//        if (permission === "granted") {
+//        }
+//      });
+//    }
+//  }
 
   //  channel.bind('new-article', function (data) {
   //    let message = JSON.parse(JSON.stringify(data));
